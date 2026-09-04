@@ -1,0 +1,40 @@
+name: Pelagica
+logo: ./logo.svg
+developerName: KartoffelChipss
+developerGithub: KartoffelChipss
+dateAdded: 2026-09-04
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A modern web, desktop and TV client for Jellyfin
+platforms: [web, webos, tizen, windows, macos, linux]
+mainPlatform: web
+official: false
+music: supported
+previewImages:
+    - './preview-images/home.webp'
+    - './preview-images/library.webp'
+    - './preview-images/series.webp'
+    - './preview-images/episode.webp'
+    - './preview-images/music.webp'
+    - './preview-images/search.webp'
+    - './preview-images/custom_sections.webp'
+links:
+    - type: github
+      url: https://github.com/PelagicaApp/Pelagica
+    - type: website
+      url: https://pelagica.app
+    - type: other
+      url: 'https://twoglot.com/@KartoffelChipss/pelagica'
+features:
+    hw-decode: true
+    direct-play: true
+    trickplay: true
+    pgs-ass-subtitles: true
+    lyrics: true
+    quick-connect: true
+    live-tv-dvr: true
+    seerr-integration: true
+    kevintweaks-watchlist: true
+    streamystats-recommendations: true
+aiUsed: true
+aiDisclaimer: I treat AI like any other tool I use. It is not a seperate "person" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.
