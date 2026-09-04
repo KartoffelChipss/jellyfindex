@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { BadgeCheck, GitFork, Music, FlaskConical, Ghost } from 'lucide-react';
+import { BadgeCheck, GitFork, Music, FlaskConical, Ghost, Lock } from 'lucide-react';
 import { labelForPlatform } from '@jellyfindex/schema';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -80,10 +80,15 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
                 )
             }
             {
-                client.openSource && (
+                client.openSource ? (
                     <Badge variant="secondary" className="text-xs">
                         <GitFork className="size-3" />
                         Open source
+                    </Badge>
+                ) : (
+                    <Badge variant="secondary" className="text-xs">
+                        <Lock className="size-3" />
+                        Closed source
                     </Badge>
                 )
             }

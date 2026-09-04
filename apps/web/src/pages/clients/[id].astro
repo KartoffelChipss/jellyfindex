@@ -13,6 +13,7 @@ import {
     Sparkles,
     FlaskConical,
     Ghost,
+    Lock,
 } from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
@@ -183,10 +184,15 @@ const previewImages = await Promise.all(
                         )
                     }
                     {
-                        client.openSource && (
+                        client.openSource ? (
                             <Badge variant="secondary">
                                 <GitFork className="size-3" />
                                 Open source
+                            </Badge>
+                        ) : (
+                            <Badge variant="secondary" className="text-xs">
+                                <Lock className="size-3" />
+                                Closed source
                             </Badge>
                         )
                     }
