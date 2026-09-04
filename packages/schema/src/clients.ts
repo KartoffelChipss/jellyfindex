@@ -9,6 +9,7 @@ export const linkSchema = z.object({
     type: z.enum(Object.keys(LINK_TYPES) as [string, ...string[]]),
     url: z.url(),
     sourcelink: z.boolean().optional(),
+    label: z.string().optional(),
 });
 
 function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {

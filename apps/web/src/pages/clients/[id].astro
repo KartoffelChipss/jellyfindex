@@ -195,7 +195,7 @@ const previewImages = await Promise.all(
                             class={buttonVariants({ size: 'sm', variant: 'outline' })}
                         >
                             <Icon />
-                            {LINK_TYPES[link.type as LinkType].label}
+                            {link.label ?? LINK_TYPES[link.type as LinkType].label}
                         </a>
                     );
                 })

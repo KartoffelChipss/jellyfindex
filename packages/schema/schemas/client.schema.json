@@ -147,6 +147,9 @@
           },
           "sourcelink": {
             "type": "boolean"
+          },
+          "label": {
+            "type": "string"
           }
         },
         "required": [
@@ -182,6 +185,9 @@
         },
         "sourcelink": {
           "type": "boolean"
+        },
+        "label": {
+          "type": "string"
         }
       },
       "required": [
