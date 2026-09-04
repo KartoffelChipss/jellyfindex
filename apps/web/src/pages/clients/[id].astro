@@ -203,6 +203,15 @@ const previewImages = await Promise.all(
         </div>
 
         {
+            previewImages.length > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Previews</h2>
+                    <PreviewCarousel client:visible images={previewImages} />
+                </section>
+            )
+        }
+
+        {
             client.description && (
                 <>
                     <Separator className="mb-8" />
@@ -210,15 +219,6 @@ const previewImages = await Promise.all(
                         <Content />
                     </div>
                 </>
-            )
-        }
-
-        {
-            previewImages.length > 0 && (
-                <section class="mb-8">
-                    <h2 class="mb-3 font-heading text-lg font-semibold">Previews</h2>
-                    <PreviewCarousel client:visible images={previewImages} />
-                </section>
             )
         }
 
