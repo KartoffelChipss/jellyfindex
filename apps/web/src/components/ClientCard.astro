@@ -25,24 +25,43 @@ const visiblePlatforms = client.platforms.slice(0, maxPlatforms);
 const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
 ---
 
-<Card className="flex h-full flex-col">
-    <CardHeader className="flex-row items-center gap-3 space-y-0">
+<Card className="flex h-full flex-col gap-0 pt-0">
+    <div class="relative">
+        {
+            client.banner ? (
+                <Image
+                    src={client.banner}
+                    alt=""
+                    width={400}
+                    height={96}
+                    class="h-20 w-full object-cover"
+                />
+            ) : (
+                <div class="h-20 w-full bg-muted/50" />
+            )
+        }
         <Image
             src={client.logo}
             alt=""
-            width={40}
-            height={40}
-            class="size-10 shrink-0 rounded-lg object-contain ring-1 ring-foreground/10"
+            width={48}
+            height={48}
+            class="absolute -bottom-6 left-4 size-12 rounded-lg bg-card object-contain shadow-md ring-4 ring-card"
         />
+    </div>
+    <CardHeader className="gap-1 pt-8">
         <div class="min-w-0">
             <CardTitle className="truncate flex items-center gap-1">
                 <a href={'/clients/' + id} class="truncate hover:underline">
                     {client.name}
                 </a>
-                <Badge variant="default" className="ml-auto shrink-0">
-                    <BadgeCheck className="size-3" />
-                    Official
-                </Badge>
+                {
+                    client.official && (
+                        <Badge variant="default" className="ml-auto shrink-0">
+                            <BadgeCheck className="size-3" />
+                            Official
+                        </Badge>
+                    )
+                }
             </CardTitle>
             <CardDescription className="truncate">{client.developerName}</CardDescription>
         </div>
