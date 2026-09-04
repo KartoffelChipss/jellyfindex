@@ -1,0 +1,61 @@
+version: '3'
+
+tasks:
+    install:
+        desc: Install workspace dependencies
+        cmds:
+            - pnpm install
+
+    dev:
+        desc: Run the Astro dev server
+        cmds:
+            - pnpm run dev
+
+    build:
+        desc: Build the Astro site
+        cmds:
+            - pnpm run build
+
+    validate:
+        desc: Validate content collections (clients, themes, plugins, tools)
+        cmds:
+            - pnpm run validate
+
+    schema:json:
+        desc: Regenerate the JSON Schema used for editor autocomplete on meta.yaml
+        cmds:
+            - pnpm run schema:json
+
+    schema:json:check:
+        desc: Fail if the generated JSON Schema is out of date with the Zod schema
+        cmds:
+            - pnpm run schema:json:check
+
+    format:
+        desc: Format the repo with Prettier
+        cmds:
+            - pnpm run format
+
+    format:check:
+        desc: Check formatting without writing changes
+        cmds:
+            - pnpm run format:check
+
+    check:
+        desc: Run everything CI runs (validate, schema check, format check, build)
+        cmds:
+            - task: validate
+            - task: schema:json:check
+            - task: format:check
+            - task: build
+
+    clean:
+        desc: Remove build output and caches
+        cmds:
+            - rm -rf apps/web/dist apps/web/.astro
+
+    clean:all:
+        desc: Remove build output, caches, and installed dependencies
+        cmds:
+            - task: clean
+            - find . -name node_modules -type d -prune -exec rm -rf {} +

@@ -1,0 +1,19 @@
+{
+    "name": "jellyfindex",
+    "private": true,
+    "version": "0.0.0",
+    "packageManager": "pnpm@10.33.0",
+    "scripts": {
+        "dev": "pnpm --filter web run dev",
+        "build": "pnpm --filter web run build",
+        "validate": "pnpm --filter @jellyfindex/validate-content run validate",
+        "schema:json": "pnpm --filter @jellyfindex/schema run schema:json",
+        "schema:json:check": "pnpm run schema:json && git diff --exit-code -- packages/schema/schemas",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "devDependencies": {
+        "prettier": "^3.9.6",
+        "prettier-plugin-astro": "^0.14.1"
+    }
+}

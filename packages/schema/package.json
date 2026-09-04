@@ -1,0 +1,21 @@
+{
+    "name": "@jellyfindex/schema",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts"
+    },
+    "scripts": {
+        "schema:json": "tsx scripts/build-json-schema.ts"
+    },
+    "dependencies": {
+        "zod": "^4.5.4"
+    },
+    "devDependencies": {
+        "tsx": "^4.19.2",
+        "@types/node": "^22.10.0"
+    }
+}

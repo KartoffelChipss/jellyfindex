@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "banner": {
+      "type": "string"
+    },
+    "previewImages": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "developerName": {
+      "type": "string"
+    },
+    "developerGithub": {
+      "type": "string"
+    },
+    "dateAdded": {
+      "type": "string",
+      "format": "date"
+    },
+    "submittedBy": {
+      "type": "string"
+    },
+    "openSource": {
+      "type": "boolean"
+    },
+    "shortDescription": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "platforms": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "android",
+          "ios",
+          "windows",
+          "macos",
+          "linux",
+          "webos",
+          "tizen",
+          "androidtv",
+          "tvos",
+          "titanos",
+          "rokuos",
+          "harmonyos",
+          "fireos",
+          "vegaos",
+          "xbox",
+          "playstation",
+          "nintendo-switch",
+          "nintendo-wiiu",
+          "nintendo-3ds",
+          "wearos",
+          "watchos",
+          "meta-quest",
+          "steamvr",
+          "web",
+          "cli",
+          "other"
+        ]
+      }
+    },
+    "mainPlatform": {
+      "type": "string",
+      "enum": [
+        "android",
+        "ios",
+        "windows",
+        "macos",
+        "linux",
+        "webos",
+        "tizen",
+        "androidtv",
+        "tvos",
+        "titanos",
+        "rokuos",
+        "harmonyos",
+        "fireos",
+        "vegaos",
+        "xbox",
+        "playstation",
+        "nintendo-switch",
+        "nintendo-wiiu",
+        "nintendo-3ds",
+        "wearos",
+        "watchos",
+        "meta-quest",
+        "steamvr",
+        "web",
+        "cli",
+        "other"
+      ]
+    },
+    "official": {
+      "default": false,
+      "type": "boolean"
+    },
+    "music": {
+      "default": "none",
+      "type": "string",
+      "enum": [
+        "none",
+        "supported",
+        "main"
+      ]
+    },
+    "links": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "github",
+              "gitlab",
+              "bitbucket",
+              "sourcehut",
+              "codeberg",
+              "website",
+              "documentation",
+              "donation",
+              "app-store",
+              "google-play",
+              "f-droid",
+              "other"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "sourcelink": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "type",
+          "url"
+        ]
+      }
+    },
+    "installationLink": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "github",
+            "gitlab",
+            "bitbucket",
+            "sourcehut",
+            "codeberg",
+            "website",
+            "documentation",
+            "donation",
+            "app-store",
+            "google-play",
+            "f-droid",
+            "other"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "sourcelink": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "url"
+      ]
+    },
+    "installationInstructions": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "android",
+          "ios",
+          "windows",
+          "macos",
+          "linux",
+          "webos",
+          "tizen",
+          "androidtv",
+          "tvos",
+          "titanos",
+          "rokuos",
+          "harmonyos",
+          "fireos",
+          "vegaos",
+          "xbox",
+          "playstation",
+          "nintendo-switch",
+          "nintendo-wiiu",
+          "nintendo-3ds",
+          "wearos",
+          "watchos",
+          "meta-quest",
+          "steamvr",
+          "web",
+          "cli",
+          "other"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "features": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "offline-download",
+          "chromecast",
+          "hw-decode",
+          "syncplay",
+          "android-auto",
+          "carplay",
+          "direct-play",
+          "10bit-hevc",
+          "dolby-vision",
+          "trickplay",
+          "external-subtitles",
+          "pgs-ass-subtitles",
+          "gapless-playback",
+          "lyrics",
+          "airplay",
+          "dlna",
+          "quick-connect",
+          "multi-server",
+          "parental-controls",
+          "live-tv-dvr",
+          "seerr-integration",
+          "trakt-scrobbling",
+          "user-profiles",
+          "kevintweaks-watchlist",
+          "streamystats-recommendations"
+        ]
+      },
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "aiUsed": {
+      "default": false,
+      "type": "boolean"
+    },
+    "aiDisclaimer": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "logo",
+    "developerName",
+    "dateAdded",
+    "submittedBy",
+    "openSource",
+    "shortDescription",
+    "platforms"
+  ],
+  "$id": "https://jellyfindex.com/schemas/client.schema.json",
+  "title": "Jellyfindex client meta.yaml"
+}

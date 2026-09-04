@@ -1,0 +1,18 @@
+name: Jellyfin Media Player
+logo: ./logo.png
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-04
+submittedBy: jan-strassburger
+openSource: true
+shortDescription: The official desktop client for Jellyfin, built on mpv for high quality local playback.
+platforms: [windows, macos, linux]
+mainPlatform: linux
+official: true
+music: supported
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-media-player
+features:
+    hw-decode: true
+    chromecast: false

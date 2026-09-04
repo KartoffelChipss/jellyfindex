@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+const clients = await getCollection('clients');
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>jellyfindex — Jellyfin clients &amp; tools</title>
+    </head>
+    <body>
+        <h1>jellyfindex</h1>
+        <ul>
+            {
+                clients.map((client) => (
+                    <li>
+                        <strong>{client.data.name}</strong> — {client.data.shortDescription}
+                    </li>
+                ))
+            }
+        </ul>
+    </body>
+</html>
