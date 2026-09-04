@@ -16,6 +16,16 @@ tasks:
         cmds:
             - pnpm run build
 
+    preview:
+        desc: Preview the built Astro site
+        cmds:
+            - pnpm run preview
+
+    ui:add:
+        desc: Add a shadcn/ui component (e.g. `task ui:add -- dialog`)
+        cmds:
+            - pnpm --filter web run ui:add -- {{.CLI_ARGS}}
+
     validate:
         desc: Validate content collections (clients, themes, plugins, tools)
         cmds:

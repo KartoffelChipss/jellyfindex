@@ -1,0 +1,28 @@
+---
+import '@fontsource-variable/geist';
+import '@/styles/global.css';
+import NavBar from '@/components/NavBar.astro';
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = 'jellyfindex — Jellyfin clients & tools',
+    description = 'A community-maintained directory of Jellyfin clients, apps, and tools.',
+} = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+    <body class="min-h-screen bg-background text-foreground antialiased">
+        <NavBar />
+        <slot />
+    </body>
+</html>

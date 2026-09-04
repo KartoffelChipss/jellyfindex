@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "pnpm --filter web run dev",
         "build": "pnpm --filter web run build",
+        "preview": "pnpm --filter web run preview",
         "validate": "pnpm --filter @jellyfindex/validate-content run validate",
         "schema:json": "pnpm --filter @jellyfindex/schema run schema:json",
         "schema:json:check": "pnpm run schema:json && git diff --exit-code -- packages/schema/schemas",

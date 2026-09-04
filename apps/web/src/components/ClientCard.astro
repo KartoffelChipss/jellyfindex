@@ -1,0 +1,88 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { BadgeCheck, GitFork, Music } from 'lucide-react';
+import { labelForPlatform } from '@jellyfindex/schema';
+import { Badge } from '@/components/ui/badge';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card';
+
+interface Props {
+    client: CollectionEntry<'clients'>['data'];
+    id: CollectionEntry<'clients'>['id'];
+}
+
+const { client, id } = Astro.props;
+
+const maxPlatforms = 4;
+const visiblePlatforms = client.platforms.slice(0, maxPlatforms);
+const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
+---
+
+<Card className="flex h-full flex-col">
+    <CardHeader className="flex-row items-center gap-3 space-y-0">
+        <Image
+            src={client.logo}
+            alt=""
+            width={40}
+            height={40}
+            class="size-10 shrink-0 rounded-lg object-contain ring-1 ring-foreground/10"
+        />
+        <div class="min-w-0">
+            <CardTitle className="truncate flex items-center gap-1">
+                <a href={'/clients/' + id} class="truncate hover:underline">
+                    {client.name}
+                </a>
+                <Badge variant="default" className="ml-auto shrink-0">
+                    <BadgeCheck className="size-3" />
+                    Official
+                </Badge>
+            </CardTitle>
+            <CardDescription className="truncate">{client.developerName}</CardDescription>
+        </div>
+    </CardHeader>
+
+    <CardContent className="flex flex-1 flex-col gap-3">
+        <p class="text-sm text-muted-foreground">{client.shortDescription}</p>
+        <div class="flex flex-wrap gap-1.5">
+            {
+                client.openSource && (
+                    <Badge variant="secondary" className="text-xs">
+                        <GitFork className="size-3" />
+                        Open source
+                    </Badge>
+                )
+            }
+            {
+                client.music === 'main' && (
+                    <Badge variant="secondary" className="text-xs">
+                        <Music className="size-3" />
+                        Music Client
+                    </Badge>
+                )
+            }
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+            {
+                visiblePlatforms.map((platform) => (
+                    <Badge variant="outline" className="text-xs">
+                        {labelForPlatform(platform)}
+                    </Badge>
+                ))
+            }
+            {
+                extraPlatformCount > 0 && (
+                    <Badge variant="outline" className="text-xs">
+                        +{extraPlatformCount} more
+                    </Badge>
+                )
+            }
+        </div>
+    </CardContent>
+</Card>
