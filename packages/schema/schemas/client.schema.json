@@ -131,6 +131,15 @@
       "default": false,
       "type": "boolean"
     },
+    "pricing": {
+      "default": "free",
+      "type": "string",
+      "enum": [
+        "free",
+        "subscription",
+        "one-time-purchase"
+      ]
+    },
     "music": {
       "default": "none",
       "type": "string",

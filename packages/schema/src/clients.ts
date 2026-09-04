@@ -42,6 +42,7 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         official: z.boolean().default(false),
         beta: z.boolean().default(false),
         abandoned: z.boolean().default(false),
+        pricing: z.enum(['free', 'subscription', 'one-time-purchase']).default('free'),
         music: z.enum(['none', 'supported', 'main']).default('none'),
 
         links: z.array(linkSchema).default([]),

@@ -14,6 +14,7 @@ import {
     FlaskConical,
     Ghost,
     Lock,
+    DollarSign,
 } from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
@@ -201,6 +202,22 @@ const previewImages = await Promise.all(
                             <Badge variant="secondary">
                                 <Music className="size-3" />
                                 {client.music === 'main' ? 'Music client' : 'Music support'}
+                            </Badge>
+                        )
+                    }
+                    {
+                        client.pricing === 'subscription' && (
+                            <Badge variant="secondary">
+                                <DollarSign className="size-3" />
+                                Subscription
+                            </Badge>
+                        )
+                    }
+                    {
+                        client.pricing === 'one-time-purchase' && (
+                            <Badge variant="secondary">
+                                <DollarSign className="size-3" />
+                                One-time purchase
                             </Badge>
                         )
                     }
