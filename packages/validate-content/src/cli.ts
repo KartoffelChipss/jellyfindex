@@ -72,6 +72,7 @@ function validateCollection(
         const entryDir = join(dir, entry);
         const metaPath = join(entryDir, 'meta.yaml');
         const descriptionPath = join(entryDir, 'index.md');
+        const installDir = join(entryDir, 'install');
         const metaRelPath = `apps/web/src/content/${collection.name}/${entry}/meta.yaml`;
 
         if (!existsSync(metaPath)) {
@@ -90,7 +91,24 @@ function validateCollection(
         const meta = (parseYaml(rawMeta) ?? {}) as Record<string, unknown>;
         const description = readFileSync(descriptionPath, 'utf-8').trim();
 
-        const result = collection.schema.safeParse({ ...meta, description });
+        const installationInstructions = {
+            ...((meta.installationInstructions as Record<string, string>) ?? {}),
+        };
+        if (existsSync(installDir)) {
+            for (const fileName of readdirSync(installDir).filter((name) => name.endsWith('.md'))) {
+                const platform = fileName.slice(0, -'.md'.length);
+                installationInstructions[platform] = readFileSync(
+                    join(installDir, fileName),
+                    'utf-8'
+                ).trim();
+            }
+        }
+
+        const result = collection.schema.safeParse({
+            ...meta,
+            description,
+            installationInstructions,
+        });
         if (!result.success) {
             for (const issue of result.error.issues) {
                 errors.push({

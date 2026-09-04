@@ -36,6 +36,7 @@ export function clientsLoader(): Loader {
                 const entryDir = join(clientsDir, slug);
                 const metaPath = join(entryDir, 'meta.yaml');
                 const descriptionPath = join(entryDir, 'index.md');
+                const installDir = join(entryDir, 'install');
 
                 if (!existsSync(metaPath)) {
                     logger.warn(`Skipping "${slug}": missing meta.yaml`);
@@ -48,9 +49,39 @@ export function clientsLoader(): Loader {
                     ? readFileSync(descriptionPath, 'utf-8').trim()
                     : '';
 
+                // installationInstructions can be written inline in meta.yaml, or as install/<platform>.md files
+                const installationInstructions = {
+                    ...((meta.installationInstructions as Record<string, string>) ?? {}),
+                };
+                const installFiles = existsSync(installDir)
+                    ? readdirSync(installDir).filter((name) => name.endsWith('.md'))
+                    : [];
+                for (const fileName of installFiles) {
+                    const platform = fileName.slice(0, -'.md'.length);
+                    installationInstructions[platform] = readFileSync(
+                        join(installDir, fileName),
+                        'utf-8'
+                    ).trim();
+                }
+
+                const installationInstructionsHtml: Record<string, string> = {};
+                for (const [platform, text] of Object.entries(installationInstructions)) {
+                    const fileURL = installFiles.includes(`${platform}.md`)
+                        ? pathToFileURL(join(installDir, `${platform}.md`))
+                        : pathToFileURL(metaPath);
+                    installationInstructionsHtml[platform] = (
+                        await renderMarkdown(text, { fileURL })
+                    ).html;
+                }
+
                 const data = await parseData({
                     id: slug,
-                    data: { ...meta, description: rawDescription },
+                    data: {
+                        ...meta,
+                        description: rawDescription,
+                        installationInstructions,
+                        installationInstructionsHtml,
+                    },
                     filePath: metaPath,
                 });
 
@@ -65,12 +96,22 @@ export function clientsLoader(): Loader {
                     data,
                     body: rawDescription,
                     filePath: toRootRelativePath(config.root, metaPath),
-                    digest: generateDigest(rawMeta + rawDescription),
+                    digest: generateDigest(
+                        rawMeta +
+                            rawDescription +
+                            installFiles
+                                .map((f) => installationInstructions[f.slice(0, -3)])
+                                .join('')
+                    ),
                     rendered,
                 });
 
                 watcher?.add(metaPath);
                 if (existsSync(descriptionPath)) watcher?.add(descriptionPath);
+                if (existsSync(installDir)) watcher?.add(installDir);
+                for (const fileName of installFiles) {
+                    watcher?.add(join(installDir, fileName));
+                }
             }
         },
     };

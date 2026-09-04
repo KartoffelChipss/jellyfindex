@@ -20,6 +20,7 @@
         "astro": "^7.3.1",
         "class-variance-authority": "^0.7.1",
         "cn": "^0.2.5",
+        "embla-carousel-react": "^8.6.0",
         "lucide-react": "^1.41.0",
         "radix-ui": "^1.6.7",
         "react": "^19.2.8",
@@ -32,6 +33,7 @@
     },
     "devDependencies": {
         "@astrojs/check": "^0.9.10",
+        "@tailwindcss/typography": "^0.5.20",
         "typescript": "^5.6.3"
     }
 }

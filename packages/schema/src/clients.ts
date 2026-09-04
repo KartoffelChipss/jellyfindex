@@ -38,6 +38,7 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         links: z.array(linkSchema).default([]),
         installationLink: linkSchema.optional(),
         installationInstructions: z.partialRecord(platformEnum, z.string()).optional(),
+        installationInstructionsHtml: z.partialRecord(platformEnum, z.string()).default({}),
 
         features: z.partialRecord(z.enum(FEATURE_FLAG_IDS), z.boolean()).default({}),
 
@@ -116,6 +117,9 @@ export type Client = z.infer<typeof clientSchema>;
 /**
  * The fields a contributor actually writes in meta.yaml
  */
-export const clientMetaSchema = buildClientFields(z.string()).omit({ description: true });
+export const clientMetaSchema = buildClientFields(z.string()).omit({
+    description: true,
+    installationInstructionsHtml: true,
+});
 
 export const IMMUTABLE_CLIENT_FIELDS = ['dateAdded', 'submittedBy'] as const;

@@ -32,6 +32,7 @@ export const LINK_TYPES = {
     },
     website: { label: 'Website', defaultSourceLink: false },
     documentation: { label: 'Documentation', defaultSourceLink: false },
+    translations: { label: 'Translations', defaultSourceLink: false },
     donation: {
         label: 'Donation',
         defaultSourceLink: false,

@@ -1,0 +1,298 @@
+---
+import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import { ArrowLeft, BadgeCheck, Download, GitFork, Music, Sparkles } from 'lucide-react';
+import {
+    FEATURE_FLAG_MAP,
+    LINK_TYPES,
+    PLATFORM_CATEGORIES,
+    categoryForPlatform,
+    labelForPlatform,
+    type LinkType,
+} from '@jellyfindex/schema';
+import { Badge } from '@/components/ui/badge';
+import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { InstallTabs } from '@/components/InstallTabs';
+import { PreviewCarousel } from '@/components/PreviewCarousel';
+import { iconForLink } from '@/lib/link-icons';
+import Layout from '@/layouts/Layout.astro';
+
+export const getStaticPaths = (async () => {
+    const entries = await getCollection('clients');
+    return entries.map((entry) => ({
+        params: { id: entry.id },
+        props: { entry },
+    }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+    entry: CollectionEntry<'clients'>;
+}
+
+const { entry } = Astro.props;
+const client = entry.data;
+const { Content } = await render(entry);
+
+function humanize(value: string) {
+    return value.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+const platformsByCategory = new Map<string, string[]>();
+for (const platform of client.platforms) {
+    const categoryLabel = PLATFORM_CATEGORIES[categoryForPlatform(platform)].label;
+    const list = platformsByCategory.get(categoryLabel) ?? [];
+    list.push(labelForPlatform(platform));
+    platformsByCategory.set(categoryLabel, list);
+}
+
+const featuresByCategory = new Map<string, string[]>();
+for (const [flagId, enabled] of Object.entries(client.features)) {
+    if (!enabled) continue;
+    const def = FEATURE_FLAG_MAP.get(flagId);
+    if (!def) continue;
+    const list = featuresByCategory.get(def.category) ?? [];
+    list.push(def.displayName);
+    featuresByCategory.set(def.category, list);
+}
+
+const otherLinks = client.links.filter((link) => link !== client.installationLink);
+
+const instructionPlatforms = client.platforms
+    .filter((platform) => client.installationInstructions?.[platform])
+    .map((platform) => ({
+        value: platform,
+        label: labelForPlatform(platform),
+        html: client.installationInstructionsHtml[platform] ?? '',
+    }));
+
+const dateAdded = new Date(client.dateAdded).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+
+const previewImages = await Promise.all(
+    client.previewImages.map(async (image) => {
+        const optimized = await getImage({ src: image, height: 512 });
+        return {
+            src: optimized.src,
+            width: optimized.attributes.width,
+            height: optimized.attributes.height,
+        };
+    })
+);
+---
+
+<Layout title={`${client.name} — jellyfindex`} description={client.shortDescription}>
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <a
+            href="/"
+            class="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+            <ArrowLeft className="size-4" />
+            All clients
+        </a>
+
+        {
+            client.banner && (
+                <Image
+                    src={client.banner}
+                    alt=""
+                    width={1200}
+                    height={400}
+                    class="mb-6 aspect-5/1 w-full rounded-xl object-cover ring-1 ring-foreground/10"
+                />
+            )
+        }
+
+        <header class="mb-8 flex items-start gap-4">
+            <Image
+                src={client.logo}
+                alt=""
+                width={64}
+                height={64}
+                class="size-16 shrink-0 rounded-xl object-contain ring-1 ring-foreground/10"
+            />
+            <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center gap-2">
+                    <h1 class="font-heading text-2xl font-semibold tracking-tight">
+                        {client.name}
+                    </h1>
+                    {
+                        client.official && (
+                            <Badge variant="default">
+                                <BadgeCheck className="size-3" />
+                                Official
+                            </Badge>
+                        )
+                    }
+                </div>
+                <p class="mt-1 text-sm text-muted-foreground">
+                    by{' '}
+                    {
+                        client.developerGithub ? (
+                            <a
+                                href={`https://github.com/${client.developerGithub}`}
+                                target="_blank"
+                                rel="noreferrer"
+                                class="hover:text-foreground hover:underline"
+                            >
+                                {client.developerName}
+                            </a>
+                        ) : (
+                            client.developerName
+                        )
+                    }
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                    {
+                        client.openSource && (
+                            <Badge variant="secondary">
+                                <GitFork className="size-3" />
+                                Open source
+                            </Badge>
+                        )
+                    }
+                    {
+                        client.music !== 'none' && (
+                            <Badge variant="secondary">
+                                <Music className="size-3" />
+                                {client.music === 'main' ? 'Music client' : 'Music support'}
+                            </Badge>
+                        )
+                    }
+                </div>
+            </div>
+        </header>
+
+        <div class="mb-8 flex flex-wrap gap-2">
+            {
+                client.installationLink && (
+                    <a
+                        href={client.installationLink.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        class={buttonVariants({ size: 'sm' })}
+                    >
+                        <Download />
+                        Install
+                    </a>
+                )
+            }
+            {
+                otherLinks.map((link) => {
+                    const Icon = iconForLink(link.type as LinkType, false);
+                    return (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            class={buttonVariants({ size: 'sm', variant: 'outline' })}
+                        >
+                            <Icon />
+                            {LINK_TYPES[link.type as LinkType].label}
+                        </a>
+                    );
+                })
+            }
+        </div>
+
+        {
+            client.description && (
+                <>
+                    <Separator className="mb-8" />
+                    <div class="prose prose-sm dark:prose-invert mb-8 max-w-none">
+                        <Content />
+                    </div>
+                </>
+            )
+        }
+
+        {
+            previewImages.length > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Previews</h2>
+                    <PreviewCarousel client:visible images={previewImages} />
+                </section>
+            )
+        }
+
+        <Separator className="mb-8" />
+
+        <section class="mb-8">
+            <h2 class="mb-3 font-heading text-lg font-semibold">Platforms</h2>
+            <div class="flex flex-col gap-3">
+                {
+                    [...platformsByCategory.entries()].map(([category, platforms]) => (
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="w-28 shrink-0 text-sm text-muted-foreground">
+                                {category}
+                            </span>
+                            <div class="flex flex-wrap gap-1.5">
+                                {platforms.map((platform) => (
+                                    <Badge variant="outline">{platform}</Badge>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+
+        {
+            featuresByCategory.size > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Features</h2>
+                    <div class="flex flex-col gap-3">
+                        {[...featuresByCategory.entries()].map(([category, features]) => (
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="w-28 shrink-0 text-sm text-muted-foreground">
+                                    {humanize(category)}
+                                </span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    {features.map((feature) => (
+                                        <Badge variant="outline">{feature}</Badge>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )
+        }
+
+        {
+            instructionPlatforms.length > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">
+                        Installation instructions
+                    </h2>
+                    <InstallTabs client:load platforms={instructionPlatforms} />
+                </section>
+            )
+        }
+
+        {
+            client.aiUsed && (
+                <div class="mb-8 flex items-start gap-2 rounded-lg border bg-muted/50 p-3 text-sm text-muted-foreground">
+                    <Sparkles className="mt-0.5 size-4 shrink-0" />
+                    <div>
+                        <h3 class="mb-1 font-heading text-sm font-bold">AI-Disclosure</h3>
+                        <p>
+                            {client.aiDisclaimer ??
+                                'This submission was written or assisted with AI.'}
+                        </p>
+                    </div>
+                </div>
+            )
+        }
+
+        <Separator className="mb-4" />
+        <p class="text-xs text-muted-foreground">
+            Added on {dateAdded} by {client.submittedBy}
+        </p>
+    </div>
+</Layout>

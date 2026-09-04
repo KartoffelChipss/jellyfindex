@@ -1,5 +1,6 @@
 name: Pelagica
 logo: ./logo.svg
+banner: ./banner.svg
 developerName: KartoffelChipss
 developerGithub: KartoffelChipss
 dateAdded: 2026-09-04
@@ -23,8 +24,26 @@ links:
       url: https://github.com/PelagicaApp/Pelagica
     - type: website
       url: https://pelagica.app
-    - type: other
+    - type: translations
       url: 'https://twoglot.com/@KartoffelChipss/pelagica'
+installationInstructions:
+    web: |-
+        Pelagica web is self-hosted via Docker. Use the docker-compose.yml from the repo,
+        point it at your Jellyfin server, and see the Installation and Configuration docs
+        for environment variables and reverse proxy setup.
+    windows: |-
+        Download the latest .exe from the GitHub Releases page. The build isn't signed with
+        an Authenticode certificate, so SmartScreen will warn you — choose "More info" >
+        "Run anyway".
+    linux: |-
+        Download a .deb package, a .pkg.tar.zst package (Arch Linux), or an .AppImage from
+        the GitHub Releases page.
+    webos: |-
+        Available as an LG webOS app — see the webOS docs in the repo for sideloading via
+        LG's Developer Mode.
+    tizen: |-
+        Available as a Samsung Tizen app — see the Tizen docs in the repo for sideloading
+        via Samsung's Developer Mode.
 features:
     hw-decode: true
     direct-play: true
