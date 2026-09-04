@@ -13,7 +13,6 @@ shortDescription: A modern web, desktop and TV client for Jellyfin
 platforms: [web, webos, tizen, windows, macos, linux]
 mainPlatform: web
 official: false
-abandoned: true
 music: supported
 previewImages:
     - './preview-images/home.webp'

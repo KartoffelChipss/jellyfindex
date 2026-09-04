@@ -1,0 +1,78 @@
+name: Report an Entry
+description: Report a problem with an app, plugin, theme, or other listed entry
+title: '[Report]: '
+labels: ['report', 'needs-triage']
+body:
+    - type: dropdown
+      id: entry-type
+      attributes:
+          label: Entry type
+          description: What kind of entry are you reporting?
+          options:
+              - Client
+              - Plugin
+              - Theme
+              - Tool
+              - Other
+      validations:
+          required: true
+
+    - type: input
+      id: entry-name
+      attributes:
+          label: Entry name
+          description: The exact name of the entry as it appears in the app
+          placeholder: e.g. "My Cool Client"
+      validations:
+          required: true
+
+    - type: input
+      id: entry-link
+      attributes:
+          label: Link to entry
+          description: URL or path to the entry's page, if applicable
+          placeholder: https://jellyfindex.com/clients/my-cool-client
+      validations:
+          required: false
+
+    - type: dropdown
+      id: issue-type
+      attributes:
+          label: What's the issue?
+          options:
+              - Broken or dead link
+              - Incorrect information
+              - Inappropriate or offensive content
+              - Abandoned or unmaintained
+              - Spam or low quality
+              - Duplicate entry
+              - Security concern
+              - Copyright or licensing issue
+              - Other
+      validations:
+          required: true
+
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+          description: Explain the issue in detail
+          placeholder: What's wrong, and what did you expect instead?
+      validations:
+          required: true
+
+    - type: textarea
+      id: evidence
+      attributes:
+          label: Evidence (optional)
+          description: Screenshots, links, or other supporting info
+      validations:
+          required: false
+
+    - type: checkboxes
+      id: checks
+      attributes:
+          label: Checklist
+          options:
+              - label: I searched existing issues and this hasn't been reported yet
+                required: true
