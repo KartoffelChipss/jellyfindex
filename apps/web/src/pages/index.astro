@@ -5,9 +5,9 @@ import ClientCard from '@/components/ClientCard.astro';
 import { Input } from '@/components/ui/input';
 import Layout from '@/layouts/Layout.astro';
 
-const entries = (await getCollection('clients')).sort(
-    (a, b) => new Date(b.data.dateAdded).getTime() - new Date(a.data.dateAdded).getTime()
-);
+const entries = (await getCollection('clients'))
+    .filter((entry) => !entry.data.abandoned)
+    .sort((a, b) => new Date(b.data.dateAdded).getTime() - new Date(a.data.dateAdded).getTime());
 ---
 
 <Layout>

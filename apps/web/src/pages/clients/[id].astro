@@ -3,7 +3,17 @@ import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import { ArrowLeft, BadgeCheck, Download, GitFork, Music, Scale, Sparkles } from 'lucide-react';
+import {
+    ArrowLeft,
+    BadgeCheck,
+    Download,
+    GitFork,
+    Music,
+    Scale,
+    Sparkles,
+    FlaskConical,
+    Ghost,
+} from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
     LINK_TYPES,
@@ -150,6 +160,28 @@ const previewImages = await Promise.all(
                     }
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
+                    {
+                        client.abandoned === true && (
+                            <Badge
+                                variant="secondary"
+                                className="text-xs dark:bg-yellow-900 bg-yellow-400"
+                            >
+                                <Ghost className="size-3" />
+                                Abandoned
+                            </Badge>
+                        )
+                    }
+                    {
+                        client.beta === true && (
+                            <Badge
+                                variant="secondary"
+                                className="text-xs dark:bg-indigo-500 bg-indigo-300"
+                            >
+                                <FlaskConical className="size-3" />
+                                Beta
+                            </Badge>
+                        )
+                    }
                     {
                         client.openSource && (
                             <Badge variant="secondary">

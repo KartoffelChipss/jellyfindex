@@ -123,6 +123,14 @@
       "default": false,
       "type": "boolean"
     },
+    "beta": {
+      "default": false,
+      "type": "boolean"
+    },
+    "abandoned": {
+      "default": false,
+      "type": "boolean"
+    },
     "music": {
       "default": "none",
       "type": "string",

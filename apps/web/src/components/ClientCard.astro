@@ -1,17 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { BadgeCheck, GitFork, Music } from 'lucide-react';
+import { BadgeCheck, GitFork, Music, FlaskConical, Ghost } from 'lucide-react';
 import { labelForPlatform } from '@jellyfindex/schema';
 import { Badge } from '@/components/ui/badge';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface Props {
     client: CollectionEntry<'clients'>['data'];
@@ -70,6 +63,22 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
     <CardContent className="flex flex-1 flex-col gap-3">
         <p class="text-sm text-muted-foreground">{client.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
+            {
+                client.abandoned === true && (
+                    <Badge variant="secondary" className="text-xs dark:bg-yellow-900 bg-yellow-400">
+                        <Ghost className="size-3" />
+                        Abandoned
+                    </Badge>
+                )
+            }
+            {
+                client.beta === true && (
+                    <Badge variant="secondary" className="text-xs dark:bg-indigo-500 bg-indigo-300">
+                        <FlaskConical className="size-3" />
+                        Beta
+                    </Badge>
+                )
+            }
             {
                 client.openSource && (
                     <Badge variant="secondary" className="text-xs">
