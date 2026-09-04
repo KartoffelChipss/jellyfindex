@@ -34,6 +34,21 @@
     "openSource": {
       "type": "boolean"
     },
+    "license": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
     "shortDescription": {
       "type": "string",
       "maxLength": 250

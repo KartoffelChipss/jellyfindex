@@ -3,7 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import { ArrowLeft, BadgeCheck, Download, GitFork, Music, Sparkles } from 'lucide-react';
+import { ArrowLeft, BadgeCheck, Download, GitFork, Music, Scale, Sparkles } from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
     LINK_TYPES,
@@ -12,7 +12,7 @@ import {
     labelForPlatform,
     type LinkType,
 } from '@jellyfindex/schema';
-import { Badge } from '@/components/ui/badge';
+import { Badge, badgeVariants } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { InstallTabs } from '@/components/InstallTabs';
@@ -165,6 +165,25 @@ const previewImages = await Promise.all(
                                 {client.music === 'main' ? 'Music client' : 'Music support'}
                             </Badge>
                         )
+                    }
+                    {
+                        client.license &&
+                            (client.license.url ? (
+                                <a
+                                    href={client.license.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class={badgeVariants({ variant: 'secondary' })}
+                                >
+                                    <Scale className="size-3" />
+                                    {client.license.name}
+                                </a>
+                            ) : (
+                                <Badge variant="secondary">
+                                    <Scale className="size-3" />
+                                    {client.license.name}
+                                </Badge>
+                            ))
                     }
                 </div>
             </div>

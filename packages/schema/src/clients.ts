@@ -12,6 +12,11 @@ export const linkSchema = z.object({
     label: z.string().optional(),
 });
 
+export const licenseSchema = z.object({
+    name: z.string(),
+    url: z.url().optional(),
+});
+
 function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {
     return z.object({
         name: z.string(),
@@ -26,6 +31,7 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         submittedBy: z.string(),
 
         openSource: z.boolean(),
+        license: licenseSchema.optional(),
         shortDescription: z.string().max(250),
         // Synthesized by the content loader from index.md
         description: z.string(),

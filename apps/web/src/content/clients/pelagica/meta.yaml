@@ -6,6 +6,9 @@ developerGithub: KartoffelChipss
 dateAdded: 2026-09-04
 submittedBy: KartoffelChipss
 openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/PelagicaApp/Pelagica/blob/main/LICENSE
 shortDescription: A modern web, desktop and TV client for Jellyfin
 platforms: [web, webos, tizen, windows, macos, linux]
 mainPlatform: web
