@@ -1,2 +1,1 @@
-Jellyfin Media Player is the official desktop client for Jellyfin, built on mpv for
-high quality local video and audio playback.
+The official Jellyfin desktop client built with Qt WebEngine and [libmpv](https://github.com/mpv-player/mpv). Supports audio passthrough, hardware decoding, and playback of more formats without transcoding.

@@ -9,9 +9,17 @@ shortDescription: The official desktop client for Jellyfin, built on mpv for hig
 platforms: [windows, macos, linux]
 official: true
 music: supported
+installationLink:
+    type: github
+    url: 'https://github.com/jellyfin/jellyfin-desktop/releases/latest'
 links:
     - type: github
       url: https://github.com/jellyfin/jellyfin-media-player
+previewImages:
+    - './preview-images/home.png'
+    - './preview-images/library.png'
+    - './preview-images/movie.png'
+    - './preview-images/player.png'
 features:
     hw-decode: true
     chromecast: false
