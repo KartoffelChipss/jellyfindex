@@ -20,7 +20,8 @@ export function clientsLoader(): Loader {
             logger,
             watcher,
         }) => {
-            const clientsDir = fileURLToPath(new URL('content/clients/', config.srcDir));
+            const repoRoot = new URL('../../', config.root);
+            const clientsDir = fileURLToPath(new URL('content/clients/', repoRoot));
             if (!existsSync(clientsDir)) {
                 logger.warn(`No clients directory found at ${clientsDir}`);
                 return;

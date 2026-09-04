@@ -8,7 +8,7 @@ import { clientSchema, IMMUTABLE_CLIENT_FIELDS } from '@jellyfindex/schema';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '../../..');
-const CONTENT_ROOT = join(REPO_ROOT, 'apps/web/src/content');
+const CONTENT_ROOT = join(REPO_ROOT, 'content');
 
 const COLLECTIONS: {
     name: string;
@@ -73,7 +73,7 @@ function validateCollection(
         const metaPath = join(entryDir, 'meta.yaml');
         const descriptionPath = join(entryDir, 'index.md');
         const installDir = join(entryDir, 'install');
-        const metaRelPath = `apps/web/src/content/${collection.name}/${entry}/meta.yaml`;
+        const metaRelPath = `content/${collection.name}/${entry}/meta.yaml`;
 
         if (!existsSync(metaPath)) {
             errors.push({ file: metaRelPath, message: 'Missing meta.yaml' });
@@ -81,7 +81,7 @@ function validateCollection(
         }
         if (!existsSync(descriptionPath)) {
             errors.push({
-                file: `apps/web/src/content/${collection.name}/${entry}/index.md`,
+                file: `content/${collection.name}/${entry}/index.md`,
                 message: 'Missing index.md (long-form description)',
             });
             continue;
