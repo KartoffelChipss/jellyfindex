@@ -26,7 +26,7 @@ export function PreviewCarousel({ images }: PreviewCarouselProps) {
                             src={image.src}
                             width={image.width}
                             height={image.height}
-                            alt=""
+                            alt={`Preview ${index + 1}`}
                             className="h-40 w-auto max-w-[85vw] rounded-lg object-cover sm:h-64 sm:max-w-none lg:h-128"
                         />
                     </CarouselItem>
