@@ -28,22 +28,15 @@ links:
       url: 'https://twoglot.com/@KartoffelChipss/pelagica'
 installationInstructions:
     web: |-
-        Pelagica web is self-hosted via Docker. Use the docker-compose.yml from the repo,
-        point it at your Jellyfin server, and see the Installation and Configuration docs
-        for environment variables and reverse proxy setup.
+        You can find a web installation instruction in [the docs](https://pelagica.app/docs/installation).
     windows: |-
-        Download the latest .exe from the GitHub Releases page. The build isn't signed with
-        an Authenticode certificate, so SmartScreen will warn you — choose "More info" >
-        "Run anyway".
+        You can download an `.exe` installer from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).
     linux: |-
-        Download a .deb package, a .pkg.tar.zst package (Arch Linux), or an .AppImage from
-        the GitHub Releases page.
+        You can download a `.deb`, a `.pkg.tar.zst` (Arch Linux), or an `.AppImage` from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).
     webos: |-
-        Available as an LG webOS app — see the webOS docs in the repo for sideloading via
-        LG's Developer Mode.
+        You can find a webOS installation instruction in [the docs](https://pelagica.app/docs/webos).
     tizen: |-
-        Available as a Samsung Tizen app — see the Tizen docs in the repo for sideloading
-        via Samsung's Developer Mode.
+        You can find a Tizen installation instruction in [the docs](https://pelagica.app/docs/tizen).
 features:
     hw-decode: true
     direct-play: true
