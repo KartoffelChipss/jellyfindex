@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import { ArrowRight, Blocks, Smartphone } from 'lucide-react';
+import ClientCard from '@/components/ClientCard.astro';
+import PluginCard from '@/components/PluginCard.astro';
+import GitHubIcon from '@/components/icons/GitHub.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Layout from '@/layouts/Layout.astro';
+
+const REPO_URL = 'https://github.com/KartoffelChipss/jellyfindex';
+
+const clients = (await getCollection('clients')).filter((entry) => !entry.data.abandoned);
+const plugins = (await getCollection('plugins')).filter((entry) => !entry.data.abandoned);
+
+const latest = [
+    ...clients.map((entry) => ({ type: 'client' as const, entry })),
+    ...plugins.map((entry) => ({ type: 'plugin' as const, entry })),
+]
+    .sort(
+        (a, b) =>
+            new Date(b.entry.data.dateAdded).getTime() - new Date(a.entry.data.dateAdded).getTime()
+    )
+    .slice(0, 6);
+---
+
+<Layout>
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <section class="pt-16 pb-14 text-center sm:pt-24 sm:pb-20">
+            <h1 class="font-heading text-4xl font-semibold tracking-tight sm:text-6xl">
+                jellyfindex
+            </h1>
+            <p class="mx-auto mt-4 max-w-2xl text-balance text-lg text-muted-foreground">
+                Find the Jellyfin client, app, or server plugin that fits your setup. A
+                community-maintained directory covering every platform Jellyfin runs on.
+            </p>
+            <p class="mt-6 text-sm text-muted-foreground">
+                {clients.length} client{clients.length === 1 ? '' : 's'} · {plugins.length} plugin{
+                    plugins.length === 1 ? '' : 's'
+                } · fully open source
+            </p>
+        </section>
+
+        <section class="mb-16 grid gap-4 sm:grid-cols-2">
+            <a href="/clients" class="group">
+                <Card className="h-full transition-colors group-hover:border-foreground/20">
+                    <CardHeader>
+                        <div
+                            class="mb-2 flex size-10 items-center justify-center rounded-lg bg-muted"
+                        >
+                            <Smartphone className="size-5" />
+                        </div>
+                        <CardTitle className="flex items-center gap-1.5 text-lg">
+                            Clients
+                            <ArrowRight
+                                className="size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+                            />
+                        </CardTitle>
+                        <CardDescription>
+                            Apps for phones, TVs, desktops, and everything in between.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+            </a>
+            <a href="/plugins" class="group">
+                <Card className="h-full transition-colors group-hover:border-foreground/20">
+                    <CardHeader>
+                        <div
+                            class="mb-2 flex size-10 items-center justify-center rounded-lg bg-muted"
+                        >
+                            <Blocks className="size-5" />
+                        </div>
+                        <CardTitle className="flex items-center gap-1.5 text-lg">
+                            Plugins
+                            <ArrowRight
+                                className="size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+                            />
+                        </CardTitle>
+                        <CardDescription>
+                            Server-side add-ons to extend what your Jellyfin instance can do.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+            </a>
+        </section>
+
+        {
+            latest.length > 0 && (
+                <section class="mb-16">
+                    <h2 class="mb-5 font-heading text-lg font-semibold">Recently added</h2>
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {latest.map(({ type, entry }) =>
+                            type === 'client' ? (
+                                <ClientCard client={entry.data} id={entry.id} />
+                            ) : (
+                                <PluginCard plugin={entry.data} id={entry.id} />
+                            )
+                        )}
+                    </div>
+                </section>
+            )
+        }
+
+        <section class="mb-20 rounded-xl border bg-card/50 px-6 py-10 text-center">
+            <h2 class="font-heading text-xl font-semibold">Missing something?</h2>
+            <p class="mx-auto mt-2 max-w-md text-balance text-sm text-muted-foreground">
+                jellyfindex is community-maintained. If your favorite client or plugin isn't listed
+                yet, open a pull request and add it.
+            </p>
+            <a
+                href={REPO_URL}
+                target="_blank"
+                rel="noreferrer"
+                class={buttonVariants({ variant: 'outline', className: 'mt-5' })}
+            >
+                <GitHubIcon class="size-4" />
+                Contribute on GitHub
+            </a>
+        </section>
+    </div>
+</Layout>
