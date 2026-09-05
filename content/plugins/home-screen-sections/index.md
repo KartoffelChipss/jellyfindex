@@ -1,0 +1,3 @@
+Home Screen Sections (HSS) replaces Jellyfin's default web client home screen with a fully modular, more "Netflixy" layout. It reimplements the vanilla sections (My Media, Continue Watching, Next Up, Recently Added, Live TV) alongside new ones like Latest Movies/TV Shows, Because You Watched, Watch Again, and weighted Genre picks based on viewing history. Sections powered by Jellyseerr — Discover, Trending, and My Requests — surface media that isn't in your library yet with a direct request button, and *arr integrations can bring upcoming release calendars into the home screen too.
+
+The plugin requires the File Transformation and Plugin Pages plugins to also be installed, and settings are configured per-user from a "Modular Home" page linked in the hamburger menu.

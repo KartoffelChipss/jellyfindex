@@ -4,21 +4,72 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
 import { z } from 'zod';
-import { clientSchema, IMMUTABLE_CLIENT_FIELDS } from '@jellyfindex/schema';
+import {
+    clientSchema,
+    IMMUTABLE_CLIENT_FIELDS,
+    pluginSchema,
+    IMMUTABLE_PLUGIN_FIELDS,
+} from '@jellyfindex/schema';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '../../..');
 const CONTENT_ROOT = join(REPO_ROOT, 'content');
 
+/** Reads `installationInstructions`, keyed per-platform from meta.yaml and/or install/<platform>.md files. */
+function readPerPlatformInstallationInstructions(
+    entryDir: string,
+    meta: Record<string, unknown>
+): Record<string, string> {
+    const installDir = join(entryDir, 'install');
+    const installationInstructions = {
+        ...((meta.installationInstructions as Record<string, string>) ?? {}),
+    };
+    if (existsSync(installDir)) {
+        for (const fileName of readdirSync(installDir).filter((name) => name.endsWith('.md'))) {
+            const platform = fileName.slice(0, -'.md'.length);
+            installationInstructions[platform] = readFileSync(
+                join(installDir, fileName),
+                'utf-8'
+            ).trim();
+        }
+    }
+    return installationInstructions;
+}
+
+/** Reads `installationInstructions` as a single string from meta.yaml and/or an install.md file. */
+function readSingleInstallationInstructions(
+    entryDir: string,
+    meta: Record<string, unknown>
+): string {
+    const installPath = join(entryDir, 'install.md');
+    return existsSync(installPath)
+        ? readFileSync(installPath, 'utf-8').trim()
+        : ((meta.installationInstructions as string | undefined) ?? '');
+}
+
 const COLLECTIONS: {
     name: string;
     schema: z.ZodType;
     immutableFields: readonly string[];
+    buildInstallationInstructions: (
+        entryDir: string,
+        meta: Record<string, unknown>
+    ) => Record<string, string> | string;
+    /** Field holding ids of other entries in this same collection (e.g. required plugins). */
+    crossReferenceField?: string;
 }[] = [
     {
         name: 'clients',
         schema: clientSchema,
         immutableFields: IMMUTABLE_CLIENT_FIELDS,
+        buildInstallationInstructions: readPerPlatformInstallationInstructions,
+    },
+    {
+        name: 'plugins',
+        schema: pluginSchema,
+        immutableFields: IMMUTABLE_PLUGIN_FIELDS,
+        buildInstallationInstructions: readSingleInstallationInstructions,
+        crossReferenceField: 'requires',
     },
 ];
 
@@ -67,12 +118,12 @@ function validateCollection(
     if (!existsSync(dir)) return 0;
 
     const entries = readdirSync(dir).filter((name) => statSync(join(dir, name)).isDirectory());
+    const knownIds = new Set(entries);
 
     for (const entry of entries) {
         const entryDir = join(dir, entry);
         const metaPath = join(entryDir, 'meta.yaml');
         const descriptionPath = join(entryDir, 'index.md');
-        const installDir = join(entryDir, 'install');
         const metaRelPath = `content/${collection.name}/${entry}/meta.yaml`;
 
         if (!existsSync(metaPath)) {
@@ -91,18 +142,7 @@ function validateCollection(
         const meta = (parseYaml(rawMeta) ?? {}) as Record<string, unknown>;
         const description = readFileSync(descriptionPath, 'utf-8').trim();
 
-        const installationInstructions = {
-            ...((meta.installationInstructions as Record<string, string>) ?? {}),
-        };
-        if (existsSync(installDir)) {
-            for (const fileName of readdirSync(installDir).filter((name) => name.endsWith('.md'))) {
-                const platform = fileName.slice(0, -'.md'.length);
-                installationInstructions[platform] = readFileSync(
-                    join(installDir, fileName),
-                    'utf-8'
-                ).trim();
-            }
-        }
+        const installationInstructions = collection.buildInstallationInstructions(entryDir, meta);
 
         const result = collection.schema.safeParse({
             ...meta,
@@ -131,6 +171,23 @@ function validateCollection(
                     file: metaRelPath,
                     message: `Referenced image does not exist: ${imgPath}`,
                 });
+            }
+        }
+
+        if (collection.crossReferenceField) {
+            const refs = (parsed[collection.crossReferenceField] as string[] | undefined) ?? [];
+            for (const refId of refs) {
+                if (refId === entry) {
+                    errors.push({
+                        file: metaRelPath,
+                        message: `"${collection.crossReferenceField}" cannot reference itself: ${refId}`,
+                    });
+                } else if (!knownIds.has(refId)) {
+                    errors.push({
+                        file: metaRelPath,
+                        message: `"${collection.crossReferenceField}" references unknown entry: ${refId}`,
+                    });
+                }
             }
         }
 

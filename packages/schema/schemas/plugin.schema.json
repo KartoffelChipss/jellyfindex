@@ -53,71 +53,30 @@
       "type": "string",
       "maxLength": 250
     },
-    "platforms": {
+    "categories": {
       "minItems": 1,
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "android",
-          "ios",
-          "windows",
-          "macos",
-          "linux",
-          "webos",
-          "tizen",
-          "androidtv",
-          "tvos",
-          "titanos",
-          "rokuos",
-          "harmonyos",
-          "fireos",
-          "vegaos",
-          "xbox",
-          "playstation",
-          "nintendo-switch",
-          "nintendo-wiiu",
-          "nintendo-3ds",
-          "wearos",
-          "watchos",
-          "meta-quest",
-          "steamvr",
-          "web",
-          "cli",
+          "general",
+          "metadata",
+          "live-tv",
+          "subtitles",
+          "notifications",
+          "authentication",
+          "automation",
+          "theme",
           "other"
         ]
       }
     },
-    "mainPlatform": {
-      "type": "string",
-      "enum": [
-        "android",
-        "ios",
-        "windows",
-        "macos",
-        "linux",
-        "webos",
-        "tizen",
-        "androidtv",
-        "tvos",
-        "titanos",
-        "rokuos",
-        "harmonyos",
-        "fireos",
-        "vegaos",
-        "xbox",
-        "playstation",
-        "nintendo-switch",
-        "nintendo-wiiu",
-        "nintendo-3ds",
-        "wearos",
-        "watchos",
-        "meta-quest",
-        "steamvr",
-        "web",
-        "cli",
-        "other"
-      ]
+    "requires": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "official": {
       "default": false,
@@ -131,23 +90,8 @@
       "default": false,
       "type": "boolean"
     },
-    "pricing": {
-      "default": "free",
-      "type": "string",
-      "enum": [
-        "free",
-        "subscription",
-        "one-time-purchase"
-      ]
-    },
-    "music": {
-      "default": "none",
-      "type": "string",
-      "enum": [
-        "none",
-        "supported",
-        "main"
-      ]
+    "minimumJellyfinVersion": {
+      "type": "string"
     },
     "links": {
       "default": [],
@@ -230,78 +174,7 @@
       ]
     },
     "installationInstructions": {
-      "type": "object",
-      "propertyNames": {
-        "type": "string",
-        "enum": [
-          "android",
-          "ios",
-          "windows",
-          "macos",
-          "linux",
-          "webos",
-          "tizen",
-          "androidtv",
-          "tvos",
-          "titanos",
-          "rokuos",
-          "harmonyos",
-          "fireos",
-          "vegaos",
-          "xbox",
-          "playstation",
-          "nintendo-switch",
-          "nintendo-wiiu",
-          "nintendo-3ds",
-          "wearos",
-          "watchos",
-          "meta-quest",
-          "steamvr",
-          "web",
-          "cli",
-          "other"
-        ]
-      },
-      "additionalProperties": {
-        "type": "string"
-      }
-    },
-    "features": {
-      "default": {},
-      "type": "object",
-      "propertyNames": {
-        "type": "string",
-        "enum": [
-          "offline-download",
-          "chromecast",
-          "hw-decode",
-          "syncplay",
-          "android-auto",
-          "carplay",
-          "direct-play",
-          "10bit-hevc",
-          "dolby-vision",
-          "trickplay",
-          "external-subtitles",
-          "pgs-ass-subtitles",
-          "gapless-playback",
-          "lyrics",
-          "airplay",
-          "dlna",
-          "quick-connect",
-          "multi-server",
-          "parental-controls",
-          "live-tv-dvr",
-          "seerr-integration",
-          "trakt-scrobbling",
-          "user-profiles",
-          "kevintweaks-watchlist",
-          "streamystats-recommendations"
-        ]
-      },
-      "additionalProperties": {
-        "type": "boolean"
-      }
+      "type": "string"
     },
     "aiUsed": {
       "default": false,
@@ -319,8 +192,8 @@
     "submittedBy",
     "openSource",
     "shortDescription",
-    "platforms"
+    "categories"
   ],
-  "$id": "https://jellyfindex.com/schemas/client.schema.json",
-  "title": "Jellyfindex client meta.yaml"
+  "$id": "https://jellyfindex.com/schemas/plugin.schema.json",
+  "title": "Jellyfindex plugin meta.yaml"
 }

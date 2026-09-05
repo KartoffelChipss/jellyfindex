@@ -1,0 +1,113 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import { BadgeCheck, GitFork, FlaskConical, Ghost, Lock } from 'lucide-react';
+import { labelForPluginCategory } from '@jellyfindex/schema';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+interface Props {
+    plugin: CollectionEntry<'plugins'>['data'];
+    id: CollectionEntry<'plugins'>['id'];
+}
+
+const { plugin, id } = Astro.props;
+
+const maxCategories = 4;
+const visibleCategories = plugin.categories.slice(0, maxCategories);
+const extraCategoryCount = plugin.categories.length - visibleCategories.length;
+---
+
+<Card className="flex h-full flex-col gap-0 pt-0">
+    <div class="relative">
+        {
+            plugin.banner ? (
+                <Image
+                    src={plugin.banner}
+                    alt=""
+                    width={400}
+                    height={96}
+                    class="h-20 w-full object-cover"
+                />
+            ) : (
+                <div class="h-20 w-full bg-muted/50" />
+            )
+        }
+        <Image
+            src={plugin.logo}
+            alt=""
+            width={48}
+            height={48}
+            class="absolute -bottom-6 left-4 size-12 rounded-lg bg-card object-contain shadow-md ring-4 ring-card"
+        />
+    </div>
+    <CardHeader className="gap-1 pt-8">
+        <div class="min-w-0">
+            <CardTitle className="truncate flex items-center gap-1">
+                <a href={'/plugins/' + id} class="truncate hover:underline">
+                    {plugin.name}
+                </a>
+                {
+                    plugin.official && (
+                        <Badge variant="default" className="ml-auto shrink-0">
+                            <BadgeCheck className="size-3" />
+                            Official
+                        </Badge>
+                    )
+                }
+            </CardTitle>
+            <CardDescription className="truncate">{plugin.developerName}</CardDescription>
+        </div>
+    </CardHeader>
+
+    <CardContent className="flex flex-1 flex-col gap-3">
+        <p class="text-sm text-muted-foreground">{plugin.shortDescription}</p>
+        <div class="flex flex-wrap gap-1.5">
+            {
+                plugin.abandoned === true && (
+                    <Badge variant="secondary" className="text-xs dark:bg-yellow-900 bg-yellow-400">
+                        <Ghost className="size-3" />
+                        Abandoned
+                    </Badge>
+                )
+            }
+            {
+                plugin.beta === true && (
+                    <Badge variant="secondary" className="text-xs dark:bg-indigo-500 bg-indigo-300">
+                        <FlaskConical className="size-3" />
+                        Beta
+                    </Badge>
+                )
+            }
+            {
+                plugin.openSource ? (
+                    <Badge variant="secondary" className="text-xs">
+                        <GitFork className="size-3" />
+                        Open source
+                    </Badge>
+                ) : (
+                    <Badge variant="secondary" className="text-xs">
+                        <Lock className="size-3" />
+                        Closed source
+                    </Badge>
+                )
+            }
+        </div>
+        <div class="flex flex-wrap gap-1.5">
+            {
+                visibleCategories.map((category) => (
+                    <Badge variant="outline" className="text-xs">
+                        {labelForPluginCategory(category)}
+                    </Badge>
+                ))
+            }
+            {
+                extraCategoryCount > 0 && (
+                    <Badge variant="outline" className="text-xs">
+                        +{extraCategoryCount} more
+                    </Badge>
+                )
+            }
+        </div>
+    </CardContent>
+</Card>

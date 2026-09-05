@@ -1,0 +1,3 @@
+File Transformation is a low-level utility plugin that other Jellyfin plugins build on. It lets a plugin register a callback that patches the content of served jellyfin-web files by filename pattern, instead of requiring server owners to edit the web client's files directly. Because the changes are applied at serve time rather than baked into the install, the server stays clean and free to update whenever a new Jellyfin release comes out.
+
+It has no user-facing configuration of its own. It exists purely so other plugins, such as Plugin Pages and Home Screen Sections, can hook into the web client safely.

@@ -1,21 +1,9 @@
 import { z } from 'zod';
 import { ALL_PLATFORMS } from './platforms.js';
 import { FEATURE_FLAG_IDS, FEATURE_FLAG_MAP } from './features.js';
-import { LINK_TYPES } from './links.js';
+import { hasSourceLink, licenseSchema, linkSchema } from './common.js';
 
 const platformEnum = z.enum(ALL_PLATFORMS as [string, ...string[]]);
-
-export const linkSchema = z.object({
-    type: z.enum(Object.keys(LINK_TYPES) as [string, ...string[]]),
-    url: z.url(),
-    sourcelink: z.boolean().optional(),
-    label: z.string().optional(),
-});
-
-export const licenseSchema = z.object({
-    name: z.string(),
-    url: z.url().optional(),
-});
 
 function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {
     return z.object({
@@ -68,11 +56,7 @@ export function buildClientSchema<ImageSchema extends z.ZodType>(imageSchema: Im
         }
 
         if (data.openSource) {
-            const hasSource = data.links.some(
-                (l) =>
-                    l.sourcelink ?? LINK_TYPES[l.type as keyof typeof LINK_TYPES].defaultSourceLink
-            );
-            if (!hasSource) {
+            if (!hasSourceLink(data.links)) {
                 ctx.addIssue({
                     code: 'custom',
                     path: ['links'],

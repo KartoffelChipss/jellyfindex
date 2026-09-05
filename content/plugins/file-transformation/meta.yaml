@@ -1,0 +1,16 @@
+name: File Transformation
+logo: ./logo.png
+developerName: IAmParadox27
+developerGithub: IAmParadox27
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/IAmParadox27/jellyfin-plugin-file-transformation/blob/main/LICENSE
+shortDescription: Lets other Jellyfin plugins non-destructively modify the served jellyfin-web files, without anyone having to patch them directly.
+categories:
+    - general
+links:
+    - type: github
+      url: https://github.com/IAmParadox27/jellyfin-plugin-file-transformation

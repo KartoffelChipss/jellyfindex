@@ -1,4 +1,7 @@
 export * from './platforms.js';
 export * from './features.js';
 export * from './links.js';
+export * from './common.js';
 export * from './clients.js';
+export * from './plugin-categories.js';
+export * from './plugins.js';

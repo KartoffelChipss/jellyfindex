@@ -1,39 +1,29 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import {
     ArrowLeft,
     BadgeCheck,
     Download,
     GitFork,
-    Music,
     Scale,
     Sparkles,
     FlaskConical,
     Ghost,
     Lock,
-    DollarSign,
 } from 'lucide-react';
-import {
-    FEATURE_FLAG_MAP,
-    LINK_TYPES,
-    PLATFORM_CATEGORIES,
-    categoryForPlatform,
-    labelForPlatform,
-    type LinkType,
-} from '@jellyfindex/schema';
+import { LINK_TYPES, labelForPluginCategory, type LinkType } from '@jellyfindex/schema';
 import { Badge, badgeVariants } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { InstallTabs } from '@/components/InstallTabs';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
 import { iconForLink } from '@/lib/link-icons';
 import Layout from '@/layouts/Layout.astro';
 
 export const getStaticPaths = (async () => {
-    const entries = await getCollection('clients');
+    const entries = await getCollection('plugins');
     return entries.map((entry) => ({
         params: { id: entry.id },
         props: { entry },
@@ -41,53 +31,27 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 interface Props {
-    entry: CollectionEntry<'clients'>;
+    entry: CollectionEntry<'plugins'>;
 }
 
 const { entry } = Astro.props;
-const client = entry.data;
+const plugin = entry.data;
 const { Content } = await render(entry);
 
-function humanize(value: string) {
-    return value.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
-}
+const otherLinks = plugin.links.filter((link) => link !== plugin.installationLink);
 
-const platformsByCategory = new Map<string, string[]>();
-for (const platform of client.platforms) {
-    const categoryLabel = PLATFORM_CATEGORIES[categoryForPlatform(platform)].label;
-    const list = platformsByCategory.get(categoryLabel) ?? [];
-    list.push(labelForPlatform(platform));
-    platformsByCategory.set(categoryLabel, list);
-}
-
-const featuresByCategory = new Map<string, string[]>();
-for (const [flagId, enabled] of Object.entries(client.features)) {
-    if (!enabled) continue;
-    const def = FEATURE_FLAG_MAP.get(flagId);
-    if (!def) continue;
-    const list = featuresByCategory.get(def.category) ?? [];
-    list.push(def.displayName);
-    featuresByCategory.set(def.category, list);
-}
-
-const otherLinks = client.links.filter((link) => link !== client.installationLink);
-
-const instructionPlatforms = client.platforms
-    .filter((platform) => client.installationInstructions?.[platform])
-    .map((platform) => ({
-        value: platform,
-        label: labelForPlatform(platform),
-        html: client.installationInstructionsHtml[platform] ?? '',
-    }));
-
-const dateAdded = new Date(client.dateAdded).toLocaleDateString('en-US', {
+const dateAdded = new Date(plugin.dateAdded).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
 });
 
+const requiredPlugins = (
+    await Promise.all(plugin.requires.map((id) => getEntry('plugins', id)))
+).filter((entry) => entry !== undefined);
+
 const previewImages = await Promise.all(
-    client.previewImages.map(async (image) => {
+    plugin.previewImages.map(async (image) => {
         const optimized = await getImage({ src: image, height: 512 });
         return {
             src: optimized.src,
@@ -98,21 +62,21 @@ const previewImages = await Promise.all(
 );
 ---
 
-<Layout title={`${client.name} — jellyfindex`} description={client.shortDescription}>
+<Layout title={`${plugin.name} — jellyfindex`} description={plugin.shortDescription}>
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <a
-            href="/"
+            href="/plugins"
             class="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
             <ArrowLeft className="size-4" />
-            All clients
+            All plugins
         </a>
 
         {
-            client.banner && (
+            plugin.banner && (
                 <Image
-                    src={client.banner}
-                    alt={client.name + ' banner'}
+                    src={plugin.banner}
+                    alt={plugin.name + ' banner'}
                     width={1200}
                     height={400}
                     loading="eager"
@@ -123,8 +87,8 @@ const previewImages = await Promise.all(
 
         <header class="mb-8 flex items-start gap-4">
             <Image
-                src={client.logo}
-                alt={client.name + ' logo'}
+                src={plugin.logo}
+                alt={plugin.name + ' logo'}
                 width={64}
                 height={64}
                 loading="eager"
@@ -133,10 +97,10 @@ const previewImages = await Promise.all(
             <div class="min-w-0 flex-1">
                 <div class="flex flex-wrap items-center gap-2">
                     <h1 class="font-heading text-2xl font-semibold tracking-tight">
-                        {client.name}
+                        {plugin.name}
                     </h1>
                     {
-                        client.official && (
+                        plugin.official && (
                             <Badge variant="default">
                                 <BadgeCheck className="size-3" />
                                 Official
@@ -147,23 +111,23 @@ const previewImages = await Promise.all(
                 <p class="mt-1 text-sm text-muted-foreground">
                     by{' '}
                     {
-                        client.developerGithub ? (
+                        plugin.developerGithub ? (
                             <a
-                                href={`https://github.com/${client.developerGithub}`}
+                                href={`https://github.com/${plugin.developerGithub}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 class="hover:text-foreground hover:underline"
                             >
-                                {client.developerName}
+                                {plugin.developerName}
                             </a>
                         ) : (
-                            client.developerName
+                            plugin.developerName
                         )
                     }
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
                     {
-                        client.abandoned === true && (
+                        plugin.abandoned === true && (
                             <Badge
                                 variant="secondary"
                                 className="text-xs dark:bg-yellow-900 bg-yellow-400"
@@ -174,7 +138,7 @@ const previewImages = await Promise.all(
                         )
                     }
                     {
-                        client.beta === true && (
+                        plugin.beta === true && (
                             <Badge
                                 variant="secondary"
                                 className="text-xs dark:bg-indigo-500 bg-indigo-300"
@@ -185,7 +149,7 @@ const previewImages = await Promise.all(
                         )
                     }
                     {
-                        client.openSource ? (
+                        plugin.openSource ? (
                             <Badge variant="secondary">
                                 <GitFork className="size-3" />
                                 Open source
@@ -198,45 +162,21 @@ const previewImages = await Promise.all(
                         )
                     }
                     {
-                        client.music !== 'none' && (
-                            <Badge variant="secondary">
-                                <Music className="size-3" />
-                                {client.music === 'main' ? 'Music client' : 'Music support'}
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.pricing === 'subscription' && (
-                            <Badge variant="secondary">
-                                <DollarSign className="size-3" />
-                                Subscription
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.pricing === 'one-time-purchase' && (
-                            <Badge variant="secondary">
-                                <DollarSign className="size-3" />
-                                One-time purchase
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.license &&
-                            (client.license.url ? (
+                        plugin.license &&
+                            (plugin.license.url ? (
                                 <a
-                                    href={client.license.url}
+                                    href={plugin.license.url}
                                     target="_blank"
                                     rel="noreferrer"
                                     class={badgeVariants({ variant: 'secondary' })}
                                 >
                                     <Scale className="size-3" />
-                                    {client.license.name}
+                                    {plugin.license.name}
                                 </a>
                             ) : (
                                 <Badge variant="secondary">
                                     <Scale className="size-3" />
-                                    {client.license.name}
+                                    {plugin.license.name}
                                 </Badge>
                             ))
                     }
@@ -246,9 +186,9 @@ const previewImages = await Promise.all(
 
         <div class="mb-8 flex flex-wrap gap-2">
             {
-                client.installationLink ? (
+                plugin.installationLink ? (
                     <a
-                        href={client.installationLink.url}
+                        href={plugin.installationLink.url}
                         target="_blank"
                         rel="noreferrer"
                         class={buttonVariants({ size: 'sm' })}
@@ -257,7 +197,7 @@ const previewImages = await Promise.all(
                         Install
                     </a>
                 ) : (
-                    instructionPlatforms.length > 0 && (
+                    plugin.installationInstructionsHtml && (
                         <a href="#installation-instructions" class={buttonVariants({ size: 'sm' })}>
                             <Download />
                             Install
@@ -293,7 +233,7 @@ const previewImages = await Promise.all(
         }
 
         {
-            client.description && (
+            plugin.description && (
                 <>
                     <Separator className="mb-8" />
                     <div class="prose prose-sm dark:prose-invert mb-8 max-w-none">
@@ -306,41 +246,35 @@ const previewImages = await Promise.all(
         <Separator className="mb-8" />
 
         <section class="mb-8">
-            <h2 class="mb-3 font-heading text-lg font-semibold">Platforms</h2>
-            <div class="flex flex-col gap-3">
+            <h2 class="mb-3 font-heading text-lg font-semibold">Categories</h2>
+            <div class="flex flex-wrap gap-1.5">
                 {
-                    [...platformsByCategory.entries()].map(([category, platforms]) => (
-                        <div class="flex flex-wrap items-center gap-2">
-                            <span class="w-28 shrink-0 text-sm text-muted-foreground">
-                                {category}
-                            </span>
-                            <div class="flex flex-wrap gap-1.5">
-                                {platforms.map((platform) => (
-                                    <Badge variant="outline">{platform}</Badge>
-                                ))}
-                            </div>
-                        </div>
+                    plugin.categories.map((category) => (
+                        <Badge variant="outline">{labelForPluginCategory(category)}</Badge>
                     ))
                 }
             </div>
         </section>
 
         {
-            featuresByCategory.size > 0 && (
+            requiredPlugins.length > 0 && (
                 <section class="mb-8">
-                    <h2 class="mb-3 font-heading text-lg font-semibold">Features</h2>
-                    <div class="flex flex-col gap-3">
-                        {[...featuresByCategory.entries()].map(([category, features]) => (
-                            <div class="flex flex-wrap items-center gap-2">
-                                <span class="w-28 shrink-0 text-sm text-muted-foreground">
-                                    {humanize(category)}
-                                </span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    {features.map((feature) => (
-                                        <Badge variant="outline">{feature}</Badge>
-                                    ))}
-                                </div>
-                            </div>
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Requires</h2>
+                    <div class="flex flex-wrap gap-2">
+                        {requiredPlugins.map((required) => (
+                            <a
+                                href={`/plugins/${required.id}`}
+                                class="flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm transition-colors hover:bg-muted/50"
+                            >
+                                <Image
+                                    src={required.data.logo}
+                                    alt=""
+                                    width={20}
+                                    height={20}
+                                    class="size-5 shrink-0 rounded object-contain"
+                                />
+                                {required.data.name}
+                            </a>
                         ))}
                     </div>
                 </section>
@@ -348,24 +282,38 @@ const previewImages = await Promise.all(
         }
 
         {
-            instructionPlatforms.length > 0 && (
-                <section id="installation-instructions" class="mb-8 scroll-mt-20">
-                    <h2 class="mb-3 font-heading text-lg font-semibold">
-                        Installation instructions
-                    </h2>
-                    <InstallTabs client:load platforms={instructionPlatforms} />
+            plugin.minimumJellyfinVersion && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Compatibility</h2>
+                    <p class="text-sm text-muted-foreground">
+                        Requires Jellyfin {plugin.minimumJellyfinVersion} or newer.
+                    </p>
                 </section>
             )
         }
 
         {
-            client.aiUsed && (
+            plugin.installationInstructionsHtml && (
+                <section id="installation-instructions" class="mb-8 scroll-mt-20">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">
+                        Installation instructions
+                    </h2>
+                    <div
+                        class="prose prose-sm dark:prose-invert max-w-none"
+                        set:html={plugin.installationInstructionsHtml}
+                    />
+                </section>
+            )
+        }
+
+        {
+            plugin.aiUsed && (
                 <div class="mb-8 flex items-start gap-2 rounded-lg border bg-muted/50 p-3 text-sm text-muted-foreground">
                     <Sparkles className="mt-0.5 size-4 shrink-0" />
                     <div>
                         <h3 class="mb-1 font-heading text-sm font-bold">AI-Disclosure</h3>
                         <p>
-                            {client.aiDisclaimer ??
+                            {plugin.aiDisclaimer ??
                                 'This submission was written or assisted with AI.'}
                         </p>
                     </div>
@@ -375,7 +323,7 @@ const previewImages = await Promise.all(
 
         <Separator className="mb-4" />
         <p class="text-xs text-muted-foreground">
-            Added on {dateAdded} by {client.submittedBy}
+            Added on {dateAdded} by {plugin.submittedBy}
         </p>
     </div>
 </Layout>
