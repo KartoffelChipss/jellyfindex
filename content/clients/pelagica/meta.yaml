@@ -37,19 +37,19 @@ previewImages:
     - image: './preview-images/custom_sections.webp'
       platform: web
       title: Custom Home Sections
-    - image: './preview-images/webos-home.png'
+    - image: './preview-images/webos-home.webp'
       platform: webos
       title: Home
-    - image: './preview-images/webos-library.png'
+    - image: './preview-images/webos-library.webp'
       platform: webos
       title: Library
-    - image: './preview-images/webos-movie.png'
+    - image: './preview-images/webos-movie.webp'
       platform: webos
       title: Movie
-    - image: './preview-images/webos-search.png'
+    - image: './preview-images/webos-search.webp'
       platform: webos
       title: Search
-    - image: './preview-images/webos-player.png'
+    - image: './preview-images/webos-player.webp'
       platform: webos
       title: Player
 links:

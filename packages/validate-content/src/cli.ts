@@ -1,7 +1,8 @@
 import { execSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 import { parse as parseYaml } from 'yaml';
 import { z } from 'zod';
 import {
@@ -12,7 +13,51 @@ import {
     themeSchema,
     IMMUTABLE_THEME_FIELDS,
     resolvePreviewImage,
+    MAX_IMAGE_DIMENSION,
+    MAX_RASTER_IMAGE_BYTES,
+    MAX_SVG_IMAGE_BYTES,
 } from '@jellyfindex/schema';
+
+function formatKb(bytes: number): string {
+    return `${Math.round(bytes / 1024)}KB`;
+}
+
+async function checkImage(fullPath: string, imgPath: string): Promise<string[]> {
+    const messages: string[] = [];
+    const ext = extname(imgPath).toLowerCase();
+    const sizeBytes = statSync(fullPath).size;
+
+    if (ext === '.svg') {
+        if (sizeBytes > MAX_SVG_IMAGE_BYTES) {
+            messages.push(
+                `${imgPath} is ${formatKb(sizeBytes)}, over the ${formatKb(MAX_SVG_IMAGE_BYTES)} limit for SVGs`
+            );
+        }
+        return messages;
+    }
+
+    if (ext !== '.webp') {
+        messages.push(
+            `${imgPath} must be a .webp file (found "${ext || 'no extension'}") — run "pnpm run optimize-images"`
+        );
+        return messages;
+    }
+
+    if (sizeBytes > MAX_RASTER_IMAGE_BYTES) {
+        messages.push(
+            `${imgPath} is ${formatKb(sizeBytes)}, over the ${formatKb(MAX_RASTER_IMAGE_BYTES)} limit — run "pnpm run optimize-images"`
+        );
+    }
+
+    const { width, height } = await sharp(fullPath).metadata();
+    if ((width ?? 0) > MAX_IMAGE_DIMENSION || (height ?? 0) > MAX_IMAGE_DIMENSION) {
+        messages.push(
+            `${imgPath} is ${width}x${height}px, over the ${MAX_IMAGE_DIMENSION}px max dimension — run "pnpm run optimize-images"`
+        );
+    }
+
+    return messages;
+}
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '../../..');
@@ -125,13 +170,13 @@ function getFileAtRef(ref: string, relPath: string): string | null {
     }
 }
 
-function validateCollection(
+async function validateCollection(
     collection: (typeof COLLECTIONS)[number],
     knownIdsByCollection: Map<string, Set<string>>,
     changedFiles: Set<string> | null,
     baseRef: string | null,
     errors: ValidationError[]
-): number {
+): Promise<number> {
     const dir = join(CONTENT_ROOT, collection.name);
     if (!existsSync(dir)) return 0;
 
@@ -184,11 +229,16 @@ function validateCollection(
             (p): p is string => typeof p === 'string' && p.length > 0
         );
         for (const imgPath of imagePaths) {
-            if (!existsSync(join(entryDir, imgPath))) {
+            const fullPath = join(entryDir, imgPath);
+            if (!existsSync(fullPath)) {
                 errors.push({
                     file: metaRelPath,
                     message: `Referenced image does not exist: ${imgPath}`,
                 });
+                continue;
+            }
+            for (const message of await checkImage(fullPath, imgPath)) {
+                errors.push({ file: metaRelPath, message });
             }
         }
 
@@ -229,7 +279,7 @@ function validateCollection(
     return entries.length;
 }
 
-function main() {
+async function main() {
     const baseRef = getBaseRef();
     const changedFiles = baseRef ? getChangedFiles(baseRef) : null;
     const errors: ValidationError[] = [];
@@ -245,7 +295,7 @@ function main() {
     }
 
     for (const collection of COLLECTIONS) {
-        total += validateCollection(
+        total += await validateCollection(
             collection,
             knownIdsByCollection,
             changedFiles,
@@ -267,4 +317,7 @@ function main() {
     );
 }
 
-main();
+main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+});

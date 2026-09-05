@@ -1,5 +1,5 @@
 name: Jellyfin Desktop
-logo: ./logo.png
+logo: ./logo.webp
 developerName: Jellyfin Team
 developerGithub: jellyfin
 dateAdded: 2026-09-04
@@ -17,10 +17,10 @@ links:
     - type: github
       url: https://github.com/jellyfin/jellyfin-media-player
 previewImages:
-    - './preview-images/home.png'
-    - './preview-images/library.png'
-    - './preview-images/movie.png'
-    - './preview-images/player.png'
+    - './preview-images/home.webp'
+    - './preview-images/library.webp'
+    - './preview-images/movie.webp'
+    - './preview-images/player.webp'
 features:
     hw-decode: true
     chromecast: false

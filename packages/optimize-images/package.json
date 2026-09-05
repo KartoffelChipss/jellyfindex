@@ -1,0 +1,18 @@
+{
+    "name": "@jellyfindex/optimize-images",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "optimize-images": "tsx src/cli.ts"
+    },
+    "dependencies": {
+        "@jellyfindex/schema": "workspace:*",
+        "sharp": "^0.35.4",
+        "yaml": "^2.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.0",
+        "tsx": "^4.19.2"
+    }
+}

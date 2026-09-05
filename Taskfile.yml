@@ -59,6 +59,11 @@ tasks:
             - task: format:check
             - task: build
 
+    optimize-images:
+        desc: Optimize images in content/clients/*/preview-images
+        cmds:
+            - pnpm run optimize-images
+
     clean:
         desc: Remove build output and caches
         cmds:

@@ -1,5 +1,5 @@
 name: Home Screen Sections
-logo: ./logo.png
+logo: ./logo.webp
 developerName: IAmParadox27
 developerGithub: IAmParadox27
 dateAdded: 2026-09-05
@@ -11,10 +11,10 @@ license:
     url: https://github.com/IAmParadox27/jellyfin-plugin-home-sections/blob/main/LICENSE
 shortDescription: Replaces the Jellyfin home screen with dynamic, Netflix-style sections like Because You Watched, Watch Again, Genre picks, and Jellyseerr-powered Discover rows.
 previewImages:
-    - ./preview-images/HSS_Showcase.png
-    - ./preview-images/because-you-watched.png
-    - ./preview-images/watch-again.png
-    - ./preview-images/settings.png
+    - ./preview-images/HSS_Showcase.webp
+    - ./preview-images/because-you-watched.webp
+    - ./preview-images/watch-again.webp
+    - ./preview-images/settings.webp
 categories:
     - general
 requires:

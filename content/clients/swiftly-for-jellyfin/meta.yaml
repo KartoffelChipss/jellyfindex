@@ -1,5 +1,5 @@
 name: Swiftly for Jellyfin
-logo: ./logo.png
+logo: ./logo.webp
 developerName: paulherter
 developerGithub: paulherter
 dateAdded: 2026-09-05
@@ -27,13 +27,13 @@ links:
     - type: discord
       url: https://discord.gg/MeGwfv3UwN
 previewImages:
-    - image: ./preview-images/home.png
+    - image: ./preview-images/home.webp
       title: Home
-    - image: ./preview-images/detail.png
+    - image: ./preview-images/detail.webp
       title: Detail
-    - image: ./preview-images/player.png
+    - image: ./preview-images/player.webp
       title: Player
-    - image: ./preview-images/picture-in-picture.png
+    - image: ./preview-images/picture-in-picture.webp
       title: Picture in Picture
 installationInstructions:
     ios: |-
