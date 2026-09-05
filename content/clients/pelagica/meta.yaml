@@ -55,5 +55,7 @@ features:
     seerr-integration: true
     kevintweaks-watchlist: true
     streamystats-recommendations: true
+relatedPlugins:
+    - pelagica-jellyfin-plugin
 aiUsed: true
 aiDisclaimer: I treat AI like any other tool I use. It is not a seperate "person" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.

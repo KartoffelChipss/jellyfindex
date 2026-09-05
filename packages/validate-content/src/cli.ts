@@ -49,6 +49,11 @@ function readSingleInstallationInstructions(
         : ((meta.installationInstructions as string | undefined) ?? '');
 }
 
+interface CrossReferenceField {
+    field: string;
+    target: string;
+}
+
 const COLLECTIONS: {
     name: string;
     schema: z.ZodType;
@@ -57,21 +62,24 @@ const COLLECTIONS: {
         entryDir: string,
         meta: Record<string, unknown>
     ) => Record<string, string> | string;
-    /** Field holding ids of other entries in this same collection (e.g. required plugins). */
-    crossReferenceField?: string;
+    crossReferenceFields?: CrossReferenceField[];
 }[] = [
     {
         name: 'clients',
         schema: clientSchema,
         immutableFields: IMMUTABLE_CLIENT_FIELDS,
         buildInstallationInstructions: readPerPlatformInstallationInstructions,
+        crossReferenceFields: [{ field: 'relatedPlugins', target: 'plugins' }],
     },
     {
         name: 'plugins',
         schema: pluginSchema,
         immutableFields: IMMUTABLE_PLUGIN_FIELDS,
         buildInstallationInstructions: readSingleInstallationInstructions,
-        crossReferenceField: 'requires',
+        crossReferenceFields: [
+            { field: 'requires', target: 'plugins' },
+            { field: 'relatedClients', target: 'clients' },
+        ],
     },
     {
         name: 'themes',
@@ -118,6 +126,7 @@ function getFileAtRef(ref: string, relPath: string): string | null {
 
 function validateCollection(
     collection: (typeof COLLECTIONS)[number],
+    knownIdsByCollection: Map<string, Set<string>>,
     changedFiles: Set<string> | null,
     baseRef: string | null,
     errors: ValidationError[]
@@ -126,7 +135,6 @@ function validateCollection(
     if (!existsSync(dir)) return 0;
 
     const entries = readdirSync(dir).filter((name) => statSync(join(dir, name)).isDirectory());
-    const knownIds = new Set(entries);
 
     for (const entry of entries) {
         const entryDir = join(dir, entry);
@@ -182,18 +190,19 @@ function validateCollection(
             }
         }
 
-        if (collection.crossReferenceField) {
-            const refs = (parsed[collection.crossReferenceField] as string[] | undefined) ?? [];
+        for (const { field, target } of collection.crossReferenceFields ?? []) {
+            const refs = (parsed[field] as string[] | undefined) ?? [];
+            const targetIds = knownIdsByCollection.get(target) ?? new Set();
             for (const refId of refs) {
-                if (refId === entry) {
+                if (target === collection.name && refId === entry) {
                     errors.push({
                         file: metaRelPath,
-                        message: `"${collection.crossReferenceField}" cannot reference itself: ${refId}`,
+                        message: `"${field}" cannot reference itself: ${refId}`,
                     });
-                } else if (!knownIds.has(refId)) {
+                } else if (!targetIds.has(refId)) {
                     errors.push({
                         file: metaRelPath,
-                        message: `"${collection.crossReferenceField}" references unknown entry: ${refId}`,
+                        message: `"${field}" references unknown ${target} entry: ${refId}`,
                     });
                 }
             }
@@ -224,8 +233,23 @@ function main() {
     const errors: ValidationError[] = [];
     let total = 0;
 
+    const knownIdsByCollection = new Map<string, Set<string>>();
     for (const collection of COLLECTIONS) {
-        total += validateCollection(collection, changedFiles, baseRef, errors);
+        const dir = join(CONTENT_ROOT, collection.name);
+        const ids = existsSync(dir)
+            ? readdirSync(dir).filter((name) => statSync(join(dir, name)).isDirectory())
+            : [];
+        knownIdsByCollection.set(collection.name, new Set(ids));
+    }
+
+    for (const collection of COLLECTIONS) {
+        total += validateCollection(
+            collection,
+            knownIdsByCollection,
+            changedFiles,
+            baseRef,
+            errors
+        );
     }
 
     if (errors.length > 0) {

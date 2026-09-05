@@ -1,7 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
-import { getCollection, render } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import { ArrowLeft, Download, Sparkles } from 'lucide-react';
 import {
@@ -81,6 +81,10 @@ const dateAdded = new Date(client.dateAdded).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
 });
+
+const relatedPlugins = (
+    await Promise.all(client.relatedPlugins.map((id) => getEntry('plugins', id)))
+).filter((entry) => entry !== undefined);
 
 const previewImages = await Promise.all(
     client.previewImages.map(async (image) => {
@@ -256,6 +260,31 @@ const previewImages = await Promise.all(
                                     ))}
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </section>
+            )
+        }
+
+        {
+            relatedPlugins.length > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Related plugins</h2>
+                    <div class="flex flex-wrap gap-2">
+                        {relatedPlugins.map((related) => (
+                            <a
+                                href={`/plugins/${related.id}`}
+                                class="flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm transition-colors hover:bg-muted/50"
+                            >
+                                <Image
+                                    src={related.data.logo}
+                                    alt=""
+                                    width={20}
+                                    height={20}
+                                    class="size-5 shrink-0 rounded object-contain"
+                                />
+                                {related.data.name}
+                            </a>
                         ))}
                     </div>
                 </section>

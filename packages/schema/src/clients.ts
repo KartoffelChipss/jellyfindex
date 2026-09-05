@@ -40,6 +40,8 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
 
         features: z.partialRecord(z.enum(FEATURE_FLAG_IDS), z.boolean()).default({}),
 
+        relatedPlugins: z.array(z.string()).default([]),
+
         aiUsed: z.boolean().default(false),
         aiDisclaimer: z.string().optional(),
     });

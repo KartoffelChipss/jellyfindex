@@ -67,11 +67,19 @@
           "authentication",
           "automation",
           "theme",
+          "companion",
           "other"
         ]
       }
     },
     "requires": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "relatedClients": {
       "default": [],
       "type": "array",
       "items": {

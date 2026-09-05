@@ -1,0 +1,1 @@
+Companion plugin for the Pelagica app. It stores the Pelagica configuration (home screen sections, item page settings, branding, links, and so on) on the Jellyfin server itself, so every user connecting through Pelagica sees the same setup instead of each client having its own local copy.

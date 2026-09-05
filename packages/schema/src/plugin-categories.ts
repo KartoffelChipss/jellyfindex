@@ -7,6 +7,7 @@ export const PLUGIN_CATEGORIES = {
     authentication: 'Authentication',
     automation: 'Automation',
     theme: 'Theme',
+    companion: 'Companion',
     other: 'Other',
 } as const;
 

@@ -1,0 +1,22 @@
+name: Pelagica Jellyfin Plugin
+logo: logo.svg
+developerName: KartoffelChipss
+developerGithub: KartoffelChipss
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A companion plugin for Pelagica, allowing you to use your config across different devices.
+categories:
+    - companion
+links:
+    - type: github
+      url: https://github.com/PelagicaApp/jellyfin-plugin
+    - type: website
+      url: https://pelagica.app
+aiUsed: true
+aiDisclaimer: I treat AI like any other tool I use. It is not a seperate "person" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.
+license:
+    name: GPL-3.0
+    url: https://github.com/PelagicaApp/jellyfin-plugin/blob/main/LICENSE
+relatedClients:
+    - pelagica

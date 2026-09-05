@@ -27,6 +27,7 @@ function buildPluginFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
 
         // Ids (directory slugs) of other plugin entries this plugin requires
         requires: z.array(z.string()).default([]),
+        relatedClients: z.array(z.string()).default([]),
 
         official: z.boolean().default(false),
         beta: z.boolean().default(false),

@@ -303,6 +303,13 @@
         "type": "boolean"
       }
     },
+    "relatedPlugins": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "aiUsed": {
       "default": false,
       "type": "boolean"
