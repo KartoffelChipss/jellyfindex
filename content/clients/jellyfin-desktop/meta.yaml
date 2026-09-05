@@ -3,6 +3,7 @@ logo: ./logo.png
 developerName: Jellyfin Team
 developerGithub: jellyfin
 dateAdded: 2026-09-04
+dateCreated: 2015-10-13
 submittedBy: KartoffelChipss
 openSource: true
 shortDescription: The official desktop client for Jellyfin, built on mpv for high quality local playback.

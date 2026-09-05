@@ -10,6 +10,7 @@ function buildThemeFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchem
         developerGithub: z.string().optional(),
 
         dateAdded: z.coerce.date(),
+        dateCreated: z.coerce.date().optional(),
         submittedBy: z.string(),
 
         openSource: z.boolean(),
@@ -66,4 +67,4 @@ export const themeMetaSchema = buildThemeFields(z.string()).omit({
     installationInstructionsHtml: true,
 });
 
-export const IMMUTABLE_THEME_FIELDS = ['dateAdded', 'submittedBy'] as const;
+export const IMMUTABLE_THEME_FIELDS = ['dateAdded', 'dateCreated', 'submittedBy'] as const;

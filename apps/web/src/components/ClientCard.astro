@@ -5,6 +5,7 @@ import { labelForPlatform } from '@jellyfindex/schema';
 import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
 import BetaBadge from '@/components/badges/BetaBadge.astro';
 import MusicBadge from '@/components/badges/MusicBadge.astro';
+import NewBadge from '@/components/badges/NewBadge.astro';
 import OfficialBadge from '@/components/badges/OfficialBadge.astro';
 import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
 import PricingBadge from '@/components/badges/PricingBadge.astro';
@@ -74,6 +75,7 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
     <CardContent className="flex flex-1 flex-col gap-3">
         <p class="text-sm text-muted-foreground">{client.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
+            <NewBadge dateCreated={client.dateCreated} />
             <AbandonedBadge abandoned={client.abandoned} />
             <BetaBadge beta={client.beta} />
             <OpenSourceBadge openSource={client.openSource} />

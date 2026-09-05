@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import { labelForPluginCategory } from '@jellyfindex/schema';
 import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
 import BetaBadge from '@/components/badges/BetaBadge.astro';
+import NewBadge from '@/components/badges/NewBadge.astro';
 import OfficialBadge from '@/components/badges/OfficialBadge.astro';
 import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
 import { Badge } from '@/components/ui/badge';
@@ -72,6 +73,7 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
     <CardContent className="flex flex-1 flex-col gap-3">
         <p class="text-sm text-muted-foreground">{plugin.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
+            <NewBadge dateCreated={plugin.dateCreated} />
             <AbandonedBadge abandoned={plugin.abandoned} />
             <BetaBadge beta={plugin.beta} />
             <OpenSourceBadge openSource={plugin.openSource} />

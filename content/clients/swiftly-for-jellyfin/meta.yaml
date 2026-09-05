@@ -1,0 +1,60 @@
+name: Swiftly for Jellyfin
+logo: ./logo.png
+developerName: paulherter
+developerGithub: paulherter
+dateAdded: 2026-09-05
+dateCreated: 2026-09-01
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A native, distraction-free Jellyfin client for iPhone, iPad, Apple TV, and Mac, with a shared GTK4 app for Linux and Windows.
+platforms:
+    - ios
+    - tvos
+    - macos
+    - linux
+    - windows
+mainPlatform: ios
+license:
+    name: MPL-2.0
+    url: https://github.com/paulherter/swiftly-for-jellyfin/blob/main/LICENSE
+links:
+    - type: github
+      url: https://github.com/paulherter/swiftly-for-jellyfin
+      sourcelink: true
+    - type: other
+      label: TestFlight Beta
+      url: https://testflight.apple.com/join/MqeP2cnj
+    - type: other
+      label: Discord
+      url: https://discord.gg/MeGwfv3UwN
+previewImages:
+    - image: ./preview-images/home.png
+      title: Home
+    - image: ./preview-images/detail.png
+      title: Detail
+    - image: ./preview-images/player.png
+      title: Player
+    - image: ./preview-images/picture-in-picture.png
+      title: Picture in Picture
+installationInstructions:
+    ios: |-
+        Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on iPhone and iPad.
+    tvos: |-
+        Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Apple TV.
+    macos: |-
+        Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Mac.
+    windows: |-
+        Download the installer from [Releases](https://github.com/paulherter/swiftly-for-jellyfin/releases/latest) (64-bit, Windows 10 and 11).
+    linux: |-
+        Run the install script, which detects your distribution and adds the Swiftly package source so updates arrive with your normal system update:
+
+        ```sh
+        curl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-for-jellyfin/main/Linux/Installieren/swiftly-installieren.sh | bash
+        ```
+
+        See the [README](https://github.com/paulherter/swiftly-for-jellyfin#-linux) for adding the package repository manually.
+features:
+    quick-connect: true
+    direct-play: true
+aiUsed: true
+aiDisclaimer: The developer built the app together with Claude, with every commit crediting it as a co-author. The decisions, testing, and responsibility are the developer's own.

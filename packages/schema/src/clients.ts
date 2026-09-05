@@ -18,6 +18,7 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         developerGithub: z.string().optional(),
 
         dateAdded: z.coerce.date(),
+        dateCreated: z.coerce.date().optional(),
         submittedBy: z.string(),
 
         openSource: z.boolean(),
@@ -133,4 +134,4 @@ export const clientMetaSchema = buildClientFields(z.string()).omit({
     installationInstructionsHtml: true,
 });
 
-export const IMMUTABLE_CLIENT_FIELDS = ['dateAdded', 'submittedBy'] as const;
+export const IMMUTABLE_CLIENT_FIELDS = ['dateAdded', 'dateCreated', 'submittedBy'] as const;

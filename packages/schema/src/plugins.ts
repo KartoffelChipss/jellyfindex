@@ -15,6 +15,7 @@ function buildPluginFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         developerGithub: z.string().optional(),
 
         dateAdded: z.coerce.date(),
+        dateCreated: z.coerce.date().optional(),
         submittedBy: z.string(),
 
         openSource: z.boolean(),
@@ -79,4 +80,4 @@ export const pluginMetaSchema = buildPluginFields(z.string()).omit({
     installationInstructionsHtml: true,
 });
 
-export const IMMUTABLE_PLUGIN_FIELDS = ['dateAdded', 'submittedBy'] as const;
+export const IMMUTABLE_PLUGIN_FIELDS = ['dateAdded', 'dateCreated', 'submittedBy'] as const;

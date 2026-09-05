@@ -46,6 +46,7 @@
       "type": "string",
       "format": "date"
     },
+    "dateCreated": {},
     "submittedBy": {
       "type": "string"
     },

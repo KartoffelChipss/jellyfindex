@@ -1,0 +1,39 @@
+---
+import { Sparkles } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    dateCreated?: Date | string;
+}
+
+const { dateCreated } = Astro.props;
+
+const NEW_PROJECT_MONTHS = 3;
+const cutoff = new Date();
+cutoff.setMonth(cutoff.getMonth() - NEW_PROJECT_MONTHS);
+
+const created = dateCreated !== undefined ? new Date(dateCreated) : undefined;
+const isNew = created !== undefined && created > cutoff;
+
+function timeAgo(date: Date): string {
+    const diffDays = Math.floor((Date.now() - date.getTime()) / (1000 * 60 * 60 * 24));
+    if (diffDays <= 0) return 'Project created today';
+    if (diffDays === 1) return 'Project created yesterday';
+    if (diffDays < 14) return `Project created ${diffDays} days ago`;
+    const diffWeeks = Math.floor(diffDays / 7);
+    return `Project created ${diffWeeks} week${diffWeeks === 1 ? '' : 's'} ago`;
+}
+---
+
+{
+    isNew && created && (
+        <Badge
+            variant="secondary"
+            className="dark:bg-emerald-900 bg-emerald-400"
+            title={timeAgo(created)}
+        >
+            <Sparkles className="size-3" />
+            New
+        </Badge>
+    )
+}

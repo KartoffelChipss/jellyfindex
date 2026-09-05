@@ -1,0 +1,3 @@
+Swiftly for Jellyfin is a native client built for Apple platforms first, with iPhone, iPad, Apple TV, and Mac sharing the same interface and playback logic. It keeps things deliberately simple: open the app, find your library, and play, with resume, subtitle switching, and Picture in Picture handled properly instead of buried behind a long settings list.
+
+The same codebase also ships as a native GTK4 app for Linux and Windows, built on libVLC. Its device profile declares every container, codec, and subtitle format the app supports, so the server has no reason to transcode and your CPU stays cool. There's no account, subscription, or tracking: nothing leaves your device except the requests to the server you enter yourself.
