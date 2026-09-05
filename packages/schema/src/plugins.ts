@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { ALL_PLUGIN_CATEGORIES } from './plugin-categories.js';
-import { hasSourceLink, licenseSchema, linkSchema } from './common.js';
+import { hasSourceLink, licenseSchema, linkSchema, previewImageSchema } from './common.js';
 
 const categoryEnum = z.enum(ALL_PLUGIN_CATEGORIES as [string, ...string[]]);
 
@@ -9,7 +9,7 @@ function buildPluginFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         name: z.string(),
         logo: imageSchema,
         banner: imageSchema.optional(),
-        previewImages: z.array(imageSchema).default([]),
+        previewImages: z.array(previewImageSchema(imageSchema)).default([]),
 
         developerName: z.string(),
         developerGithub: z.string().optional(),

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { ALL_PLATFORMS } from './platforms.js';
 import { FEATURE_FLAG_IDS, FEATURE_FLAG_MAP } from './features.js';
-import { hasSourceLink, licenseSchema, linkSchema } from './common.js';
+import { hasSourceLink, licenseSchema, linkSchema, previewImageSchema } from './common.js';
 
 const platformEnum = z.enum(ALL_PLATFORMS as [string, ...string[]]);
 
@@ -10,7 +10,7 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         name: z.string(),
         logo: imageSchema,
         banner: imageSchema.optional(),
-        previewImages: z.array(imageSchema).default([]),
+        previewImages: z.array(previewImageSchema(imageSchema)).default([]),
 
         developerName: z.string(),
         developerGithub: z.string().optional(),

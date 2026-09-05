@@ -1,10 +1,10 @@
 import { z } from 'zod';
-import { hasSourceLink, licenseSchema, linkSchema } from './common.js';
+import { hasSourceLink, licenseSchema, linkSchema, previewImageSchema } from './common.js';
 
 function buildThemeFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {
     return z.object({
         name: z.string(),
-        previewImages: z.array(imageSchema).min(1),
+        previewImages: z.array(previewImageSchema(imageSchema)).min(1),
 
         developerName: z.string(),
         developerGithub: z.string().optional(),

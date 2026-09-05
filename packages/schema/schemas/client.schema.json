@@ -15,7 +15,25 @@
       "default": [],
       "type": "array",
       "items": {
-        "type": "string"
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "image": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "image"
+            ]
+          }
+        ]
       }
     },
     "developerName": {

@@ -11,6 +11,7 @@ import {
     IMMUTABLE_PLUGIN_FIELDS,
     themeSchema,
     IMMUTABLE_THEME_FIELDS,
+    resolvePreviewImage,
 } from '@jellyfindex/schema';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -176,11 +177,12 @@ function validateCollection(
         }
 
         const parsed = result.data as Record<string, unknown>;
-        const imagePaths = [
-            parsed.logo,
-            parsed.banner,
-            ...((parsed.previewImages as string[]) ?? []),
-        ].filter((p): p is string => typeof p === 'string' && p.length > 0);
+        const previewImagePaths = (
+            (parsed.previewImages as (string | { image: string; title?: string })[]) ?? []
+        ).map((entry) => resolvePreviewImage(entry).image);
+        const imagePaths = [parsed.logo, parsed.banner, ...previewImagePaths].filter(
+            (p): p is string => typeof p === 'string' && p.length > 0
+        );
         for (const imgPath of imagePaths) {
             if (!existsSync(join(entryDir, imgPath))) {
                 errors.push({

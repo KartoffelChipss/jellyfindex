@@ -11,6 +11,7 @@ interface PreviewCarouselProps {
         src: string;
         width: number;
         height: number;
+        title?: string;
     }[];
 }
 
@@ -22,13 +23,20 @@ export function PreviewCarousel({ images }: PreviewCarouselProps) {
             <CarouselContent>
                 {images.map((image, index) => (
                     <CarouselItem key={index} className="basis-auto">
-                        <img
-                            src={image.src}
-                            width={image.width}
-                            height={image.height}
-                            alt={`Preview ${index + 1}`}
-                            className="h-40 w-auto max-w-[85vw] rounded-lg object-cover sm:h-64 sm:max-w-none lg:h-128"
-                        />
+                        <figure>
+                            <img
+                                src={image.src}
+                                width={image.width}
+                                height={image.height}
+                                alt={image.title ?? `Preview ${index + 1}`}
+                                className="h-40 w-auto max-w-[85vw] rounded-lg object-cover sm:h-64 sm:max-w-none lg:h-128"
+                            />
+                            {image.title && (
+                                <figcaption className="mt-1.5 text-center text-xs text-muted-foreground">
+                                    {image.title}
+                                </figcaption>
+                            )}
+                        </figure>
                     </CarouselItem>
                 ))}
             </CarouselContent>

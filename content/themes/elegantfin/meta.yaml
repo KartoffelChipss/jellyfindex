@@ -1,11 +1,17 @@
 name: ElegantFin
 previewImages:
-    - ./preview-images/homepage.webp
-    - ./preview-images/movies-library.webp
-    - ./preview-images/movie-page.webp
-    - ./preview-images/tv-show-page.webp
-    - ./preview-images/login-page.webp
-    - ./preview-images/settings-page.webp
+    - image: ./preview-images/homepage.webp
+      title: Homepage
+    - image: ./preview-images/movies-library.webp
+      title: Movies Library
+    - image: ./preview-images/movie-page.webp
+      title: Movie Page
+    - image: ./preview-images/tv-show-page.webp
+      title: TV Show Page
+    - image: ./preview-images/login-page.webp
+      title: Login Page
+    - image: ./preview-images/settings-page.webp
+      title: Settings Page
 developerName: lscambo13
 developerGithub: lscambo13
 dateAdded: 2026-09-05

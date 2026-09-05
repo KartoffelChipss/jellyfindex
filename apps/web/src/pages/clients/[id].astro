@@ -10,6 +10,7 @@ import {
     PLATFORM_CATEGORIES,
     categoryForPlatform,
     labelForPlatform,
+    resolvePreviewImage,
     type LinkType,
 } from '@jellyfindex/schema';
 import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
@@ -87,12 +88,14 @@ const relatedPlugins = (
 ).filter((entry) => entry !== undefined);
 
 const previewImages = await Promise.all(
-    client.previewImages.map(async (image) => {
+    client.previewImages.map(async (entry) => {
+        const { image, title } = resolvePreviewImage(entry);
         const optimized = await getImage({ src: image, height: 512 });
         return {
             src: optimized.src,
             width: optimized.attributes.width,
             height: optimized.attributes.height,
+            title,
         };
     })
 );

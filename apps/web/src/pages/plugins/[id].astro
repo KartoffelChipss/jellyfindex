@@ -4,7 +4,12 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection, getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
 import { ArrowLeft, Download, Sparkles } from 'lucide-react';
-import { LINK_TYPES, labelForPluginCategory, type LinkType } from '@jellyfindex/schema';
+import {
+    LINK_TYPES,
+    labelForPluginCategory,
+    resolvePreviewImage,
+    type LinkType,
+} from '@jellyfindex/schema';
 import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
 import BetaBadge from '@/components/badges/BetaBadge.astro';
 import LicenseBadge from '@/components/badges/LicenseBadge.astro';
@@ -51,12 +56,14 @@ const relatedClients = (
 ).filter((entry) => entry !== undefined);
 
 const previewImages = await Promise.all(
-    plugin.previewImages.map(async (image) => {
+    plugin.previewImages.map(async (entry) => {
+        const { image, title } = resolvePreviewImage(entry);
         const optimized = await getImage({ src: image, height: 512 });
         return {
             src: optimized.src,
             width: optimized.attributes.width,
             height: optimized.attributes.height,
+            title,
         };
     })
 );
