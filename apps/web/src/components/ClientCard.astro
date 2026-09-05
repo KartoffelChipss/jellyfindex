@@ -83,9 +83,11 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
         <div class="flex flex-wrap gap-1.5">
             {
                 visiblePlatforms.map((platform) => (
-                    <Badge variant="outline" className="text-xs">
-                        {labelForPlatform(platform)}
-                    </Badge>
+                    <a href={`/platforms/${platform}`}>
+                        <Badge variant="outline" className="text-xs">
+                            {labelForPlatform(platform)}
+                        </Badge>
+                    </a>
                 ))
             }
             {

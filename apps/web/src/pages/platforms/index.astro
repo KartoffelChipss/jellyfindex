@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import { ArrowLeft } from 'lucide-react';
+import {
+    ALL_PLATFORMS,
+    PLATFORM_CATEGORIES,
+    labelForPlatform,
+    type Platform,
+} from '@jellyfindex/schema';
+import Layout from '@/layouts/Layout.astro';
+
+const clients = (await getCollection('clients')).filter((entry) => !entry.data.abandoned);
+
+const countByPlatform = new Map<Platform, number>();
+for (const platform of ALL_PLATFORMS as Platform[]) {
+    countByPlatform.set(
+        platform,
+        clients.filter((entry) => entry.data.platforms.includes(platform)).length
+    );
+}
+
+const categories = Object.entries(PLATFORM_CATEGORIES)
+    .map(([id, category]) => ({
+        id,
+        label: category.label,
+        platforms: (Object.keys(category.platforms) as Platform[])
+            .map((platform) => ({ platform, count: countByPlatform.get(platform) ?? 0 }))
+            .filter(({ count }) => count > 0),
+    }))
+    .filter((category) => category.platforms.length > 0);
+
+const title = 'Browse Jellyfin clients by platform — jellyfindex';
+const description =
+    'Find Jellyfin clients for Android, iOS, Windows, macOS, Linux, TV, game consoles, and more.';
+---
+
+<Layout title={title} description={description}>
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <a
+            href="/clients"
+            class="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+            <ArrowLeft className="size-4" />
+            All clients
+        </a>
+
+        <header class="mb-10 text-center">
+            <h1 class="font-heading text-4xl font-semibold tracking-tight">
+                Browse clients by platform
+            </h1>
+            <p class="mx-auto mt-3 max-w-xl text-balance text-muted-foreground">
+                Find a Jellyfin client for the device you actually use.
+            </p>
+        </header>
+
+        <div class="flex flex-col gap-8">
+            {
+                categories.map((category) => (
+                    <section>
+                        <h2 class="mb-3 font-heading text-lg font-semibold">{category.label}</h2>
+                        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            {category.platforms.map(({ platform, count }) => (
+                                <a
+                                    href={`/platforms/${platform}`}
+                                    class="flex items-center justify-between rounded-lg border px-4 py-3 text-sm transition-colors hover:bg-muted/50"
+                                >
+                                    <span>{labelForPlatform(platform)}</span>
+                                    <span class="text-muted-foreground">
+                                        {count} client{count === 1 ? '' : 's'}
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
+                    </section>
+                ))
+            }
+        </div>
+    </div>
+</Layout>

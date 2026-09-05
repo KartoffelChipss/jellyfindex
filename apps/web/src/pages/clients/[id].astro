@@ -48,11 +48,11 @@ function humanize(value: string) {
     return value.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-const platformsByCategory = new Map<string, string[]>();
+const platformsByCategory = new Map<string, { id: string; label: string }[]>();
 for (const platform of client.platforms) {
     const categoryLabel = PLATFORM_CATEGORIES[categoryForPlatform(platform)].label;
     const list = platformsByCategory.get(categoryLabel) ?? [];
-    list.push(labelForPlatform(platform));
+    list.push({ id: platform, label: labelForPlatform(platform) });
     platformsByCategory.set(categoryLabel, list);
 }
 
@@ -243,7 +243,11 @@ const previewImages = await Promise.all(
                             </span>
                             <div class="flex flex-wrap gap-1.5">
                                 {platforms.map((platform) => (
-                                    <Badge variant="outline">{platform}</Badge>
+                                    <a href={`/platforms/${platform.id}`}>
+                                        <Badge variant="outline" className="text-xs">
+                                            {platform.label}
+                                        </Badge>
+                                    </a>
                                 ))}
                             </div>
                         </div>

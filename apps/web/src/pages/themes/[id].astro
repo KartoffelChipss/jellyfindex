@@ -173,7 +173,8 @@ const previewImages = await Promise.all(
                     <div>
                         <h3 class="mb-1 font-heading text-sm font-bold">AI-Disclosure</h3>
                         <p>
-                            {theme.aiDisclaimer ?? 'This submission was written or assisted with AI.'}
+                            {theme.aiDisclaimer ??
+                                'This submission was written or assisted with AI.'}
                         </p>
                     </div>
                 </div>
