@@ -1,0 +1,44 @@
+name: Afinity
+logo: ./logo.png
+developerName: M0RPH3US
+developerGithub: MakD
+dateAdded: 2026-09-04
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A modern, native Android Jellyfin client built with Kotlin, Jetpack Compose, Material 3, and LibMPV.
+platforms:
+    - 'android'
+mainPlatform: android
+license:
+    name: GPL-3.0
+    url: https://github.com/MakD/AFinity/blob/master/LICENSE.md
+links:
+    - type: github
+      url: https://github.com/MakD/AFinity
+    - type: obtainium
+      url: https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.makd.afinity%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FMakD%2FAFinity%22%2C%22author%22%3A%22MakD%22%2C%22name%22%3A%22AFinity%22%2C%22supportFixedAPKURL%22%3Afalse%7D
+previewImages:
+    - ./preview-images/home.png
+    - ./preview-images/library.png
+    - ./preview-images/movie_details.png
+    - ./preview-images/show_details.png
+    - ./preview-images/live_tv.png
+    - ./preview-images/live_tv_guide.png
+    - ./preview-images/audiobookshelf_screen.png
+    - ./preview-images/book_detail.png
+    - ./preview-images/audiobook_player.png
+    - ./preview-images/request_screen.png
+    - ./preview-images/player.png
+features:
+    offline-download: true
+    chromecast: true
+    hw-decode: true
+    syncplay: true
+    direct-play: true
+    trickplay: true
+    pgs-ass-subtitles: true
+    lyrics: true
+    quick-connect: true
+    multi-server: true
+    live-tv-dvr: true
+    seerr-integration: true
