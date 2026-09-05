@@ -3,7 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import { ArrowLeft, Download, Sparkles } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
     LINK_TYPES,
@@ -23,6 +23,7 @@ import PricingBadge from '@/components/badges/PricingBadge.astro';
 import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import AiDisclosureBox from '@/components/AiDisclosureBox.astro';
 import { InstallTabs } from '@/components/InstallTabs';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
 import ReportButton from '@/components/ReportButton.astro';
@@ -320,20 +321,7 @@ const previewImages = await Promise.all(
             )
         }
 
-        {
-            client.aiUsed && (
-                <div class="mb-8 flex items-start gap-2 rounded-lg border bg-muted/50 p-3 text-sm text-muted-foreground">
-                    <Sparkles className="mt-0.5 size-4 shrink-0" />
-                    <div>
-                        <h3 class="mb-1 font-heading text-sm font-bold">AI-Disclosure</h3>
-                        <p>
-                            {client.aiDisclaimer ??
-                                'This submission was written or assisted with AI.'}
-                        </p>
-                    </div>
-                </div>
-            )
-        }
+        <AiDisclosureBox aiUsage={client.aiUsage} aiDescription={client.aiDescription} />
 
         <Separator className="mb-4" />
         <div class="flex items-center justify-between gap-4">

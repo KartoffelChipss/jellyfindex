@@ -55,5 +55,5 @@ installationInstructions:
 features:
     quick-connect: true
     direct-play: true
-aiUsed: true
-aiDisclaimer: The developer built the app together with Claude, with every commit crediting it as a co-author. The decisions, testing, and responsibility are the developer's own.
+aiUsage: vibe-coded
+aiDescription: The developer built the app together with Claude, with every commit crediting it as a co-author. The decisions, testing, and responsibility are the developer's own.

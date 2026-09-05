@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { ALL_PLATFORMS } from './platforms.js';
 import { FEATURE_FLAG_IDS, FEATURE_FLAG_MAP } from './features.js';
 import { hasSourceLink, licenseSchema, linkSchema, previewImageSchema } from './common.js';
+import { aiUsageSchema } from './ai-usage.js';
 
 const platformEnum = z.enum(ALL_PLATFORMS as [string, ...string[]]);
 
@@ -46,8 +47,8 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
 
         relatedPlugins: z.array(z.string()).default([]),
 
-        aiUsed: z.boolean().default(false),
-        aiDisclaimer: z.string().optional(),
+        aiUsage: aiUsageSchema.default('unknown'),
+        aiDescription: z.string().optional(),
     });
 }
 
@@ -110,14 +111,6 @@ export function buildClientSchema<ImageSchema extends z.ZodType>(imageSchema: Im
                 });
             }
         });
-
-        if (data.aiDisclaimer && !data.aiUsed) {
-            ctx.addIssue({
-                code: 'custom',
-                path: ['aiDisclaimer'],
-                message: 'aiDisclaimer set but aiUsed is false',
-            });
-        }
     });
 }
 

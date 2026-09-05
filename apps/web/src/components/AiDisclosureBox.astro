@@ -1,0 +1,53 @@
+---
+import { Bot, CircleHelp, Sparkles } from 'lucide-react';
+import type { AiUsage } from '@jellyfindex/schema';
+
+interface Props {
+    aiUsage?: AiUsage;
+    aiDescription?: string;
+}
+
+const { aiUsage, aiDescription } = Astro.props;
+
+const COPY = {
+    unknown: {
+        title: 'AI Usage Unknown',
+        fallback: "The developer hasn't disclosed whether AI was used to build this project.",
+        icon: CircleHelp,
+    },
+    none: {
+        title: 'No AI Used',
+        fallback: 'The developer has indicated that no AI was used to build this project.',
+        icon: Bot,
+    },
+    'ai-assisted': {
+        title: 'AI-Assisted',
+        fallback: 'This submission was written with the assistance of AI.',
+        icon: Sparkles,
+    },
+    'vibe-coded': {
+        title: 'Vibe-Coded',
+        fallback:
+            "The majority of this project's code was written by AI, with the developer primarily making business and design decisions.",
+        icon: Sparkles,
+    },
+} as const;
+
+const info = COPY[aiUsage ?? 'unknown'];
+const Icon = info.icon;
+---
+
+<div
+    class:list={[
+        'mb-8 flex items-start gap-2 rounded-lg border p-3 text-sm',
+        aiUsage === 'unknown' || aiUsage === undefined
+            ? 'border-dashed text-muted-foreground/80'
+            : 'bg-muted/50 text-muted-foreground',
+    ]}
+>
+    <Icon className="mt-0.5 size-4 shrink-0" />
+    <div>
+        <h3 class="mb-1 font-heading text-sm font-bold">{info.title}</h3>
+        <p>{aiDescription ?? info.fallback}</p>
+    </div>
+</div>

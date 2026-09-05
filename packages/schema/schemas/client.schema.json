@@ -366,11 +366,17 @@
         "type": "string"
       }
     },
-    "aiUsed": {
-      "default": false,
-      "type": "boolean"
+    "aiUsage": {
+      "default": "unknown",
+      "type": "string",
+      "enum": [
+        "unknown",
+        "none",
+        "ai-assisted",
+        "vibe-coded"
+      ]
     },
-    "aiDisclaimer": {
+    "aiDescription": {
       "type": "string"
     }
   },

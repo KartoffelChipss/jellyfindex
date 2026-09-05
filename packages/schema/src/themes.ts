@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { hasSourceLink, licenseSchema, linkSchema, previewImageSchema } from './common.js';
+import { aiUsageSchema } from './ai-usage.js';
 
 function buildThemeFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {
     return z.object({
@@ -31,8 +32,8 @@ function buildThemeFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchem
         // Synthesized by the content loader from installationInstructions
         installationInstructionsHtml: z.string().default(''),
 
-        aiUsed: z.boolean().default(false),
-        aiDisclaimer: z.string().optional(),
+        aiUsage: aiUsageSchema.default('unknown'),
+        aiDescription: z.string().optional(),
     });
 }
 
@@ -44,14 +45,6 @@ export function buildThemeSchema<ImageSchema extends z.ZodType>(imageSchema: Ima
                 path: ['links'],
                 message:
                     'openSource is true but no link has sourcelink true (add a link with sourcelink: true, or set the type to github/gitlab/bitbucket/sourcehut/codeberg)',
-            });
-        }
-
-        if (data.aiDisclaimer && !data.aiUsed) {
-            ctx.addIssue({
-                code: 'custom',
-                path: ['aiDisclaimer'],
-                message: 'aiDisclaimer set but aiUsed is false',
             });
         }
     });
