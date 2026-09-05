@@ -21,6 +21,7 @@ function buildThemeFields<ImageSchema extends z.ZodType>(imageSchema: ImageSchem
         official: z.boolean().default(false),
         beta: z.boolean().default(false),
         abandoned: z.boolean().default(false),
+        ignoreAbandonedCheck: z.boolean().default(false),
 
         links: z.array(linkSchema).default([]),
         installationLink: linkSchema.optional(),

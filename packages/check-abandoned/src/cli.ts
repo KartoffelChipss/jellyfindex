@@ -50,8 +50,10 @@ function findGithubSource(links: unknown): { owner: string; repo: string } | nul
     return { owner: match[1], repo: match[2] };
 }
 
-function collectEntries(): Entry[] {
+function collectEntries(): { entries: Entry[]; ignoredIds: string[] } {
     const entries: Entry[] = [];
+    const ignoredIds: string[] = [];
+
     for (const collection of COLLECTIONS) {
         const dir = join(CONTENT_ROOT, collection);
         if (!existsSync(dir)) continue;
@@ -64,6 +66,12 @@ function collectEntries(): Entry[] {
 
             const rawText = readFileSync(metaPath, 'utf-8');
             const meta = (parseYaml(rawText) ?? {}) as Record<string, unknown>;
+
+            if (meta.ignoreAbandonedCheck === true) {
+                ignoredIds.push(`${collection}/${id}`);
+                continue;
+            }
+
             const source = findGithubSource(meta.links);
             if (!source) continue;
 
@@ -79,7 +87,7 @@ function collectEntries(): Entry[] {
             });
         }
     }
-    return entries;
+    return { entries, ignoredIds };
 }
 
 /**
@@ -173,8 +181,13 @@ async function main() {
         process.exit(1);
     }
 
-    const entries = collectEntries();
+    const { entries, ignoredIds } = collectEntries();
     console.log(`Checking ${entries.length} entries with a GitHub source link...`);
+    if (ignoredIds.length > 0) {
+        console.log(
+            `Skipping ${ignoredIds.length} entr${ignoredIds.length === 1 ? 'y' : 'ies'} with ignoreAbandonedCheck: true (${ignoredIds.join(', ')})`
+        );
+    }
 
     const activity = await fetchActivity(entries, token);
     const cutoff = new Date();

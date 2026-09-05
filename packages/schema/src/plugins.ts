@@ -32,6 +32,7 @@ function buildPluginFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         official: z.boolean().default(false),
         beta: z.boolean().default(false),
         abandoned: z.boolean().default(false),
+        ignoreAbandonedCheck: z.boolean().default(false),
 
         minimumJellyfinVersion: z.string().optional(),
 

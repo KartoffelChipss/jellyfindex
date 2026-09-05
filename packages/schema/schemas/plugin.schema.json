@@ -116,6 +116,10 @@
       "default": false,
       "type": "boolean"
     },
+    "ignoreAbandonedCheck": {
+      "default": false,
+      "type": "boolean"
+    },
     "minimumJellyfinVersion": {
       "type": "string"
     },

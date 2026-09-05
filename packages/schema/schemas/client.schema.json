@@ -180,6 +180,10 @@
       "default": false,
       "type": "boolean"
     },
+    "ignoreAbandonedCheck": {
+      "default": false,
+      "type": "boolean"
+    },
     "pricing": {
       "default": "free",
       "type": "string",
