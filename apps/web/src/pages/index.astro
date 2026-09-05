@@ -40,7 +40,7 @@ const latest = [
             <p class="mt-6 text-sm text-muted-foreground">
                 {clients.length} client{clients.length === 1 ? '' : 's'} · {plugins.length} plugin{
                     plugins.length === 1 ? '' : 's'
-                } · {themes.length} theme{themes.length === 1 ? '' : 's'} · fully open source
+                } · {themes.length} theme{themes.length === 1 ? '' : 's'}
             </p>
         </section>
 
@@ -113,8 +113,10 @@ const latest = [
                     <h2 class="mb-5 font-heading text-lg font-semibold">Recently added</h2>
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {latest.map(({ type, entry }) => {
-                            if (type === 'client') return <ClientCard client={entry.data} id={entry.id} />;
-                            if (type === 'plugin') return <PluginCard plugin={entry.data} id={entry.id} />;
+                            if (type === 'client')
+                                return <ClientCard client={entry.data} id={entry.id} />;
+                            if (type === 'plugin')
+                                return <PluginCard plugin={entry.data} id={entry.id} />;
                             return <ThemeCard theme={entry.data} id={entry.id} />;
                         })}
                     </div>
