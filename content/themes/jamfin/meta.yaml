@@ -13,6 +13,7 @@ developerGithub: JamsRepos
 dateAdded: 2026-09-05
 submittedBy: KartoffelChipss
 openSource: true
+abandoned: true
 license:
     name: MIT
     url: https://github.com/JamsRepos/Jamfin/blob/main/LICENSE
