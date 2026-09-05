@@ -30,6 +30,9 @@ links:
     - type: translations
       url: 'https://twoglot.com/@KartoffelChipss/pelagica'
       label: Help translate
+    - type: other
+      label: Demo
+      url: https://demo.pelagica.app/
 installationInstructions:
     web: |-
         You can find a web installation instruction in [the docs](https://pelagica.app/docs/installation).
