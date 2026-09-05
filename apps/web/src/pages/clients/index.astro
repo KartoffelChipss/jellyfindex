@@ -1,13 +1,15 @@
 ---
 import { getCollection } from 'astro:content';
 import { Search } from 'lucide-react';
+import { ListFilters } from '@/components/ListFilters';
 import ClientCard from '@/components/ClientCard.astro';
 import { Input } from '@/components/ui/input';
 import Layout from '@/layouts/Layout.astro';
 
-const entries = (await getCollection('clients'))
-    .filter((entry) => !entry.data.abandoned)
-    .sort((a, b) => new Date(b.data.dateAdded).getTime() - new Date(a.data.dateAdded).getTime());
+const entries = (await getCollection('clients')).sort(
+    (a, b) => new Date(b.data.dateAdded).getTime() - new Date(a.data.dateAdded).getTime()
+);
+const defaultVisibleCount = entries.filter((entry) => !entry.data.abandoned).length;
 ---
 
 <Layout
@@ -28,15 +30,16 @@ const entries = (await getCollection('clients'))
             </a>
         </header>
 
-        <div class="mb-8 flex items-center justify-between gap-4">
-            <div class="relative max-w-sm flex-1">
+        <div class="mb-8 flex flex-wrap items-center gap-4">
+            <div class="relative min-w-[200px] max-w-sm flex-1">
                 <Search
                     className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground"
                 />
                 <Input id="search" type="search" placeholder="Search clients…" className="pl-8" />
             </div>
-            <p class="shrink-0 text-sm text-muted-foreground">
-                {entries.length} client{entries.length === 1 ? '' : 's'}
+            <ListFilters client:load />
+            <p id="result-count" class="ml-auto shrink-0 text-sm text-muted-foreground">
+                {defaultVisibleCount} client{defaultVisibleCount === 1 ? '' : 's'}
             </p>
         </div>
 
@@ -45,6 +48,9 @@ const entries = (await getCollection('clients'))
                 entries.map((entry) => (
                     <div
                         data-search={`${entry.data.name} ${entry.data.developerName} ${entry.data.shortDescription}`.toLowerCase()}
+                        data-abandoned={entry.data.abandoned}
+                        data-beta={entry.data.beta}
+                        data-open-source={entry.data.openSource}
                     >
                         <ClientCard client={entry.data} id={entry.id} />
                     </div>
@@ -59,19 +65,49 @@ const entries = (await getCollection('clients'))
 </Layout>
 
 <script>
+    import {
+        DEFAULT_LIST_FILTERS,
+        LIST_FILTERS_EVENT,
+        type ListFiltersState,
+    } from '@/components/ListFilters';
+
     const input = document.querySelector<HTMLInputElement>('#search');
     const grid = document.querySelector<HTMLDivElement>('#client-grid');
     const emptyState = document.querySelector<HTMLParagraphElement>('#empty-state');
+    const resultCount = document.querySelector<HTMLParagraphElement>('#result-count');
     const cards = grid ? (Array.from(grid.children) as HTMLElement[]) : [];
 
-    input?.addEventListener('input', () => {
-        const query = input.value.trim().toLowerCase();
+    let filters: ListFiltersState = DEFAULT_LIST_FILTERS;
+
+    function applyFilters() {
+        const query = input?.value.trim().toLowerCase() ?? '';
         let visibleCount = 0;
         for (const card of cards) {
-            const matches = card.dataset.search?.includes(query) ?? true;
-            card.classList.toggle('hidden', !matches);
-            if (matches) visibleCount++;
+            const matchesSearch = card.dataset.search?.includes(query) ?? true;
+            const isAbandoned = card.dataset.abandoned === 'true';
+            const isBeta = card.dataset.beta === 'true';
+            const isOpenSource = card.dataset.openSource === 'true';
+
+            const matchesFilters =
+                (!filters.hideAbandoned || !isAbandoned) &&
+                (!filters.hideBeta || !isBeta) &&
+                (!filters.openSourceOnly || isOpenSource);
+
+            const visible = matchesSearch && matchesFilters;
+            card.classList.toggle('hidden', !visible);
+            if (visible) visibleCount++;
         }
         emptyState?.classList.toggle('hidden', visibleCount !== 0);
+        if (resultCount) {
+            resultCount.textContent = `${visibleCount} client${visibleCount === 1 ? '' : 's'}`;
+        }
+    }
+
+    input?.addEventListener('input', applyFilters);
+    window.addEventListener(LIST_FILTERS_EVENT, (event) => {
+        filters = (event as CustomEvent<ListFiltersState>).detail;
+        applyFilters();
     });
+
+    applyFilters();
 </script>

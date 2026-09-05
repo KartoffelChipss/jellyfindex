@@ -11,9 +11,9 @@ import Layout from '@/layouts/Layout.astro';
 
 const REPO_URL = 'https://github.com/KartoffelChipss/jellyfindex';
 
-const clients = (await getCollection('clients')).filter((entry) => !entry.data.abandoned);
-const plugins = (await getCollection('plugins')).filter((entry) => !entry.data.abandoned);
-const themes = (await getCollection('themes')).filter((entry) => !entry.data.abandoned);
+const clients = await getCollection('clients');
+const plugins = await getCollection('plugins');
+const themes = await getCollection('themes');
 
 const latest = [
     ...clients.map((entry) => ({ type: 'client' as const, entry })),
