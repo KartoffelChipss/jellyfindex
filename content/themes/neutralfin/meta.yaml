@@ -1,0 +1,23 @@
+name: NeutralFin
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/movies-library.webp
+      title: Movies Library
+    - image: ./preview-images/movie.webp
+      title: Movie Page
+    - image: ./preview-images/movie-alt.webp
+      title: Movie Page (Alternate)
+developerName: KartoffelChipss
+developerGithub: KartoffelChipss
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-2.0
+    url: https://github.com/KartoffelChipss/NeutralFin/blob/main/LICENSE
+shortDescription: A custom Jellyfin theme based on ElegantFin, featuring a sleek black and grey color scheme for a more neutral, modern look.
+links:
+    - type: github
+      url: https://github.com/KartoffelChipss/NeutralFin
+      sourcelink: true

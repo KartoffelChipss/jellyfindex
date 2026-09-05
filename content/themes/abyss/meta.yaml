@@ -1,0 +1,29 @@
+name: Abyss
+previewImages:
+    - image: ./preview-images/preview-1.webp
+      title: Preview 1
+    - image: ./preview-images/preview-2.webp
+      title: Preview 2
+    - image: ./preview-images/preview-3.webp
+      title: Preview 3
+    - image: ./preview-images/preview-4.webp
+      title: Preview 4
+    - image: ./preview-images/preview-5.webp
+      title: Preview 5
+    - image: ./preview-images/preview-6.webp
+      title: Preview 6
+developerName: AumGupta
+developerGithub: AumGupta
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/AumGupta/abyss-jellyfin/blob/main/LICENSE
+shortDescription: A clean, minimal dark theme with frosted glass surfaces, smooth transitions, and a clutter-free home screen spotlight add-on.
+links:
+    - type: github
+      url: https://github.com/AumGupta/abyss-jellyfin
+      sourcelink: true
+    - type: website
+      url: https://aumgupta.github.io/abyss-jellyfin/

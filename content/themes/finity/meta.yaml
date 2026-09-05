@@ -1,0 +1,23 @@
+name: Finity
+previewImages:
+    - image: ./preview-images/home-featured.webp
+      title: Home (Featured)
+    - image: ./preview-images/home-drawers.webp
+      title: Home (Drawers)
+    - image: ./preview-images/show-season.webp
+      title: Show Season
+    - image: ./preview-images/movie.webp
+      title: Movie Page
+developerName: prism2001
+developerGithub: prism2001
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/prism2001/finity/blob/main/LICENSE
+shortDescription: A sleek, modern, immersive Jellyfin theme with complete and minimal variants and configurable colors, roundness, and blur.
+links:
+    - type: github
+      url: https://github.com/prism2001/finity
+      sourcelink: true

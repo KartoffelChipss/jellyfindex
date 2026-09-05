@@ -1,0 +1,23 @@
+name: NetFin
+previewImages:
+    - image: ./preview-images/preview-1.webp
+      title: Preview 1
+    - image: ./preview-images/preview-2.webp
+      title: Preview 2
+    - image: ./preview-images/preview-3.webp
+      title: Preview 3
+    - image: ./preview-images/preview-4.webp
+      title: Preview 4
+developerName: ya0903
+developerGithub: ya0903
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/ya0903/NetFin/blob/main/LICENSE
+shortDescription: A cinematic Netflix-inspired theme with deep dark visuals, refined hover effects, and a focus on poster artwork.
+links:
+    - type: github
+      url: https://github.com/ya0903/NetFin
+      sourcelink: true

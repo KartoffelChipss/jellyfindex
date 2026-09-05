@@ -1,0 +1,19 @@
+name: finimalism
+previewImages:
+    - image: ./preview-images/preview-1.webp
+      title: Preview 1
+    - image: ./preview-images/preview-2.webp
+      title: Preview 2
+developerName: tedhinklater
+developerGithub: tedhinklater
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/tedhinklater/finimalism/blob/main/LICENSE
+shortDescription: A minimalist Jellyfin theme with separate CSS builds for Jellyfin v11 and v12, plus optional scroller and color tweaks.
+links:
+    - type: github
+      url: https://github.com/tedhinklater/finimalism
+      sourcelink: true

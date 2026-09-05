@@ -1,0 +1,27 @@
+name: ZestyTheme
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/movie.webp
+      title: Movie Page
+    - image: ./preview-images/avatar-menu.webp
+      title: Avatar Menu
+    - image: ./preview-images/player.webp
+      title: Player
+    - image: ./preview-images/login.webp
+      title: Login Page
+    - image: ./preview-images/mobile-view.webp
+      title: Mobile View
+developerName: stpnwf
+developerGithub: stpnwf
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/stpnwf/ZestyTheme/blob/main/LICENSE
+shortDescription: A minimal and elegant theme for Jellyfin with multiple color scheme presets.
+links:
+    - type: github
+      url: https://github.com/stpnwf/ZestyTheme
+      sourcelink: true

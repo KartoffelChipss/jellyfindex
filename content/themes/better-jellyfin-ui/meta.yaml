@@ -1,0 +1,25 @@
+name: better-jellyfin-ui
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/library.webp
+      title: Library
+    - image: ./preview-images/overview.webp
+      title: Details
+    - image: ./preview-images/player.webp
+      title: Player
+    - image: ./preview-images/admin.webp
+      title: Admin Dashboard
+developerName: tromoSM
+developerGithub: tromoSM
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: Apache-2.0
+    url: https://github.com/tromoSM/better-jellyfin-ui/blob/main/LICENSE
+shortDescription: A refined and modern UI enhancement for Jellyfin focused on improved layout, animations, and iOS-inspired design.
+links:
+    - type: github
+      url: https://github.com/tromoSM/better-jellyfin-ui
+      sourcelink: true

@@ -1,0 +1,23 @@
+name: Jamfin
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/details.webp
+      title: Details
+    - image: ./preview-images/library.webp
+      title: Library
+    - image: ./preview-images/admin.webp
+      title: Admin Dashboard
+developerName: JamsRepos
+developerGithub: JamsRepos
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/JamsRepos/Jamfin/blob/main/LICENSE
+shortDescription: Bringing a modern, sleek glassmorphism design to Jellyfin, enhancing your media server's aesthetics.
+links:
+    - type: github
+      url: https://github.com/JamsRepos/Jamfin
+      sourcelink: true

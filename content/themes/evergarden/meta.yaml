@@ -1,0 +1,25 @@
+name: evergarden
+previewImages:
+    - image: ./preview-images/summer.webp
+      title: Summer
+    - image: ./preview-images/spring.webp
+      title: Spring
+    - image: ./preview-images/fall.webp
+      title: Fall
+    - image: ./preview-images/winter.webp
+      title: Winter
+developerName: evergardentheme
+developerGithub: evergardentheme
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: EUPL-1.2
+    url: https://github.com/evergardentheme/jellyfin/blob/main/LICENSE
+shortDescription: 'A cozy, nature-inspired theme for Jellyfin with four seasonal color palettes: Winter, Fall, Spring, and Summer.'
+links:
+    - type: github
+      url: https://github.com/evergardentheme/jellyfin
+      sourcelink: true
+    - type: codeberg
+      url: https://codeberg.org/evergarden/jellyfin

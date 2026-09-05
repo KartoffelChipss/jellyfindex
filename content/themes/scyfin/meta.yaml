@@ -1,0 +1,27 @@
+name: scyfin
+previewImages:
+    - image: ./preview-images/homepage.webp
+      title: Homepage
+    - image: ./preview-images/homepage-backdrops.webp
+      title: Homepage (Backdrops)
+    - image: ./preview-images/details.webp
+      title: Details
+    - image: ./preview-images/details-backdrops.webp
+      title: Details (Backdrops)
+    - image: ./preview-images/dashboard.webp
+      title: Dashboard
+    - image: ./preview-images/login.webp
+      title: Login Page
+developerName: loof2736
+developerGithub: loof2736
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/loof2736/scyfin/blob/main/LICENSE
+shortDescription: Custom CSS theme for Jellyfin with support for backdrops and multiple accent color themes.
+links:
+    - type: github
+      url: https://github.com/loof2736/scyfin
+      sourcelink: true

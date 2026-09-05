@@ -1,0 +1,25 @@
+name: Catppuccin
+previewImages:
+    - image: ./preview-images/latte.webp
+      title: Latte
+    - image: ./preview-images/frappe.webp
+      title: Frappé
+    - image: ./preview-images/macchiato.webp
+      title: Macchiato
+    - image: ./preview-images/mocha.webp
+      title: Mocha
+developerName: Catppuccin
+developerGithub: catppuccin
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/catppuccin/jellyfin/blob/main/LICENSE
+shortDescription: 'Soothing pastel theme for Jellyfin with four flavors: Latte, Frappé, Macchiato, and Mocha.'
+links:
+    - type: github
+      url: https://github.com/catppuccin/jellyfin
+      sourcelink: true
+    - type: website
+      url: https://catppuccin.com

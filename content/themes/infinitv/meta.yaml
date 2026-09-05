@@ -1,0 +1,29 @@
+name: infinitv
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/library.webp
+      title: Library
+    - image: ./preview-images/series.webp
+      title: Series
+    - image: ./preview-images/episodes.webp
+      title: Episodes
+    - image: ./preview-images/movie.webp
+      title: Movie
+    - image: ./preview-images/player.webp
+      title: Player
+developerName: buesche87
+developerGithub: buesche87
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/buesche87/infinitv/blob/main/LICENSE
+shortDescription: A TV-mode-focused Jellyfin theme optimized for HTPC and remote-control navigation, with full desktop and mobile support.
+links:
+    - type: github
+      url: https://github.com/buesche87/infinitv
+      sourcelink: true
+    - type: website
+      url: https://buesche87.github.io/infinitv/

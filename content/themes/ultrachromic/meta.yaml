@@ -1,0 +1,23 @@
+name: Ultrachromic
+previewImages:
+    - image: ./preview-images/preview-1.webp
+      title: Preview 1
+    - image: ./preview-images/preview-2.webp
+      title: Preview 2
+    - image: ./preview-images/preview-3.webp
+      title: Preview 3
+    - image: ./preview-images/preview-4.webp
+      title: Preview 4
+developerName: CTalvio
+developerGithub: CTalvio
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: MIT
+    url: https://github.com/CTalvio/Ultrachromic/blob/main/LICENSE
+shortDescription: The final form, the true evolution of the chromic theme saga, with multiple presets and deep customization options.
+links:
+    - type: github
+      url: https://github.com/CTalvio/Ultrachromic
+      sourcelink: true

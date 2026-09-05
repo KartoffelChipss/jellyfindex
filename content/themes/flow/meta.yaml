@@ -1,0 +1,23 @@
+name: Flow
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/details.webp
+      title: Details
+    - image: ./preview-images/episode-grid.webp
+      title: Episode Grid
+    - image: ./preview-images/blue-theme.webp
+      title: Blue Theme
+developerName: LitCastVlog
+developerGithub: LitCastVlog
+dateAdded: 2026-09-05
+submittedBy: KartoffelChipss
+openSource: true
+license:
+    name: GPL-3.0
+    url: https://github.com/LitCastVlog/Flow/blob/main/LICENSE
+shortDescription: A Plex-inspired theme for Jellyfin's WebUI, based on scyfin, with optional drawer, episode grid, and color add-ons.
+links:
+    - type: github
+      url: https://github.com/LitCastVlog/Flow
+      sourcelink: true
