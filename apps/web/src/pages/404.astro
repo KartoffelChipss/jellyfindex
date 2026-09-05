@@ -1,0 +1,31 @@
+---
+import { Home, FileSearchCorner } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Page not found — jellyfindex" description="This page doesn't exist.">
+    <Fragment slot="head">
+        <meta name="robots" content="noindex" />
+    </Fragment>
+
+    <div
+        class="mx-auto flex max-w-2xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8"
+    >
+        <div class="mb-6 flex size-16 items-center justify-center rounded-full bg-muted">
+            <FileSearchCorner className="size-8 text-muted-foreground" />
+        </div>
+        <h1 class="font-heading text-4xl font-semibold tracking-tight">Page not found</h1>
+        <p class="mx-auto mt-3 max-w-md text-balance text-muted-foreground">
+            This page doesn't exist. It may have been moved, renamed, or never existed in the first
+            place.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="/" class={buttonVariants({ size: 'sm' })}>
+                <Home />
+                Home
+            </a>
+        </div>
+    </div>
+</Layout>
