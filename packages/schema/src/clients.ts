@@ -10,7 +10,9 @@ function buildClientFields<ImageSchema extends z.ZodType>(imageSchema: ImageSche
         name: z.string(),
         logo: imageSchema,
         banner: imageSchema.optional(),
-        previewImages: z.array(previewImageSchema(imageSchema)).default([]),
+        previewImages: z
+            .array(previewImageSchema(imageSchema, { platform: platformEnum.optional() }))
+            .default([]),
 
         developerName: z.string(),
         developerGithub: z.string().optional(),
@@ -94,6 +96,18 @@ export function buildClientSchema<ImageSchema extends z.ZodType>(imageSchema: Im
                 }
             }
         }
+
+        data.previewImages.forEach((entry, index) => {
+            const platform = (entry as { platform?: (typeof data.platforms)[number] } | null)
+                ?.platform;
+            if (platform && !data.platforms.includes(platform)) {
+                ctx.addIssue({
+                    code: 'custom',
+                    path: ['previewImages', index, 'platform'],
+                    message: `previewImages platform "${platform}" is not in platforms list`,
+                });
+            }
+        });
 
         if (data.aiDisclaimer && !data.aiUsed) {
             ctx.addIssue({

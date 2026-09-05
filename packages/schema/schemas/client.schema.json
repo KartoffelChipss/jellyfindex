@@ -27,6 +27,37 @@
               },
               "title": {
                 "type": "string"
+              },
+              "platform": {
+                "type": "string",
+                "enum": [
+                  "android",
+                  "ios",
+                  "windows",
+                  "macos",
+                  "linux",
+                  "webos",
+                  "tizen",
+                  "androidtv",
+                  "tvos",
+                  "titanos",
+                  "rokuos",
+                  "harmonyos",
+                  "fireos",
+                  "vegaos",
+                  "xbox",
+                  "playstation",
+                  "nintendo-switch",
+                  "nintendo-wiiu",
+                  "nintendo-3ds",
+                  "wearos",
+                  "watchos",
+                  "meta-quest",
+                  "steamvr",
+                  "web",
+                  "cli",
+                  "other"
+                ]
               }
             },
             "required": [

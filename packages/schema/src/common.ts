@@ -19,8 +19,14 @@ export function hasSourceLink(links: z.infer<typeof linkSchema>[]): boolean {
     );
 }
 
-export function previewImageSchema<ImageSchema extends z.ZodType>(imageSchema: ImageSchema) {
-    return z.union([imageSchema, z.object({ image: imageSchema, title: z.string().optional() })]);
+export function previewImageSchema<ImageSchema extends z.ZodType, Extra extends z.ZodRawShape = {}>(
+    imageSchema: ImageSchema,
+    extra: Extra = {} as Extra
+) {
+    return z.union([
+        imageSchema,
+        z.object({ image: imageSchema, title: z.string().optional(), ...extra }),
+    ]);
 }
 
 export interface PreviewImage<Image> {
@@ -28,12 +34,12 @@ export interface PreviewImage<Image> {
     title?: string;
 }
 
-/** Normalizes a preview image entry (plain image, or `{ image, title }`) to `{ image, title? }`. */
-export function resolvePreviewImage<Image>(
-    entry: Image | PreviewImage<Image>
-): PreviewImage<Image> {
+/** Normalizes a preview image entry */
+export function resolvePreviewImage<Entry>(
+    entry: Entry
+): Entry extends { image: unknown } ? Entry : PreviewImage<Entry> {
     if (entry !== null && typeof entry === 'object' && 'image' in entry) {
-        return entry as PreviewImage<Image>;
+        return entry as never;
     }
-    return { image: entry as Image };
+    return { image: entry } as never;
 }
