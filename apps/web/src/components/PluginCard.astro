@@ -1,8 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { BadgeCheck, GitFork, FlaskConical, Ghost, Lock } from 'lucide-react';
 import { labelForPluginCategory } from '@jellyfindex/schema';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -47,14 +50,7 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
                 <a href={'/plugins/' + id} class="truncate hover:underline">
                     {plugin.name}
                 </a>
-                {
-                    plugin.official && (
-                        <Badge variant="default" className="ml-auto shrink-0">
-                            <BadgeCheck className="size-3" />
-                            Official
-                        </Badge>
-                    )
-                }
+                <OfficialBadge official={plugin.official} class="ml-auto shrink-0" />
             </CardTitle>
             <CardDescription className="truncate">
                 {
@@ -76,35 +72,9 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
     <CardContent className="flex flex-1 flex-col gap-3">
         <p class="text-sm text-muted-foreground">{plugin.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
-            {
-                plugin.abandoned === true && (
-                    <Badge variant="secondary" className="text-xs dark:bg-yellow-900 bg-yellow-400">
-                        <Ghost className="size-3" />
-                        Abandoned
-                    </Badge>
-                )
-            }
-            {
-                plugin.beta === true && (
-                    <Badge variant="secondary" className="text-xs dark:bg-indigo-500 bg-indigo-300">
-                        <FlaskConical className="size-3" />
-                        Beta
-                    </Badge>
-                )
-            }
-            {
-                plugin.openSource ? (
-                    <Badge variant="secondary" className="text-xs">
-                        <GitFork className="size-3" />
-                        Open source
-                    </Badge>
-                ) : (
-                    <Badge variant="secondary" className="text-xs">
-                        <Lock className="size-3" />
-                        Closed source
-                    </Badge>
-                )
-            }
+            <AbandonedBadge abandoned={plugin.abandoned} />
+            <BetaBadge beta={plugin.beta} />
+            <OpenSourceBadge openSource={plugin.openSource} />
         </div>
         <div class="flex flex-wrap gap-1.5">
             {

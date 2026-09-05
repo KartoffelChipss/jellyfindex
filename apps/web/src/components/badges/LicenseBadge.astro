@@ -1,0 +1,30 @@
+---
+import { Scale } from 'lucide-react';
+import { Badge, badgeVariants } from '@/components/ui/badge';
+
+interface Props {
+    license?: { name: string; url?: string };
+}
+
+const { license } = Astro.props;
+---
+
+{
+    license &&
+        (license.url ? (
+            <a
+                href={license.url}
+                target="_blank"
+                rel="noreferrer"
+                class={badgeVariants({ variant: 'secondary' })}
+            >
+                <Scale className="size-3" />
+                {license.name}
+            </a>
+        ) : (
+            <Badge variant="secondary">
+                <Scale className="size-3" />
+                {license.name}
+            </Badge>
+        ))
+}

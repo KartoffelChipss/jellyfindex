@@ -3,19 +3,14 @@ import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, getEntry, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import {
-    ArrowLeft,
-    BadgeCheck,
-    Download,
-    GitFork,
-    Scale,
-    Sparkles,
-    FlaskConical,
-    Ghost,
-    Lock,
-} from 'lucide-react';
+import { ArrowLeft, Download, Sparkles } from 'lucide-react';
 import { LINK_TYPES, labelForPluginCategory, type LinkType } from '@jellyfindex/schema';
-import { Badge, badgeVariants } from '@/components/ui/badge';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import LicenseBadge from '@/components/badges/LicenseBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
@@ -99,14 +94,7 @@ const previewImages = await Promise.all(
                     <h1 class="font-heading text-2xl font-semibold tracking-tight">
                         {plugin.name}
                     </h1>
-                    {
-                        plugin.official && (
-                            <Badge variant="default">
-                                <BadgeCheck className="size-3" />
-                                Official
-                            </Badge>
-                        )
-                    }
+                    <OfficialBadge official={plugin.official} />
                 </div>
                 <p class="mt-1 text-sm text-muted-foreground">
                     by{' '}
@@ -124,60 +112,10 @@ const previewImages = await Promise.all(
                     }
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
-                    {
-                        plugin.abandoned === true && (
-                            <Badge
-                                variant="secondary"
-                                className="text-xs dark:bg-yellow-900 bg-yellow-400"
-                            >
-                                <Ghost className="size-3" />
-                                Abandoned
-                            </Badge>
-                        )
-                    }
-                    {
-                        plugin.beta === true && (
-                            <Badge
-                                variant="secondary"
-                                className="text-xs dark:bg-indigo-500 bg-indigo-300"
-                            >
-                                <FlaskConical className="size-3" />
-                                Beta
-                            </Badge>
-                        )
-                    }
-                    {
-                        plugin.openSource ? (
-                            <Badge variant="secondary">
-                                <GitFork className="size-3" />
-                                Open source
-                            </Badge>
-                        ) : (
-                            <Badge variant="secondary" className="text-xs">
-                                <Lock className="size-3" />
-                                Closed source
-                            </Badge>
-                        )
-                    }
-                    {
-                        plugin.license &&
-                            (plugin.license.url ? (
-                                <a
-                                    href={plugin.license.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class={badgeVariants({ variant: 'secondary' })}
-                                >
-                                    <Scale className="size-3" />
-                                    {plugin.license.name}
-                                </a>
-                            ) : (
-                                <Badge variant="secondary">
-                                    <Scale className="size-3" />
-                                    {plugin.license.name}
-                                </Badge>
-                            ))
-                    }
+                    <AbandonedBadge abandoned={plugin.abandoned} />
+                    <BetaBadge beta={plugin.beta} />
+                    <OpenSourceBadge openSource={plugin.openSource} />
+                    <LicenseBadge license={plugin.license} />
                 </div>
             </div>
         </header>

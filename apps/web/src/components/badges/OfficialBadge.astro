@@ -1,0 +1,20 @@
+---
+import { BadgeCheck } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    official?: boolean;
+    class?: string;
+}
+
+const { official, class: className } = Astro.props;
+---
+
+{
+    official && (
+        <Badge variant="default" className={className}>
+            <BadgeCheck className="size-3" />
+            Official
+        </Badge>
+    )
+}

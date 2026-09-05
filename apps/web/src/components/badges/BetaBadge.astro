@@ -1,0 +1,19 @@
+---
+import { FlaskConical } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    beta?: boolean;
+}
+
+const { beta } = Astro.props;
+---
+
+{
+    beta === true && (
+        <Badge variant="secondary" className="dark:bg-indigo-500 bg-indigo-300">
+            <FlaskConical className="size-3" />
+            Beta
+        </Badge>
+    )
+}

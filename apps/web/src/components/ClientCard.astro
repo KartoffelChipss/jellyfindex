@@ -1,8 +1,13 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { BadgeCheck, GitFork, Music, FlaskConical, Ghost, Lock, DollarSign } from 'lucide-react';
 import { labelForPlatform } from '@jellyfindex/schema';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import MusicBadge from '@/components/badges/MusicBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import PricingBadge from '@/components/badges/PricingBadge.astro';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -47,14 +52,7 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
                 <a href={'/clients/' + id} class="truncate hover:underline">
                     {client.name}
                 </a>
-                {
-                    client.official && (
-                        <Badge variant="default" className="ml-auto shrink-0">
-                            <BadgeCheck className="size-3" />
-                            Official
-                        </Badge>
-                    )
-                }
+                <OfficialBadge official={client.official} class="ml-auto shrink-0" />
             </CardTitle>
             <CardDescription className="truncate">
                 {
@@ -76,59 +74,11 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
     <CardContent className="flex flex-1 flex-col gap-3">
         <p class="text-sm text-muted-foreground">{client.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
-            {
-                client.abandoned === true && (
-                    <Badge variant="secondary" className="text-xs dark:bg-yellow-900 bg-yellow-400">
-                        <Ghost className="size-3" />
-                        Abandoned
-                    </Badge>
-                )
-            }
-            {
-                client.beta === true && (
-                    <Badge variant="secondary" className="text-xs dark:bg-indigo-500 bg-indigo-300">
-                        <FlaskConical className="size-3" />
-                        Beta
-                    </Badge>
-                )
-            }
-            {
-                client.openSource ? (
-                    <Badge variant="secondary" className="text-xs">
-                        <GitFork className="size-3" />
-                        Open source
-                    </Badge>
-                ) : (
-                    <Badge variant="secondary" className="text-xs">
-                        <Lock className="size-3" />
-                        Closed source
-                    </Badge>
-                )
-            }
-            {
-                client.music === 'main' && (
-                    <Badge variant="secondary" className="text-xs">
-                        <Music className="size-3" />
-                        Music Client
-                    </Badge>
-                )
-            }
-            {
-                client.pricing === 'subscription' && (
-                    <Badge variant="secondary" className="text-xs">
-                        <DollarSign className="size-3" />
-                        Subscription
-                    </Badge>
-                )
-            }
-            {
-                client.pricing === 'one-time-purchase' && (
-                    <Badge variant="secondary" className="text-xs">
-                        <DollarSign className="size-3" />
-                        One-time purchase
-                    </Badge>
-                )
-            }
+            <AbandonedBadge abandoned={client.abandoned} />
+            <BetaBadge beta={client.beta} />
+            <OpenSourceBadge openSource={client.openSource} />
+            <MusicBadge music={client.music} />
+            <PricingBadge pricing={client.pricing} />
         </div>
         <div class="flex flex-wrap gap-1.5">
             {

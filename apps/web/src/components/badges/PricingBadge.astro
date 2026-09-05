@@ -1,0 +1,27 @@
+---
+import { DollarSign } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    pricing: 'free' | 'subscription' | 'one-time-purchase';
+}
+
+const { pricing } = Astro.props;
+---
+
+{
+    pricing === 'subscription' && (
+        <Badge variant="secondary">
+            <DollarSign className="size-3" />
+            Subscription
+        </Badge>
+    )
+}
+{
+    pricing === 'one-time-purchase' && (
+        <Badge variant="secondary">
+            <DollarSign className="size-3" />
+            One-time purchase
+        </Badge>
+    )
+}

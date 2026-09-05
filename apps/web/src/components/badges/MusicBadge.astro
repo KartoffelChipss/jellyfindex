@@ -1,0 +1,19 @@
+---
+import { Music } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    music: 'none' | 'supported' | 'main';
+}
+
+const { music } = Astro.props;
+---
+
+{
+    music !== 'none' && (
+        <Badge variant="secondary">
+            <Music className="size-3" />
+            {music === 'main' ? 'Music client' : 'Music support'}
+        </Badge>
+    )
+}

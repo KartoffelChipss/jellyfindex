@@ -1,0 +1,24 @@
+---
+import { GitFork, Lock } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    openSource: boolean;
+}
+
+const { openSource } = Astro.props;
+---
+
+{
+    openSource ? (
+        <Badge variant="secondary">
+            <GitFork className="size-3" />
+            Open source
+        </Badge>
+    ) : (
+        <Badge variant="secondary">
+            <Lock className="size-3" />
+            Closed source
+        </Badge>
+    )
+}

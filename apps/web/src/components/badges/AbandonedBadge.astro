@@ -1,0 +1,19 @@
+---
+import { Ghost } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+interface Props {
+    abandoned?: boolean;
+}
+
+const { abandoned } = Astro.props;
+---
+
+{
+    abandoned === true && (
+        <Badge variant="secondary" className="dark:bg-yellow-900 bg-yellow-400">
+            <Ghost className="size-3" />
+            Abandoned
+        </Badge>
+    )
+}

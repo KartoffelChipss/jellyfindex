@@ -3,19 +3,7 @@ import type { GetStaticPaths } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import { Image, getImage } from 'astro:assets';
-import {
-    ArrowLeft,
-    BadgeCheck,
-    Download,
-    GitFork,
-    Music,
-    Scale,
-    Sparkles,
-    FlaskConical,
-    Ghost,
-    Lock,
-    DollarSign,
-} from 'lucide-react';
+import { ArrowLeft, Download, Sparkles } from 'lucide-react';
 import {
     FEATURE_FLAG_MAP,
     LINK_TYPES,
@@ -24,7 +12,14 @@ import {
     labelForPlatform,
     type LinkType,
 } from '@jellyfindex/schema';
-import { Badge, badgeVariants } from '@/components/ui/badge';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import LicenseBadge from '@/components/badges/LicenseBadge.astro';
+import MusicBadge from '@/components/badges/MusicBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import PricingBadge from '@/components/badges/PricingBadge.astro';
+import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { InstallTabs } from '@/components/InstallTabs';
@@ -135,14 +130,7 @@ const previewImages = await Promise.all(
                     <h1 class="font-heading text-2xl font-semibold tracking-tight">
                         {client.name}
                     </h1>
-                    {
-                        client.official && (
-                            <Badge variant="default">
-                                <BadgeCheck className="size-3" />
-                                Official
-                            </Badge>
-                        )
-                    }
+                    <OfficialBadge official={client.official} />
                 </div>
                 <p class="mt-1 text-sm text-muted-foreground">
                     by{' '}
@@ -160,84 +148,12 @@ const previewImages = await Promise.all(
                     }
                 </p>
                 <div class="mt-3 flex flex-wrap gap-1.5">
-                    {
-                        client.abandoned === true && (
-                            <Badge
-                                variant="secondary"
-                                className="text-xs dark:bg-yellow-900 bg-yellow-400"
-                            >
-                                <Ghost className="size-3" />
-                                Abandoned
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.beta === true && (
-                            <Badge
-                                variant="secondary"
-                                className="text-xs dark:bg-indigo-500 bg-indigo-300"
-                            >
-                                <FlaskConical className="size-3" />
-                                Beta
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.openSource ? (
-                            <Badge variant="secondary">
-                                <GitFork className="size-3" />
-                                Open source
-                            </Badge>
-                        ) : (
-                            <Badge variant="secondary" className="text-xs">
-                                <Lock className="size-3" />
-                                Closed source
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.music !== 'none' && (
-                            <Badge variant="secondary">
-                                <Music className="size-3" />
-                                {client.music === 'main' ? 'Music client' : 'Music support'}
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.pricing === 'subscription' && (
-                            <Badge variant="secondary">
-                                <DollarSign className="size-3" />
-                                Subscription
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.pricing === 'one-time-purchase' && (
-                            <Badge variant="secondary">
-                                <DollarSign className="size-3" />
-                                One-time purchase
-                            </Badge>
-                        )
-                    }
-                    {
-                        client.license &&
-                            (client.license.url ? (
-                                <a
-                                    href={client.license.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    class={badgeVariants({ variant: 'secondary' })}
-                                >
-                                    <Scale className="size-3" />
-                                    {client.license.name}
-                                </a>
-                            ) : (
-                                <Badge variant="secondary">
-                                    <Scale className="size-3" />
-                                    {client.license.name}
-                                </Badge>
-                            ))
-                    }
+                    <AbandonedBadge abandoned={client.abandoned} />
+                    <BetaBadge beta={client.beta} />
+                    <OpenSourceBadge openSource={client.openSource} />
+                    <MusicBadge music={client.music} />
+                    <PricingBadge pricing={client.pricing} />
+                    <LicenseBadge license={client.license} />
                 </div>
             </div>
         </header>
