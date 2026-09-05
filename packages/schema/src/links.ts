@@ -53,6 +53,11 @@ export const LINK_TYPES = {
         defaultSourceLink: false,
         domains: [/^f-droid\.org$/],
     },
+    obtainium: {
+        label: 'Obtainium',
+        defaultSourceLink: false,
+        domains: [/^obtainium\.imranr\.dev$/],
+    },
     other: { label: 'Other', defaultSourceLink: false },
 } as const satisfies Record<string, LinkTypeDef>;
 
