@@ -22,7 +22,7 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
 ---
 
 <Card className="flex h-full flex-col gap-0 pt-0">
-    <div class="relative">
+    <a href={'/plugins/' + id} class="relative">
         {
             plugin.banner ? (
                 <Image
@@ -43,7 +43,7 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
             height={48}
             class="absolute -bottom-6 left-4 size-12 rounded-lg bg-card object-contain shadow-md ring-4 ring-card"
         />
-    </div>
+    </a>
     <CardHeader className="gap-1 pt-8">
         <div class="min-w-0">
             <CardTitle className="truncate flex items-center gap-1">

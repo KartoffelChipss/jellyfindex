@@ -16,13 +16,15 @@ const { theme, id } = Astro.props;
 ---
 
 <Card className="flex h-full flex-col gap-0 pt-0">
-    <Image
-        src={theme.previewImages[0]}
-        alt=""
-        width={400}
-        height={225}
-        class="aspect-video w-full object-cover"
-    />
+    <a href={'/themes/' + id} class="relative block w-full overflow-hidden rounded-t-lg">
+        <Image
+            src={theme.previewImages[0]}
+            alt=""
+            width={400}
+            height={225}
+            class="aspect-video w-full object-cover"
+        />
+    </a>
     <CardHeader className="gap-1">
         <div class="min-w-0">
             <CardTitle className="truncate flex items-center gap-1">
