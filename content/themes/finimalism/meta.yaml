@@ -9,6 +9,7 @@ developerGithub: tedhinklater
 dateAdded: 2026-09-05
 submittedBy: KartoffelChipss
 openSource: true
+abandoned: true
 license:
     name: GPL-3.0
     url: https://github.com/tedhinklater/finimalism/blob/main/LICENSE
