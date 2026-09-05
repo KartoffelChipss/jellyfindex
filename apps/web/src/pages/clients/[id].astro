@@ -149,9 +149,7 @@ const previewImages = await Promise.all(
                     {
                         client.developerGithub ? (
                             <a
-                                href={`https://github.com/${client.developerGithub}`}
-                                target="_blank"
-                                rel="noreferrer"
+                                href={`/authors/${client.developerGithub.toLowerCase()}`}
                                 class="hover:text-foreground hover:underline"
                             >
                                 {client.developerName}

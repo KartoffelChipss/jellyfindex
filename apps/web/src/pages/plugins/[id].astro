@@ -113,9 +113,7 @@ const previewImages = await Promise.all(
                     {
                         plugin.developerGithub ? (
                             <a
-                                href={`https://github.com/${plugin.developerGithub}`}
-                                target="_blank"
-                                rel="noreferrer"
+                                href={`/authors/${plugin.developerGithub.toLowerCase()}`}
                                 class="hover:text-foreground hover:underline"
                             >
                                 {plugin.developerName}

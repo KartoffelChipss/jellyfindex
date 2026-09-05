@@ -56,7 +56,20 @@ const extraCategoryCount = plugin.categories.length - visibleCategories.length;
                     )
                 }
             </CardTitle>
-            <CardDescription className="truncate">{plugin.developerName}</CardDescription>
+            <CardDescription className="truncate">
+                {
+                    plugin.developerGithub ? (
+                        <a
+                            href={`/authors/${plugin.developerGithub.toLowerCase()}`}
+                            class="hover:text-foreground hover:underline"
+                        >
+                            {plugin.developerName}
+                        </a>
+                    ) : (
+                        plugin.developerName
+                    )
+                }
+            </CardDescription>
         </div>
     </CardHeader>
 

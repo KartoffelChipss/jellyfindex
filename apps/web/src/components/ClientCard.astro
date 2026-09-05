@@ -56,7 +56,20 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
                     )
                 }
             </CardTitle>
-            <CardDescription className="truncate">{client.developerName}</CardDescription>
+            <CardDescription className="truncate">
+                {
+                    client.developerGithub ? (
+                        <a
+                            href={`/authors/${client.developerGithub.toLowerCase()}`}
+                            class="hover:text-foreground hover:underline"
+                        >
+                            {client.developerName}
+                        </a>
+                    ) : (
+                        client.developerName
+                    )
+                }
+            </CardDescription>
         </div>
     </CardHeader>
 
