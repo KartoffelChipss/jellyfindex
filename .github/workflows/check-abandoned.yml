@@ -1,0 +1,62 @@
+name: Check for abandoned projects
+
+on:
+    schedule:
+        # 04:23 UTC on the 1st of every month.
+        - cron: '23 4 1 * *'
+    workflow_dispatch:
+
+concurrency:
+    group: check-abandoned
+    cancel-in-progress: false
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+    check-abandoned:
+        name: Flag inactive projects
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: pnpm
+
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+
+            - name: Check for abandoned projects
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: pnpm run check-abandoned
+
+            - name: Check for changes
+              id: diff
+              run: |
+                  if [ -n "$(git status --porcelain -- content)" ]; then
+                    echo "changed=true" >> "$GITHUB_OUTPUT"
+                  else
+                    echo "changed=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Open pull request
+              if: steps.diff.outputs.changed == 'true'
+              uses: peter-evans/create-pull-request@v7
+              with:
+                  commit-message: 'chore: mark inactive projects as abandoned'
+                  title: 'Mark inactive projects as abandoned'
+                  body-path: check-abandoned-summary.md
+                  branch: bot/check-abandoned
+                  delete-branch: true
+                  add-paths: content/**/meta.yaml
+                  labels: automated
+                  reviewers: KartoffelChipss
