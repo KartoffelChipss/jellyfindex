@@ -58,6 +58,11 @@ export const LINK_TYPES = {
         defaultSourceLink: false,
         domains: [/^obtainium\.imranr\.dev$/],
     },
+    discord: {
+        label: 'Discord',
+        defaultSourceLink: false,
+        domains: [/^discord\.com$/, /^discord\.gg$/],
+    },
     other: { label: 'Other', defaultSourceLink: false },
 } as const satisfies Record<string, LinkTypeDef>;
 

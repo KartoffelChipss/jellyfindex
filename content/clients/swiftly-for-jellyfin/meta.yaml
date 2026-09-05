@@ -24,8 +24,7 @@ links:
     - type: other
       label: TestFlight Beta
       url: https://testflight.apple.com/join/MqeP2cnj
-    - type: other
-      label: Discord
+    - type: discord
       url: https://discord.gg/MeGwfv3UwN
 previewImages:
     - image: ./preview-images/home.png

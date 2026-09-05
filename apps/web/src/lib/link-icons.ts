@@ -9,6 +9,7 @@ import AppStore from '@/components/icons/AppStore.astro';
 import GooglePlay from '@/components/icons/GooglePlay.astro';
 import Fdroid from '@/components/icons/FDroid.astro';
 import Obtainium from '@/components/icons/Obtainium.astro';
+import Discord from '@/components/icons/Discord.astro';
 
 /** Picks an icon for a client link, preferring a brand mark for known hosts/stores. */
 export function iconForLink(type: LinkType, isInstall: boolean) {
@@ -40,6 +41,8 @@ export function iconForLink(type: LinkType, isInstall: boolean) {
             return Fdroid;
         case 'obtainium':
             return Obtainium;
+        case 'discord':
+            return Discord;
         default:
             return ExternalLink;
     }
