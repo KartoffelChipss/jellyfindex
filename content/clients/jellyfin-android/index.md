@@ -1,0 +1,3 @@
+Jellyfin for Android is the official companion app for phones and tablets. Rather than reimplementing the interface, it wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client used by every server, so browsing, search, and library layout stay identical to what you'd see in a desktop browser, while Android gets native touches on top: local audio and video playback, Chromecast support, notifications, and Quick Connect login.
+
+Because it's a thin wrapper around the web client rather than a fully native rewrite, most fixes and new features land in [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) first and reach this app automatically.

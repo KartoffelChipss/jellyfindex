@@ -1,0 +1,3 @@
+JellyCon is the official lightweight Kodi add-on for Jellyfin. Rather than syncing your library into Kodi's own database, it acts as a thin frontend: movies, TV shows, music videos, and music are populated dynamically straight from the server, so there's no library sync to wait on and content updates on your Jellyfin server show up immediately in Kodi.
+
+It supports Live TV, switches between multiple Jellyfin user accounts on the fly, and logs in with Quick Connect or a manual username and password. Because menus and widgets are exposed through Kodi's own add-on browser, JellyCon can be wired into almost any customizable Kodi skin.

@@ -1,0 +1,41 @@
+name: Swiftfin
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2021-05-14
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Swift-native Jellyfin client for iPhone, iPad, and Apple TV, built around VLCKit to maximize direct play.
+platforms:
+    - ios
+    - tvos
+mainPlatform: ios
+official: true
+license:
+    name: MPL-2.0
+    url: https://github.com/jellyfin/Swiftfin/blob/main/LICENSE.md
+links:
+    - type: github
+      url: https://github.com/jellyfin/Swiftfin
+      sourcelink: true
+    - type: app-store
+      url: https://apps.apple.com/us/app/swiftfin/id1604098728
+    - type: other
+      label: TestFlight Beta
+      url: https://testflight.apple.com/join/SqNPfdxq
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Recently Added
+    - image: ./preview-images/3.webp
+      title: Library
+features:
+    trickplay: true
+    direct-play: true
+    pgs-ass-subtitles: true
+    quick-connect: true
+    multi-server: true
+    live-tv-dvr: true
+    offline-download: true

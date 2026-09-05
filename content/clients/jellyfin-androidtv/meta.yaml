@@ -1,0 +1,49 @@
+name: Jellyfin for Android TV
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2018-12-13
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for Android TV, Fire TV, and Nvidia Shield devices.
+platforms:
+    - androidtv
+    - fireos
+mainPlatform: androidtv
+official: true
+license:
+    name: GPL-2.0
+    url: https://github.com/jellyfin/jellyfin-androidtv/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-androidtv
+      sourcelink: true
+    - type: google-play
+      url: https://play.google.com/store/apps/details?id=org.jellyfin.androidtv
+    - type: f-droid
+      url: https://f-droid.org/en/packages/org.jellyfin.androidtv/
+    - type: other
+      label: Amazon Appstore
+      url: https://www.amazon.com/gp/aw/d/B07TX7Z725
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Library
+    - image: ./preview-images/3.webp
+      title: Details
+features:
+    hw-decode: true
+    direct-play: true
+    trickplay: true
+    pgs-ass-subtitles: true
+    external-subtitles: true
+    dolby-vision: true
+    10bit-hevc: true
+    quick-connect: true
+    multi-server: true
+    user-profiles: true
+    parental-controls: true
+    live-tv-dvr: true
+    syncplay: true

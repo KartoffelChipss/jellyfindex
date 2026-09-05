@@ -1,0 +1,3 @@
+Jellyfin for Android TV is the official native client for Android TV, Fire TV, and Nvidia Shield, built to be driven entirely with a remote. It plays almost everything your server has without transcoding, using hardware-accelerated decoding with Dolby Vision and 10-bit HEVC support, trickplay scrubbing thumbnails, and both embedded and external subtitle formats including PGS and ASS.
+
+Beyond playback it covers the things a shared living-room device needs: Quick Connect and multiple saved servers, separate user profiles with parental controls and PINs, Live TV with DVR scheduling, and SyncPlay to watch in step with other Jellyfin clients on the network.

@@ -1,0 +1,3 @@
+Jellyfin MPV Shim is the official cross-platform cast client for Windows, macOS, and Linux, built around the MPV media player to direct play almost any file your server has without transcoding. It can run quietly in the background as a cast target that other Jellyfin apps (including the mobile apps) can control remotely, or act as a fully-featured desktop client on its own, complete with offline sync.
+
+It covers Live TV with channel guides, schedules, and recording rules, SyncPlay for watching together with other clients, Chromecast-like display mirroring, Discord Rich Presence, and configurable shader packs and SVP integration for enhancing video quality. Nearly everything, including MPV itself, can be tuned through its configuration files.

@@ -1,0 +1,38 @@
+name: Jellyfin for Android
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2020-07-21
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for Android phones and tablets, wrapping the web client with native audio, video, and casting support.
+platforms:
+    - android
+mainPlatform: android
+official: true
+license:
+    name: GPL-2.0
+    url: https://github.com/jellyfin/jellyfin-android/blob/master/LICENSE.md
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-android
+      sourcelink: true
+    - type: google-play
+      url: https://play.google.com/store/apps/details?id=org.jellyfin.mobile
+    - type: f-droid
+      url: https://f-droid.org/en/packages/org.jellyfin.mobile/
+    - type: other
+      label: Amazon Appstore
+      url: https://www.amazon.com/gp/aw/d/B081RFTTQ9
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Library
+    - image: ./preview-images/3.webp
+      title: Details
+features:
+    chromecast: true
+    quick-connect: true
+    multi-server: true

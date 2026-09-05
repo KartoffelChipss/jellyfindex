@@ -1,0 +1,26 @@
+name: Jellyfin for webOS
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2019-05-04
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for LG webOS smart TVs, wrapping the web client for the big screen.
+platforms:
+    - webos
+mainPlatform: webos
+official: true
+license:
+    name: MPL-2.0
+    url: https://github.com/jellyfin/jellyfin-webos/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-webos
+      sourcelink: true
+    - type: other
+      label: LG Content Store
+      url: https://us.lgappstv.com/main/tvapp/detail?appId=1030579
+features:
+    quick-connect: true
+    multi-server: true

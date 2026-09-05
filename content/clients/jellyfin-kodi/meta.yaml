@@ -1,0 +1,26 @@
+name: Jellyfin for Kodi
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2018-12-12
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Kodi add-on that syncs Jellyfin libraries into Kodi's native database for full-speed browsing with any skin.
+platforms:
+    - other
+mainPlatform: other
+official: true
+license:
+    name: GPL-3.0
+    url: https://github.com/jellyfin/jellyfin-kodi/blob/master/LICENSE.txt
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-kodi
+      sourcelink: true
+    - type: other
+      label: Installation Guide
+      url: https://jellyfin.org/docs/general/clients/kodi
+features:
+    direct-play: true
+    live-tv-dvr: true

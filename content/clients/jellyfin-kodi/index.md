@@ -1,0 +1,3 @@
+Jellyfin for Kodi combines Kodi's fast native navigation and skin support with Jellyfin's metadata and library management. Unlike a plugin-style frontend, it syncs the Jellyfin libraries you choose (movies, TV shows, music videos, and music) straight into Kodi's own database, so browsing runs at full native speed and works with any Kodi skin or add-on that expects a local library.
+
+Other libraries, like simple Live TV, home videos and photos, and playlists, stay available dynamically without syncing. Watched and resume state sync both ways between Kodi and your server in near real time, and you can send play commands to a running Kodi from the Jellyfin web client or mobile apps.

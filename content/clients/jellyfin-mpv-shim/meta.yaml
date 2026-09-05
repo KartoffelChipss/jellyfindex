@@ -1,0 +1,34 @@
+name: Jellyfin MPV Shim
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2020-01-11
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official cross-platform cast client for Jellyfin, built on MPV for near-universal direct play without transcoding.
+platforms:
+    - windows
+    - macos
+    - linux
+mainPlatform: linux
+official: true
+license:
+    name: GPL-3.0
+    url: https://github.com/jellyfin/jellyfin-mpv-shim/blob/master/LICENSE.md
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-mpv-shim
+      sourcelink: true
+    - type: other
+      label: Flathub (Linux)
+      url: https://flathub.org/apps/details/com.github.iwalton3.jellyfin-mpv-shim
+    - type: other
+      label: GitHub Downloads
+      url: https://github.com/jellyfin/jellyfin-mpv-shim/releases
+features:
+    direct-play: true
+    syncplay: true
+    live-tv-dvr: true
+    quick-connect: true
+    chromecast: true

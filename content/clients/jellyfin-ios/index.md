@@ -1,0 +1,3 @@
+Jellyfin Mobile is the official companion app for iPhone and iPad, built with Expo around the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with. It wraps that web client in a native shell so browsing, search, and library layout match what you'd see in a desktop browser, while iOS gets native audio and video playback, Live TV, and Quick Connect login on top.
+
+Since it's a wrapper rather than a fully native rewrite, this is the app to reach for if you want the exact web experience on a phone; for a from-scratch Swift client built around VLC, see [Swiftfin](/clients/swiftfin) instead.

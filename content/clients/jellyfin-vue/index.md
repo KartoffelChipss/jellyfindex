@@ -1,0 +1,3 @@
+Jellyfin Vue is an official, experimental alternative to the main [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client, rewritten from scratch with Vue.js. It isn't meant to replace the main web client and isn't feature-complete yet, but it's actively developed and usable today: point it at any Jellyfin server behind a properly configured HTTPS reverse proxy, or try it against Jellyfin's public demo server.
+
+You can use the hosted build, self-host it with the provided Docker images, or bundle it as a local desktop app; in every case it only ever talks to the Jellyfin server you point it to, the same privacy model as the main web client.

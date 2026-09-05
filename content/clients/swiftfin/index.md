@@ -1,0 +1,3 @@
+Swiftfin is the official Jellyfin client written in Swift for iPhone, iPad, and Apple TV, redesigned to look and feel native on every class of Apple device rather than reusing the web interface. It ships two playback engines: a VLCKit-based player that maximizes direct play across a wide range of containers and codecs, and a native AVPlayer-based option for cases like framerate matching and Picture in Picture where Apple's own player has the edge.
+
+Beyond playback, Swiftfin covers Live TV, trickplay scrubbing thumbnails, downloads for offline viewing, and Quick Connect and multi-server login, all built and maintained by the Jellyfin team as an official beta. It's free on the App Store, with a TestFlight channel for testing new features and fixes before general release.

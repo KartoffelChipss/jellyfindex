@@ -1,0 +1,38 @@
+name: Jellyfin for Roku
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2024-08-06
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for Roku devices, with trickplay, media segment, and song lyric support.
+platforms:
+    - rokuos
+mainPlatform: rokuos
+official: true
+license:
+    name: GPL-2.0
+    url: https://github.com/jellyfin/jellyfin-roku/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-roku
+      sourcelink: true
+    - type: other
+      label: Roku Channel Store
+      url: https://channelstore.roku.com/details/592369/jellyfin
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+    - image: ./preview-images/movie-details.webp
+      title: Movie Details
+    - image: ./preview-images/tv-library.webp
+      title: TV Library
+    - image: ./preview-images/music-playback.webp
+      title: Music Playback
+features:
+    trickplay: true
+    lyrics: true
+    external-subtitles: true
+    quick-connect: true
+    multi-server: true

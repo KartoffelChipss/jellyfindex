@@ -1,0 +1,32 @@
+name: Jellyfin Mobile
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2019-08-19
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for iPhone and iPad, wrapping the web client with native audio and video playback.
+platforms:
+    - ios
+mainPlatform: ios
+official: true
+license:
+    name: MPL-2.0
+    url: https://github.com/jellyfin/jellyfin-ios/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-ios
+      sourcelink: true
+    - type: app-store
+      url: https://apps.apple.com/us/app/jellyfin-mobile/id1480192618
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Library
+    - image: ./preview-images/3.webp
+      title: Details
+features:
+    quick-connect: true
+    multi-server: true

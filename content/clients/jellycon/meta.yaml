@@ -1,0 +1,28 @@
+name: JellyCon
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2020-07-04
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official lightweight Kodi add-on for browsing and playing Jellyfin media directly within the Kodi interface.
+platforms:
+    - other
+mainPlatform: other
+official: true
+license:
+    name: GPL-2.0
+    url: https://github.com/jellyfin/jellycon/blob/master/LICENSE.txt
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellycon
+      sourcelink: true
+    - type: other
+      label: Installation Guide
+      url: https://jellyfin.org/docs/general/clients/kodi
+features:
+    quick-connect: true
+    multi-server: true
+    live-tv-dvr: true
+    user-profiles: true

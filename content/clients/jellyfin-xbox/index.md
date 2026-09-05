@@ -1,0 +1,1 @@
+Jellyfin for Xbox is the official client for Xbox consoles, built as a Universal Windows Platform app that wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with in an integrated webview. It brings that browsing and playback experience to a controller and TV screen, with installation through the Microsoft Store.

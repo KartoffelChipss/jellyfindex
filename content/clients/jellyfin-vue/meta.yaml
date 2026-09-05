@@ -1,0 +1,31 @@
+name: Jellyfin Vue
+logo: ./logo.svg
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2020-09-02
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: An official, experimental alternative web client for Jellyfin, rewritten from scratch with Vue.js.
+platforms:
+    - web
+mainPlatform: web
+official: true
+beta: true
+license:
+    name: GPL-3.0
+    url: https://github.com/jellyfin/jellyfin-vue/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-vue
+      sourcelink: true
+    - type: other
+      label: Open in browser
+      url: https://jf-vue.pages.dev/
+    - type: other
+      label: Docker
+      url: https://github.com/jellyfin/jellyfin-vue/pkgs/container/jellyfin-vue
+previewImages:
+    - image: ./preview-images/home.webp
+      title: Home
+music: supported

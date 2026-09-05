@@ -1,0 +1,1 @@
+Jellyfin for Tizen is the official app for Samsung smart TVs. Like the webOS version, it's a native wrapper that bundles the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client every server ships with, so it inherits the web client's browsing and playback features while handling remote input and installation through Samsung's Smart TV App Store.

@@ -1,0 +1,26 @@
+name: Jellyfin for Xbox
+logo: ./logo.webp
+developerName: Jellyfin Team
+developerGithub: jellyfin
+dateAdded: 2026-09-05
+dateCreated: 2020-03-25
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The official Jellyfin app for Xbox consoles, wrapping the web client in a Universal Windows Platform app.
+platforms:
+    - xbox
+mainPlatform: xbox
+official: true
+license:
+    name: GPL-2.0
+    url: https://github.com/jellyfin/jellyfin-xbox/blob/master/LICENSE
+links:
+    - type: github
+      url: https://github.com/jellyfin/jellyfin-xbox
+      sourcelink: true
+    - type: other
+      label: Microsoft Store
+      url: https://apps.microsoft.com/detail/9P2DRTG62QF8
+features:
+    quick-connect: true
+    multi-server: true
