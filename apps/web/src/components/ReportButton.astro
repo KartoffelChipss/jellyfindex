@@ -1,0 +1,22 @@
+---
+import { Flag } from 'lucide-react';
+import { reportEntryUrl, type ReportEntryType } from '@/lib/report';
+
+interface Props {
+    entryType: ReportEntryType;
+    name: string;
+    path: string;
+}
+
+const { entryType, name, path } = Astro.props;
+---
+
+<a
+    href={reportEntryUrl(entryType, name, path)}
+    target="_blank"
+    rel="noreferrer"
+    class="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
+>
+    <Flag className="size-3" />
+    Report
+</a>

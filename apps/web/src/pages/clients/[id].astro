@@ -24,6 +24,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { InstallTabs } from '@/components/InstallTabs';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
+import ReportButton from '@/components/ReportButton.astro';
 import { iconForLink } from '@/lib/link-icons';
 import Layout from '@/layouts/Layout.astro';
 
@@ -288,8 +289,11 @@ const previewImages = await Promise.all(
         }
 
         <Separator className="mb-4" />
-        <p class="text-xs text-muted-foreground">
-            Added on {dateAdded} by {client.submittedBy}
-        </p>
+        <div class="flex items-center justify-between gap-4">
+            <p class="text-xs text-muted-foreground">
+                Added on {dateAdded} by {client.submittedBy}
+            </p>
+            <ReportButton entryType="Client" name={client.name} path={`/clients/${entry.id}`} />
+        </div>
     </div>
 </Layout>

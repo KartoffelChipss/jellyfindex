@@ -48,6 +48,7 @@ body:
               - Duplicate entry
               - Security concern
               - Copyright or licensing issue
+              - I am the owner and want to remove this entry
               - Other
       validations:
           required: true

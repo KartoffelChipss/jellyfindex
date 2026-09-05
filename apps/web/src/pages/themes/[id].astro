@@ -13,6 +13,7 @@ import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
 import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
+import ReportButton from '@/components/ReportButton.astro';
 import { iconForLink } from '@/lib/link-icons';
 import Layout from '@/layouts/Layout.astro';
 
@@ -178,8 +179,11 @@ const previewImages = await Promise.all(
         }
 
         <Separator className="mb-4" />
-        <p class="text-xs text-muted-foreground">
-            Added on {dateAdded} by {theme.submittedBy}
-        </p>
+        <div class="flex items-center justify-between gap-4">
+            <p class="text-xs text-muted-foreground">
+                Added on {dateAdded} by {theme.submittedBy}
+            </p>
+            <ReportButton entryType="Theme" name={theme.name} path={`/themes/${entry.id}`} />
+        </div>
     </div>
 </Layout>
