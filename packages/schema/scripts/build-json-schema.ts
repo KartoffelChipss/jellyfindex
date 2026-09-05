@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 import { clientMetaSchema } from '../src/clients.js';
 import { pluginMetaSchema } from '../src/plugins.js';
+import { themeMetaSchema } from '../src/themes.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outDir = join(__dirname, '../schemas');
@@ -20,6 +21,12 @@ const SCHEMAS: { fileName: string; id: string; title: string; schema: z.ZodType 
         id: 'https://jellyfindex.com/schemas/plugin.schema.json',
         title: 'Jellyfindex plugin meta.yaml',
         schema: pluginMetaSchema,
+    },
+    {
+        fileName: 'theme.schema.json',
+        id: 'https://jellyfindex.com/schemas/theme.schema.json',
+        title: 'Jellyfindex theme meta.yaml',
+        schema: themeMetaSchema,
     },
 ];
 

@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+interface Props {
+    theme: CollectionEntry<'themes'>['data'];
+    id: CollectionEntry<'themes'>['id'];
+}
+
+const { theme, id } = Astro.props;
+---
+
+<Card className="flex h-full flex-col gap-0 pt-0">
+    <Image
+        src={theme.previewImages[0]}
+        alt=""
+        width={400}
+        height={225}
+        class="aspect-video w-full object-cover"
+    />
+    <CardHeader className="gap-1">
+        <div class="min-w-0">
+            <CardTitle className="truncate flex items-center gap-1">
+                <a href={'/themes/' + id} class="truncate hover:underline">
+                    {theme.name}
+                </a>
+                <OfficialBadge official={theme.official} class="ml-auto shrink-0" />
+            </CardTitle>
+            <CardDescription className="truncate">
+                {
+                    theme.developerGithub ? (
+                        <a
+                            href={`/authors/${theme.developerGithub.toLowerCase()}`}
+                            class="hover:text-foreground hover:underline"
+                        >
+                            {theme.developerName}
+                        </a>
+                    ) : (
+                        theme.developerName
+                    )
+                }
+            </CardDescription>
+        </div>
+    </CardHeader>
+
+    <CardContent className="flex flex-1 flex-col gap-3">
+        <div class="flex flex-wrap gap-1.5">
+            <AbandonedBadge abandoned={theme.abandoned} />
+            <BetaBadge beta={theme.beta} />
+            <OpenSourceBadge openSource={theme.openSource} />
+        </div>
+    </CardContent>
+</Card>

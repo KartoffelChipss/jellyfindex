@@ -5,3 +5,4 @@ export * from './common.js';
 export * from './clients.js';
 export * from './plugin-categories.js';
 export * from './plugins.js';
+export * from './themes.js';

@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import { ArrowLeft } from 'lucide-react';
 import ClientCard from '@/components/ClientCard.astro';
 import PluginCard from '@/components/PluginCard.astro';
+import ThemeCard from '@/components/ThemeCard.astro';
 import GitHubIcon from '@/components/icons/GitHub.astro';
 import { buttonVariants } from '@/components/ui/button';
 import Layout from '@/layouts/Layout.astro';
@@ -12,9 +13,10 @@ import Layout from '@/layouts/Layout.astro';
 export const getStaticPaths = (async () => {
     const clients = await getCollection('clients');
     const plugins = await getCollection('plugins');
+    const themes = await getCollection('themes');
 
     const githubs = new Map<string, string>();
-    for (const entry of [...clients, ...plugins]) {
+    for (const entry of [...clients, ...plugins, ...themes]) {
         const gh = entry.data.developerGithub;
         if (!gh) continue;
         const key = gh.toLowerCase();
@@ -27,6 +29,7 @@ export const getStaticPaths = (async () => {
             github,
             clients: clients.filter((entry) => entry.data.developerGithub?.toLowerCase() === key),
             plugins: plugins.filter((entry) => entry.data.developerGithub?.toLowerCase() === key),
+            themes: themes.filter((entry) => entry.data.developerGithub?.toLowerCase() === key),
         },
     }));
 }) satisfies GetStaticPaths;
@@ -35,17 +38,22 @@ interface Props {
     github: string;
     clients: CollectionEntry<'clients'>[];
     plugins: CollectionEntry<'plugins'>[];
+    themes: CollectionEntry<'themes'>[];
 }
 
-const { github, clients, plugins } = Astro.props;
+const { github, clients, plugins, themes } = Astro.props;
 
-const developerName = clients[0]?.data.developerName ?? plugins[0]?.data.developerName ?? github;
-const total = clients.length + plugins.length;
+const developerName =
+    clients[0]?.data.developerName ??
+    plugins[0]?.data.developerName ??
+    themes[0]?.data.developerName ??
+    github;
+const total = clients.length + plugins.length + themes.length;
 ---
 
 <Layout
     title={`${developerName} — jellyfindex`}
-    description={`Jellyfin clients and plugins by ${developerName} on jellyfindex.`}
+    description={`Jellyfin clients, plugins, and themes by ${developerName} on jellyfindex.`}
 >
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <a
@@ -107,6 +115,21 @@ const total = clients.length + plugins.length;
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         {plugins.map((entry) => (
                             <PluginCard plugin={entry.data} id={entry.id} />
+                        ))}
+                    </div>
+                </section>
+            )
+        }
+
+        {
+            themes.length > 0 && (
+                <section class="mb-12">
+                    <h2 class="mb-4 font-heading text-lg font-semibold">
+                        Themes ({themes.length})
+                    </h2>
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {themes.map((entry) => (
+                            <ThemeCard theme={entry.data} id={entry.id} />
                         ))}
                     </div>
                 </section>

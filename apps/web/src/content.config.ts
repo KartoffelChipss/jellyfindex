@@ -1,7 +1,8 @@
 import { defineCollection } from 'astro:content';
-import { buildClientSchema, buildPluginSchema } from '@jellyfindex/schema';
+import { buildClientSchema, buildPluginSchema, buildThemeSchema } from '@jellyfindex/schema';
 import { clientsLoader } from './content/loaders/clients.js';
 import { pluginsLoader } from './content/loaders/plugins.js';
+import { themesLoader } from './content/loaders/themes.js';
 
 const clients = defineCollection({
     loader: clientsLoader(),
@@ -13,4 +14,9 @@ const plugins = defineCollection({
     schema: ({ image }) => buildPluginSchema(image()),
 });
 
-export const collections = { clients, plugins };
+const themes = defineCollection({
+    loader: themesLoader(),
+    schema: ({ image }) => buildThemeSchema(image()),
+});
+
+export const collections = { clients, plugins, themes };

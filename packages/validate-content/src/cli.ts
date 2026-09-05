@@ -9,6 +9,8 @@ import {
     IMMUTABLE_CLIENT_FIELDS,
     pluginSchema,
     IMMUTABLE_PLUGIN_FIELDS,
+    themeSchema,
+    IMMUTABLE_THEME_FIELDS,
 } from '@jellyfindex/schema';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -70,6 +72,12 @@ const COLLECTIONS: {
         immutableFields: IMMUTABLE_PLUGIN_FIELDS,
         buildInstallationInstructions: readSingleInstallationInstructions,
         crossReferenceField: 'requires',
+    },
+    {
+        name: 'themes',
+        schema: themeSchema,
+        immutableFields: IMMUTABLE_THEME_FIELDS,
+        buildInstallationInstructions: readSingleInstallationInstructions,
     },
 ];
 

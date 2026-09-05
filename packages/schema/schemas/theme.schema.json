@@ -5,14 +5,8 @@
     "name": {
       "type": "string"
     },
-    "logo": {
-      "type": "string"
-    },
-    "banner": {
-      "type": "string"
-    },
     "previewImages": {
-      "default": [],
+      "minItems": 1,
       "type": "array",
       "items": {
         "type": "string"
@@ -53,31 +47,6 @@
       "type": "string",
       "maxLength": 250
     },
-    "categories": {
-      "minItems": 1,
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "general",
-          "metadata",
-          "library",
-          "integrations",
-          "notifications",
-          "authentication",
-          "automation",
-          "theme",
-          "other"
-        ]
-      }
-    },
-    "requires": {
-      "default": [],
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "official": {
       "default": false,
       "type": "boolean"
@@ -89,9 +58,6 @@
     "abandoned": {
       "default": false,
       "type": "boolean"
-    },
-    "minimumJellyfinVersion": {
-      "type": "string"
     },
     "links": {
       "default": [],
@@ -186,14 +152,13 @@
   },
   "required": [
     "name",
-    "logo",
+    "previewImages",
     "developerName",
     "dateAdded",
     "submittedBy",
     "openSource",
-    "shortDescription",
-    "categories"
+    "shortDescription"
   ],
-  "$id": "https://jellyfindex.com/schemas/plugin.schema.json",
-  "title": "Jellyfindex plugin meta.yaml"
+  "$id": "https://jellyfindex.com/schemas/theme.schema.json",
+  "title": "Jellyfindex theme meta.yaml"
 }

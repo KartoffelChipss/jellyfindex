@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import { ArrowRight, Blocks, Smartphone } from 'lucide-react';
+import { ArrowRight, Blocks, Paintbrush, Smartphone } from 'lucide-react';
 import ClientCard from '@/components/ClientCard.astro';
 import PluginCard from '@/components/PluginCard.astro';
+import ThemeCard from '@/components/ThemeCard.astro';
 import GitHubIcon from '@/components/icons/GitHub.astro';
 import { buttonVariants } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -12,10 +13,12 @@ const REPO_URL = 'https://github.com/KartoffelChipss/jellyfindex';
 
 const clients = (await getCollection('clients')).filter((entry) => !entry.data.abandoned);
 const plugins = (await getCollection('plugins')).filter((entry) => !entry.data.abandoned);
+const themes = (await getCollection('themes')).filter((entry) => !entry.data.abandoned);
 
 const latest = [
     ...clients.map((entry) => ({ type: 'client' as const, entry })),
     ...plugins.map((entry) => ({ type: 'plugin' as const, entry })),
+    ...themes.map((entry) => ({ type: 'theme' as const, entry })),
 ]
     .sort(
         (a, b) =>
@@ -31,17 +34,17 @@ const latest = [
                 jellyfindex
             </h1>
             <p class="mx-auto mt-4 max-w-2xl text-balance text-lg text-muted-foreground">
-                Find the Jellyfin client, app, or server plugin that fits your setup. A
+                Find the Jellyfin client, plugin, or theme that fits your setup. A
                 community-maintained directory covering every platform Jellyfin runs on.
             </p>
             <p class="mt-6 text-sm text-muted-foreground">
                 {clients.length} client{clients.length === 1 ? '' : 's'} · {plugins.length} plugin{
                     plugins.length === 1 ? '' : 's'
-                } · fully open source
+                } · {themes.length} theme{themes.length === 1 ? '' : 's'} · fully open source
             </p>
         </section>
 
-        <section class="mb-16 grid gap-4 sm:grid-cols-2">
+        <section class="mb-16 grid gap-4 sm:grid-cols-3">
             <a href="/clients" class="group">
                 <Card className="h-full transition-colors group-hover:border-foreground/20">
                     <CardHeader>
@@ -82,6 +85,26 @@ const latest = [
                     </CardHeader>
                 </Card>
             </a>
+            <a href="/themes" class="group">
+                <Card className="h-full transition-colors group-hover:border-foreground/20">
+                    <CardHeader>
+                        <div
+                            class="mb-2 flex size-10 items-center justify-center rounded-lg bg-muted"
+                        >
+                            <Paintbrush className="size-5" />
+                        </div>
+                        <CardTitle className="flex items-center gap-1.5 text-lg">
+                            Themes
+                            <ArrowRight
+                                className="size-4 -translate-x-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+                            />
+                        </CardTitle>
+                        <CardDescription>
+                            Restyle your Jellyfin web client with a community theme.
+                        </CardDescription>
+                    </CardHeader>
+                </Card>
+            </a>
         </section>
 
         {
@@ -89,13 +112,11 @@ const latest = [
                 <section class="mb-16">
                     <h2 class="mb-5 font-heading text-lg font-semibold">Recently added</h2>
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        {latest.map(({ type, entry }) =>
-                            type === 'client' ? (
-                                <ClientCard client={entry.data} id={entry.id} />
-                            ) : (
-                                <PluginCard plugin={entry.data} id={entry.id} />
-                            )
-                        )}
+                        {latest.map(({ type, entry }) => {
+                            if (type === 'client') return <ClientCard client={entry.data} id={entry.id} />;
+                            if (type === 'plugin') return <PluginCard plugin={entry.data} id={entry.id} />;
+                            return <ThemeCard theme={entry.data} id={entry.id} />;
+                        })}
                     </div>
                 </section>
             )

@@ -1,0 +1,185 @@
+---
+import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import { getImage } from 'astro:assets';
+import { ArrowLeft, Download, Sparkles } from 'lucide-react';
+import { LINK_TYPES, type LinkType } from '@jellyfindex/schema';
+import AbandonedBadge from '@/components/badges/AbandonedBadge.astro';
+import BetaBadge from '@/components/badges/BetaBadge.astro';
+import LicenseBadge from '@/components/badges/LicenseBadge.astro';
+import OfficialBadge from '@/components/badges/OfficialBadge.astro';
+import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { PreviewCarousel } from '@/components/PreviewCarousel';
+import { iconForLink } from '@/lib/link-icons';
+import Layout from '@/layouts/Layout.astro';
+
+export const getStaticPaths = (async () => {
+    const entries = await getCollection('themes');
+    return entries.map((entry) => ({
+        params: { id: entry.id },
+        props: { entry },
+    }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+    entry: CollectionEntry<'themes'>;
+}
+
+const { entry } = Astro.props;
+const theme = entry.data;
+const { Content } = await render(entry);
+
+const otherLinks = theme.links.filter((link) => link !== theme.installationLink);
+
+const dateAdded = new Date(theme.dateAdded).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+});
+
+const previewImages = await Promise.all(
+    theme.previewImages.map(async (image) => {
+        const optimized = await getImage({ src: image, height: 512 });
+        return {
+            src: optimized.src,
+            width: optimized.attributes.width,
+            height: optimized.attributes.height,
+        };
+    })
+);
+---
+
+<Layout title={`${theme.name} — jellyfindex`} description={theme.shortDescription}>
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <a
+            href="/themes"
+            class="mb-6 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+            <ArrowLeft className="size-4" />
+            All themes
+        </a>
+
+        <header class="mb-8">
+            <div class="flex flex-wrap items-center gap-2">
+                <h1 class="font-heading text-2xl font-semibold tracking-tight">{theme.name}</h1>
+                <OfficialBadge official={theme.official} />
+            </div>
+            <p class="mt-1 text-sm text-muted-foreground">
+                by{' '}
+                {
+                    theme.developerGithub ? (
+                        <a
+                            href={`/authors/${theme.developerGithub.toLowerCase()}`}
+                            class="hover:text-foreground hover:underline"
+                        >
+                            {theme.developerName}
+                        </a>
+                    ) : (
+                        theme.developerName
+                    )
+                }
+            </p>
+            <div class="mt-3 flex flex-wrap gap-1.5">
+                <AbandonedBadge abandoned={theme.abandoned} />
+                <BetaBadge beta={theme.beta} />
+                <OpenSourceBadge openSource={theme.openSource} />
+                <LicenseBadge license={theme.license} />
+            </div>
+        </header>
+
+        <div class="mb-8 flex flex-wrap gap-2">
+            {
+                theme.installationLink ? (
+                    <a
+                        href={theme.installationLink.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        class={buttonVariants({ size: 'sm' })}
+                    >
+                        <Download />
+                        Install
+                    </a>
+                ) : (
+                    theme.installationInstructionsHtml && (
+                        <a href="#installation-instructions" class={buttonVariants({ size: 'sm' })}>
+                            <Download />
+                            Install
+                        </a>
+                    )
+                )
+            }
+            {
+                otherLinks.map((link) => {
+                    const Icon = iconForLink(link.type as LinkType, false);
+                    return (
+                        <a
+                            href={link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            class={buttonVariants({ size: 'sm', variant: 'outline' })}
+                        >
+                            <Icon />
+                            {link.label ?? LINK_TYPES[link.type as LinkType].label}
+                        </a>
+                    );
+                })
+            }
+        </div>
+
+        {
+            previewImages.length > 0 && (
+                <section class="mb-8">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">Previews</h2>
+                    <PreviewCarousel client:visible images={previewImages} />
+                </section>
+            )
+        }
+
+        {
+            theme.description && (
+                <>
+                    <Separator className="mb-8" />
+                    <div class="prose prose-sm dark:prose-invert mb-8 max-w-none">
+                        <Content />
+                    </div>
+                </>
+            )
+        }
+
+        {
+            theme.installationInstructionsHtml && (
+                <section id="installation-instructions" class="mb-8 scroll-mt-20">
+                    <h2 class="mb-3 font-heading text-lg font-semibold">
+                        Installation instructions
+                    </h2>
+                    <div
+                        class="prose prose-sm dark:prose-invert max-w-none"
+                        set:html={theme.installationInstructionsHtml}
+                    />
+                </section>
+            )
+        }
+
+        {
+            theme.aiUsed && (
+                <div class="mb-8 flex items-start gap-2 rounded-lg border bg-muted/50 p-3 text-sm text-muted-foreground">
+                    <Sparkles className="mt-0.5 size-4 shrink-0" />
+                    <div>
+                        <h3 class="mb-1 font-heading text-sm font-bold">AI-Disclosure</h3>
+                        <p>
+                            {theme.aiDisclaimer ?? 'This submission was written or assisted with AI.'}
+                        </p>
+                    </div>
+                </div>
+            )
+        }
+
+        <Separator className="mb-4" />
+        <p class="text-xs text-muted-foreground">
+            Added on {dateAdded} by {theme.submittedBy}
+        </p>
+    </div>
+</Layout>

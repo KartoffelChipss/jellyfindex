@@ -1,5 +1,7 @@
 {
     "yaml.schemas": {
-        "./packages/schema/schemas/client.schema.json": "content/clients/*/meta.yaml"
+        "./packages/schema/schemas/client.schema.json": "content/clients/*/meta.yaml",
+        "./packages/schema/schemas/theme.schema.json": "content/themes/*/meta.yaml",
+        "./packages/schema/schemas/plugin.schema.json": "content/plugins/*/meta.yaml"
     }
 }
