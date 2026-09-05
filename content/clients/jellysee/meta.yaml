@@ -1,0 +1,39 @@
+name: JellySee
+logo: ./logo.webp
+developerName: HarshLabs
+developerGithub: HarshLabs
+dateAdded: 2026-09-05
+dateCreated: 2025-07-22
+submittedBy: KartoffelChipss
+openSource: false
+shortDescription: A native Apple TV app that brings Jellyfin and Jellyseerr together in one interface, with requesting, watchlists, and direct-play-first streaming.
+platforms:
+    - tvos
+mainPlatform: tvos
+pricing: one-time-purchase
+music: supported
+links:
+    - type: app-store
+      url: https://apps.apple.com/us/app/jellysee/id6748783768
+previewImages:
+    - image: ./preview-images/discover.webp
+      title: Discover
+    - image: ./preview-images/detail.webp
+      title: Chapters
+    - image: ./preview-images/library.webp
+      title: Library
+    - image: ./preview-images/upcoming.webp
+      title: Upcoming
+    - image: ./preview-images/photos.webp
+      title: Photos
+features:
+    direct-play: true
+    dolby-vision: true
+    10bit-hevc: true
+    pgs-ass-subtitles: true
+    quick-connect: true
+    multi-server: true
+    user-profiles: true
+    syncplay: true
+    seerr-integration: true
+    hw-decode: true

@@ -4,8 +4,6 @@ previewImages:
       title: Home
     - image: ./preview-images/details.webp
       title: Details
-    - image: ./preview-images/episode-grid.webp
-      title: Episode Grid
     - image: ./preview-images/blue-theme.webp
       title: Blue Theme
 developerName: LitCastVlog
