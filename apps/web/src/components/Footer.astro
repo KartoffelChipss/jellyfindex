@@ -1,0 +1,92 @@
+---
+import GitHubIcon from '@/components/icons/GitHub.astro';
+
+const REPO_URL = 'https://github.com/KartoffelChipss/jellyfindex';
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t">
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-10 sm:flex-row sm:justify-between">
+            <div class="max-w-sm">
+                <a href="/" class="flex items-center gap-2 font-heading text-sm font-semibold">
+                    jellyfindex
+                </a>
+                <p class="mt-2 text-sm text-muted-foreground">
+                    A community-maintained directory of Jellyfin clients, plugins, and themes.
+                </p>
+                <a
+                    href={REPO_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    class="mt-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                    <GitHubIcon class="size-4" />
+                    GitHub
+                </a>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                <div>
+                    <h2 class="text-sm font-medium">Directory</h2>
+                    <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+                        <li>
+                            <a href="/clients" class="transition-colors hover:text-foreground">
+                                Clients
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/plugins" class="transition-colors hover:text-foreground">
+                                Plugins
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/themes" class="transition-colors hover:text-foreground">
+                                Themes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-sm font-medium">Project</h2>
+                    <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+                        <li>
+                            <a
+                                href={`${REPO_URL}?tab=contributing-ov-file#contributing-to-jellyfindex`}
+                                target="_blank"
+                                rel="noreferrer"
+                                class="transition-colors hover:text-foreground"
+                            >
+                                Contribute
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${REPO_URL}/issues/new/choose`}
+                                target="_blank"
+                                rel="noreferrer"
+                                class="transition-colors hover:text-foreground"
+                            >
+                                Report an entry
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-sm font-medium">Legal</h2>
+                    <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+                        <li>
+                            <a href="/impressum" class="transition-colors hover:text-foreground">
+                                Impressum
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="mt-10 flex flex-col gap-2 border-t pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
+        >
+            <p>© {year} jellyfindex. Not affiliated with the Jellyfin project.</p>
+        </div>
+    </div>
+</footer>

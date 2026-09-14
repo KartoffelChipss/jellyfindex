@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/geist';
 import '@/styles/global.css';
+import Footer from '@/components/Footer.astro';
 import NavBar from '@/components/NavBar.astro';
 
 interface Props {
@@ -36,10 +37,11 @@ const {
 
         <slot name="head" />
     </head>
-    <body class="min-h-screen bg-background text-foreground antialiased">
+    <body class="flex min-h-screen flex-col bg-background text-foreground antialiased">
         <NavBar />
-        <main>
+        <main class="flex-1">
             <slot />
         </main>
+        <Footer />
     </body>
 </html>
