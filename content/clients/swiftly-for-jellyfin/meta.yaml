@@ -16,10 +16,10 @@ platforms:
 mainPlatform: ios
 license:
     name: MPL-2.0
-    url: https://github.com/paulherter/swiftly-for-jellyfin/blob/main/LICENSE
+    url: https://github.com/paulherter/swiftly-player/blob/main/LICENSE
 links:
     - type: github
-      url: https://github.com/paulherter/swiftly-for-jellyfin
+      url: https://github.com/paulherter/swiftly-player
       sourcelink: true
     - type: other
       label: TestFlight Beta
@@ -43,15 +43,15 @@ installationInstructions:
     macos: |-
         Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Mac.
     windows: |-
-        Download the installer from [Releases](https://github.com/paulherter/swiftly-for-jellyfin/releases/latest) (64-bit, Windows 10 and 11).
+        Download the installer from [Releases](https://github.com/paulherter/swiftly-player/releases/latest) (64-bit, Windows 10 and 11).
     linux: |-
         Run the install script, which detects your distribution and adds the Swiftly package source so updates arrive with your normal system update:
 
         ```sh
-        curl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-for-jellyfin/main/Linux/Installieren/swiftly-installieren.sh | bash
+        curl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-player/main/Linux/Installieren/swiftly-installieren.sh | bash
         ```
 
-        See the [README](https://github.com/paulherter/swiftly-for-jellyfin#-linux) for adding the package repository manually.
+        See the [README](https://github.com/paulherter/swiftly-player#-linux) for adding the package repository manually.
 features:
     quick-connect: true
     direct-play: true
