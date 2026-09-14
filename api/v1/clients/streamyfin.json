@@ -90,5 +90,10 @@
       "title": "Movie Details"
     }
   ],
-  "repoStats": null
+  "repoStats": {
+    "repo": "streamyfin/streamyfin",
+    "stars": 5194,
+    "lastActivity": "2026-09-12T18:58:54Z",
+    "isArchived": false
+  }
 }

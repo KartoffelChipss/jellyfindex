@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T13:00:33.259Z",
+  "generatedAt": "2026-09-14T13:07:51.105Z",
   "count": 18,
   "clients": [
     {
@@ -225,7 +225,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-android",
-        "stars": 2754,
+        "stars": 2755,
         "lastActivity": "2026-09-13T16:21:19Z",
         "isArchived": false
       }
@@ -374,7 +374,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-media-player",
-        "stars": 5745,
+        "stars": 5746,
         "lastActivity": "2026-08-31T07:43:51Z",
         "isArchived": false
       }
@@ -495,7 +495,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-kodi",
         "stars": 1128,
-        "lastActivity": "2026-09-13T18:12:15Z",
+        "lastActivity": "2026-09-14T11:39:21Z",
         "isArchived": false
       }
     },
@@ -559,7 +559,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-mpv-shim",
         "stars": 2384,
-        "lastActivity": "2026-09-13T16:46:31Z",
+        "lastActivity": "2026-09-14T11:39:21Z",
         "isArchived": false
       }
     },
@@ -632,7 +632,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-roku",
-        "stars": 225,
+        "stars": 226,
         "lastActivity": "2026-09-09T16:00:23Z",
         "isArchived": false
       }
@@ -1072,7 +1072,7 @@
       ],
       "repoStats": {
         "repo": "PelagicaApp/Pelagica",
-        "stars": 300,
+        "stars": 301,
         "lastActivity": "2026-09-13T11:23:18Z",
         "isArchived": false
       }
@@ -1169,7 +1169,12 @@
           "title": "Movie Details"
         }
       ],
-      "repoStats": null
+      "repoStats": {
+        "repo": "streamyfin/streamyfin",
+        "stars": 5194,
+        "lastActivity": "2026-09-12T18:58:54Z",
+        "isArchived": false
+      }
     },
     {
       "id": "swiftfin",
@@ -1244,7 +1249,7 @@
       "repoStats": {
         "repo": "jellyfin/Swiftfin",
         "stars": 4162,
-        "lastActivity": "2026-09-14T05:21:09Z",
+        "lastActivity": "2026-09-14T10:26:14Z",
         "isArchived": false
       }
     },
@@ -1332,9 +1337,9 @@
         }
       ],
       "repoStats": {
-        "repo": "paulherter/swiftly-for-jellyfin",
+        "repo": "paulherter/swiftly-player",
         "stars": 1,
-        "lastActivity": "2026-09-07T13:29:33Z",
+        "lastActivity": "2026-09-13T22:57:00Z",
         "isArchived": false
       }
     }

@@ -51,5 +51,10 @@
       "title": "Push Notifications"
     }
   ],
-  "repoStats": null
+  "repoStats": {
+    "repo": "streamyfin/jellyfin-plugin-streamyfin",
+    "stars": 300,
+    "lastActivity": "2026-08-31T14:35:46Z",
+    "isArchived": false
+  }
 }
