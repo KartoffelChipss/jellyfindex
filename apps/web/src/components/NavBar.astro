@@ -1,31 +1,36 @@
 ---
+import { Blocks, Paintbrush, Smartphone } from 'lucide-react';
+
 const REPO_URL = 'https://github.com/KartoffelChipss/jellyfindex';
 ---
 
 <header class="sticky top-4 z-10 w-full mx-auto mb-6 max-w-6xl px-4">
     <nav
-        class="flex items-center justify-between gap-4 rounded-full border bg-card/50 px-4 py-2 shadow-sm backdrop-blur"
+        class="flex items-center justify-between gap-4 rounded-full border bg-card/50 px-5 py-3 shadow-sm backdrop-blur"
     >
         <a href="/" class="flex items-center gap-2 font-heading text-sm font-semibold">
             jellyfindex
         </a>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-6">
             <a
                 href="/clients"
-                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1.5"
             >
+                <Smartphone className="size-4" />
                 Clients
             </a>
             <a
                 href="/plugins"
-                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1.5"
             >
+                <Blocks className="size-4" />
                 Plugins
             </a>
             <a
                 href="/themes"
-                class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                class="text-sm text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1.5"
             >
+                <Paintbrush className="size-4" />
                 Themes
             </a>
         </div>
