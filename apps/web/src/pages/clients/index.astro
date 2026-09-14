@@ -22,12 +22,6 @@ const defaultVisibleCount = entries.filter((entry) => !entry.data.abandoned).len
             <p class="mx-auto mt-3 max-w-xl text-balance text-muted-foreground">
                 A community-maintained directory of Jellyfin clients.
             </p>
-            <a
-                href="/platforms"
-                class="mt-3 inline-block text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-            >
-                Browse by platform
-            </a>
         </header>
 
         <div class="mb-8 flex flex-wrap items-center gap-4">
@@ -38,6 +32,12 @@ const defaultVisibleCount = entries.filter((entry) => !entry.data.abandoned).len
                 <Input id="search" type="search" placeholder="Search clients…" className="pl-8" />
             </div>
             <ListFilters client:load />
+            <a
+                href="/platforms"
+                class="inline-block text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+            >
+                Browse by platform
+            </a>
             <p id="result-count" class="ml-auto shrink-0 text-sm text-muted-foreground">
                 {defaultVisibleCount} client{defaultVisibleCount === 1 ? '' : 's'}
             </p>
