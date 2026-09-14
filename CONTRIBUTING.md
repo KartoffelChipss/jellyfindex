@@ -195,7 +195,7 @@ Themes have no `logo`/`banner`/`platforms`/`categories`. The theme's `previewIma
 pnpm run validate
 ```
 
-This checks every entry against its schema, verifies referenced images exist and fit the size/dimension limits, and checks cross-references (`relatedPlugins`, `relatedClients`, `requires`) point at real entries. Fix anything it reports before opening a PR.
+This checks that every entry's directory name is a valid lowercase kebab-case slug, validates its schema, verifies referenced images exist and fit the size/dimension limits, and checks cross-references (`relatedPlugins`, `relatedClients`, `requires`) point at real entries. Fix anything it reports before opening a PR.
 
 Also run:
 

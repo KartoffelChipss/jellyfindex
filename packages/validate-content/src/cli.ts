@@ -63,6 +63,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '../../..');
 const CONTENT_ROOT = join(REPO_ROOT, 'content');
 
+/** Lowercase kebab-case: letters/digits, single hyphens between words, no leading/trailing hyphen. */
+const SLUG_REGEX = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
 /** Reads `installationInstructions`, keyed per-platform from meta.yaml and/or install/<platform>.md files. */
 function readPerPlatformInstallationInstructions(
     entryDir: string,
@@ -187,6 +190,14 @@ async function validateCollection(
         const metaPath = join(entryDir, 'meta.yaml');
         const descriptionPath = join(entryDir, 'index.md');
         const metaRelPath = `content/${collection.name}/${entry}/meta.yaml`;
+
+        if (!SLUG_REGEX.test(entry)) {
+            errors.push({
+                file: `content/${collection.name}/${entry}`,
+                message: `Invalid slug "${entry}" — directory names must be lowercase kebab-case (letters, digits, and single hyphens between words, e.g. "my-cool-app")`,
+            });
+            continue;
+        }
 
         if (!existsSync(metaPath)) {
             errors.push({ file: metaRelPath, message: 'Missing meta.yaml' });
