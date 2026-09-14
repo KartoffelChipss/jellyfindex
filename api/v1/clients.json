@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T12:52:47.321Z",
+  "generatedAt": "2026-09-14T12:57:13.132Z",
   "count": 18,
   "clients": [
     {
@@ -1251,7 +1251,7 @@
     {
       "id": "swiftly-for-jellyfin",
       "url": "https://jellyfindex.com/clients/swiftly-for-jellyfin",
-      "name": "Swiftly for Jellyfin",
+      "name": "Swiftly Player",
       "developerName": "paulherter",
       "developerGithub": "paulherter",
       "dateAdded": "2026-09-05T00:00:00.000Z",
@@ -1285,6 +1285,10 @@
           "sourcelink": true
         },
         {
+          "type": "app-store",
+          "url": "https://apps.apple.com/app/id6806824067"
+        },
+        {
           "type": "other",
           "url": "https://testflight.apple.com/join/MqeP2cnj",
           "label": "TestFlight Beta"
@@ -1295,11 +1299,11 @@
         }
       ],
       "installationInstructions": {
-        "ios": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on iPhone and iPad.",
-        "tvos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Apple TV.",
-        "macos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Mac.",
-        "windows": "Download the installer from [Releases](https://github.com/paulherter/swiftly-player/releases/latest) (64-bit, Windows 10 and 11).",
-        "linux": "Run the install script, which detects your distribution and adds the Swiftly package source so updates arrive with your normal system update:\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-player/main/Linux/Installieren/swiftly-installieren.sh | bash\n```\n\nSee the [README](https://github.com/paulherter/swiftly-player#-linux) for adding the package repository manually."
+        "ios": "You can install Swiftly Player on iPhone and iPad from the [App Store](https://apps.apple.com/app/id6806824067).",
+        "tvos": "You can install Swiftly Player on Apple TV from the [App Store](https://apps.apple.com/app/id6806824067).",
+        "macos": "You can install Swiftly Player on Mac from the [App Store](https://apps.apple.com/app/id6806824067).",
+        "windows": "You can find the installation instructions for Windows in the [README](https://github.com/paulherter/swiftly-player#-windows).",
+        "linux": "You can find the installation instructions for Linux in the [README](https://github.com/paulherter/swiftly-player#-linux)."
       },
       "features": {
         "quick-connect": true,
