@@ -1,0 +1,50 @@
+name: Deploy
+
+on:
+    push:
+        branches: [main]
+    workflow_run:
+        workflows: ['Update repo stats', 'Check for abandoned projects']
+        types: [completed]
+        branches: [main]
+    workflow_dispatch:
+
+concurrency:
+    group: deploy
+    cancel-in-progress: true
+
+permissions:
+    contents: write
+
+jobs:
+    deploy:
+        name: Build and deploy to GitHub Pages
+        runs-on: ubuntu-latest
+        if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: pnpm
+
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
+
+            - name: Build
+              run: pnpm run build
+
+            - name: Deploy to gh-pages
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: gh-pages
+                  folder: apps/web/dist
+                  clean: true
