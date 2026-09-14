@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-14T11:31:06.042Z",
-  "count": 4,
+  "generatedAt": "2026-09-14T12:52:47.330Z",
+  "count": 5,
   "plugins": [
     {
       "id": "file-transformation",
@@ -107,6 +107,61 @@
         "lastActivity": "2026-09-11T09:15:35Z",
         "isArchived": false
       }
+    },
+    {
+      "id": "jellyfin-plugin-streamyfin",
+      "url": "https://jellyfindex.com/plugins/jellyfin-plugin-streamyfin",
+      "name": "Streamyfin Companion Plugin",
+      "developerName": "Streamyfin Team",
+      "developerGithub": "streamyfin",
+      "dateAdded": "2026-09-14T00:00:00.000Z",
+      "dateCreated": "2024-08-21T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/streamyfin/jellyfin-plugin-streamyfin/blob/main/LICENSE"
+      },
+      "shortDescription": "Server-side companion plugin for Streamyfin. Sync and lock app settings, build custom home screens, and configure push notifications and Seerr SSO.",
+      "description": "The Streamyfin Companion Plugin is a server-side plugin that centralizes configuration for the Streamyfin mobile app. It lets admins manage and lock playback, audio, subtitle, and swipe-gesture settings for every user from the Jellyfin dashboard instead of having to configure each device individually.\n\nBesides the settings sync, it also enables adds customizable home screen sections, push notifications for new media, sessions, and playback events, and automatic SSO login for Seerr, plus integrations with Streamystats and Marlin search.",
+      "categories": [
+        "companion",
+        "integrations",
+        "notifications"
+      ],
+      "requires": [],
+      "relatedClients": [
+        "streamyfin"
+      ],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/streamyfin/jellyfin-plugin-streamyfin",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "1. Open **Jellyfin Dashboard** → **Plugins** → **Catalog**\n2. Click the settings icon next to \"Catalog\" and **Add** a new repository with this URL:\n    ```\n    https://raw.githubusercontent.com/streamyfin/jellyfin-plugin-streamyfin/main/manifest.json\n    ```\n3. Go back to **Catalog**, search for \"Streamyfin\", and click **Install**\n4. Restart Jellyfin to complete installation\n\nRequires .NET 9 / Jellyfin 10.11 or newer.",
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.CPUMjEjm_1MQitX.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1.CH8FRxMZ_RT7BA.webp",
+          "title": "Custom Home Screen"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.CsMF5-G0_h9Fv5.webp",
+          "title": "Seerr Integration"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.D40GPMNp_Z1klUHt.webp",
+          "title": "Push Notifications"
+        }
+      ],
+      "repoStats": null
     },
     {
       "id": "pelagica-jellyfin-plugin",

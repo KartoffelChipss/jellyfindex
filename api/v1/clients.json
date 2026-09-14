@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-14T11:31:05.979Z",
-  "count": 17,
+  "generatedAt": "2026-09-14T12:52:47.321Z",
+  "count": 18,
   "clients": [
     {
       "id": "afinity",
@@ -1076,6 +1076,100 @@
         "lastActivity": "2026-09-13T11:23:18Z",
         "isArchived": false
       }
+    },
+    {
+      "id": "streamyfin",
+      "url": "https://jellyfindex.com/clients/streamyfin",
+      "name": "Streamyfin",
+      "developerName": "Streamyfin Team",
+      "developerGithub": "streamyfin",
+      "dateAdded": "2026-09-14T00:00:00.000Z",
+      "dateCreated": "2024-07-31T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/streamyfin/streamyfin/blob/develop/LICENSE.txt"
+      },
+      "shortDescription": "A Jellyfin client built with Expo for iOS, Android, tvOS, and Android TV, using MPV for playback with offline downloads, trickplay, and Chromecast.",
+      "description": "Streamyfin is a Jellyfin client built with Expo and React Native for Android and iOS, with additional Apple TV and Android TV support. It uses MPV as its playback engine across platforms and aims to be a smooth, reliable alternative to the official apps.\n\nBeyond core playback, Streamyfin supports downloading media for offline viewing, trickplay scrubbing thumbnails, intro/credits skipping, Chromecast, and Jellyseerr integration for requesting media from within the app. A companion Jellyfin server plugin lets admins sync client settings, default languages, and download/search provider configuration across all users.",
+      "platforms": [
+        "ios",
+        "android",
+        "tvos",
+        "androidtv"
+      ],
+      "mainPlatform": "ios",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/streamyfin/streamyfin",
+          "sourcelink": true
+        },
+        {
+          "type": "website",
+          "url": "https://streamyfin.app/"
+        },
+        {
+          "type": "app-store",
+          "url": "https://apps.apple.com/app/streamyfin/id6593660679"
+        },
+        {
+          "type": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=com.fredrikburmester.streamyfin"
+        },
+        {
+          "type": "discord",
+          "url": "https://discord.gg/aJvAYeycyY"
+        },
+        {
+          "type": "donation",
+          "url": "https://www.buymeacoffee.com/fredrikbur3"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "offline-download": true,
+        "chromecast": true,
+        "hw-decode": true,
+        "direct-play": true,
+        "dolby-vision": true,
+        "10bit-hevc": true,
+        "trickplay": true,
+        "external-subtitles": true,
+        "quick-connect": true,
+        "seerr-integration": true
+      },
+      "relatedPlugins": [
+        "jellyfin-plugin-streamyfin"
+      ],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.CPUMjEjm_1MQitX.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1.BlTYErP2_MBsM7.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.BVkrBSPs_1M4QfQ.webp",
+          "title": "Episode Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.DLa4n3-b_22UXmc.webp",
+          "title": "Show Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/4.DPHdw0xX_ZUEdKV.webp",
+          "title": "Movie Details"
+        }
+      ],
+      "repoStats": null
     },
     {
       "id": "swiftfin",
