@@ -1,0 +1,54 @@
+{
+  "id": "jellyfin-tizen",
+  "url": "https://jellyfindex.com/clients/jellyfin-tizen",
+  "name": "Jellyfin for Tizen",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2019-10-12T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-tizen/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for Samsung Tizen smart TVs, wrapping the web client for the big screen.",
+  "description": "Jellyfin for Tizen is the official app for Samsung smart TVs. Like the webOS version, it's a native wrapper that bundles the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client every server ships with, so it inherits the web client's browsing and playback features while handling remote input and installation through Samsung's Smart TV App Store.",
+  "platforms": [
+    "tizen"
+  ],
+  "mainPlatform": "tizen",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-tizen",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://www.samsung.com/us/tvs/smart-tv/samsung-tv-apps-detail/?appId=3202007021208",
+      "label": "Samsung Smart TV App Store"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-tizen",
+    "stars": 1716,
+    "lastActivity": "2025-10-24T13:59:32Z",
+    "isArchived": false
+  }
+}

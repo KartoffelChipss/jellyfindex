@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1080 1081" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-2846,-11531)">
+        <g id="Pelagica-Appicon-Dark" serif:id="Pelagica Appicon Dark" transform="matrix(1,0,0,1,2846,11531.621929)">
+            <rect x="0" y="0" width="1080" height="1080" style="fill:none;"/>
+            <g transform="matrix(2.003711,0,0,1.514727,-2230.12987,-17575.371669)">
+                <rect x="1113" y="11603" width="539" height="713" style="fill:url(#_Linear1);"/>
+            </g>
+            <g transform="matrix(0.718142,-0.428641,0.428641,0.718142,-61.415861,364.423839)">
+                <g transform="matrix(0.588066,0,0,0.588066,207.994149,59.045083)">
+                    <path d="M543.455,0C843.396,0 1086.91,243.514 1086.91,543.455C1086.91,843.396 831.123,611.031 531.182,611.031C231.241,611.031 0,843.396 0,543.455C-0,243.514 243.514,0 543.455,0ZM543.455,82.521C288.923,82.521 82.275,268.362 82.275,497.265C82.275,726.168 278.508,548.837 533.04,548.837C787.572,548.837 1004.634,726.168 1004.634,497.265C1004.634,268.362 797.987,82.521 543.455,82.521Z" style="fill:white;stroke:white;stroke-width:61px;"/>
+                </g>
+                <g transform="matrix(0.93933,0,0,0.93933,10.623391,59.473426)">
+                    <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:56.01px;"/>
+                </g>
+                <g transform="matrix(0.93933,0,0,0.93933,131.578376,45.945565)">
+                    <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:56.01px;"/>
+                </g>
+                <g transform="matrix(0.93933,0,0,0.93933,259.69517,82.550364)">
+                    <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:56.01px;"/>
+                </g>
+                <g transform="matrix(0.93933,0,0,0.93933,-113.514621,94.486711)">
+                    <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:56.01px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-539,-713,539,-713,1652,12316)"><stop offset="0" style="stop-color:rgb(30,30,30);stop-opacity:1"/><stop offset="0.6" style="stop-color:rgb(33,33,33);stop-opacity:1"/><stop offset="0.81" style="stop-color:rgb(39,39,39);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(46,46,46);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

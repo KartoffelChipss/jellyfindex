@@ -1,0 +1,54 @@
+{
+  "id": "netfin",
+  "url": "https://jellyfindex.com/themes/netfin",
+  "name": "NetFin",
+  "developerName": "ya0903",
+  "developerGithub": "ya0903",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2026-03-10T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/ya0903/NetFin/blob/main/LICENSE"
+  },
+  "shortDescription": "A cinematic Netflix-inspired theme with deep dark visuals, refined hover effects, and a focus on poster artwork.",
+  "description": "NetFin is a cinematic, Netflix-inspired theme for Jellyfin with deep dark visuals, refined hover effects, and a focus on poster artwork.\n\nIt includes experimental add-ons you can layer on top of the main import, such as replacing the Jellyfin logo with a custom one. See the [README](https://github.com/ya0903/NetFin#readme) for the full list.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/ya0903/NetFin",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "Paste into **Jellyfin → Dashboard → General → Custom CSS**:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/ya0903/NetFin@main/netfin.css');\n```\n\nOptional experimental add-ons (paste **after** the main import) are documented in the [README](https://github.com/ya0903/NetFin#-experimental-add-ons).",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/preview-1.BXrs82i6_Z1mpgdu.webp",
+      "title": "Preview 1"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-2.ClfpZdqs_N1Vpt.webp",
+      "title": "Preview 2"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-3.P6LzF2Ep_ZXvJPq.webp",
+      "title": "Preview 3"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-4.C4I1Iz2l_5Tutt.webp",
+      "title": "Preview 4"
+    }
+  ],
+  "repoStats": {
+    "repo": "ya0903/NetFin",
+    "stars": 53,
+    "lastActivity": "2026-04-29T20:10:36Z",
+    "isArchived": false
+  }
+}

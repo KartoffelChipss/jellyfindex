@@ -1,0 +1,49 @@
+{
+  "id": "pelagica-jellyfin-plugin",
+  "url": "https://jellyfindex.com/plugins/pelagica-jellyfin-plugin",
+  "name": "Pelagica Jellyfin Plugin",
+  "developerName": "KartoffelChipss",
+  "developerGithub": "KartoffelChipss",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2026-07-26T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/PelagicaApp/jellyfin-plugin/blob/main/LICENSE"
+  },
+  "shortDescription": "A companion plugin for Pelagica, allowing you to use your config across different devices.",
+  "description": "Companion plugin for the Pelagica app. It stores the Pelagica configuration (home screen sections, item page settings, branding, links, and so on) on the Jellyfin server itself, so every user connecting through Pelagica sees the same setup instead of each client having its own local copy.",
+  "categories": [
+    "companion"
+  ],
+  "requires": [],
+  "relatedClients": [
+    "pelagica"
+  ],
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/PelagicaApp/jellyfin-plugin"
+    },
+    {
+      "type": "website",
+      "url": "https://pelagica.app"
+    }
+  ],
+  "installationInstructions": "1. In Jellyfin, go to Dashboard > Plugins > Repositories.\n2. Add a repository with this URL:\n   `https://raw.githubusercontent.com/PelagicaApp/jellyfin-plugin/main/manifest.json`\n3. Go to the Catalog tab, find Pelagica under General, and install it.\n4. Restart Jellyfin when prompted.\n\nAlternatively, download the release zip from the Releases page, extract it into your Jellyfin plugins directory (for example `/config/plugins/Pelagica`), and restart Jellyfin.",
+  "aiUsage": "ai-assisted",
+  "aiDescription": "I treat AI like any other tool I use. It is not a seperate \"person\" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.",
+  "logo": "https://jellyfindex.com/_astro/logo.qURnakGn_Z10HX6k.svg",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "PelagicaApp/jellyfin-plugin",
+    "stars": 0,
+    "lastActivity": "2026-07-26T13:36:19Z",
+    "isArchived": false
+  }
+}

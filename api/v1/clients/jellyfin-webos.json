@@ -1,0 +1,54 @@
+{
+  "id": "jellyfin-webos",
+  "url": "https://jellyfindex.com/clients/jellyfin-webos",
+  "name": "Jellyfin for webOS",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2019-05-04T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-webos/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for LG webOS smart TVs, wrapping the web client for the big screen.",
+  "description": "Jellyfin for webOS is the official app for LG smart TVs. It's a small native wrapper around the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client that runs in a browser or ships with every server, so most development and features happen there and land on webOS automatically, while the wrapper handles remote input, TV-specific playback, and installation through LG's Content Store.",
+  "platforms": [
+    "webos"
+  ],
+  "mainPlatform": "webos",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-webos",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://us.lgappstv.com/main/tvapp/detail?appId=1030579",
+      "label": "LG Content Store"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-webos",
+    "stars": 864,
+    "lastActivity": "2025-11-04T01:15:36Z",
+    "isArchived": false
+  }
+}

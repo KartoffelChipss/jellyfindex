@@ -1,0 +1,54 @@
+{
+  "id": "finity",
+  "url": "https://jellyfindex.com/themes/finity",
+  "name": "Finity",
+  "developerName": "prism2001",
+  "developerGithub": "prism2001",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-05-14T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/prism2001/finity/blob/main/LICENSE"
+  },
+  "shortDescription": "A sleek, modern, immersive Jellyfin theme with complete and minimal variants and configurable colors, roundness, and blur.",
+  "description": "Finity is a sleek, modern, immersive theme for Jellyfin, available as a complete build or a lighter minimal build.\n\nColors, roundness, blur, and spacing can be customized by copying variables from the CSS file, and the theme requires an up-to-date browser for its backdrop gradient effects.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/prism2001/finity",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "**Complete theme:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/prism2001/finity@main/complete/finity-complete.css');\n```\n\n**Minimal theme** (no backdrop gradient, no clickable episode titles in the season grid):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/prism2001/finity@main/minimal/finity-minimal.css');\n```\n\nAdd to the **top** of your Jellyfin Custom CSS field. See the [README](https://github.com/prism2001/finity#readme) for display-setting prerequisites and customization variables.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home-featured.DCL9ddIH_Z25wnxH.webp",
+      "title": "Home (Featured)"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/home-drawers.C5yYwYLk_Z1Gpoeu.webp",
+      "title": "Home (Drawers)"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/show-season.C_1dtZ3I_ZoeQ7K.webp",
+      "title": "Show Season"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie.DoVN91NQ_Z2qnOik.webp",
+      "title": "Movie Page"
+    }
+  ],
+  "repoStats": {
+    "repo": "prism2001/finity",
+    "stars": 77,
+    "lastActivity": "2026-05-03T15:13:53Z",
+    "isArchived": false
+  }
+}

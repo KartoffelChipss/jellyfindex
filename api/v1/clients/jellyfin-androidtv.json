@@ -1,0 +1,87 @@
+{
+  "id": "jellyfin-androidtv",
+  "url": "https://jellyfindex.com/clients/jellyfin-androidtv",
+  "name": "Jellyfin for Android TV",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2018-12-13T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-androidtv/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for Android TV, Fire TV, and Nvidia Shield devices.",
+  "description": "Jellyfin for Android TV is the official native client for Android TV, Fire TV, and Nvidia Shield, built to be driven entirely with a remote. It plays almost everything your server has without transcoding, using hardware-accelerated decoding with Dolby Vision and 10-bit HEVC support, trickplay scrubbing thumbnails, and both embedded and external subtitle formats including PGS and ASS.\n\nBeyond playback it covers the things a shared living-room device needs: Quick Connect and multiple saved servers, separate user profiles with parental controls and PINs, Live TV with DVR scheduling, and SyncPlay to watch in step with other Jellyfin clients on the network.",
+  "platforms": [
+    "androidtv",
+    "fireos"
+  ],
+  "mainPlatform": "androidtv",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-androidtv",
+      "sourcelink": true
+    },
+    {
+      "type": "google-play",
+      "url": "https://play.google.com/store/apps/details?id=org.jellyfin.androidtv"
+    },
+    {
+      "type": "f-droid",
+      "url": "https://f-droid.org/en/packages/org.jellyfin.androidtv/"
+    },
+    {
+      "type": "other",
+      "url": "https://www.amazon.com/gp/aw/d/B07TX7Z725",
+      "label": "Amazon Appstore"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "hw-decode": true,
+    "direct-play": true,
+    "trickplay": true,
+    "pgs-ass-subtitles": true,
+    "external-subtitles": true,
+    "dolby-vision": true,
+    "10bit-hevc": true,
+    "quick-connect": true,
+    "multi-server": true,
+    "user-profiles": true,
+    "parental-controls": true,
+    "live-tv-dvr": true,
+    "syncplay": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1.Bvox5nYs_Z2aGB2X.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.lPLokjX2_Z2sfwGC.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.BNjLqG5z_1TSoyb.webp",
+      "title": "Details"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-androidtv",
+    "stars": 4544,
+    "lastActivity": "2026-09-13T10:34:19Z",
+    "isArchived": false
+  }
+}

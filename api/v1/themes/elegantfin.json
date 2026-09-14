@@ -1,0 +1,65 @@
+{
+  "id": "elegantfin",
+  "url": "https://jellyfindex.com/themes/elegantfin",
+  "name": "ElegantFin",
+  "developerName": "lscambo13",
+  "developerGithub": "lscambo13",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2024-12-01T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/lscambo13/ElegantFin/blob/main/LICENSE"
+  },
+  "shortDescription": "A Jellyfin theme inspired by Jellyseerr, improving the overall look and experience with various little fixes to the UI/UX.",
+  "description": "ElegantFin is a Jellyfin theme inspired by Jellyseerr's design that gives the web client a fresh, modern look with a single import. It adds new layouts and color tones, smoother animations, rounded corners and consistent spacing, and stylish borders, hover effects, and shadows across the interface, while cutting down on unnecessary clutter.\n\nThe theme is built to look the same whether you're on phone, desktop, or TV, and it ships with a handful of optional customizations: custom media covers for libraries, a custom login page background, extra overlay buttons on hover, and a centered play button on cards.\n\nYou can find instructions on how to customize the theme in the [README](https://github.com/lscambo13/ElegantFin/tree/main#-how-to-customise-this-theme).",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/lscambo13/ElegantFin"
+    },
+    {
+      "type": "donation",
+      "url": "https://buymeacoffee.com/lscambo13"
+    }
+  ],
+  "installationInstructions": "Paste the following into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css');\n```\n\n**Server-side (applies to everyone):**\n\n1. Open **Dashboard** from the Administration tab in Settings.\n2. Select the **Branding** tab (Jellyfin 10.11+) from the sidebar.\n3. Scroll down to the **Custom CSS** code box.\n4. Paste the code above and click **Save**.\n\n**Client-side (applies to your account only):**\n\n1. Open the **Display** tab in Settings.\n2. Scroll down to the **Custom CSS** code box.\n3. Paste the code above and click **Save**.\n\nOn Jellyfin v12, set **User Settings → Display → Display Mode** to `Desktop (Legacy)` on desktop or `Mobile (Legacy)` on mobile. The new non-legacy UI isn't fully supported yet.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/homepage.DYmy_isa_2eAUzz.webp",
+      "title": "Homepage"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movies-library.DSFf2Vgy_wgkVu.webp",
+      "title": "Movies Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie-page.CyP5ZIbQ_uPVSQ.webp",
+      "title": "Movie Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/tv-show-page.Cf2dELDn_1D7BMN.webp",
+      "title": "TV Show Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/login-page.BE1eXSNO_aH73.webp",
+      "title": "Login Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/settings-page.Cb_DjSnG_yFMg7.webp",
+      "title": "Settings Page"
+    }
+  ],
+  "repoStats": {
+    "repo": "lscambo13/ElegantFin",
+    "stars": 2136,
+    "lastActivity": "2026-09-09T11:16:14Z",
+    "isArchived": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "jellyfin-desktop",
+  "url": "https://jellyfindex.com/clients/jellyfin-desktop",
+  "name": "Jellyfin Desktop",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-04T00:00:00.000Z",
+  "dateCreated": "2015-10-13T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "shortDescription": "The official desktop client for Jellyfin, built on mpv for high quality local playback.",
+  "description": "The official Jellyfin desktop client built with Qt WebEngine and [libmpv](https://github.com/mpv-player/mpv). Supports audio passthrough, hardware decoding, and playback of more formats without transcoding.",
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "supported",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-media-player"
+    }
+  ],
+  "installationLink": {
+    "type": "github",
+    "url": "https://github.com/jellyfin/jellyfin-desktop/releases/latest"
+  },
+  "installationInstructions": {},
+  "features": {
+    "hw-decode": true,
+    "chromecast": false
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.CTSwh9L4_ZD0a1S.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.CjAlCz-4_1Kajp7.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie.Cz4RgHeN_eiWXJ.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.hkCfup6W_tAxfh.webp"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-media-player",
+    "stars": 5745,
+    "lastActivity": "2026-08-31T07:43:51Z",
+    "isArchived": false
+  }
+}

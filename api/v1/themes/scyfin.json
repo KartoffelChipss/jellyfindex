@@ -1,0 +1,62 @@
+{
+  "id": "scyfin",
+  "url": "https://jellyfindex.com/themes/scyfin",
+  "name": "scyfin",
+  "developerName": "loof2736",
+  "developerGithub": "loof2736",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2022-11-09T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/loof2736/scyfin/blob/main/LICENSE"
+  },
+  "shortDescription": "Custom CSS theme for Jellyfin with support for backdrops and multiple accent color themes.",
+  "description": "scyfin is a custom CSS theme for Jellyfin with support for backdrops and several accent-color themes, including Seafoam, Coral, and Snow.\n\nOptional add-ons can disable the static left drawer, disable backdrops on navigation pages, or switch the \"Identify\" search results to a list view. See the [README](https://github.com/loof2736/scyfin#readme) for the full list.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/loof2736/scyfin",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "**Jellyfin 10.11.x and above:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');\n```\n\n**Jellyfin 10.10.x and below:** replace `@latest` with `@1.4` in the URL above (and in any options you use).\n\nPaste into a Custom CSS box. Optional add-ons and accent-color themes (Seafoam, Coral, Snow, and more) are listed in the [README](https://github.com/loof2736/scyfin#readme).",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/homepage.DVzPN3de_Z1VGq3O.webp",
+      "title": "Homepage"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/homepage-backdrops.TayDwTOk_dVRtU.webp",
+      "title": "Homepage (Backdrops)"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/details.BpHB5b_B_R8Pw5.webp",
+      "title": "Details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/details-backdrops.D4FnkrTC_nhC4t.webp",
+      "title": "Details (Backdrops)"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/dashboard.BqaoWhVI_Z1fU9wT.webp",
+      "title": "Dashboard"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/login.BCtdPz5p_Z2RJDx.webp",
+      "title": "Login Page"
+    }
+  ],
+  "repoStats": {
+    "repo": "loof2736/scyfin",
+    "stars": 732,
+    "lastActivity": "2026-09-11T21:28:28Z",
+    "isArchived": false
+  }
+}

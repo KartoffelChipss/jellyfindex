@@ -1,0 +1,58 @@
+{
+  "id": "evergarden",
+  "url": "https://jellyfindex.com/themes/evergarden",
+  "name": "evergarden",
+  "developerName": "evergardentheme",
+  "developerGithub": "evergardentheme",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-12-11T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "EUPL-1.2",
+    "url": "https://github.com/evergardentheme/jellyfin/blob/main/LICENSE"
+  },
+  "shortDescription": "A cozy, nature-inspired theme for Jellyfin with four seasonal color palettes: Winter, Fall, Spring, and Summer.",
+  "description": "Evergarden is a cozy, nature-inspired theme for Jellyfin with four seasonal color palettes: Winter, Fall, Spring, and Summer.\n\nLike Catppuccin, its accent color can be overridden after the palette import, and development happens primarily on [Codeberg](https://codeberg.org/evergarden/jellyfin), mirrored to GitHub.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/evergardentheme/jellyfin",
+      "sourcelink": true
+    },
+    {
+      "type": "codeberg",
+      "url": "https://codeberg.org/evergarden/jellyfin"
+    }
+  ],
+  "installationInstructions": "1. Copy your preferred palette's import rule:\n    ```css\n    /* Winter */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-winter.css');\n    /* Fall */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-fall.css');\n    /* Spring */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-spring.css');\n    /* Summer */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-summer.css');\n    ```\n2. Open **Settings → Display** and paste the CSS into the **Custom CSS code** section.\n3. Press **Save** and enjoy the pretty colors!",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/summer.B4GX-Pj2_Z1uzGSc.webp",
+      "title": "Summer"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/spring.C5EAKcO9_Z1fr7MU.webp",
+      "title": "Spring"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/fall.CW-_aR4f_Z1FO9z7.webp",
+      "title": "Fall"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/winter.DaOVbyc4_1edI0y.webp",
+      "title": "Winter"
+    }
+  ],
+  "repoStats": {
+    "repo": "evergardentheme/jellyfin",
+    "stars": 12,
+    "lastActivity": "2026-09-11T12:04:51Z",
+    "isArchived": false
+  }
+}

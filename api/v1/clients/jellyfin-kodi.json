@@ -1,0 +1,54 @@
+{
+  "id": "jellyfin-kodi",
+  "url": "https://jellyfindex.com/clients/jellyfin-kodi",
+  "name": "Jellyfin for Kodi",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2018-12-12T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/jellyfin/jellyfin-kodi/blob/master/LICENSE.txt"
+  },
+  "shortDescription": "The official Kodi add-on that syncs Jellyfin libraries into Kodi's native database for full-speed browsing with any skin.",
+  "description": "Jellyfin for Kodi combines Kodi's fast native navigation and skin support with Jellyfin's metadata and library management. Unlike a plugin-style frontend, it syncs the Jellyfin libraries you choose (movies, TV shows, music videos, and music) straight into Kodi's own database, so browsing runs at full native speed and works with any Kodi skin or add-on that expects a local library.\n\nOther libraries, like simple Live TV, home videos and photos, and playlists, stay available dynamically without syncing. Watched and resume state sync both ways between Kodi and your server in near real time, and you can send play commands to a running Kodi from the Jellyfin web client or mobile apps.",
+  "platforms": [
+    "other"
+  ],
+  "mainPlatform": "other",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-kodi",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://jellyfin.org/docs/general/clients/kodi",
+      "label": "Installation Guide"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "direct-play": true,
+    "live-tv-dvr": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-kodi",
+    "stars": 1128,
+    "lastActivity": "2026-09-13T18:12:15Z",
+    "isArchived": false
+  }
+}

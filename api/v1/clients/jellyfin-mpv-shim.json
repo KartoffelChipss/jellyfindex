@@ -1,0 +1,64 @@
+{
+  "id": "jellyfin-mpv-shim",
+  "url": "https://jellyfindex.com/clients/jellyfin-mpv-shim",
+  "name": "Jellyfin MPV Shim",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2020-01-11T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/jellyfin/jellyfin-mpv-shim/blob/master/LICENSE.md"
+  },
+  "shortDescription": "The official cross-platform cast client for Jellyfin, built on MPV for near-universal direct play without transcoding.",
+  "description": "Jellyfin MPV Shim is the official cross-platform cast client for Windows, macOS, and Linux, built around the MPV media player to direct play almost any file your server has without transcoding. It can run quietly in the background as a cast target that other Jellyfin apps (including the mobile apps) can control remotely, or act as a fully-featured desktop client on its own, complete with offline sync.\n\nIt covers Live TV with channel guides, schedules, and recording rules, SyncPlay for watching together with other clients, Chromecast-like display mirroring, Discord Rich Presence, and configurable shader packs and SVP integration for enhancing video quality. Nearly everything, including MPV itself, can be tuned through its configuration files.",
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "mainPlatform": "linux",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-mpv-shim",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://flathub.org/apps/details/com.github.iwalton3.jellyfin-mpv-shim",
+      "label": "Flathub (Linux)"
+    },
+    {
+      "type": "other",
+      "url": "https://github.com/jellyfin/jellyfin-mpv-shim/releases",
+      "label": "GitHub Downloads"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "direct-play": true,
+    "syncplay": true,
+    "live-tv-dvr": true,
+    "quick-connect": true,
+    "chromecast": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-mpv-shim",
+    "stars": 2384,
+    "lastActivity": "2026-09-13T16:46:31Z",
+    "isArchived": false
+  }
+}

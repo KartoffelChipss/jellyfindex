@@ -1,0 +1,54 @@
+{
+  "id": "jellyfin-xbox",
+  "url": "https://jellyfindex.com/clients/jellyfin-xbox",
+  "name": "Jellyfin for Xbox",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2020-03-25T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-xbox/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for Xbox consoles, wrapping the web client in a Universal Windows Platform app.",
+  "description": "Jellyfin for Xbox is the official client for Xbox consoles, built as a Universal Windows Platform app that wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with in an integrated webview. It brings that browsing and playback experience to a controller and TV screen, with installation through the Microsoft Store.",
+  "platforms": [
+    "xbox"
+  ],
+  "mainPlatform": "xbox",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-xbox",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://apps.microsoft.com/detail/9P2DRTG62QF8",
+      "label": "Microsoft Store"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-xbox",
+    "stars": 162,
+    "lastActivity": "2026-09-02T21:59:07Z",
+    "isArchived": false
+  }
+}

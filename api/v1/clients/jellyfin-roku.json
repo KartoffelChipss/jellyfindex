@@ -1,0 +1,74 @@
+{
+  "id": "jellyfin-roku",
+  "url": "https://jellyfindex.com/clients/jellyfin-roku",
+  "name": "Jellyfin for Roku",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2024-08-06T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-roku/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for Roku devices, with trickplay, media segment, and song lyric support.",
+  "description": "Jellyfin for Roku is the official channel for Roku devices, letting you browse and play movies, TV shows, music, and Live TV without leaving the Roku interface. It supports trickplay scrubbing thumbnails, media segment skipping (intros, credits, and similar), downloading subtitles directly to the device, and song lyrics during music playback.\n\nNote: due to a technical limitation of the Roku store, the listing may state that a cable or satellite subscription is required. No subscription of any kind is needed to use Jellyfin or any official client.",
+  "platforms": [
+    "rokuos"
+  ],
+  "mainPlatform": "rokuos",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-roku",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://channelstore.roku.com/details/592369/jellyfin",
+      "label": "Roku Channel Store"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "trickplay": true,
+    "lyrics": true,
+    "external-subtitles": true,
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.Dz6LSGpD_25vfdg.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.BOGiXAlZ_11z22h.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie-details.B7W26g8P_23b54U.webp",
+      "title": "Movie Details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/tv-library.a1macWX0_14pgBk.webp",
+      "title": "TV Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/music-playback.LHaW4kMZ_Z2fmI0T.webp",
+      "title": "Music Playback"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-roku",
+    "stars": 225,
+    "lastActivity": "2026-09-09T16:00:23Z",
+    "isArchived": false
+  }
+}

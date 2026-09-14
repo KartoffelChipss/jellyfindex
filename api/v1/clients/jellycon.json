@@ -1,0 +1,56 @@
+{
+  "id": "jellycon",
+  "url": "https://jellyfindex.com/clients/jellycon",
+  "name": "JellyCon",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2020-07-04T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/jellyfin/jellycon/blob/master/LICENSE.txt"
+  },
+  "shortDescription": "The official lightweight Kodi add-on for browsing and playing Jellyfin media directly within the Kodi interface.",
+  "description": "JellyCon is the official lightweight Kodi add-on for Jellyfin. Rather than syncing your library into Kodi's own database, it acts as a thin frontend: movies, TV shows, music videos, and music are populated dynamically straight from the server, so there's no library sync to wait on and content updates on your Jellyfin server show up immediately in Kodi.\n\nIt supports Live TV, switches between multiple Jellyfin user accounts on the fly, and logs in with Quick Connect or a manual username and password. Because menus and widgets are exposed through Kodi's own add-on browser, JellyCon can be wired into almost any customizable Kodi skin.",
+  "platforms": [
+    "other"
+  ],
+  "mainPlatform": "other",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellycon",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://jellyfin.org/docs/general/clients/kodi",
+      "label": "Installation Guide"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "quick-connect": true,
+    "multi-server": true,
+    "live-tv-dvr": true,
+    "user-profiles": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [],
+  "repoStats": {
+    "repo": "jellyfin/jellycon",
+    "stars": 545,
+    "lastActivity": "2026-09-07T20:20:18Z",
+    "isArchived": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "home-screen-sections",
+  "url": "https://jellyfindex.com/plugins/home-screen-sections",
+  "name": "Home Screen Sections",
+  "developerName": "IAmParadox27",
+  "developerGithub": "IAmParadox27",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-01-19T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/IAmParadox27/jellyfin-plugin-home-sections/blob/main/LICENSE"
+  },
+  "shortDescription": "Replaces the Jellyfin home screen with dynamic, Netflix-style sections like Because You Watched, Watch Again, Genre picks, and Jellyseerr-powered Discover rows.",
+  "description": "Home Screen Sections (HSS) replaces Jellyfin's default web client home screen with a fully modular, more \"Netflixy\" layout. It reimplements the vanilla sections (My Media, Continue Watching, Next Up, Recently Added, Live TV) alongside new ones like Latest Movies/TV Shows, Because You Watched, Watch Again, and weighted Genre picks based on viewing history. Sections powered by Jellyseerr — Discover, Trending, and My Requests — surface media that isn't in your library yet with a direct request button, and *arr integrations can bring upcoming release calendars into the home screen too.\n\nThe plugin requires the File Transformation and Plugin Pages plugins to also be installed, and settings are configured per-user from a \"Modular Home\" page linked in the hamburger menu.",
+  "categories": [
+    "general"
+  ],
+  "requires": [
+    "file-transformation",
+    "plugin-pages"
+  ],
+  "relatedClients": [],
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "minimumJellyfinVersion": "10.10.7",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/IAmParadox27/jellyfin-plugin-home-sections"
+    },
+    {
+      "type": "other",
+      "url": "https://features.iamparadox.dev/",
+      "label": "Feature requests"
+    }
+  ],
+  "installationInstructions": "1. Install the [File Transformation](https://github.com/IAmParadox27/jellyfin-plugin-file-transformation) and [Plugin Pages](https://github.com/IAmParadox27/jellyfin-plugin-pages) plugins first. Both are required.\n2. Add `https://www.iamparadox.dev/jellyfin/plugins/manifest.json` as a plugin repository in **Dashboard → Plugins → Repositories**.\n3. Install **Home Screen Sections** from the catalogue, then restart Jellyfin.\n4. Open the hamburger menu on the user's homepage and select **Modular Home**.\n5. Enable support and select the sections you want, then save.\n6. Force-refresh the page (or app) to see the new home screen.",
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BNdTHcKk_1pkTia.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/HSS_Showcase.hDQhEkpp_Z1Nr12K.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/because-you-watched.D997q60Y_2a1cS.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/watch-again.Bq_ADwjk_Z2mJoAV.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/settings.qDd0Dbuh_Z154iEu.webp"
+    }
+  ],
+  "repoStats": {
+    "repo": "IAmParadox27/jellyfin-plugin-home-sections",
+    "stars": 505,
+    "lastActivity": "2026-09-11T09:15:35Z",
+    "isArchived": false
+  }
+}

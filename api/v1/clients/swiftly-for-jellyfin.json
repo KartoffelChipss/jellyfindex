@@ -1,0 +1,86 @@
+{
+  "id": "swiftly-for-jellyfin",
+  "url": "https://jellyfindex.com/clients/swiftly-for-jellyfin",
+  "name": "Swiftly for Jellyfin",
+  "developerName": "paulherter",
+  "developerGithub": "paulherter",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2026-09-01T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MPL-2.0",
+    "url": "https://github.com/paulherter/swiftly-player/blob/main/LICENSE"
+  },
+  "shortDescription": "A native, distraction-free Jellyfin client for iPhone, iPad, Apple TV, and Mac, with a shared GTK4 app for Linux and Windows.",
+  "description": "Swiftly for Jellyfin is a native client built for Apple platforms first, with iPhone, iPad, Apple TV, and Mac sharing the same interface and playback logic. It keeps things deliberately simple: open the app, find your library, and play, with resume, subtitle switching, and Picture in Picture handled properly instead of buried behind a long settings list.\n\nThe same codebase also ships as a native GTK4 app for Linux and Windows, built on libVLC. Its device profile declares every container, codec, and subtitle format the app supports, so the server has no reason to transcode and your CPU stays cool. There's no account, subscription, or tracking: nothing leaves your device except the requests to the server you enter yourself.",
+  "platforms": [
+    "ios",
+    "tvos",
+    "macos",
+    "linux",
+    "windows"
+  ],
+  "mainPlatform": "ios",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/paulherter/swiftly-player",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://testflight.apple.com/join/MqeP2cnj",
+      "label": "TestFlight Beta"
+    },
+    {
+      "type": "discord",
+      "url": "https://discord.gg/MeGwfv3UwN"
+    }
+  ],
+  "installationInstructions": {
+    "ios": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on iPhone and iPad.",
+    "tvos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Apple TV.",
+    "macos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Mac.",
+    "windows": "Download the installer from [Releases](https://github.com/paulherter/swiftly-player/releases/latest) (64-bit, Windows 10 and 11).",
+    "linux": "Run the install script, which detects your distribution and adds the Swiftly package source so updates arrive with your normal system update:\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-player/main/Linux/Installieren/swiftly-installieren.sh | bash\n```\n\nSee the [README](https://github.com/paulherter/swiftly-player#-linux) for adding the package repository manually."
+  },
+  "features": {
+    "quick-connect": true,
+    "direct-play": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "vibe-coded",
+  "aiDescription": "The developer built the app together with Claude, with every commit crediting it as a co-author. The decisions, testing, and responsibility are the developer's own.",
+  "logo": "https://jellyfindex.com/_astro/logo.CKeBgFXo_xqbTK.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.r0uFB8JB_Z18q9Nu.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/detail.SectlIqx_Z6DAC0.webp",
+      "title": "Detail"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.BCGElbIn_ZPv9qn.webp",
+      "title": "Player"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/picture-in-picture.BNg80zRE_Z1CConm.webp",
+      "title": "Picture in Picture"
+    }
+  ],
+  "repoStats": {
+    "repo": "paulherter/swiftly-for-jellyfin",
+    "stars": 1,
+    "lastActivity": "2026-09-07T13:29:33Z",
+    "isArchived": false
+  }
+}

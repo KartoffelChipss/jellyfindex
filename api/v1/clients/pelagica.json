@@ -1,0 +1,149 @@
+{
+  "id": "pelagica",
+  "url": "https://jellyfindex.com/clients/pelagica",
+  "name": "Pelagica",
+  "developerName": "KartoffelChipss",
+  "developerGithub": "KartoffelChipss",
+  "dateAdded": "2026-09-04T00:00:00.000Z",
+  "dateCreated": "2025-12-30T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/PelagicaApp/Pelagica/blob/main/LICENSE"
+  },
+  "shortDescription": "A modern web, desktop and TV client for Jellyfin",
+  "description": "Pelagica is a web, desktop, and TV client for <a href=\"https://jellyfin.org\">Jellyfin</a> built using React. It aims to provide a fast, modern, and customizable user experience for browsing and watching your media library. It's available as a self-hosted web app, a native desktop app for macOS, Windows, and Linux, and a TV app for Samsung Tizen and LG webOS.\n\n## Features\n\n- **Customizable Sections:** Tailor your homepage with sections like \"Continue Watching\", \"Recently Added\", or completely custom queries.\n- **Media Bars:** Add custom media bars to feature specific content.\n- **Search:** Quickly find media across your library from anywhere using `Cmd+K` / `Ctrl+K`.\n- **Video Player:** Integrated video player for movies and TV shows.\n- **Music Player:** A music player that allows you to listen to your music albums or playlists while browsing your library.\n- **Responsive Design:** Works seamlessly on both desktop and mobile devices.\n- **Desktop App:** Native apps for macOS, Windows, and Linux, built with [Wails](https://v3.wails.io).\n- **Theming:** Light and dark mode support as well as custom themes\n- **Localization:** Supports multiple languages through [community contributions](#localization).\n\nIf you want to suggest new features or report bugs, please use the [GitHub Issues](https://github.com/KartoffelChipss/pelagica/issues) section.\n\n### Integrated Services\n\n- **Seerr:** Discover new movies and TV shows to watch, and request them without leaving Pelagica.\n- **Streamystats:** Get your streamystats recommendations directly on your home page.\n- **kefintweaks Watchlist:** View and manage your kefintweaks watchlist within Pelagica.\n\n## Web Demo\n\nYou can find a live demo of Pelagica web at:\n\nhttps://demo.pelagica.app/\n\nThe demo instance has the `jellyfin.streamyfin.app` server with a username preconfigured, so you just have to click \"Login\" to test it out. If your own Jellyfin server is publicly accessible, you can also use that by entering the server URL and your credentials.\n\nFor production use, you should self-host Pelagica using Docker or another method.\n\nThank you to [Streamyfin](https://streamyfin.app/) for providing a demo Jellyfin server for testing!\n\n## Discord\n\nFor discussions about Pelagica, join the [JellyfinCommunity](https://discord.gg/VKqprjh3Wr) and head to the `#pelagica` channel.",
+  "platforms": [
+    "web",
+    "webos",
+    "tizen",
+    "windows",
+    "macos",
+    "linux",
+    "tvos"
+  ],
+  "mainPlatform": "web",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "supported",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/PelagicaApp/Pelagica"
+    },
+    {
+      "type": "website",
+      "url": "https://pelagica.app"
+    },
+    {
+      "type": "translations",
+      "url": "https://twoglot.com/@KartoffelChipss/pelagica",
+      "label": "Help translate"
+    },
+    {
+      "type": "other",
+      "url": "https://demo.pelagica.app/",
+      "label": "Demo"
+    }
+  ],
+  "installationInstructions": {
+    "web": "You can find a web installation instruction in [the docs](https://pelagica.app/docs/installation).",
+    "windows": "You can download an `.exe` installer from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).",
+    "linux": "You can download a `.deb`, a `.pkg.tar.zst` (Arch Linux), or an `.AppImage` from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).",
+    "macos": "On Apple Silicon, install via the Homebrew tap:\n\n```sh\nbrew tap PelagicaApp/pelagica\nbrew trust PelagicaApp/pelagica\nbrew install --cask pelagica\n```\n\nThen clear the quarantine flag once (the app isn't notarized):\n\n```sh\nxattr -dr com.apple.quarantine \"/Applications/Pelagica.app\"\n```\n\nAlternatively, download the `.dmg` from [Releases](https://github.com/PelagicaApp/Pelagica/releases) and right-click > Open to bypass Gatekeeper.",
+    "webos": "You can find a webOS installation instruction in [the docs](https://pelagica.app/docs/webos).",
+    "tizen": "You can find a Tizen installation instruction in [the docs](https://pelagica.app/docs/tizen).",
+    "tvos": "You can find a tvOS installation instruction in [the docs](https://pelagica.app/docs/appletv)."
+  },
+  "features": {
+    "hw-decode": true,
+    "direct-play": true,
+    "trickplay": true,
+    "pgs-ass-subtitles": true,
+    "lyrics": true,
+    "quick-connect": true,
+    "live-tv-dvr": true,
+    "seerr-integration": true,
+    "kevintweaks-watchlist": true,
+    "streamystats-recommendations": true
+  },
+  "relatedPlugins": [
+    "pelagica-jellyfin-plugin"
+  ],
+  "aiUsage": "ai-assisted",
+  "aiDescription": "I treat AI like any other tool I use. It is not a seperate \"person\" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.",
+  "logo": "https://jellyfindex.com/_astro/logo.qURnakGn_Z10HX6k.svg",
+  "banner": "https://jellyfindex.com/_astro/banner.BG9YpOvE_Z1UCI6d.svg",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.y0oOVeu2_Z1JLAOM.webp",
+      "title": "Home",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.BCW3v8a4_2mhUWH.webp",
+      "title": "Library",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/series.DGB7vBoU_eqMrJ.webp",
+      "title": "Series",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/episode.CuE-iFzQ_a844c.webp",
+      "title": "Episode",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/music.DN8Oqbd1_2cq6Lc.webp",
+      "title": "Music",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/search.CNBfgsaY_wx84j.webp",
+      "title": "Search",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/custom_sections.wMi3wjLl_Z8Cnt8.webp",
+      "title": "Custom Home Sections",
+      "platform": "web"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/webos-home.gBW-W4eP_2iHkXI.webp",
+      "title": "Home",
+      "platform": "webos"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/webos-library.BhbsS5xm_Z2svQxT.webp",
+      "title": "Library",
+      "platform": "webos"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/webos-movie.DklAHQW9_2bOLPe.webp",
+      "title": "Movie",
+      "platform": "webos"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/webos-search.CXpNm77d_Zbjngd.webp",
+      "title": "Search",
+      "platform": "webos"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/webos-player.B-BrSz63_Z2kVjW2.webp",
+      "title": "Player",
+      "platform": "webos"
+    }
+  ],
+  "repoStats": {
+    "repo": "PelagicaApp/Pelagica",
+    "stars": 300,
+    "lastActivity": "2026-09-13T11:23:18Z",
+    "isArchived": false
+  }
+}

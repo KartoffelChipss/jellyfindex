@@ -1,0 +1,68 @@
+{
+  "id": "jellysee",
+  "url": "https://jellyfindex.com/clients/jellysee",
+  "name": "JellySee",
+  "developerName": "HarshLabs",
+  "developerGithub": "HarshLabs",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-07-22T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": false,
+  "shortDescription": "A native Apple TV app that brings Jellyfin and Jellyseerr together in one interface, with requesting, watchlists, and direct-play-first streaming.",
+  "description": "JellySee is a native tvOS app that brings your Jellyfin server and Jellyseerr together in one place, built specifically for the Apple TV remote and big screen. It plays media through the system video player and is built to direct play first, transcoding only when your Apple TV actually needs it, with support for Dolby Vision, HDR10+, PGS/ASS subtitles, and multi-channel audio up to 7.1 with Atmos.\n\nBeyond playback, it covers browsing and requesting in one app: trending and recommended sections, cast and crew pages, a watchlist, and one-tap requests with season and quality-profile selection that track through to Available. Multiple Jellyfin and Jellyseerr servers and profiles are supported, each Apple TV user can keep their own setup, and SyncPlay lets you watch together with other clients on the same network. JellySee is a paid, closed-source app, though two of its companion Jellyfin plugins (native trickplay and YouTube trailers) are open source.",
+  "platforms": [
+    "tvos"
+  ],
+  "mainPlatform": "tvos",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "one-time-purchase",
+  "music": "supported",
+  "links": [
+    {
+      "type": "app-store",
+      "url": "https://apps.apple.com/us/app/jellysee/id6748783768"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "direct-play": true,
+    "dolby-vision": true,
+    "10bit-hevc": true,
+    "pgs-ass-subtitles": true,
+    "quick-connect": true,
+    "multi-server": true,
+    "user-profiles": true,
+    "syncplay": true,
+    "seerr-integration": true,
+    "hw-decode": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.1ph9LyJ5_1rCJeL.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/discover.sW2FdJTm_Z1tVBP2.webp",
+      "title": "Discover"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/detail.CW5j3bZ4_Z1EoJq6.webp",
+      "title": "Chapters"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.B8mtI5GW_ZBhC2x.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/upcoming.BEagRXfc_ZjL7LH.webp",
+      "title": "Upcoming"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/photos.CkhyJCa1_Z1bGeLf.webp",
+      "title": "Photos"
+    }
+  ],
+  "repoStats": null
+}

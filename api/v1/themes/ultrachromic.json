@@ -1,0 +1,54 @@
+{
+  "id": "ultrachromic",
+  "url": "https://jellyfindex.com/themes/ultrachromic",
+  "name": "Ultrachromic",
+  "developerName": "CTalvio",
+  "developerGithub": "CTalvio",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2021-05-15T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/CTalvio/Ultrachromic/blob/main/LICENSE"
+  },
+  "shortDescription": "The final form, the true evolution of the chromic theme saga, with multiple presets and deep customization options.",
+  "description": "Ultrachromic is the latest evolution of CTalvio's \"chromic\" theme series for Jellyfin, offered as several presets: Monochromic, Kaleidochromic, and Novachromic.\n\nNovachromic and Kaleidochromic support custom accent colors, and additional fixes and font stylesheets can be layered on top. Note: the theme may not work correctly behind a reverse proxy. See the [README](https://github.com/CTalvio/Ultrachromic#readme) for details and the full list of module combinations.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/CTalvio/Ultrachromic",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "Pick one preset:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/monochromic_preset.css');\n```\n\nor\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/kaleidochromic_preset.css');\n```\n\nor\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/novachromic_preset.css');\n```\n\nOnly one preset is needed; Novachromic and Kaleidochromic support custom accent colors. Optional fixes and font stylesheets:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fixes.css');\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/jf_font.css');\n```\n\nPaste into **Dashboard → General → Custom CSS** and click **Save**; it applies immediately, server-wide. Don't mix a preset with a custom module combination; see the [README](https://github.com/CTalvio/Ultrachromic#readme) for building one from scratch.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/preview-1.Jza0pZzd_FBVjQ.webp",
+      "title": "Preview 1"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-2.QsbewhAs_26Flpz.webp",
+      "title": "Preview 2"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-3.BJdKRU-Y_qm3co.webp",
+      "title": "Preview 3"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-4.tmUrFrVt_1wJ0Pz.webp",
+      "title": "Preview 4"
+    }
+  ],
+  "repoStats": {
+    "repo": "CTalvio/Ultrachromic",
+    "stars": 991,
+    "lastActivity": "2026-09-10T17:32:22Z",
+    "isArchived": false
+  }
+}

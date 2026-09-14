@@ -1,0 +1,50 @@
+{
+  "id": "flow",
+  "url": "https://jellyfindex.com/themes/flow",
+  "name": "Flow",
+  "developerName": "LitCastVlog",
+  "developerGithub": "LitCastVlog",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-03-26T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/LitCastVlog/Flow/blob/main/LICENSE"
+  },
+  "shortDescription": "A Plex-inspired theme for Jellyfin's WebUI, based on scyfin, with optional drawer, episode grid, and color add-ons.",
+  "description": "Flow is a Plex-inspired theme for Jellyfin's web client, built on top of [scyfin](https://github.com/loof2736/scyfin).\n\nOptional add-ons layer on top of the base theme: a collapsible drawer menu, a bigger logo for high-DPI displays, an episode grid borrowed from Ultrachromic, rounded cast/crew cards, and several color presets (orange, pink, rainbow, red, white).",
+  "official": false,
+  "beta": false,
+  "abandoned": true,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/LitCastVlog/Flow",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "**Base theme:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/LitCastVlog/Flow@main/CSS/ScyFlow-main.css');\n```\n\n**Extras** (smaller cast/crew section, B/W logo, hides \"Upcoming on TV\" / \"Next Up\" in season view):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/LitCastVlog/Flow@main/CSS/ScyFlow-Extras.css');\n```\n\nPaste into a Custom CSS box. See the [README](https://github.com/LitCastVlog/Flow#readme) for optional add-ons like the collapsible drawer, episode grid, rounded cast/crew, and color presets.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.DKNoQO6Z_1IiiBG.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/details.BsGCSSLF_1uiRKQ.webp",
+      "title": "Details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/blue-theme.BSYmrki3_Z2i1etN.webp",
+      "title": "Blue Theme"
+    }
+  ],
+  "repoStats": {
+    "repo": "LitCastVlog/Flow",
+    "stars": 113,
+    "lastActivity": "2025-11-25T20:27:32Z",
+    "isArchived": false
+  }
+}

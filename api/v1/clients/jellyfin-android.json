@@ -1,0 +1,76 @@
+{
+  "id": "jellyfin-android",
+  "url": "https://jellyfindex.com/clients/jellyfin-android",
+  "name": "Jellyfin for Android",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2020-07-21T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-android/blob/master/LICENSE.md"
+  },
+  "shortDescription": "The official Jellyfin app for Android phones and tablets, wrapping the web client with native audio, video, and casting support.",
+  "description": "Jellyfin for Android is the official companion app for phones and tablets. Rather than reimplementing the interface, it wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client used by every server, so browsing, search, and library layout stay identical to what you'd see in a desktop browser, while Android gets native touches on top: local audio and video playback, Chromecast support, notifications, and Quick Connect login.\n\nBecause it's a thin wrapper around the web client rather than a fully native rewrite, most fixes and new features land in [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) first and reach this app automatically.",
+  "platforms": [
+    "android"
+  ],
+  "mainPlatform": "android",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-android",
+      "sourcelink": true
+    },
+    {
+      "type": "google-play",
+      "url": "https://play.google.com/store/apps/details?id=org.jellyfin.mobile"
+    },
+    {
+      "type": "f-droid",
+      "url": "https://f-droid.org/en/packages/org.jellyfin.mobile/"
+    },
+    {
+      "type": "other",
+      "url": "https://www.amazon.com/gp/aw/d/B081RFTTQ9",
+      "label": "Amazon Appstore"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "chromecast": true,
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1.D9b2Eiy4_1GgauR.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.DE3BhfE7_ZHqgsg.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.PDbPFYXK_1uYn5D.webp",
+      "title": "Details"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-android",
+    "stars": 2754,
+    "lastActivity": "2026-09-13T16:21:19Z",
+    "isArchived": false
+  }
+}

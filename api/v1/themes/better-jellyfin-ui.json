@@ -1,0 +1,58 @@
+{
+  "id": "better-jellyfin-ui",
+  "url": "https://jellyfindex.com/themes/better-jellyfin-ui",
+  "name": "better-jellyfin-ui",
+  "developerName": "tromoSM",
+  "developerGithub": "tromoSM",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2026-01-13T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "Apache-2.0",
+    "url": "https://github.com/tromoSM/better-jellyfin-ui/blob/main/LICENSE"
+  },
+  "shortDescription": "A refined and modern UI enhancement for Jellyfin focused on improved layout, animations, and iOS-inspired design.",
+  "description": "better-jellyfin-ui is a modern UI overhaul for Jellyfin with glassmorphism-inspired blur effects, refined layouts, and smoother animations across the desktop client.\n\nIt includes optional add-on modules for a floating header, a high-contrast interface, and scale-up hover animations on cards, so you can mix and match on top of the base theme.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/tromoSM/better-jellyfin-ui",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "Go to **Dashboard → General → Branding → Custom CSS** and paste:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/theme.css');\n```\n\nClick **Save** and refresh the page.\n\n> **Firefox users:** enable `layout.css.backdrop-filter.enabled` and `gfx.webrender.all` in `about:config` to see the blur effect.\n\nOptional add-ons (paste after the base import) include a floating header, a high-contrast interface, and a scale-up hover animation for cards. See the [README](https://github.com/tromoSM/better-jellyfin-ui#readme) for each snippet.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.CG2sUBo8_v2B5G.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.CYzXTJjX_Z1NxM8N.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/overview.Bs8Fmtlx_ZtGopS.webp",
+      "title": "Details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.CR8bE0mR_Z2jJdz9.webp",
+      "title": "Player"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/admin.QCXg86dK_7jxgL.webp",
+      "title": "Admin Dashboard"
+    }
+  ],
+  "repoStats": {
+    "repo": "tromoSM/better-jellyfin-ui",
+    "stars": 62,
+    "lastActivity": "2026-09-12T22:52:34Z",
+    "isArchived": false
+  }
+}

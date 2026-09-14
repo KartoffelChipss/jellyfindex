@@ -1,0 +1,867 @@
+{
+  "generatedAt": "2026-09-14T10:26:41.988Z",
+  "count": 15,
+  "themes": [
+    {
+      "id": "abyss",
+      "url": "https://jellyfindex.com/themes/abyss",
+      "name": "Abyss",
+      "developerName": "AumGupta",
+      "developerGithub": "AumGupta",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2026-03-17T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/AumGupta/abyss-jellyfin/blob/main/LICENSE"
+      },
+      "shortDescription": "A clean, minimal dark theme with frosted glass surfaces, smooth transitions, and a clutter-free home screen spotlight add-on.",
+      "description": "Abyss is a clean, minimal dark theme for Jellyfin built around frosted glass surfaces, refined typography, and smooth animations that re-skin nearly the entire interface.\n\nIt ships with one-click installers for Windows and Linux that configure your whole Jellyfin instance (CSS, dashboard theme, home section order, and Spotlight) in one step, alongside a lighter \"Lite\" mode that keeps the same look while reducing blur, shadows, and motion. Accent color and corner rounding can be customized via CSS variables.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/AumGupta/abyss-jellyfin",
+          "sourcelink": true
+        },
+        {
+          "type": "website",
+          "url": "https://aumgupta.github.io/abyss-jellyfin/"
+        }
+      ],
+      "installationInstructions": "Abyss's full setup (one-click installer, dashboard theme, Spotlight) is described in the [installation guide](https://github.com/AumGupta/abyss-jellyfin#-installation).\n\nFor a quick CSS-only preview, paste into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/AumGupta/abyss-jellyfin@main/abyss.css');\n```\n\n> **Note:** This quick import only gives a partial preview. Follow the full setup guide above for the complete experience.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/preview-1.BVa8cltZ_ZFX6r6.webp",
+          "title": "Preview 1"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-2.pyh2DiNp_2eOS3l.webp",
+          "title": "Preview 2"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-3.Q7ykahvW_Z2hj1iW.webp",
+          "title": "Preview 3"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-4.D7VYvm9G_movCw.webp",
+          "title": "Preview 4"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-5.CGqhodbV_jXEyf.webp",
+          "title": "Preview 5"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-6.DzOn1U1B_Z2n035j.webp",
+          "title": "Preview 6"
+        }
+      ],
+      "repoStats": {
+        "repo": "AumGupta/abyss-jellyfin",
+        "stars": 665,
+        "lastActivity": "2026-09-13T14:01:41Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "better-jellyfin-ui",
+      "url": "https://jellyfindex.com/themes/better-jellyfin-ui",
+      "name": "better-jellyfin-ui",
+      "developerName": "tromoSM",
+      "developerGithub": "tromoSM",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2026-01-13T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "Apache-2.0",
+        "url": "https://github.com/tromoSM/better-jellyfin-ui/blob/main/LICENSE"
+      },
+      "shortDescription": "A refined and modern UI enhancement for Jellyfin focused on improved layout, animations, and iOS-inspired design.",
+      "description": "better-jellyfin-ui is a modern UI overhaul for Jellyfin with glassmorphism-inspired blur effects, refined layouts, and smoother animations across the desktop client.\n\nIt includes optional add-on modules for a floating header, a high-contrast interface, and scale-up hover animations on cards, so you can mix and match on top of the base theme.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/tromoSM/better-jellyfin-ui",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "Go to **Dashboard → General → Branding → Custom CSS** and paste:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/theme.css');\n```\n\nClick **Save** and refresh the page.\n\n> **Firefox users:** enable `layout.css.backdrop-filter.enabled` and `gfx.webrender.all` in `about:config` to see the blur effect.\n\nOptional add-ons (paste after the base import) include a floating header, a high-contrast interface, and a scale-up hover animation for cards. See the [README](https://github.com/tromoSM/better-jellyfin-ui#readme) for each snippet.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.CG2sUBo8_v2B5G.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.CYzXTJjX_Z1NxM8N.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/overview.Bs8Fmtlx_ZtGopS.webp",
+          "title": "Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.CR8bE0mR_Z2jJdz9.webp",
+          "title": "Player"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/admin.QCXg86dK_7jxgL.webp",
+          "title": "Admin Dashboard"
+        }
+      ],
+      "repoStats": {
+        "repo": "tromoSM/better-jellyfin-ui",
+        "stars": 62,
+        "lastActivity": "2026-09-12T22:52:34Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "catppuccin",
+      "url": "https://jellyfindex.com/themes/catppuccin",
+      "name": "Catppuccin",
+      "developerName": "Catppuccin",
+      "developerGithub": "catppuccin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2023-03-11T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/catppuccin/jellyfin/blob/main/LICENSE"
+      },
+      "shortDescription": "Soothing pastel theme for Jellyfin with four flavors: Latte, Frappé, Macchiato, and Mocha.",
+      "description": "Catppuccin for Jellyfin brings the community-favorite soothing pastel palette to Jellyfin's web client, with four flavors to choose from: Latte, Frappé, Macchiato, and Mocha.\n\nThe accent color can be overridden after the theme and flavor imports, and it's part of the wider [Catppuccin](https://catppuccin.com) ecosystem of ports for dozens of apps.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/catppuccin/jellyfin",
+          "sourcelink": true
+        },
+        {
+          "type": "website",
+          "url": "https://catppuccin.com"
+        }
+      ],
+      "installationInstructions": "1. Copy the theme import rule:\n    ```css\n    @import url('https://jellyfin.catppuccin.com/theme.css');\n    ```\n2. Open **Settings → Display** and paste the CSS into the **Custom CSS code** section.\n3. Copy your preferred flavor's import rule and paste it **after** the theme import:\n    ```css\n    /* Latte */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-latte.css');\n    /* Frappé */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-frappe.css');\n    /* Macchiato */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-macchiato.css');\n    /* Mocha */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-mocha.css');\n    ```\n4. Press **Save** and you're done!",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/latte.CVG0kfjl_Z2hrPo9.webp",
+          "title": "Latte"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/frappe.BuMClur5_Z2bTNex.webp",
+          "title": "Frappé"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/macchiato.6TEgv29x_k1jRo.webp",
+          "title": "Macchiato"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/mocha.CHRghrNL_Z2lJLuy.webp",
+          "title": "Mocha"
+        }
+      ],
+      "repoStats": {
+        "repo": "catppuccin/jellyfin",
+        "stars": 130,
+        "lastActivity": "2026-09-11T11:37:31Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "elegantfin",
+      "url": "https://jellyfindex.com/themes/elegantfin",
+      "name": "ElegantFin",
+      "developerName": "lscambo13",
+      "developerGithub": "lscambo13",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2024-12-01T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/lscambo13/ElegantFin/blob/main/LICENSE"
+      },
+      "shortDescription": "A Jellyfin theme inspired by Jellyseerr, improving the overall look and experience with various little fixes to the UI/UX.",
+      "description": "ElegantFin is a Jellyfin theme inspired by Jellyseerr's design that gives the web client a fresh, modern look with a single import. It adds new layouts and color tones, smoother animations, rounded corners and consistent spacing, and stylish borders, hover effects, and shadows across the interface, while cutting down on unnecessary clutter.\n\nThe theme is built to look the same whether you're on phone, desktop, or TV, and it ships with a handful of optional customizations: custom media covers for libraries, a custom login page background, extra overlay buttons on hover, and a centered play button on cards.\n\nYou can find instructions on how to customize the theme in the [README](https://github.com/lscambo13/ElegantFin/tree/main#-how-to-customise-this-theme).",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/lscambo13/ElegantFin"
+        },
+        {
+          "type": "donation",
+          "url": "https://buymeacoffee.com/lscambo13"
+        }
+      ],
+      "installationInstructions": "Paste the following into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css');\n```\n\n**Server-side (applies to everyone):**\n\n1. Open **Dashboard** from the Administration tab in Settings.\n2. Select the **Branding** tab (Jellyfin 10.11+) from the sidebar.\n3. Scroll down to the **Custom CSS** code box.\n4. Paste the code above and click **Save**.\n\n**Client-side (applies to your account only):**\n\n1. Open the **Display** tab in Settings.\n2. Scroll down to the **Custom CSS** code box.\n3. Paste the code above and click **Save**.\n\nOn Jellyfin v12, set **User Settings → Display → Display Mode** to `Desktop (Legacy)` on desktop or `Mobile (Legacy)` on mobile. The new non-legacy UI isn't fully supported yet.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/homepage.DYmy_isa_2eAUzz.webp",
+          "title": "Homepage"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movies-library.DSFf2Vgy_wgkVu.webp",
+          "title": "Movies Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie-page.CyP5ZIbQ_uPVSQ.webp",
+          "title": "Movie Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/tv-show-page.Cf2dELDn_1D7BMN.webp",
+          "title": "TV Show Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/login-page.BE1eXSNO_aH73.webp",
+          "title": "Login Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/settings-page.Cb_DjSnG_yFMg7.webp",
+          "title": "Settings Page"
+        }
+      ],
+      "repoStats": {
+        "repo": "lscambo13/ElegantFin",
+        "stars": 2136,
+        "lastActivity": "2026-09-09T11:16:14Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "evergarden",
+      "url": "https://jellyfindex.com/themes/evergarden",
+      "name": "evergarden",
+      "developerName": "evergardentheme",
+      "developerGithub": "evergardentheme",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-12-11T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "EUPL-1.2",
+        "url": "https://github.com/evergardentheme/jellyfin/blob/main/LICENSE"
+      },
+      "shortDescription": "A cozy, nature-inspired theme for Jellyfin with four seasonal color palettes: Winter, Fall, Spring, and Summer.",
+      "description": "Evergarden is a cozy, nature-inspired theme for Jellyfin with four seasonal color palettes: Winter, Fall, Spring, and Summer.\n\nLike Catppuccin, its accent color can be overridden after the palette import, and development happens primarily on [Codeberg](https://codeberg.org/evergarden/jellyfin), mirrored to GitHub.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/evergardentheme/jellyfin",
+          "sourcelink": true
+        },
+        {
+          "type": "codeberg",
+          "url": "https://codeberg.org/evergarden/jellyfin"
+        }
+      ],
+      "installationInstructions": "1. Copy your preferred palette's import rule:\n    ```css\n    /* Winter */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-winter.css');\n    /* Fall */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-fall.css');\n    /* Spring */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-spring.css');\n    /* Summer */\n    @import url('https://everviolet.github.io/jellyfin/evergarden-summer.css');\n    ```\n2. Open **Settings → Display** and paste the CSS into the **Custom CSS code** section.\n3. Press **Save** and enjoy the pretty colors!",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/summer.B4GX-Pj2_Z1uzGSc.webp",
+          "title": "Summer"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/spring.C5EAKcO9_Z1fr7MU.webp",
+          "title": "Spring"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/fall.CW-_aR4f_Z1FO9z7.webp",
+          "title": "Fall"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/winter.DaOVbyc4_1edI0y.webp",
+          "title": "Winter"
+        }
+      ],
+      "repoStats": {
+        "repo": "evergardentheme/jellyfin",
+        "stars": 12,
+        "lastActivity": "2026-09-11T12:04:51Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "finimalism",
+      "url": "https://jellyfindex.com/themes/finimalism",
+      "name": "finimalism",
+      "developerName": "tedhinklater",
+      "developerGithub": "tedhinklater",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2023-11-23T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/tedhinklater/finimalism/blob/main/LICENSE"
+      },
+      "shortDescription": "A minimalist Jellyfin theme with separate CSS builds for Jellyfin v11 and v12, plus optional scroller and color tweaks.",
+      "description": "Finimalism is a minimalist CSS theme for Jellyfin, shipped as separate builds for Jellyfin v11 and v12.\n\nAccent color, blur, corner rounding, and tint can be overridden with CSS variables after the theme import, and an optional scrollers stylesheet adjusts the horizontal media rows.",
+      "official": false,
+      "beta": false,
+      "abandoned": true,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/tedhinklater/finimalism",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "**Jellyfin v11:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism11.css');\n```\n\n**Jellyfin v12:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism12.css');\n```\n\nPaste into your Custom CSS box (Dashboard → Branding, or your own Display settings).\n\nCustomize with CSS variables after the import:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism11.css');\n:root {\n    --accent: 202, 20, 20;\n    --backdropBlur: blur(0px);\n    --rounding: 0.8em;\n    --tint: 0, 0, 0;\n}\n```",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/preview-1.BH1Kez79_Z1YHuvr.webp",
+          "title": "Preview 1"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-2.DcuZq52n_Z13BCnm.webp",
+          "title": "Preview 2"
+        }
+      ],
+      "repoStats": {
+        "repo": "tedhinklater/finimalism",
+        "stars": 458,
+        "lastActivity": "2026-02-16T16:09:19Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "finity",
+      "url": "https://jellyfindex.com/themes/finity",
+      "name": "Finity",
+      "developerName": "prism2001",
+      "developerGithub": "prism2001",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-05-14T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/prism2001/finity/blob/main/LICENSE"
+      },
+      "shortDescription": "A sleek, modern, immersive Jellyfin theme with complete and minimal variants and configurable colors, roundness, and blur.",
+      "description": "Finity is a sleek, modern, immersive theme for Jellyfin, available as a complete build or a lighter minimal build.\n\nColors, roundness, blur, and spacing can be customized by copying variables from the CSS file, and the theme requires an up-to-date browser for its backdrop gradient effects.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/prism2001/finity",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "**Complete theme:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/prism2001/finity@main/complete/finity-complete.css');\n```\n\n**Minimal theme** (no backdrop gradient, no clickable episode titles in the season grid):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/prism2001/finity@main/minimal/finity-minimal.css');\n```\n\nAdd to the **top** of your Jellyfin Custom CSS field. See the [README](https://github.com/prism2001/finity#readme) for display-setting prerequisites and customization variables.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home-featured.DCL9ddIH_Z25wnxH.webp",
+          "title": "Home (Featured)"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/home-drawers.C5yYwYLk_Z1Gpoeu.webp",
+          "title": "Home (Drawers)"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/show-season.C_1dtZ3I_ZoeQ7K.webp",
+          "title": "Show Season"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie.DoVN91NQ_Z2qnOik.webp",
+          "title": "Movie Page"
+        }
+      ],
+      "repoStats": {
+        "repo": "prism2001/finity",
+        "stars": 77,
+        "lastActivity": "2026-05-03T15:13:53Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "flow",
+      "url": "https://jellyfindex.com/themes/flow",
+      "name": "Flow",
+      "developerName": "LitCastVlog",
+      "developerGithub": "LitCastVlog",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-03-26T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/LitCastVlog/Flow/blob/main/LICENSE"
+      },
+      "shortDescription": "A Plex-inspired theme for Jellyfin's WebUI, based on scyfin, with optional drawer, episode grid, and color add-ons.",
+      "description": "Flow is a Plex-inspired theme for Jellyfin's web client, built on top of [scyfin](https://github.com/loof2736/scyfin).\n\nOptional add-ons layer on top of the base theme: a collapsible drawer menu, a bigger logo for high-DPI displays, an episode grid borrowed from Ultrachromic, rounded cast/crew cards, and several color presets (orange, pink, rainbow, red, white).",
+      "official": false,
+      "beta": false,
+      "abandoned": true,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/LitCastVlog/Flow",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "**Base theme:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/LitCastVlog/Flow@main/CSS/ScyFlow-main.css');\n```\n\n**Extras** (smaller cast/crew section, B/W logo, hides \"Upcoming on TV\" / \"Next Up\" in season view):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/LitCastVlog/Flow@main/CSS/ScyFlow-Extras.css');\n```\n\nPaste into a Custom CSS box. See the [README](https://github.com/LitCastVlog/Flow#readme) for optional add-ons like the collapsible drawer, episode grid, rounded cast/crew, and color presets.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.DKNoQO6Z_1IiiBG.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/details.BsGCSSLF_1uiRKQ.webp",
+          "title": "Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/blue-theme.BSYmrki3_Z2i1etN.webp",
+          "title": "Blue Theme"
+        }
+      ],
+      "repoStats": {
+        "repo": "LitCastVlog/Flow",
+        "stars": 113,
+        "lastActivity": "2025-11-25T20:27:32Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "infinitv",
+      "url": "https://jellyfindex.com/themes/infinitv",
+      "name": "infinitv",
+      "developerName": "buesche87",
+      "developerGithub": "buesche87",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-10-13T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/buesche87/infinitv/blob/main/LICENSE"
+      },
+      "shortDescription": "A TV-mode-focused Jellyfin theme optimized for HTPC and remote-control navigation, with full desktop and mobile support.",
+      "description": "infinitv is a Jellyfin theme built with a strong focus on HTPC setups using Jellyfin Desktop as the client, while fully supporting desktop and mobile too.\n\nIt adds a minimalist TV-mode UI optimized for remote-control and keyboard navigation, smoother custom cards and animations, centered menus and titles, a compact player OSD on wide displays, and full support for user-defined colors, transparency, and background images.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/buesche87/infinitv",
+          "sourcelink": true
+        },
+        {
+          "type": "website",
+          "url": "https://buesche87.github.io/infinitv/"
+        }
+      ],
+      "installationInstructions": "Add to your Custom CSS field:\n\n```css\n@import url('https://buesche87.github.io/infinitv/infinitv.css');\n:root {\n    /* Accent Color */\n    --accent-h: 310; /* Hue: Purple */\n    --accent-s: 100%; /* Saturation */\n    --accent-l: 50%; /* Brightness */\n\n    /* Background Image */\n    --bgImage: url('https://example.com/your-background.jpg');\n\n    /* Darkness & Opacity */\n    --bgdarkness: 0.6; /* Background Darkness */\n    --headeropacity: 0.7; /* Header & Drawer Opacity */\n    --itemopacity: 0.8; /* Item Opacity (Card Footer, Detail Ribbon) */\n\n    /* Roundings */\n    --rounding-media: 12px;\n    --rounding-system: 6px;\n}\n```\n\nSee the [README](https://github.com/buesche87/infinitv#readme) for the full list of customization variables, including disabling the card glow.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.FCf3O0aw_Z1hSTem.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.CZ-DD0z__1FqifY.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/series.KxlQlNwC_ZO5lvt.webp",
+          "title": "Series"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/episodes.DvoNAGav_ZaeOF6.webp",
+          "title": "Episodes"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie.CjRwJA6G_1Nw0XE.webp",
+          "title": "Movie"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.BlgEah9r_Z8up1I.webp",
+          "title": "Player"
+        }
+      ],
+      "repoStats": {
+        "repo": "buesche87/infinitv",
+        "stars": 22,
+        "lastActivity": "2026-09-12T09:21:32Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jamfin",
+      "url": "https://jellyfindex.com/themes/jamfin",
+      "name": "Jamfin",
+      "developerName": "JamsRepos",
+      "developerGithub": "JamsRepos",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2024-06-01T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/JamsRepos/Jamfin/blob/main/LICENSE"
+      },
+      "shortDescription": "Bringing a modern, sleek glassmorphism design to Jellyfin, enhancing your media server's aesthetics.",
+      "description": "Jamfin brings a modern, sleek glassmorphism design to Jellyfin's web client, built to be modular and compact so server owners can easily customize their setup.\n\nPlug-and-play modules let you add or remove pieces of the theme separately from the base look, and theme colors are exposed as CSS variables for easy customization.",
+      "official": false,
+      "beta": false,
+      "abandoned": true,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/JamsRepos/Jamfin",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "**Complete theme** (base + all optional modules):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/JamsRepos/Jamfin@latest/theme/complete.css');\n```\n\n**Base theme only:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/JamsRepos/Jamfin@latest/theme/base.css');\n```\n\nPaste into the **Custom CSS code** field under **Dashboard → General** (applies server-wide), or under your own **Display** settings with \"Disable server-provided custom CSS code\" enabled (applies to you only). See the [modules folder](https://github.com/JamsRepos/Jamfin/tree/main/theme/modules) for optional add-ons.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.DcHnkY6t_Z1Jrhto.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/details.DP9oFYiQ_ZglQNy.webp",
+          "title": "Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.CgF_DoKj_Z1o2Pmj.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/admin.za3Av1s6_ZfeCOK.webp",
+          "title": "Admin Dashboard"
+        }
+      ],
+      "repoStats": {
+        "repo": "JamsRepos/Jamfin",
+        "stars": 103,
+        "lastActivity": "2025-11-02T20:25:53Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "netfin",
+      "url": "https://jellyfindex.com/themes/netfin",
+      "name": "NetFin",
+      "developerName": "ya0903",
+      "developerGithub": "ya0903",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2026-03-10T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/ya0903/NetFin/blob/main/LICENSE"
+      },
+      "shortDescription": "A cinematic Netflix-inspired theme with deep dark visuals, refined hover effects, and a focus on poster artwork.",
+      "description": "NetFin is a cinematic, Netflix-inspired theme for Jellyfin with deep dark visuals, refined hover effects, and a focus on poster artwork.\n\nIt includes experimental add-ons you can layer on top of the main import, such as replacing the Jellyfin logo with a custom one. See the [README](https://github.com/ya0903/NetFin#readme) for the full list.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/ya0903/NetFin",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "Paste into **Jellyfin → Dashboard → General → Custom CSS**:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/ya0903/NetFin@main/netfin.css');\n```\n\nOptional experimental add-ons (paste **after** the main import) are documented in the [README](https://github.com/ya0903/NetFin#-experimental-add-ons).",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/preview-1.BXrs82i6_Z1mpgdu.webp",
+          "title": "Preview 1"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-2.ClfpZdqs_N1Vpt.webp",
+          "title": "Preview 2"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-3.P6LzF2Ep_ZXvJPq.webp",
+          "title": "Preview 3"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-4.C4I1Iz2l_5Tutt.webp",
+          "title": "Preview 4"
+        }
+      ],
+      "repoStats": {
+        "repo": "ya0903/NetFin",
+        "stars": 53,
+        "lastActivity": "2026-04-29T20:10:36Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "neutralfin",
+      "url": "https://jellyfindex.com/themes/neutralfin",
+      "name": "NeutralFin",
+      "developerName": "KartoffelChipss",
+      "developerGithub": "KartoffelChipss",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-07-31T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/KartoffelChipss/NeutralFin/blob/main/LICENSE"
+      },
+      "shortDescription": "A custom Jellyfin theme based on ElegantFin, featuring a sleek black and grey color scheme for a more neutral, modern look.",
+      "description": "NeutralFin is a custom Jellyfin theme based on [lscambo13's ElegantFin](https://github.com/lscambo13/ElegantFin), featuring a sleek black and grey color scheme for a more neutral and modern look.",
+      "official": false,
+      "beta": false,
+      "abandoned": true,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/KartoffelChipss/NeutralFin",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "Paste the following into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/KartoffelChipss/NeutralFin@latest/theme/neutralfin-minified.css');\n```\n\n**Server-side (applies to everyone):**\n\n1. Go to **Settings → Administration** tab.\n2. Select the **General** tab from the sidebar.\n3. Scroll to the **Branding** section.\n4. Locate the **Custom CSS** field.\n5. Paste your custom CSS into the box.\n6. Click **Save** to apply the changes.\n\n**Client-side (applies to your account only):**\n\n1. Go to **Settings → Display** tab.\n2. Scroll down to find the **Custom CSS** field.\n3. Paste your custom CSS into the box.\n4. Click **Save** to apply the changes.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.CoJjefKk_Z21mAeQ.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movies-library.McHfm1uN_ZClebL.webp",
+          "title": "Movies Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie.C94ElZFM_Z1lRG7J.webp",
+          "title": "Movie Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie-alt.COR1NAab_Z25YLY4.webp",
+          "title": "Movie Page (Alternate)"
+        }
+      ],
+      "repoStats": {
+        "repo": "KartoffelChipss/NeutralFin",
+        "stars": 97,
+        "lastActivity": "2025-11-24T18:09:19Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "scyfin",
+      "url": "https://jellyfindex.com/themes/scyfin",
+      "name": "scyfin",
+      "developerName": "loof2736",
+      "developerGithub": "loof2736",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2022-11-09T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/loof2736/scyfin/blob/main/LICENSE"
+      },
+      "shortDescription": "Custom CSS theme for Jellyfin with support for backdrops and multiple accent color themes.",
+      "description": "scyfin is a custom CSS theme for Jellyfin with support for backdrops and several accent-color themes, including Seafoam, Coral, and Snow.\n\nOptional add-ons can disable the static left drawer, disable backdrops on navigation pages, or switch the \"Identify\" search results to a list view. See the [README](https://github.com/loof2736/scyfin#readme) for the full list.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/loof2736/scyfin",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "**Jellyfin 10.11.x and above:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');\n```\n\n**Jellyfin 10.10.x and below:** replace `@latest` with `@1.4` in the URL above (and in any options you use).\n\nPaste into a Custom CSS box. Optional add-ons and accent-color themes (Seafoam, Coral, Snow, and more) are listed in the [README](https://github.com/loof2736/scyfin#readme).",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/homepage.DVzPN3de_Z1VGq3O.webp",
+          "title": "Homepage"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/homepage-backdrops.TayDwTOk_dVRtU.webp",
+          "title": "Homepage (Backdrops)"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/details.BpHB5b_B_R8Pw5.webp",
+          "title": "Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/details-backdrops.D4FnkrTC_nhC4t.webp",
+          "title": "Details (Backdrops)"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/dashboard.BqaoWhVI_Z1fU9wT.webp",
+          "title": "Dashboard"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/login.BCtdPz5p_Z2RJDx.webp",
+          "title": "Login Page"
+        }
+      ],
+      "repoStats": {
+        "repo": "loof2736/scyfin",
+        "stars": 732,
+        "lastActivity": "2026-09-11T21:28:28Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "ultrachromic",
+      "url": "https://jellyfindex.com/themes/ultrachromic",
+      "name": "Ultrachromic",
+      "developerName": "CTalvio",
+      "developerGithub": "CTalvio",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2021-05-15T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/CTalvio/Ultrachromic/blob/main/LICENSE"
+      },
+      "shortDescription": "The final form, the true evolution of the chromic theme saga, with multiple presets and deep customization options.",
+      "description": "Ultrachromic is the latest evolution of CTalvio's \"chromic\" theme series for Jellyfin, offered as several presets: Monochromic, Kaleidochromic, and Novachromic.\n\nNovachromic and Kaleidochromic support custom accent colors, and additional fixes and font stylesheets can be layered on top. Note: the theme may not work correctly behind a reverse proxy. See the [README](https://github.com/CTalvio/Ultrachromic#readme) for details and the full list of module combinations.",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/CTalvio/Ultrachromic",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "Pick one preset:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/monochromic_preset.css');\n```\n\nor\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/kaleidochromic_preset.css');\n```\n\nor\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/novachromic_preset.css');\n```\n\nOnly one preset is needed; Novachromic and Kaleidochromic support custom accent colors. Optional fixes and font stylesheets:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fixes.css');\n@import url('https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/jf_font.css');\n```\n\nPaste into **Dashboard → General → Custom CSS** and click **Save**; it applies immediately, server-wide. Don't mix a preset with a custom module combination; see the [README](https://github.com/CTalvio/Ultrachromic#readme) for building one from scratch.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/preview-1.Jza0pZzd_FBVjQ.webp",
+          "title": "Preview 1"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-2.QsbewhAs_26Flpz.webp",
+          "title": "Preview 2"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-3.BJdKRU-Y_qm3co.webp",
+          "title": "Preview 3"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/preview-4.tmUrFrVt_1wJ0Pz.webp",
+          "title": "Preview 4"
+        }
+      ],
+      "repoStats": {
+        "repo": "CTalvio/Ultrachromic",
+        "stars": 991,
+        "lastActivity": "2026-09-10T17:32:22Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "zestytheme",
+      "url": "https://jellyfindex.com/themes/zestytheme",
+      "name": "ZestyTheme",
+      "developerName": "stpnwf",
+      "developerGithub": "stpnwf",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2024-05-08T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MIT",
+        "url": "https://github.com/stpnwf/ZestyTheme/blob/main/LICENSE"
+      },
+      "shortDescription": "A minimal and elegant theme for Jellyfin with multiple color scheme presets.",
+      "description": "ZestyTheme is a minimal and elegant theme for Jellyfin, built for Jellyfin 10.11+ with a legacy build available for 10.10.\n\nIt ships with several color scheme presets, including Cyan (default) and Blue, and looks best with Backdrops enabled for every device using the theme.",
+      "official": false,
+      "beta": false,
+      "abandoned": true,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/stpnwf/ZestyTheme",
+          "sourcelink": true
+        }
+      ],
+      "installationInstructions": "For Jellyfin `v10.11+`, paste into **Dashboard → Branding → Custom CSS**:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/theme.css');\n```\n\nFor Jellyfin `v10.10`, use the legacy build instead:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@legacy/v10.10/theme.css');\n```\n\nThen enable **Backdrops** for every device using this theme (**Settings → Display → Backdrops**).\n\nOptional color scheme presets (add **one**, after the theme import), e.g. Blue:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/colorschemes/blue.css');\n```\n\nSee the [README](https://github.com/stpnwf/ZestyTheme#readme) for all available color schemes.",
+      "aiUsage": "unknown",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.DS8FwkWs_Z1Dinff.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie.DdWy78Ly_Z2vMMP7.webp",
+          "title": "Movie Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/avatar-menu.DCXUeqzB_Z1jLyLW.webp",
+          "title": "Avatar Menu"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.DgRUWXE0_XzhpI.webp",
+          "title": "Player"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/login.mZuQQ6Ar_Z1LfzY3.webp",
+          "title": "Login Page"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/mobile-view.CXLRUwlV_Z2nLXgj.webp",
+          "title": "Mobile View"
+        }
+      ],
+      "repoStats": {
+        "repo": "stpnwf/ZestyTheme",
+        "stars": 530,
+        "lastActivity": "2025-11-07T03:30:27Z",
+        "isArchived": false
+      }
+    }
+  ]
+}

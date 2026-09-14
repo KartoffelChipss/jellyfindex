@@ -1,0 +1,54 @@
+{
+  "id": "jamfin",
+  "url": "https://jellyfindex.com/themes/jamfin",
+  "name": "Jamfin",
+  "developerName": "JamsRepos",
+  "developerGithub": "JamsRepos",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2024-06-01T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/JamsRepos/Jamfin/blob/main/LICENSE"
+  },
+  "shortDescription": "Bringing a modern, sleek glassmorphism design to Jellyfin, enhancing your media server's aesthetics.",
+  "description": "Jamfin brings a modern, sleek glassmorphism design to Jellyfin's web client, built to be modular and compact so server owners can easily customize their setup.\n\nPlug-and-play modules let you add or remove pieces of the theme separately from the base look, and theme colors are exposed as CSS variables for easy customization.",
+  "official": false,
+  "beta": false,
+  "abandoned": true,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/JamsRepos/Jamfin",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "**Complete theme** (base + all optional modules):\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/JamsRepos/Jamfin@latest/theme/complete.css');\n```\n\n**Base theme only:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/JamsRepos/Jamfin@latest/theme/base.css');\n```\n\nPaste into the **Custom CSS code** field under **Dashboard → General** (applies server-wide), or under your own **Display** settings with \"Disable server-provided custom CSS code\" enabled (applies to you only). See the [modules folder](https://github.com/JamsRepos/Jamfin/tree/main/theme/modules) for optional add-ons.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.DcHnkY6t_Z1Jrhto.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/details.DP9oFYiQ_ZglQNy.webp",
+      "title": "Details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.CgF_DoKj_Z1o2Pmj.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/admin.za3Av1s6_ZfeCOK.webp",
+      "title": "Admin Dashboard"
+    }
+  ],
+  "repoStats": {
+    "repo": "JamsRepos/Jamfin",
+    "stars": 103,
+    "lastActivity": "2025-11-02T20:25:53Z",
+    "isArchived": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "finimalism",
+  "url": "https://jellyfindex.com/themes/finimalism",
+  "name": "finimalism",
+  "developerName": "tedhinklater",
+  "developerGithub": "tedhinklater",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2023-11-23T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/tedhinklater/finimalism/blob/main/LICENSE"
+  },
+  "shortDescription": "A minimalist Jellyfin theme with separate CSS builds for Jellyfin v11 and v12, plus optional scroller and color tweaks.",
+  "description": "Finimalism is a minimalist CSS theme for Jellyfin, shipped as separate builds for Jellyfin v11 and v12.\n\nAccent color, blur, corner rounding, and tint can be overridden with CSS variables after the theme import, and an optional scrollers stylesheet adjusts the horizontal media rows.",
+  "official": false,
+  "beta": false,
+  "abandoned": true,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/tedhinklater/finimalism",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "**Jellyfin v11:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism11.css');\n```\n\n**Jellyfin v12:**\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism12.css');\n```\n\nPaste into your Custom CSS box (Dashboard → Branding, or your own Display settings).\n\nCustomize with CSS variables after the import:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/tedhinklater/finimalism@main/Finimalism11.css');\n:root {\n    --accent: 202, 20, 20;\n    --backdropBlur: blur(0px);\n    --rounding: 0.8em;\n    --tint: 0, 0, 0;\n}\n```",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/preview-1.BH1Kez79_Z1YHuvr.webp",
+      "title": "Preview 1"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-2.DcuZq52n_Z13BCnm.webp",
+      "title": "Preview 2"
+    }
+  ],
+  "repoStats": {
+    "repo": "tedhinklater/finimalism",
+    "stars": 458,
+    "lastActivity": "2026-02-16T16:09:19Z",
+    "isArchived": false
+  }
+}

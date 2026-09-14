@@ -1,0 +1,96 @@
+{
+  "id": "afinity",
+  "url": "https://jellyfindex.com/clients/afinity",
+  "name": "Afinity",
+  "developerName": "M0RPH3US",
+  "developerGithub": "MakD",
+  "dateAdded": "2026-09-04T00:00:00.000Z",
+  "dateCreated": "2025-10-01T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/MakD/AFinity/blob/master/LICENSE.md"
+  },
+  "shortDescription": "A modern, native Android Jellyfin client built with Kotlin, Jetpack Compose, Material 3, and LibMPV.",
+  "description": "​AFinity is a native Android application that brings your Jellyfin media library to life with a clean, responsive interface. Stream your movies, TV shows, music, and live TV with hardware-accelerated playback, and discover new content through a home screen you can shape yourself. Beyond video, AFinity extends your experience with optional Audiobookshelf integration for audiobooks and podcasts, and direct media requests via Jellyseerr.",
+  "platforms": [
+    "android"
+  ],
+  "mainPlatform": "android",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/MakD/AFinity"
+    },
+    {
+      "type": "obtainium",
+      "url": "https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.makd.afinity%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FMakD%2FAFinity%22%2C%22author%22%3A%22MakD%22%2C%22name%22%3A%22AFinity%22%2C%22supportFixedAPKURL%22%3Afalse%7D"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "offline-download": true,
+    "chromecast": true,
+    "hw-decode": true,
+    "syncplay": true,
+    "direct-play": true,
+    "trickplay": true,
+    "pgs-ass-subtitles": true,
+    "lyrics": true,
+    "quick-connect": true,
+    "multi-server": true,
+    "live-tv-dvr": true,
+    "seerr-integration": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.DlbrgZiM_Z26xHHm.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.CblYNRJ7_Z2dTM4d.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.phReagj-_1Xv340.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie_details.CkCV-HMX_d3xpd.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/show_details.qQMSGmP0_2mB9Yd.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/live_tv.Cm3fsbkV_16mjeF.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/live_tv_guide.CiG7mRV9_Z1XSGfU.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/audiobookshelf_screen.BT390GBd_Z3zFLw.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/book_detail.C3TOtdxR_Z22MWcT.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/audiobook_player.Lt5awh7d_1zSJib.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/request_screen.K_kWqeHM_Z13FFMK.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.alj2RWrJ_1PzyG1.webp"
+    }
+  ],
+  "repoStats": {
+    "repo": "MakD/AFinity",
+    "stars": 235,
+    "lastActivity": "2026-08-30T03:40:08Z",
+    "isArchived": false
+  }
+}

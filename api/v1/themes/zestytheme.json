@@ -1,0 +1,62 @@
+{
+  "id": "zestytheme",
+  "url": "https://jellyfindex.com/themes/zestytheme",
+  "name": "ZestyTheme",
+  "developerName": "stpnwf",
+  "developerGithub": "stpnwf",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2024-05-08T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/stpnwf/ZestyTheme/blob/main/LICENSE"
+  },
+  "shortDescription": "A minimal and elegant theme for Jellyfin with multiple color scheme presets.",
+  "description": "ZestyTheme is a minimal and elegant theme for Jellyfin, built for Jellyfin 10.11+ with a legacy build available for 10.10.\n\nIt ships with several color scheme presets, including Cyan (default) and Blue, and looks best with Backdrops enabled for every device using the theme.",
+  "official": false,
+  "beta": false,
+  "abandoned": true,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/stpnwf/ZestyTheme",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "For Jellyfin `v10.11+`, paste into **Dashboard → Branding → Custom CSS**:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/theme.css');\n```\n\nFor Jellyfin `v10.10`, use the legacy build instead:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@legacy/v10.10/theme.css');\n```\n\nThen enable **Backdrops** for every device using this theme (**Settings → Display → Backdrops**).\n\nOptional color scheme presets (add **one**, after the theme import), e.g. Blue:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/colorschemes/blue.css');\n```\n\nSee the [README](https://github.com/stpnwf/ZestyTheme#readme) for all available color schemes.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.DS8FwkWs_Z1Dinff.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie.DdWy78Ly_Z2vMMP7.webp",
+      "title": "Movie Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/avatar-menu.DCXUeqzB_Z1jLyLW.webp",
+      "title": "Avatar Menu"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.DgRUWXE0_XzhpI.webp",
+      "title": "Player"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/login.mZuQQ6Ar_Z1LfzY3.webp",
+      "title": "Login Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/mobile-view.CXLRUwlV_Z2nLXgj.webp",
+      "title": "Mobile View"
+    }
+  ],
+  "repoStats": {
+    "repo": "stpnwf/ZestyTheme",
+    "stars": 530,
+    "lastActivity": "2025-11-07T03:30:27Z",
+    "isArchived": false
+  }
+}

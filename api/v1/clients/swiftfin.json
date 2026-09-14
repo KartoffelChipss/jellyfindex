@@ -1,0 +1,77 @@
+{
+  "id": "swiftfin",
+  "url": "https://jellyfindex.com/clients/swiftfin",
+  "name": "Swiftfin",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2021-05-14T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MPL-2.0",
+    "url": "https://github.com/jellyfin/Swiftfin/blob/main/LICENSE.md"
+  },
+  "shortDescription": "The official Swift-native Jellyfin client for iPhone, iPad, and Apple TV, built around VLCKit to maximize direct play.",
+  "description": "Swiftfin is the official Jellyfin client written in Swift for iPhone, iPad, and Apple TV, redesigned to look and feel native on every class of Apple device rather than reusing the web interface. It ships two playback engines: a VLCKit-based player that maximizes direct play across a wide range of containers and codecs, and a native AVPlayer-based option for cases like framerate matching and Picture in Picture where Apple's own player has the edge.\n\nBeyond playback, Swiftfin covers Live TV, trickplay scrubbing thumbnails, downloads for offline viewing, and Quick Connect and multi-server login, all built and maintained by the Jellyfin team as an official beta. It's free on the App Store, with a TestFlight channel for testing new features and fixes before general release.",
+  "platforms": [
+    "ios",
+    "tvos"
+  ],
+  "mainPlatform": "ios",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/Swiftfin",
+      "sourcelink": true
+    },
+    {
+      "type": "app-store",
+      "url": "https://apps.apple.com/us/app/swiftfin/id1604098728"
+    },
+    {
+      "type": "other",
+      "url": "https://testflight.apple.com/join/SqNPfdxq",
+      "label": "TestFlight Beta"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "trickplay": true,
+    "direct-play": true,
+    "pgs-ass-subtitles": true,
+    "quick-connect": true,
+    "multi-server": true,
+    "live-tv-dvr": true,
+    "offline-download": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.CMs91h_N_27Ol6A.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1.D4l8SeR6_Z1RN4lI.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.D6FcKI9n_1R78mY.webp",
+      "title": "Recently Added"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.CZjsIDU1_2e1HT0.webp",
+      "title": "Library"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/Swiftfin",
+    "stars": 4162,
+    "lastActivity": "2026-09-14T05:21:09Z",
+    "isArchived": false
+  }
+}

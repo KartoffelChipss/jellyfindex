@@ -1,0 +1,66 @@
+{
+  "id": "jellyfin-ios",
+  "url": "https://jellyfindex.com/clients/jellyfin-ios",
+  "name": "Jellyfin Mobile",
+  "developerName": "Jellyfin Team",
+  "developerGithub": "jellyfin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2019-08-19T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MPL-2.0",
+    "url": "https://github.com/jellyfin/jellyfin-ios/blob/master/LICENSE"
+  },
+  "shortDescription": "The official Jellyfin app for iPhone and iPad, wrapping the web client with native audio and video playback.",
+  "description": "Jellyfin Mobile is the official companion app for iPhone and iPad, built with Expo around the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with. It wraps that web client in a native shell so browsing, search, and library layout match what you'd see in a desktop browser, while iOS gets native audio and video playback, Live TV, and Quick Connect login on top.\n\nSince it's a wrapper rather than a fully native rewrite, this is the app to reach for if you want the exact web experience on a phone; for a from-scratch Swift client built around VLC, see [Swiftfin](/clients/swiftfin) instead.",
+  "platforms": [
+    "ios"
+  ],
+  "mainPlatform": "ios",
+  "official": true,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/jellyfin/jellyfin-ios",
+      "sourcelink": true
+    },
+    {
+      "type": "app-store",
+      "url": "https://apps.apple.com/us/app/jellyfin-mobile/id1480192618"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "quick-connect": true,
+    "multi-server": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1._r81Qlin_Z8Gw8O.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.BJHOZ7Me_1MSssM.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.CYCapq2S_ZCH8wD.webp",
+      "title": "Details"
+    }
+  ],
+  "repoStats": {
+    "repo": "jellyfin/jellyfin-ios",
+    "stars": 594,
+    "lastActivity": "2026-09-08T15:09:40Z",
+    "isArchived": false
+  }
+}

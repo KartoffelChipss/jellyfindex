@@ -1,0 +1,66 @@
+{
+  "id": "abyss",
+  "url": "https://jellyfindex.com/themes/abyss",
+  "name": "Abyss",
+  "developerName": "AumGupta",
+  "developerGithub": "AumGupta",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2026-03-17T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/AumGupta/abyss-jellyfin/blob/main/LICENSE"
+  },
+  "shortDescription": "A clean, minimal dark theme with frosted glass surfaces, smooth transitions, and a clutter-free home screen spotlight add-on.",
+  "description": "Abyss is a clean, minimal dark theme for Jellyfin built around frosted glass surfaces, refined typography, and smooth animations that re-skin nearly the entire interface.\n\nIt ships with one-click installers for Windows and Linux that configure your whole Jellyfin instance (CSS, dashboard theme, home section order, and Spotlight) in one step, alongside a lighter \"Lite\" mode that keeps the same look while reducing blur, shadows, and motion. Accent color and corner rounding can be customized via CSS variables.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/AumGupta/abyss-jellyfin",
+      "sourcelink": true
+    },
+    {
+      "type": "website",
+      "url": "https://aumgupta.github.io/abyss-jellyfin/"
+    }
+  ],
+  "installationInstructions": "Abyss's full setup (one-click installer, dashboard theme, Spotlight) is described in the [installation guide](https://github.com/AumGupta/abyss-jellyfin#-installation).\n\nFor a quick CSS-only preview, paste into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/AumGupta/abyss-jellyfin@main/abyss.css');\n```\n\n> **Note:** This quick import only gives a partial preview. Follow the full setup guide above for the complete experience.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/preview-1.BVa8cltZ_ZFX6r6.webp",
+      "title": "Preview 1"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-2.pyh2DiNp_2eOS3l.webp",
+      "title": "Preview 2"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-3.Q7ykahvW_Z2hj1iW.webp",
+      "title": "Preview 3"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-4.D7VYvm9G_movCw.webp",
+      "title": "Preview 4"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-5.CGqhodbV_jXEyf.webp",
+      "title": "Preview 5"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/preview-6.DzOn1U1B_Z2n035j.webp",
+      "title": "Preview 6"
+    }
+  ],
+  "repoStats": {
+    "repo": "AumGupta/abyss-jellyfin",
+    "stars": 665,
+    "lastActivity": "2026-09-13T14:01:41Z",
+    "isArchived": false
+  }
+}

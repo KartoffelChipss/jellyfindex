@@ -1,0 +1,58 @@
+{
+  "id": "catppuccin",
+  "url": "https://jellyfindex.com/themes/catppuccin",
+  "name": "Catppuccin",
+  "developerName": "Catppuccin",
+  "developerGithub": "catppuccin",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2023-03-11T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/catppuccin/jellyfin/blob/main/LICENSE"
+  },
+  "shortDescription": "Soothing pastel theme for Jellyfin with four flavors: Latte, Frappé, Macchiato, and Mocha.",
+  "description": "Catppuccin for Jellyfin brings the community-favorite soothing pastel palette to Jellyfin's web client, with four flavors to choose from: Latte, Frappé, Macchiato, and Mocha.\n\nThe accent color can be overridden after the theme and flavor imports, and it's part of the wider [Catppuccin](https://catppuccin.com) ecosystem of ports for dozens of apps.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/catppuccin/jellyfin",
+      "sourcelink": true
+    },
+    {
+      "type": "website",
+      "url": "https://catppuccin.com"
+    }
+  ],
+  "installationInstructions": "1. Copy the theme import rule:\n    ```css\n    @import url('https://jellyfin.catppuccin.com/theme.css');\n    ```\n2. Open **Settings → Display** and paste the CSS into the **Custom CSS code** section.\n3. Copy your preferred flavor's import rule and paste it **after** the theme import:\n    ```css\n    /* Latte */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-latte.css');\n    /* Frappé */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-frappe.css');\n    /* Macchiato */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-macchiato.css');\n    /* Mocha */\n    @import url('https://jellyfin.catppuccin.com/catppuccin-mocha.css');\n    ```\n4. Press **Save** and you're done!",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/latte.CVG0kfjl_Z2hrPo9.webp",
+      "title": "Latte"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/frappe.BuMClur5_Z2bTNex.webp",
+      "title": "Frappé"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/macchiato.6TEgv29x_k1jRo.webp",
+      "title": "Macchiato"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/mocha.CHRghrNL_Z2lJLuy.webp",
+      "title": "Mocha"
+    }
+  ],
+  "repoStats": {
+    "repo": "catppuccin/jellyfin",
+    "stars": 130,
+    "lastActivity": "2026-09-11T11:37:31Z",
+    "isArchived": false
+  }
+}

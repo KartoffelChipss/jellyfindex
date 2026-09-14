@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "Read-only JSON API for the jellyfindex directory.",
+  "fairUse": "Build tools, bots, and integrations with this. Please do not use it to launch a competing directory site with the same concept and dataset — see /api for details.",
+  "endpoints": {
+    "clients": "https://jellyfindex.com/api/v1/clients.json",
+    "client": "https://jellyfindex.com/api/v1/clients/:id.json",
+    "plugins": "https://jellyfindex.com/api/v1/plugins.json",
+    "plugin": "https://jellyfindex.com/api/v1/plugins/:id.json",
+    "themes": "https://jellyfindex.com/api/v1/themes.json",
+    "theme": "https://jellyfindex.com/api/v1/themes/:id.json"
+  },
+  "docs": "https://jellyfindex.com/api"
+}

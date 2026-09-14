@@ -1,0 +1,66 @@
+{
+  "id": "infinitv",
+  "url": "https://jellyfindex.com/themes/infinitv",
+  "name": "infinitv",
+  "developerName": "buesche87",
+  "developerGithub": "buesche87",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-10-13T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-3.0",
+    "url": "https://github.com/buesche87/infinitv/blob/main/LICENSE"
+  },
+  "shortDescription": "A TV-mode-focused Jellyfin theme optimized for HTPC and remote-control navigation, with full desktop and mobile support.",
+  "description": "infinitv is a Jellyfin theme built with a strong focus on HTPC setups using Jellyfin Desktop as the client, while fully supporting desktop and mobile too.\n\nIt adds a minimalist TV-mode UI optimized for remote-control and keyboard navigation, smoother custom cards and animations, centered menus and titles, a compact player OSD on wide displays, and full support for user-defined colors, transparency, and background images.",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/buesche87/infinitv",
+      "sourcelink": true
+    },
+    {
+      "type": "website",
+      "url": "https://buesche87.github.io/infinitv/"
+    }
+  ],
+  "installationInstructions": "Add to your Custom CSS field:\n\n```css\n@import url('https://buesche87.github.io/infinitv/infinitv.css');\n:root {\n    /* Accent Color */\n    --accent-h: 310; /* Hue: Purple */\n    --accent-s: 100%; /* Saturation */\n    --accent-l: 50%; /* Brightness */\n\n    /* Background Image */\n    --bgImage: url('https://example.com/your-background.jpg');\n\n    /* Darkness & Opacity */\n    --bgdarkness: 0.6; /* Background Darkness */\n    --headeropacity: 0.7; /* Header & Drawer Opacity */\n    --itemopacity: 0.8; /* Item Opacity (Card Footer, Detail Ribbon) */\n\n    /* Roundings */\n    --rounding-media: 12px;\n    --rounding-system: 6px;\n}\n```\n\nSee the [README](https://github.com/buesche87/infinitv#readme) for the full list of customization variables, including disabling the card glow.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.FCf3O0aw_Z1hSTem.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/library.CZ-DD0z__1FqifY.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/series.KxlQlNwC_ZO5lvt.webp",
+      "title": "Series"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/episodes.DvoNAGav_ZaeOF6.webp",
+      "title": "Episodes"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie.CjRwJA6G_1Nw0XE.webp",
+      "title": "Movie"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/player.BlgEah9r_Z8up1I.webp",
+      "title": "Player"
+    }
+  ],
+  "repoStats": {
+    "repo": "buesche87/infinitv",
+    "stars": 22,
+    "lastActivity": "2026-09-12T09:21:32Z",
+    "isArchived": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "neutralfin",
+  "url": "https://jellyfindex.com/themes/neutralfin",
+  "name": "NeutralFin",
+  "developerName": "KartoffelChipss",
+  "developerGithub": "KartoffelChipss",
+  "dateAdded": "2026-09-05T00:00:00.000Z",
+  "dateCreated": "2025-07-31T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "GPL-2.0",
+    "url": "https://github.com/KartoffelChipss/NeutralFin/blob/main/LICENSE"
+  },
+  "shortDescription": "A custom Jellyfin theme based on ElegantFin, featuring a sleek black and grey color scheme for a more neutral, modern look.",
+  "description": "NeutralFin is a custom Jellyfin theme based on [lscambo13's ElegantFin](https://github.com/lscambo13/ElegantFin), featuring a sleek black and grey color scheme for a more neutral and modern look.",
+  "official": false,
+  "beta": false,
+  "abandoned": true,
+  "ignoreAbandonedCheck": false,
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/KartoffelChipss/NeutralFin",
+      "sourcelink": true
+    }
+  ],
+  "installationInstructions": "Paste the following into a Custom CSS box:\n\n```css\n@import url('https://cdn.jsdelivr.net/gh/KartoffelChipss/NeutralFin@latest/theme/neutralfin-minified.css');\n```\n\n**Server-side (applies to everyone):**\n\n1. Go to **Settings → Administration** tab.\n2. Select the **General** tab from the sidebar.\n3. Scroll to the **Branding** section.\n4. Locate the **Custom CSS** field.\n5. Paste your custom CSS into the box.\n6. Click **Save** to apply the changes.\n\n**Client-side (applies to your account only):**\n\n1. Go to **Settings → Display** tab.\n2. Scroll down to find the **Custom CSS** field.\n3. Paste your custom CSS into the box.\n4. Click **Save** to apply the changes.",
+  "aiUsage": "unknown",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/home.CoJjefKk_Z21mAeQ.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movies-library.McHfm1uN_ZClebL.webp",
+      "title": "Movies Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie.C94ElZFM_Z1lRG7J.webp",
+      "title": "Movie Page"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/movie-alt.COR1NAab_Z25YLY4.webp",
+      "title": "Movie Page (Alternate)"
+    }
+  ],
+  "repoStats": {
+    "repo": "KartoffelChipss/NeutralFin",
+    "stars": 97,
+    "lastActivity": "2025-11-24T18:09:19Z",
+    "isArchived": false
+  }
+}

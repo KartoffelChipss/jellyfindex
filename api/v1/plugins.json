@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-09-14T10:26:41.885Z",
+  "count": 4,
+  "plugins": [
+    {
+      "id": "file-transformation",
+      "url": "https://jellyfindex.com/plugins/file-transformation",
+      "name": "File Transformation",
+      "developerName": "IAmParadox27",
+      "developerGithub": "IAmParadox27",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-01-23T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/IAmParadox27/jellyfin-plugin-file-transformation/blob/main/LICENSE"
+      },
+      "shortDescription": "Lets other Jellyfin plugins non-destructively modify the served jellyfin-web files, without anyone having to patch them directly.",
+      "description": "File Transformation is a low-level utility plugin that other Jellyfin plugins build on. It lets a plugin register a callback that patches the content of served jellyfin-web files by filename pattern, instead of requiring server owners to edit the web client's files directly. Because the changes are applied at serve time rather than baked into the install, the server stays clean and free to update whenever a new Jellyfin release comes out.\n\nIt has no user-facing configuration of its own. It exists purely so other plugins, such as Plugin Pages and Home Screen Sections, can hook into the web client safely.",
+      "categories": [
+        "general"
+      ],
+      "requires": [],
+      "relatedClients": [],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/IAmParadox27/jellyfin-plugin-file-transformation"
+        }
+      ],
+      "installationInstructions": "1. Add `https://www.iamparadox.dev/jellyfin/plugins/manifest.json` as a plugin repository in **Dashboard → Plugins → Repositories**.\n2. Find **File Transformation** in the catalogue and install it. No further configuration is required.\n3. Restart Jellyfin.",
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.E7eMQvEq_Z276jtc.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "IAmParadox27/jellyfin-plugin-file-transformation",
+        "stars": 530,
+        "lastActivity": "2026-09-08T09:02:53Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "home-screen-sections",
+      "url": "https://jellyfindex.com/plugins/home-screen-sections",
+      "name": "Home Screen Sections",
+      "developerName": "IAmParadox27",
+      "developerGithub": "IAmParadox27",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-01-19T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/IAmParadox27/jellyfin-plugin-home-sections/blob/main/LICENSE"
+      },
+      "shortDescription": "Replaces the Jellyfin home screen with dynamic, Netflix-style sections like Because You Watched, Watch Again, Genre picks, and Jellyseerr-powered Discover rows.",
+      "description": "Home Screen Sections (HSS) replaces Jellyfin's default web client home screen with a fully modular, more \"Netflixy\" layout. It reimplements the vanilla sections (My Media, Continue Watching, Next Up, Recently Added, Live TV) alongside new ones like Latest Movies/TV Shows, Because You Watched, Watch Again, and weighted Genre picks based on viewing history. Sections powered by Jellyseerr — Discover, Trending, and My Requests — surface media that isn't in your library yet with a direct request button, and *arr integrations can bring upcoming release calendars into the home screen too.\n\nThe plugin requires the File Transformation and Plugin Pages plugins to also be installed, and settings are configured per-user from a \"Modular Home\" page linked in the hamburger menu.",
+      "categories": [
+        "general"
+      ],
+      "requires": [
+        "file-transformation",
+        "plugin-pages"
+      ],
+      "relatedClients": [],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "minimumJellyfinVersion": "10.10.7",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/IAmParadox27/jellyfin-plugin-home-sections"
+        },
+        {
+          "type": "other",
+          "url": "https://features.iamparadox.dev/",
+          "label": "Feature requests"
+        }
+      ],
+      "installationInstructions": "1. Install the [File Transformation](https://github.com/IAmParadox27/jellyfin-plugin-file-transformation) and [Plugin Pages](https://github.com/IAmParadox27/jellyfin-plugin-pages) plugins first. Both are required.\n2. Add `https://www.iamparadox.dev/jellyfin/plugins/manifest.json` as a plugin repository in **Dashboard → Plugins → Repositories**.\n3. Install **Home Screen Sections** from the catalogue, then restart Jellyfin.\n4. Open the hamburger menu on the user's homepage and select **Modular Home**.\n5. Enable support and select the sections you want, then save.\n6. Force-refresh the page (or app) to see the new home screen.",
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BNdTHcKk_1pkTia.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/HSS_Showcase.hDQhEkpp_Z1Nr12K.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/because-you-watched.D997q60Y_2a1cS.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/watch-again.Bq_ADwjk_Z2mJoAV.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/settings.qDd0Dbuh_Z154iEu.webp"
+        }
+      ],
+      "repoStats": {
+        "repo": "IAmParadox27/jellyfin-plugin-home-sections",
+        "stars": 505,
+        "lastActivity": "2026-09-11T09:15:35Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "pelagica-jellyfin-plugin",
+      "url": "https://jellyfindex.com/plugins/pelagica-jellyfin-plugin",
+      "name": "Pelagica Jellyfin Plugin",
+      "developerName": "KartoffelChipss",
+      "developerGithub": "KartoffelChipss",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2026-07-26T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/PelagicaApp/jellyfin-plugin/blob/main/LICENSE"
+      },
+      "shortDescription": "A companion plugin for Pelagica, allowing you to use your config across different devices.",
+      "description": "Companion plugin for the Pelagica app. It stores the Pelagica configuration (home screen sections, item page settings, branding, links, and so on) on the Jellyfin server itself, so every user connecting through Pelagica sees the same setup instead of each client having its own local copy.",
+      "categories": [
+        "companion"
+      ],
+      "requires": [],
+      "relatedClients": [
+        "pelagica"
+      ],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/PelagicaApp/jellyfin-plugin"
+        },
+        {
+          "type": "website",
+          "url": "https://pelagica.app"
+        }
+      ],
+      "installationInstructions": "1. In Jellyfin, go to Dashboard > Plugins > Repositories.\n2. Add a repository with this URL:\n   `https://raw.githubusercontent.com/PelagicaApp/jellyfin-plugin/main/manifest.json`\n3. Go to the Catalog tab, find Pelagica under General, and install it.\n4. Restart Jellyfin when prompted.\n\nAlternatively, download the release zip from the Releases page, extract it into your Jellyfin plugins directory (for example `/config/plugins/Pelagica`), and restart Jellyfin.",
+      "aiUsage": "ai-assisted",
+      "aiDescription": "I treat AI like any other tool I use. It is not a seperate \"person\" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.",
+      "logo": "https://jellyfindex.com/_astro/logo.qURnakGn_Z10HX6k.svg",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "PelagicaApp/jellyfin-plugin",
+        "stars": 0,
+        "lastActivity": "2026-07-26T13:36:19Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "plugin-pages",
+      "url": "https://jellyfindex.com/plugins/plugin-pages",
+      "name": "Plugin Pages",
+      "developerName": "IAmParadox27",
+      "developerGithub": "IAmParadox27",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-01-19T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/IAmParadox27/jellyfin-plugin-pages/blob/main/LICENSE"
+      },
+      "shortDescription": "Lets other Jellyfin plugins add their own user-facing pages to the web client, styled to match the server's theme.",
+      "description": "Plugin Pages allows other Jellyfin plugins to add their own user-facing pages to the web client, while keeping the same theming and style the server owner has already set up. Pages added this way feel more \"at home\" than the plain custom links Jellyfin offers out of the box.\n\nIt's a building block other plugins depend on — Home Screen Sections uses it to add its \"Modular Home\" settings page to the hamburger menu, for example. It requires File Transformation to be installed first, since that's what lets it patch the served web client.",
+      "categories": [
+        "general"
+      ],
+      "requires": [
+        "file-transformation"
+      ],
+      "relatedClients": [],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "minimumJellyfinVersion": "10.10.6",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/IAmParadox27/jellyfin-plugin-pages"
+        }
+      ],
+      "installationInstructions": "1. Add `https://www.iamparadox.dev/jellyfin/plugins/manifest.json` as a plugin repository in **Dashboard → Plugins → Repositories**.\n2. Ensure **File Transformation** is installed first.\n3. Install **Plugin Pages** from the catalogue.\n4. Restart Jellyfin.",
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.Df8LmfZ__Z1bmxr2.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "IAmParadox27/jellyfin-plugin-pages",
+        "stars": 181,
+        "lastActivity": "2026-09-09T08:59:09Z",
+        "isArchived": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1244 @@
+{
+  "generatedAt": "2026-09-14T10:26:41.878Z",
+  "count": 17,
+  "clients": [
+    {
+      "id": "afinity",
+      "url": "https://jellyfindex.com/clients/afinity",
+      "name": "Afinity",
+      "developerName": "M0RPH3US",
+      "developerGithub": "MakD",
+      "dateAdded": "2026-09-04T00:00:00.000Z",
+      "dateCreated": "2025-10-01T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/MakD/AFinity/blob/master/LICENSE.md"
+      },
+      "shortDescription": "A modern, native Android Jellyfin client built with Kotlin, Jetpack Compose, Material 3, and LibMPV.",
+      "description": "​AFinity is a native Android application that brings your Jellyfin media library to life with a clean, responsive interface. Stream your movies, TV shows, music, and live TV with hardware-accelerated playback, and discover new content through a home screen you can shape yourself. Beyond video, AFinity extends your experience with optional Audiobookshelf integration for audiobooks and podcasts, and direct media requests via Jellyseerr.",
+      "platforms": [
+        "android"
+      ],
+      "mainPlatform": "android",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/MakD/AFinity"
+        },
+        {
+          "type": "obtainium",
+          "url": "https://apps.obtainium.imranr.dev/redirect?r=obtainium://app/%7B%22id%22%3A%22com.makd.afinity%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2FMakD%2FAFinity%22%2C%22author%22%3A%22MakD%22%2C%22name%22%3A%22AFinity%22%2C%22supportFixedAPKURL%22%3Afalse%7D"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "offline-download": true,
+        "chromecast": true,
+        "hw-decode": true,
+        "syncplay": true,
+        "direct-play": true,
+        "trickplay": true,
+        "pgs-ass-subtitles": true,
+        "lyrics": true,
+        "quick-connect": true,
+        "multi-server": true,
+        "live-tv-dvr": true,
+        "seerr-integration": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.DlbrgZiM_Z26xHHm.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.CblYNRJ7_Z2dTM4d.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.phReagj-_1Xv340.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie_details.CkCV-HMX_d3xpd.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/show_details.qQMSGmP0_2mB9Yd.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/live_tv.Cm3fsbkV_16mjeF.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/live_tv_guide.CiG7mRV9_Z1XSGfU.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/audiobookshelf_screen.BT390GBd_Z3zFLw.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/book_detail.C3TOtdxR_Z22MWcT.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/audiobook_player.Lt5awh7d_1zSJib.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/request_screen.K_kWqeHM_Z13FFMK.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.alj2RWrJ_1PzyG1.webp"
+        }
+      ],
+      "repoStats": {
+        "repo": "MakD/AFinity",
+        "stars": 235,
+        "lastActivity": "2026-08-30T03:40:08Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellycon",
+      "url": "https://jellyfindex.com/clients/jellycon",
+      "name": "JellyCon",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2020-07-04T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/jellyfin/jellycon/blob/master/LICENSE.txt"
+      },
+      "shortDescription": "The official lightweight Kodi add-on for browsing and playing Jellyfin media directly within the Kodi interface.",
+      "description": "JellyCon is the official lightweight Kodi add-on for Jellyfin. Rather than syncing your library into Kodi's own database, it acts as a thin frontend: movies, TV shows, music videos, and music are populated dynamically straight from the server, so there's no library sync to wait on and content updates on your Jellyfin server show up immediately in Kodi.\n\nIt supports Live TV, switches between multiple Jellyfin user accounts on the fly, and logs in with Quick Connect or a manual username and password. Because menus and widgets are exposed through Kodi's own add-on browser, JellyCon can be wired into almost any customizable Kodi skin.",
+      "platforms": [
+        "other"
+      ],
+      "mainPlatform": "other",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellycon",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://jellyfin.org/docs/general/clients/kodi",
+          "label": "Installation Guide"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "quick-connect": true,
+        "multi-server": true,
+        "live-tv-dvr": true,
+        "user-profiles": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellycon",
+        "stars": 545,
+        "lastActivity": "2026-09-07T20:20:18Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-android",
+      "url": "https://jellyfindex.com/clients/jellyfin-android",
+      "name": "Jellyfin for Android",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2020-07-21T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-android/blob/master/LICENSE.md"
+      },
+      "shortDescription": "The official Jellyfin app for Android phones and tablets, wrapping the web client with native audio, video, and casting support.",
+      "description": "Jellyfin for Android is the official companion app for phones and tablets. Rather than reimplementing the interface, it wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client used by every server, so browsing, search, and library layout stay identical to what you'd see in a desktop browser, while Android gets native touches on top: local audio and video playback, Chromecast support, notifications, and Quick Connect login.\n\nBecause it's a thin wrapper around the web client rather than a fully native rewrite, most fixes and new features land in [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) first and reach this app automatically.",
+      "platforms": [
+        "android"
+      ],
+      "mainPlatform": "android",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-android",
+          "sourcelink": true
+        },
+        {
+          "type": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=org.jellyfin.mobile"
+        },
+        {
+          "type": "f-droid",
+          "url": "https://f-droid.org/en/packages/org.jellyfin.mobile/"
+        },
+        {
+          "type": "other",
+          "url": "https://www.amazon.com/gp/aw/d/B081RFTTQ9",
+          "label": "Amazon Appstore"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "chromecast": true,
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1.D9b2Eiy4_1GgauR.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.DE3BhfE7_ZHqgsg.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.PDbPFYXK_1uYn5D.webp",
+          "title": "Details"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-android",
+        "stars": 2754,
+        "lastActivity": "2026-09-13T16:21:19Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-androidtv",
+      "url": "https://jellyfindex.com/clients/jellyfin-androidtv",
+      "name": "Jellyfin for Android TV",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2018-12-13T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-androidtv/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for Android TV, Fire TV, and Nvidia Shield devices.",
+      "description": "Jellyfin for Android TV is the official native client for Android TV, Fire TV, and Nvidia Shield, built to be driven entirely with a remote. It plays almost everything your server has without transcoding, using hardware-accelerated decoding with Dolby Vision and 10-bit HEVC support, trickplay scrubbing thumbnails, and both embedded and external subtitle formats including PGS and ASS.\n\nBeyond playback it covers the things a shared living-room device needs: Quick Connect and multiple saved servers, separate user profiles with parental controls and PINs, Live TV with DVR scheduling, and SyncPlay to watch in step with other Jellyfin clients on the network.",
+      "platforms": [
+        "androidtv",
+        "fireos"
+      ],
+      "mainPlatform": "androidtv",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-androidtv",
+          "sourcelink": true
+        },
+        {
+          "type": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=org.jellyfin.androidtv"
+        },
+        {
+          "type": "f-droid",
+          "url": "https://f-droid.org/en/packages/org.jellyfin.androidtv/"
+        },
+        {
+          "type": "other",
+          "url": "https://www.amazon.com/gp/aw/d/B07TX7Z725",
+          "label": "Amazon Appstore"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "hw-decode": true,
+        "direct-play": true,
+        "trickplay": true,
+        "pgs-ass-subtitles": true,
+        "external-subtitles": true,
+        "dolby-vision": true,
+        "10bit-hevc": true,
+        "quick-connect": true,
+        "multi-server": true,
+        "user-profiles": true,
+        "parental-controls": true,
+        "live-tv-dvr": true,
+        "syncplay": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1.Bvox5nYs_Z2aGB2X.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.lPLokjX2_Z2sfwGC.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.BNjLqG5z_1TSoyb.webp",
+          "title": "Details"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-androidtv",
+        "stars": 4544,
+        "lastActivity": "2026-09-13T10:34:19Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-desktop",
+      "url": "https://jellyfindex.com/clients/jellyfin-desktop",
+      "name": "Jellyfin Desktop",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-04T00:00:00.000Z",
+      "dateCreated": "2015-10-13T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "shortDescription": "The official desktop client for Jellyfin, built on mpv for high quality local playback.",
+      "description": "The official Jellyfin desktop client built with Qt WebEngine and [libmpv](https://github.com/mpv-player/mpv). Supports audio passthrough, hardware decoding, and playback of more formats without transcoding.",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "supported",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-media-player"
+        }
+      ],
+      "installationLink": {
+        "type": "github",
+        "url": "https://github.com/jellyfin/jellyfin-desktop/releases/latest"
+      },
+      "installationInstructions": {},
+      "features": {
+        "hw-decode": true,
+        "chromecast": false
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.CTSwh9L4_ZD0a1S.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.CjAlCz-4_1Kajp7.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie.Cz4RgHeN_eiWXJ.webp"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.hkCfup6W_tAxfh.webp"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-media-player",
+        "stars": 5745,
+        "lastActivity": "2026-08-31T07:43:51Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-ios",
+      "url": "https://jellyfindex.com/clients/jellyfin-ios",
+      "name": "Jellyfin Mobile",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2019-08-19T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-ios/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for iPhone and iPad, wrapping the web client with native audio and video playback.",
+      "description": "Jellyfin Mobile is the official companion app for iPhone and iPad, built with Expo around the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with. It wraps that web client in a native shell so browsing, search, and library layout match what you'd see in a desktop browser, while iOS gets native audio and video playback, Live TV, and Quick Connect login on top.\n\nSince it's a wrapper rather than a fully native rewrite, this is the app to reach for if you want the exact web experience on a phone; for a from-scratch Swift client built around VLC, see [Swiftfin](/clients/swiftfin) instead.",
+      "platforms": [
+        "ios"
+      ],
+      "mainPlatform": "ios",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-ios",
+          "sourcelink": true
+        },
+        {
+          "type": "app-store",
+          "url": "https://apps.apple.com/us/app/jellyfin-mobile/id1480192618"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1._r81Qlin_Z8Gw8O.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.BJHOZ7Me_1MSssM.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.CYCapq2S_ZCH8wD.webp",
+          "title": "Details"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-ios",
+        "stars": 594,
+        "lastActivity": "2026-09-08T15:09:40Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-kodi",
+      "url": "https://jellyfindex.com/clients/jellyfin-kodi",
+      "name": "Jellyfin for Kodi",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2018-12-12T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/jellyfin/jellyfin-kodi/blob/master/LICENSE.txt"
+      },
+      "shortDescription": "The official Kodi add-on that syncs Jellyfin libraries into Kodi's native database for full-speed browsing with any skin.",
+      "description": "Jellyfin for Kodi combines Kodi's fast native navigation and skin support with Jellyfin's metadata and library management. Unlike a plugin-style frontend, it syncs the Jellyfin libraries you choose (movies, TV shows, music videos, and music) straight into Kodi's own database, so browsing runs at full native speed and works with any Kodi skin or add-on that expects a local library.\n\nOther libraries, like simple Live TV, home videos and photos, and playlists, stay available dynamically without syncing. Watched and resume state sync both ways between Kodi and your server in near real time, and you can send play commands to a running Kodi from the Jellyfin web client or mobile apps.",
+      "platforms": [
+        "other"
+      ],
+      "mainPlatform": "other",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-kodi",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://jellyfin.org/docs/general/clients/kodi",
+          "label": "Installation Guide"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "direct-play": true,
+        "live-tv-dvr": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-kodi",
+        "stars": 1128,
+        "lastActivity": "2026-09-13T18:12:15Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-mpv-shim",
+      "url": "https://jellyfindex.com/clients/jellyfin-mpv-shim",
+      "name": "Jellyfin MPV Shim",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2020-01-11T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/jellyfin/jellyfin-mpv-shim/blob/master/LICENSE.md"
+      },
+      "shortDescription": "The official cross-platform cast client for Jellyfin, built on MPV for near-universal direct play without transcoding.",
+      "description": "Jellyfin MPV Shim is the official cross-platform cast client for Windows, macOS, and Linux, built around the MPV media player to direct play almost any file your server has without transcoding. It can run quietly in the background as a cast target that other Jellyfin apps (including the mobile apps) can control remotely, or act as a fully-featured desktop client on its own, complete with offline sync.\n\nIt covers Live TV with channel guides, schedules, and recording rules, SyncPlay for watching together with other clients, Chromecast-like display mirroring, Discord Rich Presence, and configurable shader packs and SVP integration for enhancing video quality. Nearly everything, including MPV itself, can be tuned through its configuration files.",
+      "platforms": [
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "mainPlatform": "linux",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-mpv-shim",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://flathub.org/apps/details/com.github.iwalton3.jellyfin-mpv-shim",
+          "label": "Flathub (Linux)"
+        },
+        {
+          "type": "other",
+          "url": "https://github.com/jellyfin/jellyfin-mpv-shim/releases",
+          "label": "GitHub Downloads"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "direct-play": true,
+        "syncplay": true,
+        "live-tv-dvr": true,
+        "quick-connect": true,
+        "chromecast": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-mpv-shim",
+        "stars": 2384,
+        "lastActivity": "2026-09-13T16:46:31Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-roku",
+      "url": "https://jellyfindex.com/clients/jellyfin-roku",
+      "name": "Jellyfin for Roku",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2024-08-06T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-roku/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for Roku devices, with trickplay, media segment, and song lyric support.",
+      "description": "Jellyfin for Roku is the official channel for Roku devices, letting you browse and play movies, TV shows, music, and Live TV without leaving the Roku interface. It supports trickplay scrubbing thumbnails, media segment skipping (intros, credits, and similar), downloading subtitles directly to the device, and song lyrics during music playback.\n\nNote: due to a technical limitation of the Roku store, the listing may state that a cable or satellite subscription is required. No subscription of any kind is needed to use Jellyfin or any official client.",
+      "platforms": [
+        "rokuos"
+      ],
+      "mainPlatform": "rokuos",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-roku",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://channelstore.roku.com/details/592369/jellyfin",
+          "label": "Roku Channel Store"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "trickplay": true,
+        "lyrics": true,
+        "external-subtitles": true,
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.Dz6LSGpD_25vfdg.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.BOGiXAlZ_11z22h.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/movie-details.B7W26g8P_23b54U.webp",
+          "title": "Movie Details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/tv-library.a1macWX0_14pgBk.webp",
+          "title": "TV Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/music-playback.LHaW4kMZ_Z2fmI0T.webp",
+          "title": "Music Playback"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-roku",
+        "stars": 225,
+        "lastActivity": "2026-09-09T16:00:23Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-tizen",
+      "url": "https://jellyfindex.com/clients/jellyfin-tizen",
+      "name": "Jellyfin for Tizen",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2019-10-12T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-tizen/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for Samsung Tizen smart TVs, wrapping the web client for the big screen.",
+      "description": "Jellyfin for Tizen is the official app for Samsung smart TVs. Like the webOS version, it's a native wrapper that bundles the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client every server ships with, so it inherits the web client's browsing and playback features while handling remote input and installation through Samsung's Smart TV App Store.",
+      "platforms": [
+        "tizen"
+      ],
+      "mainPlatform": "tizen",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-tizen",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://www.samsung.com/us/tvs/smart-tv/samsung-tv-apps-detail/?appId=3202007021208",
+          "label": "Samsung Smart TV App Store"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-tizen",
+        "stars": 1716,
+        "lastActivity": "2025-10-24T13:59:32Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-vue",
+      "url": "https://jellyfindex.com/clients/jellyfin-vue",
+      "name": "Jellyfin Vue",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2020-09-02T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/jellyfin/jellyfin-vue/blob/master/LICENSE"
+      },
+      "shortDescription": "An official, experimental alternative web client for Jellyfin, rewritten from scratch with Vue.js.",
+      "description": "Jellyfin Vue is an official, experimental alternative to the main [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client, rewritten from scratch with Vue.js. It isn't meant to replace the main web client and isn't feature-complete yet, but it's actively developed and usable today: point it at any Jellyfin server behind a properly configured HTTPS reverse proxy, or try it against Jellyfin's public demo server.\n\nYou can use the hosted build, self-host it with the provided Docker images, or bundle it as a local desktop app; in every case it only ever talks to the Jellyfin server you point it to, the same privacy model as the main web client.",
+      "platforms": [
+        "web"
+      ],
+      "mainPlatform": "web",
+      "official": true,
+      "beta": true,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "supported",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-vue",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://jf-vue.pages.dev/",
+          "label": "Open in browser"
+        },
+        {
+          "type": "other",
+          "url": "https://github.com/jellyfin/jellyfin-vue/pkgs/container/jellyfin-vue",
+          "label": "Docker"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {},
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.4OJPhqzU_LQeXu.svg",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.DjB77zKz_1TsEla.webp",
+          "title": "Home"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-vue",
+        "stars": 1704,
+        "lastActivity": "2026-09-11T00:04:15Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-webos",
+      "url": "https://jellyfindex.com/clients/jellyfin-webos",
+      "name": "Jellyfin for webOS",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2019-05-04T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-webos/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for LG webOS smart TVs, wrapping the web client for the big screen.",
+      "description": "Jellyfin for webOS is the official app for LG smart TVs. It's a small native wrapper around the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) client that runs in a browser or ships with every server, so most development and features happen there and land on webOS automatically, while the wrapper handles remote input, TV-specific playback, and installation through LG's Content Store.",
+      "platforms": [
+        "webos"
+      ],
+      "mainPlatform": "webos",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-webos",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://us.lgappstv.com/main/tvapp/detail?appId=1030579",
+          "label": "LG Content Store"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-webos",
+        "stars": 864,
+        "lastActivity": "2025-11-04T01:15:36Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellyfin-xbox",
+      "url": "https://jellyfindex.com/clients/jellyfin-xbox",
+      "name": "Jellyfin for Xbox",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2020-03-25T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/jellyfin/jellyfin-xbox/blob/master/LICENSE"
+      },
+      "shortDescription": "The official Jellyfin app for Xbox consoles, wrapping the web client in a Universal Windows Platform app.",
+      "description": "Jellyfin for Xbox is the official client for Xbox consoles, built as a Universal Windows Platform app that wraps the same [Jellyfin Web](https://github.com/jellyfin/jellyfin-web) interface every server ships with in an integrated webview. It brings that browsing and playback experience to a controller and TV screen, with installation through the Microsoft Store.",
+      "platforms": [
+        "xbox"
+      ],
+      "mainPlatform": "xbox",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/jellyfin-xbox",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://apps.microsoft.com/detail/9P2DRTG62QF8",
+          "label": "Microsoft Store"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "quick-connect": true,
+        "multi-server": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.BOmKzXBc_Zq0028.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "jellyfin/jellyfin-xbox",
+        "stars": 162,
+        "lastActivity": "2026-09-02T21:59:07Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "jellysee",
+      "url": "https://jellyfindex.com/clients/jellysee",
+      "name": "JellySee",
+      "developerName": "HarshLabs",
+      "developerGithub": "HarshLabs",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2025-07-22T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": false,
+      "shortDescription": "A native Apple TV app that brings Jellyfin and Jellyseerr together in one interface, with requesting, watchlists, and direct-play-first streaming.",
+      "description": "JellySee is a native tvOS app that brings your Jellyfin server and Jellyseerr together in one place, built specifically for the Apple TV remote and big screen. It plays media through the system video player and is built to direct play first, transcoding only when your Apple TV actually needs it, with support for Dolby Vision, HDR10+, PGS/ASS subtitles, and multi-channel audio up to 7.1 with Atmos.\n\nBeyond playback, it covers browsing and requesting in one app: trending and recommended sections, cast and crew pages, a watchlist, and one-tap requests with season and quality-profile selection that track through to Available. Multiple Jellyfin and Jellyseerr servers and profiles are supported, each Apple TV user can keep their own setup, and SyncPlay lets you watch together with other clients on the same network. JellySee is a paid, closed-source app, though two of its companion Jellyfin plugins (native trickplay and YouTube trailers) are open source.",
+      "platforms": [
+        "tvos"
+      ],
+      "mainPlatform": "tvos",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "one-time-purchase",
+      "music": "supported",
+      "links": [
+        {
+          "type": "app-store",
+          "url": "https://apps.apple.com/us/app/jellysee/id6748783768"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "direct-play": true,
+        "dolby-vision": true,
+        "10bit-hevc": true,
+        "pgs-ass-subtitles": true,
+        "quick-connect": true,
+        "multi-server": true,
+        "user-profiles": true,
+        "syncplay": true,
+        "seerr-integration": true,
+        "hw-decode": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.1ph9LyJ5_1rCJeL.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/discover.sW2FdJTm_Z1tVBP2.webp",
+          "title": "Discover"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/detail.CW5j3bZ4_Z1EoJq6.webp",
+          "title": "Chapters"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.B8mtI5GW_ZBhC2x.webp",
+          "title": "Library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/upcoming.BEagRXfc_ZjL7LH.webp",
+          "title": "Upcoming"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/photos.CkhyJCa1_Z1bGeLf.webp",
+          "title": "Photos"
+        }
+      ],
+      "repoStats": null
+    },
+    {
+      "id": "pelagica",
+      "url": "https://jellyfindex.com/clients/pelagica",
+      "name": "Pelagica",
+      "developerName": "KartoffelChipss",
+      "developerGithub": "KartoffelChipss",
+      "dateAdded": "2026-09-04T00:00:00.000Z",
+      "dateCreated": "2025-12-30T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/PelagicaApp/Pelagica/blob/main/LICENSE"
+      },
+      "shortDescription": "A modern web, desktop and TV client for Jellyfin",
+      "description": "Pelagica is a web, desktop, and TV client for <a href=\"https://jellyfin.org\">Jellyfin</a> built using React. It aims to provide a fast, modern, and customizable user experience for browsing and watching your media library. It's available as a self-hosted web app, a native desktop app for macOS, Windows, and Linux, and a TV app for Samsung Tizen and LG webOS.\n\n## Features\n\n- **Customizable Sections:** Tailor your homepage with sections like \"Continue Watching\", \"Recently Added\", or completely custom queries.\n- **Media Bars:** Add custom media bars to feature specific content.\n- **Search:** Quickly find media across your library from anywhere using `Cmd+K` / `Ctrl+K`.\n- **Video Player:** Integrated video player for movies and TV shows.\n- **Music Player:** A music player that allows you to listen to your music albums or playlists while browsing your library.\n- **Responsive Design:** Works seamlessly on both desktop and mobile devices.\n- **Desktop App:** Native apps for macOS, Windows, and Linux, built with [Wails](https://v3.wails.io).\n- **Theming:** Light and dark mode support as well as custom themes\n- **Localization:** Supports multiple languages through [community contributions](#localization).\n\nIf you want to suggest new features or report bugs, please use the [GitHub Issues](https://github.com/KartoffelChipss/pelagica/issues) section.\n\n### Integrated Services\n\n- **Seerr:** Discover new movies and TV shows to watch, and request them without leaving Pelagica.\n- **Streamystats:** Get your streamystats recommendations directly on your home page.\n- **kefintweaks Watchlist:** View and manage your kefintweaks watchlist within Pelagica.\n\n## Web Demo\n\nYou can find a live demo of Pelagica web at:\n\nhttps://demo.pelagica.app/\n\nThe demo instance has the `jellyfin.streamyfin.app` server with a username preconfigured, so you just have to click \"Login\" to test it out. If your own Jellyfin server is publicly accessible, you can also use that by entering the server URL and your credentials.\n\nFor production use, you should self-host Pelagica using Docker or another method.\n\nThank you to [Streamyfin](https://streamyfin.app/) for providing a demo Jellyfin server for testing!\n\n## Discord\n\nFor discussions about Pelagica, join the [JellyfinCommunity](https://discord.gg/VKqprjh3Wr) and head to the `#pelagica` channel.",
+      "platforms": [
+        "web",
+        "webos",
+        "tizen",
+        "windows",
+        "macos",
+        "linux",
+        "tvos"
+      ],
+      "mainPlatform": "web",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "supported",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/PelagicaApp/Pelagica"
+        },
+        {
+          "type": "website",
+          "url": "https://pelagica.app"
+        },
+        {
+          "type": "translations",
+          "url": "https://twoglot.com/@KartoffelChipss/pelagica",
+          "label": "Help translate"
+        },
+        {
+          "type": "other",
+          "url": "https://demo.pelagica.app/",
+          "label": "Demo"
+        }
+      ],
+      "installationInstructions": {
+        "web": "You can find a web installation instruction in [the docs](https://pelagica.app/docs/installation).",
+        "windows": "You can download an `.exe` installer from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).",
+        "linux": "You can download a `.deb`, a `.pkg.tar.zst` (Arch Linux), or an `.AppImage` from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).",
+        "macos": "On Apple Silicon, install via the Homebrew tap:\n\n```sh\nbrew tap PelagicaApp/pelagica\nbrew trust PelagicaApp/pelagica\nbrew install --cask pelagica\n```\n\nThen clear the quarantine flag once (the app isn't notarized):\n\n```sh\nxattr -dr com.apple.quarantine \"/Applications/Pelagica.app\"\n```\n\nAlternatively, download the `.dmg` from [Releases](https://github.com/PelagicaApp/Pelagica/releases) and right-click > Open to bypass Gatekeeper.",
+        "webos": "You can find a webOS installation instruction in [the docs](https://pelagica.app/docs/webos).",
+        "tizen": "You can find a Tizen installation instruction in [the docs](https://pelagica.app/docs/tizen).",
+        "tvos": "You can find a tvOS installation instruction in [the docs](https://pelagica.app/docs/appletv)."
+      },
+      "features": {
+        "hw-decode": true,
+        "direct-play": true,
+        "trickplay": true,
+        "pgs-ass-subtitles": true,
+        "lyrics": true,
+        "quick-connect": true,
+        "live-tv-dvr": true,
+        "seerr-integration": true,
+        "kevintweaks-watchlist": true,
+        "streamystats-recommendations": true
+      },
+      "relatedPlugins": [
+        "pelagica-jellyfin-plugin"
+      ],
+      "aiUsage": "ai-assisted",
+      "aiDescription": "I treat AI like any other tool I use. It is not a seperate \"person\" that can code for me or design my software. I use it for research, for finding bugs or generating small code snippets.",
+      "logo": "https://jellyfindex.com/_astro/logo.qURnakGn_Z10HX6k.svg",
+      "banner": "https://jellyfindex.com/_astro/banner.BG9YpOvE_Z1UCI6d.svg",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.y0oOVeu2_Z1JLAOM.webp",
+          "title": "Home",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/library.BCW3v8a4_2mhUWH.webp",
+          "title": "Library",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/series.DGB7vBoU_eqMrJ.webp",
+          "title": "Series",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/episode.CuE-iFzQ_a844c.webp",
+          "title": "Episode",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/music.DN8Oqbd1_2cq6Lc.webp",
+          "title": "Music",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/search.CNBfgsaY_wx84j.webp",
+          "title": "Search",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/custom_sections.wMi3wjLl_Z8Cnt8.webp",
+          "title": "Custom Home Sections",
+          "platform": "web"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/webos-home.gBW-W4eP_2iHkXI.webp",
+          "title": "Home",
+          "platform": "webos"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/webos-library.BhbsS5xm_Z2svQxT.webp",
+          "title": "Library",
+          "platform": "webos"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/webos-movie.DklAHQW9_2bOLPe.webp",
+          "title": "Movie",
+          "platform": "webos"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/webos-search.CXpNm77d_Zbjngd.webp",
+          "title": "Search",
+          "platform": "webos"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/webos-player.B-BrSz63_Z2kVjW2.webp",
+          "title": "Player",
+          "platform": "webos"
+        }
+      ],
+      "repoStats": {
+        "repo": "PelagicaApp/Pelagica",
+        "stars": 300,
+        "lastActivity": "2026-09-13T11:23:18Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "swiftfin",
+      "url": "https://jellyfindex.com/clients/swiftfin",
+      "name": "Swiftfin",
+      "developerName": "Jellyfin Team",
+      "developerGithub": "jellyfin",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2021-05-14T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/jellyfin/Swiftfin/blob/main/LICENSE.md"
+      },
+      "shortDescription": "The official Swift-native Jellyfin client for iPhone, iPad, and Apple TV, built around VLCKit to maximize direct play.",
+      "description": "Swiftfin is the official Jellyfin client written in Swift for iPhone, iPad, and Apple TV, redesigned to look and feel native on every class of Apple device rather than reusing the web interface. It ships two playback engines: a VLCKit-based player that maximizes direct play across a wide range of containers and codecs, and a native AVPlayer-based option for cases like framerate matching and Picture in Picture where Apple's own player has the edge.\n\nBeyond playback, Swiftfin covers Live TV, trickplay scrubbing thumbnails, downloads for offline viewing, and Quick Connect and multi-server login, all built and maintained by the Jellyfin team as an official beta. It's free on the App Store, with a TestFlight channel for testing new features and fixes before general release.",
+      "platforms": [
+        "ios",
+        "tvos"
+      ],
+      "mainPlatform": "ios",
+      "official": true,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/jellyfin/Swiftfin",
+          "sourcelink": true
+        },
+        {
+          "type": "app-store",
+          "url": "https://apps.apple.com/us/app/swiftfin/id1604098728"
+        },
+        {
+          "type": "other",
+          "url": "https://testflight.apple.com/join/SqNPfdxq",
+          "label": "TestFlight Beta"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "trickplay": true,
+        "direct-play": true,
+        "pgs-ass-subtitles": true,
+        "quick-connect": true,
+        "multi-server": true,
+        "live-tv-dvr": true,
+        "offline-download": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.CMs91h_N_27Ol6A.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/1.D4l8SeR6_Z1RN4lI.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/2.D6FcKI9n_1R78mY.webp",
+          "title": "Recently Added"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/3.CZjsIDU1_2e1HT0.webp",
+          "title": "Library"
+        }
+      ],
+      "repoStats": {
+        "repo": "jellyfin/Swiftfin",
+        "stars": 4162,
+        "lastActivity": "2026-09-14T05:21:09Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "swiftly-for-jellyfin",
+      "url": "https://jellyfindex.com/clients/swiftly-for-jellyfin",
+      "name": "Swiftly for Jellyfin",
+      "developerName": "paulherter",
+      "developerGithub": "paulherter",
+      "dateAdded": "2026-09-05T00:00:00.000Z",
+      "dateCreated": "2026-09-01T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "MPL-2.0",
+        "url": "https://github.com/paulherter/swiftly-player/blob/main/LICENSE"
+      },
+      "shortDescription": "A native, distraction-free Jellyfin client for iPhone, iPad, Apple TV, and Mac, with a shared GTK4 app for Linux and Windows.",
+      "description": "Swiftly for Jellyfin is a native client built for Apple platforms first, with iPhone, iPad, Apple TV, and Mac sharing the same interface and playback logic. It keeps things deliberately simple: open the app, find your library, and play, with resume, subtitle switching, and Picture in Picture handled properly instead of buried behind a long settings list.\n\nThe same codebase also ships as a native GTK4 app for Linux and Windows, built on libVLC. Its device profile declares every container, codec, and subtitle format the app supports, so the server has no reason to transcode and your CPU stays cool. There's no account, subscription, or tracking: nothing leaves your device except the requests to the server you enter yourself.",
+      "platforms": [
+        "ios",
+        "tvos",
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "mainPlatform": "ios",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/paulherter/swiftly-player",
+          "sourcelink": true
+        },
+        {
+          "type": "other",
+          "url": "https://testflight.apple.com/join/MqeP2cnj",
+          "label": "TestFlight Beta"
+        },
+        {
+          "type": "discord",
+          "url": "https://discord.gg/MeGwfv3UwN"
+        }
+      ],
+      "installationInstructions": {
+        "ios": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on iPhone and iPad.",
+        "tvos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Apple TV.",
+        "macos": "Join the [TestFlight beta](https://testflight.apple.com/join/MqeP2cnj) to install on Mac.",
+        "windows": "Download the installer from [Releases](https://github.com/paulherter/swiftly-player/releases/latest) (64-bit, Windows 10 and 11).",
+        "linux": "Run the install script, which detects your distribution and adds the Swiftly package source so updates arrive with your normal system update:\n\n```sh\ncurl -fsSL https://raw.githubusercontent.com/paulherter/swiftly-player/main/Linux/Installieren/swiftly-installieren.sh | bash\n```\n\nSee the [README](https://github.com/paulherter/swiftly-player#-linux) for adding the package repository manually."
+      },
+      "features": {
+        "quick-connect": true,
+        "direct-play": true
+      },
+      "relatedPlugins": [],
+      "aiUsage": "vibe-coded",
+      "aiDescription": "The developer built the app together with Claude, with every commit crediting it as a co-author. The decisions, testing, and responsibility are the developer's own.",
+      "logo": "https://jellyfindex.com/_astro/logo.CKeBgFXo_xqbTK.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/home.r0uFB8JB_Z18q9Nu.webp",
+          "title": "Home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/detail.SectlIqx_Z6DAC0.webp",
+          "title": "Detail"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/player.BCGElbIn_ZPv9qn.webp",
+          "title": "Player"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/picture-in-picture.BNg80zRE_Z1CConm.webp",
+          "title": "Picture in Picture"
+        }
+      ],
+      "repoStats": {
+        "repo": "paulherter/swiftly-for-jellyfin",
+        "stars": 1,
+        "lastActivity": "2026-09-07T13:29:33Z",
+        "isArchived": false
+      }
+    }
+  ]
+}
