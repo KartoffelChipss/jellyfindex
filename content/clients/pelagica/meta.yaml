@@ -11,7 +11,7 @@ license:
     name: GPL-3.0
     url: https://github.com/PelagicaApp/Pelagica/blob/main/LICENSE
 shortDescription: A modern web, desktop and TV client for Jellyfin
-platforms: [web, webos, tizen, windows, macos, linux]
+platforms: [web, webos, tizen, windows, macos, linux, tvos]
 mainPlatform: web
 official: false
 music: supported
@@ -70,10 +70,14 @@ installationInstructions:
         You can download an `.exe` installer from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).
     linux: |-
         You can download a `.deb`, a `.pkg.tar.zst` (Arch Linux), or an `.AppImage` from [Releases](https://github.com/PelagicaApp/Pelagica/releases/latest).
+    macos: |-
+        You can find a macOS installation instruction in [the docs](https://pelagica.app/docs/desktop).
     webos: |-
         You can find a webOS installation instruction in [the docs](https://pelagica.app/docs/webos).
     tizen: |-
         You can find a Tizen installation instruction in [the docs](https://pelagica.app/docs/tizen).
+    tvos: |-
+        You can find a tvOS installation instruction in [the docs](https://pelagica.app/docs/appletv).
 features:
     hw-decode: true
     direct-play: true
