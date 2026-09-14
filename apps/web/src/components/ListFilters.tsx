@@ -1,5 +1,6 @@
 import { useId, useState } from 'react';
 import { SlidersHorizontal } from 'lucide-react';
+import { AI_USAGE_OPTIONS, type AiUsage } from '@jellyfindex/schema';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import {
@@ -14,21 +15,31 @@ export interface ListFiltersState {
     hideAbandoned: boolean;
     hideBeta: boolean;
     openSourceOnly: boolean;
+    aiUsage: Record<AiUsage, boolean>;
 }
 
 export const DEFAULT_LIST_FILTERS: ListFiltersState = {
     hideAbandoned: true,
     hideBeta: false,
     openSourceOnly: false,
+    aiUsage: { unknown: true, none: true, 'ai-assisted': true, 'vibe-coded': true },
 };
 
 export const LIST_FILTERS_EVENT = 'jf:filters-change';
+
+const AI_USAGE_LABELS: Record<AiUsage, string> = {
+    unknown: 'Unknown',
+    none: 'No AI',
+    'ai-assisted': 'AI-assisted',
+    'vibe-coded': 'Vibe-coded',
+};
 
 export function ListFilters() {
     const [filters, setFilters] = useState<ListFiltersState>(DEFAULT_LIST_FILTERS);
     const abandonedId = useId();
     const betaId = useId();
     const openSourceId = useId();
+    const aiUsageIdPrefix = useId();
 
     function update(patch: Partial<ListFiltersState>) {
         const next = { ...filters, ...patch };
@@ -38,9 +49,17 @@ export function ListFilters() {
         );
     }
 
-    const activeCount = [!filters.hideAbandoned, filters.hideBeta, filters.openSourceOnly].filter(
-        Boolean
-    ).length;
+    function toggleAiUsage(value: AiUsage, checked: boolean) {
+        update({ aiUsage: { ...filters.aiUsage, [value]: checked } });
+    }
+
+    const aiUsageActive = Object.values(filters.aiUsage).some((shown) => !shown);
+    const activeCount = [
+        !filters.hideAbandoned,
+        filters.hideBeta,
+        filters.openSourceOnly,
+        aiUsageActive,
+    ].filter(Boolean).length;
 
     return (
         <Popover>
@@ -97,6 +116,31 @@ export function ListFilters() {
                         />
                         Open source only
                     </label>
+                </div>
+
+                <div className="mt-3 border-t pt-3">
+                    <p className="mb-2 text-xs font-medium text-muted-foreground">AI usage</p>
+                    <div className="flex flex-col gap-2.5">
+                        {AI_USAGE_OPTIONS.map((value) => {
+                            const id = `${aiUsageIdPrefix}-${value}`;
+                            return (
+                                <label
+                                    key={value}
+                                    htmlFor={id}
+                                    className="flex cursor-pointer items-center gap-2 text-sm"
+                                >
+                                    <Checkbox
+                                        id={id}
+                                        checked={filters.aiUsage[value]}
+                                        onCheckedChange={(checked) =>
+                                            toggleAiUsage(value, checked === true)
+                                        }
+                                    />
+                                    {AI_USAGE_LABELS[value]}
+                                </label>
+                            );
+                        })}
+                    </div>
                 </div>
             </PopoverContent>
         </Popover>

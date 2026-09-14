@@ -1,6 +1,6 @@
 import z from 'zod';
 
-const AI_USAGE_OPTIONS = ['unknown', 'none', 'ai-assisted', 'vibe-coded'] as const;
+export const AI_USAGE_OPTIONS = ['unknown', 'none', 'ai-assisted', 'vibe-coded'] as const;
 
 export type AiUsage = (typeof AI_USAGE_OPTIONS)[number];
 

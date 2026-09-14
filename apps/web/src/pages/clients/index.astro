@@ -51,6 +51,7 @@ const defaultVisibleCount = entries.filter((entry) => !entry.data.abandoned).len
                         data-abandoned={entry.data.abandoned}
                         data-beta={entry.data.beta}
                         data-open-source={entry.data.openSource}
+                        data-ai-usage={entry.data.aiUsage}
                     >
                         <ClientCard client={entry.data} id={entry.id} />
                     </div>
@@ -87,11 +88,13 @@ const defaultVisibleCount = entries.filter((entry) => !entry.data.abandoned).len
             const isAbandoned = card.dataset.abandoned === 'true';
             const isBeta = card.dataset.beta === 'true';
             const isOpenSource = card.dataset.openSource === 'true';
+            const aiUsage = card.dataset.aiUsage as keyof ListFiltersState['aiUsage'] | undefined;
 
             const matchesFilters =
                 (!filters.hideAbandoned || !isAbandoned) &&
                 (!filters.hideBeta || !isBeta) &&
-                (!filters.openSourceOnly || isOpenSource);
+                (!filters.openSourceOnly || isOpenSource) &&
+                (!aiUsage || filters.aiUsage[aiUsage]);
 
             const visible = matchesSearch && matchesFilters;
             card.classList.toggle('hidden', !visible);
