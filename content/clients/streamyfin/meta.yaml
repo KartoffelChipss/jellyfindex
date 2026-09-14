@@ -1,0 +1,54 @@
+name: Streamyfin
+logo: ./logo.webp
+developerName: Streamyfin Team
+developerGithub: streamyfin
+dateAdded: 2026-09-14
+dateCreated: 2024-07-31
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A Jellyfin client built with Expo for iOS, Android, tvOS, and Android TV, using MPV for playback with offline downloads, trickplay, and Chromecast.
+platforms:
+    - ios
+    - android
+    - tvos
+    - androidtv
+mainPlatform: ios
+license:
+    name: MPL-2.0
+    url: https://github.com/streamyfin/streamyfin/blob/develop/LICENSE.txt
+links:
+    - type: github
+      url: https://github.com/streamyfin/streamyfin
+      sourcelink: true
+    - type: website
+      url: https://streamyfin.app/
+    - type: app-store
+      url: https://apps.apple.com/app/streamyfin/id6593660679
+    - type: google-play
+      url: https://play.google.com/store/apps/details?id=com.fredrikburmester.streamyfin
+    - type: discord
+      url: https://discord.gg/aJvAYeycyY
+    - type: donation
+      url: https://www.buymeacoffee.com/fredrikbur3
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Episode Details
+    - image: ./preview-images/3.webp
+      title: Show Details
+    - image: ./preview-images/4.webp
+      title: Movie Details
+features:
+    offline-download: true
+    chromecast: true
+    hw-decode: true
+    direct-play: true
+    dolby-vision: true
+    10bit-hevc: true
+    trickplay: true
+    external-subtitles: true
+    quick-connect: true
+    seerr-integration: true
+relatedPlugins:
+    - jellyfin-plugin-streamyfin

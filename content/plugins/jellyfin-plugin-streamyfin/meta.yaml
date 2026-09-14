@@ -1,0 +1,29 @@
+name: Streamyfin Companion Plugin
+logo: ./logo.webp
+developerName: Streamyfin Team
+developerGithub: streamyfin
+dateAdded: 2026-09-14
+dateCreated: 2024-08-21
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: Server-side companion plugin for Streamyfin. Sync and lock app settings, build custom home screens, and configure push notifications and Seerr SSO.
+license:
+    name: MPL-2.0
+    url: https://github.com/streamyfin/jellyfin-plugin-streamyfin/blob/main/LICENSE
+categories:
+    - companion
+    - integrations
+    - notifications
+links:
+    - type: github
+      url: https://github.com/streamyfin/jellyfin-plugin-streamyfin
+      sourcelink: true
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Custom Home Screen
+    - image: ./preview-images/2.webp
+      title: Seerr Integration
+    - image: ./preview-images/3.webp
+      title: Push Notifications
+relatedClients:
+    - streamyfin

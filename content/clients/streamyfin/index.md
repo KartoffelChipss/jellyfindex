@@ -1,0 +1,3 @@
+Streamyfin is a Jellyfin client built with Expo and React Native for Android and iOS, with additional Apple TV and Android TV support. It uses MPV as its playback engine across platforms and aims to be a smooth, reliable alternative to the official apps.
+
+Beyond core playback, Streamyfin supports downloading media for offline viewing, trickplay scrubbing thumbnails, intro/credits skipping, Chromecast, and Jellyseerr integration for requesting media from within the app. A companion Jellyfin server plugin lets admins sync client settings, default languages, and download/search provider configuration across all users.
