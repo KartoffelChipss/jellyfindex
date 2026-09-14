@@ -23,7 +23,7 @@ export function InstallTabs({ platforms }: InstallTabsProps) {
             {platforms.map((platform) => (
                 <TabsContent key={platform.value} value={platform.value}>
                     <div
-                        className="prose prose-sm dark:prose-invert max-w-none"
+                        className="prose dark:prose-invert max-w-none"
                         dangerouslySetInnerHTML={{ __html: platform.html }}
                     />
                 </TabsContent>

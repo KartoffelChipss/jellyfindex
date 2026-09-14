@@ -152,7 +152,7 @@ const previewImages = await Promise.all(
             theme.description && (
                 <>
                     <Separator className="mb-8" />
-                    <div class="prose prose-sm dark:prose-invert mb-8 max-w-none">
+                    <div class="prose dark:prose-invert mb-8 max-w-none">
                         <Content />
                     </div>
                 </>
@@ -166,7 +166,7 @@ const previewImages = await Promise.all(
                         Installation instructions
                     </h2>
                     <div
-                        class="prose prose-sm dark:prose-invert max-w-none"
+                        class="prose dark:prose-invert max-w-none"
                         set:html={theme.installationInstructionsHtml}
                     />
                 </section>
