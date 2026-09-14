@@ -2,6 +2,7 @@
     "name": "@jellyfindex/optimize-images",
     "private": true,
     "version": "0.0.0",
+    "license": "GPL-3.0-or-later",
     "type": "module",
     "scripts": {
         "optimize-images": "tsx src/cli.ts"

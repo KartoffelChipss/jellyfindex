@@ -69,6 +69,9 @@ const year = new Date().getFullYear();
                                 Report an entry
                             </a>
                         </li>
+                        <li>
+                            <a href="/api" class="transition-colors hover:text-foreground"> API </a>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -77,6 +80,16 @@ const year = new Date().getFullYear();
                         <li>
                             <a href="/impressum" class="transition-colors hover:text-foreground">
                                 Impressum
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href={`${REPO_URL}/blob/main/LICENSE`}
+                                target="_blank"
+                                rel="noreferrer"
+                                class="transition-colors hover:text-foreground"
+                            >
+                                License (GPL-3.0)
                             </a>
                         </li>
                     </ul>

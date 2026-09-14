@@ -2,6 +2,7 @@
     "name": "jellyfindex",
     "private": true,
     "version": "0.0.0",
+    "license": "GPL-3.0-or-later",
     "packageManager": "pnpm@10.33.0",
     "scripts": {
         "dev": "pnpm --filter web run dev",

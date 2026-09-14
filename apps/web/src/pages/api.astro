@@ -1,0 +1,147 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+const SITE_URL = 'https://jellyfindex.com';
+
+const endpoints = [
+    {
+        method: 'GET',
+        path: '/api/v1/clients.json',
+        description: 'All client entries.',
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/clients/:id.json',
+        description: 'A single client, e.g. /api/v1/clients/jellysee.json.',
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/plugins.json',
+        description: 'All plugin entries.',
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/plugins/:id.json',
+        description: 'A single plugin.',
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/themes.json',
+        description: 'All theme entries.',
+    },
+    {
+        method: 'GET',
+        path: '/api/v1/themes/:id.json',
+        description: 'A single theme.',
+    },
+];
+---
+
+<Layout
+    title="API — jellyfindex"
+    description="Read-only JSON API for the jellyfindex directory of Jellyfin clients, plugins, and themes."
+>
+    <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+        <h1 class="font-heading text-3xl font-semibold tracking-tight">API</h1>
+        <p class="mt-3 text-muted-foreground">
+            jellyfindex exposes the whole directory as static, read-only JSON. No auth and no rate
+            limit. It's just plain files, regenerated on every deploy.
+        </p>
+
+        <h2 class="mt-10 mb-3 font-heading text-lg font-semibold">Endpoints</h2>
+        <div class="overflow-hidden rounded-lg border">
+            <table class="w-full text-sm">
+                <tbody>
+                    {
+                        endpoints.map((endpoint, index) => (
+                            <tr class={index > 0 ? 'border-t' : ''}>
+                                <td class="px-4 py-3 align-top">
+                                    <code class="text-xs text-muted-foreground">
+                                        {endpoint.method}
+                                    </code>
+                                </td>
+                                <td class="px-4 py-3 align-top font-mono text-xs whitespace-nowrap">
+                                    {endpoint.path}
+                                </td>
+                                <td class="px-4 py-3 align-top text-muted-foreground">
+                                    {endpoint.description}
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="mt-3 text-sm text-muted-foreground">
+            A machine-readable index of these is also available at{' '}
+            <a href="/api/v1.json" class="underline underline-offset-2 hover:text-foreground">
+                /api/v1.json
+            </a>.
+        </p>
+
+        <h2 class="mt-10 mb-3 font-heading text-lg font-semibold">Response shape</h2>
+        <p class="mb-3 text-sm text-muted-foreground">
+            List endpoints wrap entries in an envelope with <code>generatedAt</code> and{' '}
+            <code>count</code>. Each entry carries every field from its{' '}
+            <a
+                href={`https://github.com/KartoffelChipss/jellyfindex?tab=contributing-ov-file#4-fill-in-metayaml`}
+                class="underline underline-offset-2 hover:text-foreground"
+            >
+                meta.yaml
+            </a>, plus:
+        </p>
+        <ul class="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+            <li><code>id</code> — the entry's slug.</li>
+            <li><code>url</code> — its page on jellyfindex.</li>
+            <li>
+                <code>description</code> — the long-form write-up, as plain markdown.
+            </li>
+            <li>
+                <code>logo</code> / <code>banner</code> / <code>previewImages[].image</code> — absolute
+                URLs to the optimized images.
+            </li>
+            <li>
+                <code>repoStats</code> — cached GitHub stars, last commit date, and archived status for
+                the entry's source repo (refreshed daily), or <code>null</code> if it has no GitHub link.
+            </li>
+        </ul>
+
+        <h2 class="mt-10 mb-3 font-heading text-lg font-semibold">Example</h2>
+        <pre
+            class="overflow-x-auto rounded-lg border bg-muted/50 p-4 text-xs"><code>{`curl ${SITE_URL}/api/v1/clients/jellysee.json`}</code></pre>
+
+        <h2 class="mt-10 mb-3 font-heading text-lg font-semibold">Fair use</h2>
+        <p class="text-sm text-muted-foreground">
+            This exists so you can build tools, bots, and integrations on top of the directory, not
+            so you can stand up a copy of jellyfindex itself. Please don't use this data to launch a
+            competing site with the same concept and dataset, reskinned or otherwise. Prefer
+            building on the community instead of around it. If you want to help grow the list, {' '}
+            <a
+                href="https://github.com/KartoffelChipss/jellyfindex?tab=contributing-ov-file#contributing-to-jellyfindex"
+                class="underline underline-offset-2 hover:text-foreground"
+            >
+                contribute an entry
+            </a>.
+        </p>
+        <p class="mt-3 text-sm text-muted-foreground">
+            The code itself is open source under the{' '}
+            <a
+                href="https://github.com/KartoffelChipss/jellyfindex/blob/main/LICENSE"
+                class="underline underline-offset-2 hover:text-foreground"
+            >
+                GNU GPL v3
+            </a>. You're free to reuse, modify, and redistribute it, including for another project,
+            as long as your project stays GPL-licensed too and credits the source, per the license
+            terms. The curated dataset is a separate matter: it's maintained with real effort and
+            protected as a database compilation under EU law, so please don't extract it wholesale
+            to power a from-scratch competing directory. If you're planning something and aren't
+            sure it's fine, just ask: {' '}
+            <a
+                href="mailto:contact@jellyfindex.com"
+                class="underline underline-offset-2 hover:text-foreground"
+            >
+                contact@jellyfindex.com
+            </a>.
+        </p>
+    </div>
+</Layout>
