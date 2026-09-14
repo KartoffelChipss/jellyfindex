@@ -4,6 +4,7 @@ import { ArrowRight, Blocks, Paintbrush, Smartphone } from 'lucide-react';
 import ClientCard from '@/components/ClientCard.astro';
 import PluginCard from '@/components/PluginCard.astro';
 import ThemeCard from '@/components/ThemeCard.astro';
+import DiscordIcon from '@/components/icons/Discord.astro';
 import GitHubIcon from '@/components/icons/GitHub.astro';
 import { buttonVariants } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -11,6 +12,7 @@ import Layout from '@/layouts/Layout.astro';
 
 const REPO_URL =
     'https://github.com/KartoffelChipss/jellyfindex?tab=contributing-ov-file#contributing-to-jellyfindex';
+const DISCORD_URL = 'https://discord.gg/VKqprjh3Wr';
 
 const clients = await getCollection('clients');
 const plugins = await getCollection('plugins');
@@ -125,21 +127,39 @@ const latest = [
             )
         }
 
-        <section class="mb-20 rounded-xl border bg-card/50 px-6 py-10 text-center">
-            <h2 class="font-heading text-xl font-semibold">Missing something?</h2>
-            <p class="mx-auto mt-2 max-w-md text-balance text-sm text-muted-foreground">
-                jellyfindex is community-maintained. If your favorite client or plugin isn't listed
-                yet, open a pull request and add it.
-            </p>
-            <a
-                href={REPO_URL}
-                target="_blank"
-                rel="noreferrer"
-                class={buttonVariants({ variant: 'outline', className: 'mt-5' })}
-            >
-                <GitHubIcon class="size-4" />
-                Contribute on GitHub
-            </a>
+        <section class="mb-8 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-xl border bg-card/50 px-6 py-10 text-center">
+                <h2 class="font-heading text-xl font-semibold">Missing something?</h2>
+                <p class="mx-auto mt-2 max-w-md text-balance text-sm text-muted-foreground">
+                    jellyfindex is community-maintained. If your favorite client or plugin isn't
+                    listed yet, open a pull request and add it.
+                </p>
+                <a
+                    href={REPO_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    class={buttonVariants({ variant: 'outline', className: 'mt-5' })}
+                >
+                    <GitHubIcon class="size-4" />
+                    Contribute on GitHub
+                </a>
+            </div>
+            <div class="rounded-xl border bg-card/50 px-6 py-10 text-center">
+                <h2 class="font-heading text-xl font-semibold">Join the community</h2>
+                <p class="mx-auto mt-2 max-w-md text-balance text-sm text-muted-foreground">
+                    Chat with other Jellyfin users, get help, and discuss Jellyfin projects in the
+                    JellyfinCommunity Discord server.
+                </p>
+                <a
+                    href={DISCORD_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    class={buttonVariants({ variant: 'outline', className: 'mt-5' })}
+                >
+                    <DiscordIcon class="size-4" />
+                    Join the Discord
+                </a>
+            </div>
         </section>
     </div>
 </Layout>
