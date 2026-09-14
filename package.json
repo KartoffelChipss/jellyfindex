@@ -9,6 +9,7 @@
         "preview": "pnpm --filter web run preview",
         "validate": "pnpm --filter @jellyfindex/validate-content run validate",
         "check-abandoned": "pnpm --filter @jellyfindex/check-abandoned run check-abandoned",
+        "repo-stats": "pnpm --filter @jellyfindex/repo-stats run repo-stats",
         "optimize-images": "pnpm --filter @jellyfindex/optimize-images run optimize-images",
         "schema:json": "pnpm --filter @jellyfindex/schema run schema:json",
         "schema:json:check": "pnpm run schema:json && git diff --exit-code -- packages/schema/schemas",

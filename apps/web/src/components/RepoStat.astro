@@ -1,0 +1,52 @@
+---
+import { RefreshCw, Star } from 'lucide-react';
+import { formatStars, getActivityTone, getRepoStats, getStarTone, timeAgo } from '@/lib/repo-stats';
+
+interface Props {
+    collection: string;
+    id: string;
+    class?: string;
+}
+
+const { collection, id, class: className } = Astro.props;
+const stats = getRepoStats(collection, id);
+
+const STAR_TONE_CLASSES = {
+    low: 'text-muted-foreground',
+    mid: 'text-foreground',
+    high: 'text-amber-600 dark:text-amber-400',
+} as const;
+
+const ACTIVITY_TONE_CLASSES = {
+    fresh: 'text-emerald-600 dark:text-emerald-400',
+    normal: 'text-muted-foreground',
+    stale: 'text-orange-700 dark:text-orange-400',
+    archived: 'text-destructive',
+} as const;
+
+const starClass = stats ? STAR_TONE_CLASSES[getStarTone(stats.stars)] : '';
+const activityClass = stats ? ACTIVITY_TONE_CLASSES[getActivityTone(stats)] : '';
+---
+
+{
+    stats && (
+        <div class={`flex items-center gap-3 text-sm ${className ?? ''}`}>
+            <span
+                class={`flex items-center gap-1 ${starClass}`}
+                title={`${stats.stars} stars on GitHub`}
+            >
+                <Star className="size-3.5" />
+                {formatStars(stats.stars)}
+            </span>
+            {stats.lastActivity && (
+                <span
+                    class={`flex items-center gap-1 ${activityClass}`}
+                    title={`Last commit: ${new Date(stats.lastActivity).toLocaleDateString()}`}
+                >
+                    <RefreshCw className="size-3.5" />
+                    Updated {timeAgo(stats.lastActivity)}
+                </span>
+            )}
+        </div>
+    )
+}

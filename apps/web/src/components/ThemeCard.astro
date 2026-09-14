@@ -7,6 +7,7 @@ import BetaBadge from '@/components/badges/BetaBadge.astro';
 import NewBadge from '@/components/badges/NewBadge.astro';
 import OfficialBadge from '@/components/badges/OfficialBadge.astro';
 import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
+import RepoStat from '@/components/RepoStat.astro';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface Props {
@@ -55,6 +56,7 @@ const cover = resolvePreviewImage(theme.previewImages[0]);
     </CardHeader>
 
     <CardContent className="flex flex-1 flex-col gap-3">
+        <RepoStat collection="themes" id={id} class="mt-1" />
         <div class="flex flex-wrap gap-1.5">
             <NewBadge dateCreated={theme.dateCreated} />
             <AbandonedBadge abandoned={theme.abandoned} />

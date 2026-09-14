@@ -9,6 +9,7 @@ import NewBadge from '@/components/badges/NewBadge.astro';
 import OfficialBadge from '@/components/badges/OfficialBadge.astro';
 import OpenSourceBadge from '@/components/badges/OpenSourceBadge.astro';
 import PricingBadge from '@/components/badges/PricingBadge.astro';
+import RepoStat from '@/components/RepoStat.astro';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -73,6 +74,7 @@ const extraPlatformCount = client.platforms.length - visiblePlatforms.length;
     </CardHeader>
 
     <CardContent className="flex flex-1 flex-col gap-3">
+        <RepoStat collection="clients" id={id} class="mt-1" />
         <p class="text-sm text-muted-foreground">{client.shortDescription}</p>
         <div class="flex flex-wrap gap-1.5">
             <NewBadge dateCreated={client.dateCreated} />

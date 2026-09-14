@@ -21,6 +21,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import AiDisclosureBox from '@/components/AiDisclosureBox.astro';
 import { PreviewCarousel } from '@/components/PreviewCarousel';
+import RepoStat from '@/components/RepoStat.astro';
 import ReportButton from '@/components/ReportButton.astro';
 import { iconForLink } from '@/lib/link-icons';
 import Layout from '@/layouts/Layout.astro';
@@ -129,6 +130,7 @@ const previewImages = await Promise.all(
                         )
                     }
                 </p>
+                <RepoStat collection="plugins" id={entry.id} class="mt-2" />
                 <div class="mt-3 flex flex-wrap gap-1.5">
                     <NewBadge dateCreated={plugin.dateCreated} />
                     <AbandonedBadge abandoned={plugin.abandoned} />

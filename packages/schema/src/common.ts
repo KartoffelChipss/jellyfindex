@@ -19,6 +19,27 @@ export function hasSourceLink(links: z.infer<typeof linkSchema>[]): boolean {
     );
 }
 
+interface RawLink {
+    type: string;
+    url: string;
+    sourcelink?: boolean;
+}
+
+/** Finds the `owner/repo` a GitHub link entry points at, if any of the given (unparsed) links is one. */
+export function findGithubSource(links: unknown): { owner: string; repo: string } | null {
+    if (!Array.isArray(links)) return null;
+    const source = (links as RawLink[]).find(
+        (l) => l.sourcelink ?? LINK_TYPES[l.type as keyof typeof LINK_TYPES]?.defaultSourceLink
+    );
+    if (!source || source.type !== 'github') return null;
+
+    const match = source.url.match(
+        /^https?:\/\/github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?(?:[/?#].*)?$/
+    );
+    if (!match) return null;
+    return { owner: match[1], repo: match[2] };
+}
+
 export function previewImageSchema<ImageSchema extends z.ZodType, Extra extends z.ZodRawShape = {}>(
     imageSchema: ImageSchema,
     extra: Extra = {} as Extra

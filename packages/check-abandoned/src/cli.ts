@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from '
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
-import { LINK_TYPES } from '@jellyfindex/schema';
+import { findGithubSource } from '@jellyfindex/schema';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, '../../..');
@@ -12,12 +12,6 @@ const SUMMARY_PATH = join(REPO_ROOT, 'check-abandoned-summary.md');
 const COLLECTIONS = ['clients', 'plugins', 'themes'] as const;
 const STALE_MONTHS = 6;
 const GRAPHQL_BATCH_SIZE = 50;
-
-interface Link {
-    type: string;
-    url: string;
-    sourcelink?: boolean;
-}
 
 interface Entry {
     collection: string;
@@ -33,21 +27,6 @@ interface Entry {
 interface RepoActivity {
     isArchived: boolean;
     lastActivity: string | null;
-}
-
-/** Mirrors hasSourceLink() in packages/schema/src/common.ts, but also returns the link itself. */
-function findGithubSource(links: unknown): { owner: string; repo: string } | null {
-    if (!Array.isArray(links)) return null;
-    const source = (links as Link[]).find(
-        (l) => l.sourcelink ?? LINK_TYPES[l.type as keyof typeof LINK_TYPES]?.defaultSourceLink
-    );
-    if (!source || source.type !== 'github') return null;
-
-    const match = source.url.match(
-        /^https?:\/\/github\.com\/([^/]+)\/([^/]+?)(?:\.git)?\/?(?:[/?#].*)?$/
-    );
-    if (!match) return null;
-    return { owner: match[1], repo: match[2] };
 }
 
 function collectEntries(): { entries: Entry[]; ignoredIds: string[] } {

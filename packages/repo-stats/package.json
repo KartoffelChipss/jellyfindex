@@ -1,0 +1,17 @@
+{
+    "name": "@jellyfindex/repo-stats",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "repo-stats": "tsx src/cli.ts"
+    },
+    "dependencies": {
+        "@jellyfindex/schema": "workspace:*",
+        "yaml": "^2.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "^22.10.0",
+        "tsx": "^4.19.2"
+    }
+}
