@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" viewBox="0 0 1080 1081">
+  <style>
+    .light-icon { display: inline; }
+    .dark-icon  { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .light-icon { display: none; }
+      .dark-icon  { display: inline; }
+    }
+  </style>
+  <g class="light-icon"><g transform="matrix(1,0,0,1,-1191,-11537)">
+        <g id="jellyfindex-logo-dark" serif:id="jellyfindex logo dark" transform="matrix(1.023539,0,0,1.023539,1191,11537.697268)">
+            <g opacity="0.97">
+                <rect x="0" y="0" width="1055.163" height="1055.163" style="fill:none;"/>
+                <g transform="matrix(1.141136,0,0,1.141136,-52.162849,-74.460702)">
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-505.445007,1423.46557)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:rgb(10,10,10);stroke-width:61.07px;"/>
+                    </g>
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-515.864373,1211.221871)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:rgb(10,10,10);stroke-width:61.07px;"/>
+                    </g>
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-500.314355,988.289672)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:rgb(10,10,10);stroke-width:61.07px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g></g>
+  <g class="dark-icon"><g transform="matrix(1,0,0,1,0,-11583)">
+        <g id="jellyfindex-logo" serif:id="jellyfindex logo" transform="matrix(1.023539,0,0,1.023539,0,11583.697268)">
+            <g opacity="0.97">
+                <rect x="0" y="0" width="1055.163" height="1055.163" style="fill:none;"/>
+                <g transform="matrix(1.141136,0,0,1.141136,-52.162849,-74.460702)">
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-505.445007,1423.46557)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:61.07px;"/>
+                    </g>
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-515.864373,1211.221871)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:61.07px;"/>
+                    </g>
+                    <g transform="matrix(-0,-1.401885,1.401885,-0,-500.314355,988.289672)">
+                        <path d="M475.233,489.798C475.233,489.798 426.945,615.921 486.246,713.344C540.729,802.853 490.482,887.01 475.233,959.866" style="fill:none;stroke:white;stroke-width:61.07px;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g></g>
+</svg>
