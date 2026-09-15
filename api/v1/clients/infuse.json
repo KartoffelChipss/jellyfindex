@@ -1,0 +1,74 @@
+{
+  "id": "infuse",
+  "url": "https://jellyfindex.com/clients/infuse",
+  "name": "Infuse",
+  "developerName": "Firecore",
+  "dateAdded": "2026-09-15T00:00:00.000Z",
+  "dateCreated": "2016-11-21T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": false,
+  "shortDescription": "A polished, closed-source video player for iPhone, iPad, Apple TV, and Mac that connects directly to Jellyfin, Plex, and Emby libraries, with hardware-accelerated 4K HDR/Dolby Vision playback, AirPlay/Google Cast, and Trakt sync.",
+  "description": "Infuse is a polished, closed-source video player from Firecore for iPhone, iPad, Apple TV, and Mac. It connects directly to Jellyfin, Plex, and Emby libraries (alongside NAS shares, SMB/WebDAV sources, and cloud storage), pulling in artwork and metadata automatically without any file conversion or transcoding for most formats.\n\nPlayback covers a wide range of video, audio, and subtitle formats, with hardware-accelerated 4K HDR, HDR10+, and Dolby Vision, plus Dolby and DTS audio passthrough. AirPlay and Google Cast streaming, two-way Trakt sync for watched history and ratings, and one-click OpenSubtitles downloads round out the free tier. Infuse Pro, available as a subscription or one-time lifetime purchase, unlocks additional formats, cloud storage sources, video trailers, and cross-device library and playback sync.",
+  "platforms": [
+    "ios",
+    "tvos",
+    "macos"
+  ],
+  "mainPlatform": "tvos",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "subscription",
+  "music": "supported",
+  "links": [
+    {
+      "type": "website",
+      "url": "https://firecore.com/infuse"
+    },
+    {
+      "type": "app-store",
+      "url": "https://apps.apple.com/app/infuse/id1136220934"
+    }
+  ],
+  "installationLink": {
+    "type": "app-store",
+    "url": "https://apps.apple.com/app/infuse/id1136220934"
+  },
+  "installationInstructions": {},
+  "features": {
+    "direct-play": true,
+    "hw-decode": true,
+    "dolby-vision": true,
+    "10bit-hevc": true,
+    "airplay": true,
+    "chromecast": true,
+    "external-subtitles": true,
+    "pgs-ass-subtitles": true,
+    "trakt-scrobbling": true,
+    "multi-server": true,
+    "parental-controls": true,
+    "gapless-playback": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.C3RsiHXS_13vK1V.webp",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/0.4AZzJ3e7_2ugMvA.webp"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/1.CEmAAuG3_3VpL0.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.Cg5VTZ4R_ZCkoei.webp",
+      "title": "Movie details"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.cRWpW-NP_ZsXrT3.webp",
+      "title": "Now playing"
+    }
+  ],
+  "repoStats": null
+}
