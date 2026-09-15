@@ -14,7 +14,7 @@ dateAdded: 2026-09-05
 dateCreated: 2025-07-31
 submittedBy: KartoffelChipss
 openSource: true
-abandoned: true
+abandoned: false
 license:
     name: GPL-2.0
     url: https://github.com/KartoffelChipss/NeutralFin/blob/main/LICENSE
