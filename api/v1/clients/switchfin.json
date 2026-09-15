@@ -1,0 +1,101 @@
+{
+  "id": "switchfin",
+  "url": "https://jellyfindex.com/clients/switchfin",
+  "name": "Switchfin",
+  "developerName": "dragonflylee",
+  "developerGithub": "dragonflylee",
+  "dateAdded": "2026-09-15T00:00:00.000Z",
+  "dateCreated": "2023-06-12T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "Apache-2.0",
+    "url": "https://github.com/dragonflylee/switchfin/blob/dev/LICENSE"
+  },
+  "shortDescription": "A third-party native Jellyfin client for Windows, macOS, Linux, Nintendo Switch, PS4, and PSVita, built on MPV with hardware-accelerated playback, Live TV, and a remote file browser for WebDAV/SFTP/FTP sources.",
+  "description": "Switchfin is a third-party native Jellyfin client originally built for Nintendo Switch homebrew, and now also available for Windows, macOS, Linux, PS4, and PSVita. Playback is built on MPV, with direct play and server-side transcoding, hardware-accelerated decoding with software fallback, and broad codec support for containers, video, audio, and subtitles including SSA/ASS.\n\nBeyond core playback it covers Live TV with a channel guide, offline downloads with series batch download, a dashboard for monitoring server sessions and activities, and MirrorPlay for controlling playback on one device from another over the local network. A remote file browser lets you add WebDAV, HTTP(S), SFTP, and FTP sources alongside your Jellyfin libraries, and Danmaku (弹幕) overlays are supported through the jellyfin-plugin-danmu plugin. The interface is available in 14 languages.",
+  "platforms": [
+    "windows",
+    "macos",
+    "linux",
+    "nintendo-switch",
+    "playstation"
+  ],
+  "mainPlatform": "nintendo-switch",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "none",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/dragonflylee/switchfin",
+      "sourcelink": true
+    },
+    {
+      "type": "other",
+      "url": "https://hb-app.store/switch/Switchfin",
+      "label": "Nintendo Switch Homebrew Store"
+    },
+    {
+      "type": "other",
+      "url": "https://www.rinnegatamante.eu/vitadb/#/info/1258",
+      "label": "PSVita (VitaDB)"
+    },
+    {
+      "type": "other",
+      "url": "https://pkg-zone.com/details/SFIN00000",
+      "label": "PS4 (pkg-zone)"
+    },
+    {
+      "type": "other",
+      "url": "https://flathub.org/apps/fun.dragonfly.switchfin",
+      "label": "Flathub"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "direct-play": true,
+    "hw-decode": true,
+    "live-tv-dvr": true,
+    "offline-download": true,
+    "pgs-ass-subtitles": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.Cfg_LlJb_LQeXu.svg",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1.B7Lo7PLa_1HW0wC.webp",
+      "title": "Home"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.Cixhdq65_2ocyv8.webp",
+      "title": "Library"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.BDrDZK4n_18kiAU.webp",
+      "title": "Search"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/4.Zo2L8hgU_1xJpPp.webp",
+      "title": "Music"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/5.B3F3MC_h_Z1MOdVg.webp",
+      "title": "Series"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/6.CC2iHSzT_ZFMcfH.webp",
+      "title": "Episode"
+    }
+  ],
+  "repoStats": {
+    "repo": "dragonflylee/switchfin",
+    "stars": 872,
+    "lastActivity": "2026-09-08T07:21:36Z",
+    "isArchived": false
+  }
+}
