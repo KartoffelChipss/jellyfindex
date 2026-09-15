@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-15T08:04:46.824Z",
-  "count": 18,
+  "generatedAt": "2026-09-15T16:00:59.691Z",
+  "count": 19,
   "clients": [
     {
       "id": "afinity",
@@ -225,7 +225,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-android",
-        "stars": 2763,
+        "stars": 2764,
         "lastActivity": "2026-09-14T19:19:56Z",
         "isArchived": false
       }
@@ -312,8 +312,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-androidtv",
-        "stars": 4548,
-        "lastActivity": "2026-09-15T01:00:24Z",
+        "stars": 4553,
+        "lastActivity": "2026-09-15T14:56:38Z",
         "isArchived": false
       }
     },
@@ -374,7 +374,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-media-player",
-        "stars": 5755,
+        "stars": 5756,
         "lastActivity": "2026-08-31T07:43:51Z",
         "isArchived": false
       }
@@ -495,7 +495,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-kodi",
         "stars": 1129,
-        "lastActivity": "2026-09-14T11:39:21Z",
+        "lastActivity": "2026-09-15T15:50:41Z",
         "isArchived": false
       }
     },
@@ -558,7 +558,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-mpv-shim",
-        "stars": 2387,
+        "stars": 2388,
         "lastActivity": "2026-09-14T22:30:10Z",
         "isArchived": false
       }
@@ -801,7 +801,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-webos",
-        "stars": 865,
+        "stars": 866,
         "lastActivity": "2025-11-04T01:15:36Z",
         "isArchived": false
       }
@@ -927,6 +927,130 @@
         }
       ],
       "repoStats": null
+    },
+    {
+      "id": "moonfin",
+      "url": "https://jellyfindex.com/clients/moonfin",
+      "name": "Moonfin",
+      "developerName": "Moonfin",
+      "developerGithub": "Moonfin-Client",
+      "dateAdded": "2026-09-15T00:00:00.000Z",
+      "dateCreated": "2026-03-25T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-2.0",
+        "url": "https://github.com/Moonfin-Client/Moonfin-Core/blob/main/LICENSE"
+      },
+      "shortDescription": "A premium Jellyfin and Emby client built with Flutter for phones, tablets, desktop, Android TV, Apple TV, Fire TV, and web, with offline downloads, retro games, and ebook support.",
+      "description": "Moonfin is a media client for Jellyfin and Emby servers, built with Flutter. A single shared codebase powers phones and tablets, Windows, macOS, and Linux, Android TV, Fire TV, and Apple TV, plus an installable web app, all with a navigation scheme tuned for touch, pointer, and remote input.\n\nBeyond core playback, Moonfin supports a unified library that merges multiple Jellyfin and Emby servers into one browsable UI, offline downloads with automatic organization, ebook and audiobook reading, and retro game emulation with gamepad support and cross-device save states. A theme store with a built-in editor and OLED mode, Live TV with DVR, SyncPlay, and Seerr integration for discovery and requests round out the feature set. Web playback and the theme store sync are powered by the companion Moonbase server plugin.",
+      "platforms": [
+        "android",
+        "ios",
+        "macos",
+        "windows",
+        "linux",
+        "androidtv",
+        "tvos",
+        "fireos",
+        "web",
+        "webos",
+        "tizen",
+        "rokuos"
+      ],
+      "mainPlatform": "android",
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "pricing": "free",
+      "music": "none",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/Moonfin-Client/Moonfin-Core",
+          "label": "Core GitHub"
+        },
+        {
+          "type": "website",
+          "url": "https://moonfin.io"
+        },
+        {
+          "type": "app-store",
+          "url": "https://apps.apple.com/app/moonfin/id6761283970"
+        },
+        {
+          "type": "google-play",
+          "url": "https://play.google.com/store/apps/details?id=org.moonfin.androidtv"
+        },
+        {
+          "type": "discord",
+          "url": "https://discord.gg/moonfin"
+        },
+        {
+          "type": "donation",
+          "url": "https://www.buymeacoffee.com/moonfin"
+        }
+      ],
+      "installationInstructions": {},
+      "features": {
+        "offline-download": true,
+        "chromecast": true,
+        "airplay": true,
+        "dlna": true,
+        "syncplay": true,
+        "dolby-vision": true,
+        "10bit-hevc": true,
+        "direct-play": true,
+        "trickplay": true,
+        "live-tv-dvr": true,
+        "seerr-integration": true,
+        "multi-server": true,
+        "parental-controls": true,
+        "quick-connect": true
+      },
+      "relatedPlugins": [
+        "moonbase"
+      ],
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.LSpai4sS_1bbI2o.webp",
+      "banner": "https://jellyfindex.com/_astro/banner.Bk8fq0OR_2w2u4a.webp",
+      "previewImages": [
+        {
+          "image": "https://jellyfindex.com/_astro/desktop-1.CfWVgjIP_ZbMakK.webp",
+          "title": "Desktop / tablet library"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/desktop-2.B6jRGwuF_Z1iV5yA.webp",
+          "title": "Desktop / tablet details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/mobile-1.CJlkQTOv_7H6JS.webp",
+          "title": "Mobile home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/mobile-2.D36qficr_1vaxwD.webp",
+          "title": "Mobile details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/tv-1.DI0Q8NCT_1C8Gfi.webp",
+          "title": "TV home"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/tv-2.ClnzXC2y_H8udF.webp",
+          "title": "TV details"
+        },
+        {
+          "image": "https://jellyfindex.com/_astro/tv-3.BwqmOnQ0_Zzi70q.webp",
+          "title": "TV genres"
+        }
+      ],
+      "repoStats": {
+        "repo": "Moonfin-Client/Moonfin-Core",
+        "stars": 692,
+        "lastActivity": "2026-09-15T15:26:05Z",
+        "isArchived": false
+      }
     },
     {
       "id": "pelagica",
@@ -1171,7 +1295,7 @@
       ],
       "repoStats": {
         "repo": "streamyfin/streamyfin",
-        "stars": 5194,
+        "stars": 5196,
         "lastActivity": "2026-09-12T18:58:54Z",
         "isArchived": false
       }
@@ -1248,7 +1372,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/Swiftfin",
-        "stars": 4167,
+        "stars": 4168,
         "lastActivity": "2026-09-14T21:05:36Z",
         "isArchived": false
       }

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-15T08:04:46.832Z",
-  "count": 5,
+  "generatedAt": "2026-09-15T16:00:59.700Z",
+  "count": 6,
   "plugins": [
     {
       "id": "file-transformation",
@@ -39,7 +39,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-file-transformation",
-        "stars": 531,
+        "stars": 532,
         "lastActivity": "2026-09-08T09:02:53Z",
         "isArchived": false
       }
@@ -103,8 +103,8 @@
       ],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-home-sections",
-        "stars": 507,
-        "lastActivity": "2026-09-11T09:15:35Z",
+        "stars": 509,
+        "lastActivity": "2026-09-15T11:27:53Z",
         "isArchived": false
       }
     },
@@ -165,6 +165,58 @@
         "repo": "streamyfin/jellyfin-plugin-streamyfin",
         "stars": 300,
         "lastActivity": "2026-08-31T14:35:46Z",
+        "isArchived": false
+      }
+    },
+    {
+      "id": "moonbase",
+      "url": "https://jellyfindex.com/plugins/moonbase",
+      "name": "Moonbase",
+      "developerName": "Moonfin",
+      "developerGithub": "Moonfin-Client",
+      "dateAdded": "2026-09-15T00:00:00.000Z",
+      "dateCreated": "2026-02-08T00:00:00.000Z",
+      "submittedBy": "KartoffelChipss",
+      "openSource": true,
+      "license": {
+        "name": "GPL-3.0",
+        "url": "https://github.com/Moonfin-Client/Plugin/blob/master/LICENSE"
+      },
+      "shortDescription": "The companion server plugin for Moonfin clients on Jellyfin and Emby, syncing settings across devices, hosting the Moonfin web app, and adding Seerr integration, custom themes, and admin tools.",
+      "description": "Moonbase is the server plugin that gives every Moonfin client its shared backbone, for both Jellyfin and Emby. It syncs user settings across devices, hosts the Moonfin web app directly on the server, resolves media bar and home screen data server-side, and adds extra rating sources through MDBList and TMDB.\n\nOn top of that, Moonbase provides a Seerr integration with a built-in proxy and single sign-on, push notifications for Seerr activity and new library additions, a custom theme editor with server-side validation, retro game library support with synced saves, and admin tools for pushing server-wide defaults, broadcasting messages, and monitoring active downloads and transcodes. The repo ships both a Jellyfin plugin and an Emby plugin from one place.",
+      "categories": [
+        "companion",
+        "integrations",
+        "notifications"
+      ],
+      "requires": [],
+      "relatedClients": [
+        "moonfin"
+      ],
+      "official": false,
+      "beta": false,
+      "abandoned": false,
+      "ignoreAbandonedCheck": false,
+      "minimumJellyfinVersion": "10.10.0",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/Moonfin-Client/Plugin",
+          "sourcelink": true
+        },
+        {
+          "type": "website",
+          "url": "https://moonfin.io"
+        }
+      ],
+      "installationInstructions": "Moonbase requires Jellyfin 10.10+ or Emby 4.8+.\n\n### Jellyfin (recommended: plugin catalog)\n\n1. Open the Jellyfin Dashboard, then go to Administration > Plugins > Repositories.\n2. Add a repository with name `Moonbase` and URL `https://raw.githubusercontent.com/Moonfin-Client/Plugin/refs/heads/master/manifest.json`.\n3. Go to Catalog, find **Moonbase**, and install it.\n4. Restart Jellyfin.\n\n### Emby\n\nEmby doesn't have a catalog for this plugin, so it's a manual drop-in:\n\n1. Download the latest `Moonfin.Emby-x.x.x.x.zip` from the [Releases page](https://github.com/Moonfin-Client/Plugin/releases).\n2. Extract `Emby.Plugins.Moonfin.dll`, `SharpCompress.dll`, and the `web` folder into your Emby plugins folder.\n3. Restart Emby.\n\nOnce installed, the Moonfin web app is served at `https://your-server-host/Moonfin/Web/`. See the [wiki](https://github.com/Moonfin-Client/Plugin/wiki/Installation) for platform-specific plugin folder paths and troubleshooting.",
+      "aiUsage": "unknown",
+      "logo": "https://jellyfindex.com/_astro/logo.LSpai4sS_1bbI2o.webp",
+      "previewImages": [],
+      "repoStats": {
+        "repo": "Moonfin-Client/Plugin",
+        "stars": 385,
+        "lastActivity": "2026-09-15T15:24:30Z",
         "isArchived": false
       }
     },
@@ -257,8 +309,8 @@
       "previewImages": [],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-pages",
-        "stars": 181,
-        "lastActivity": "2026-09-09T08:59:09Z",
+        "stars": 182,
+        "lastActivity": "2026-09-15T10:18:14Z",
         "isArchived": false
       }
     }
