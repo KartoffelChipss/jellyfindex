@@ -1,0 +1,44 @@
+name: Infuse
+logo: ./logo.webp
+developerName: Firecore
+dateAdded: 2026-09-15
+dateCreated: 2016-11-21
+submittedBy: KartoffelChipss
+openSource: false
+shortDescription: A polished, closed-source video player for iPhone, iPad, Apple TV, and Mac that connects directly to Jellyfin, Plex, and Emby libraries, with hardware-accelerated 4K HDR/Dolby Vision playback, AirPlay/Google Cast, and Trakt sync.
+platforms:
+    - ios
+    - tvos
+    - macos
+mainPlatform: tvos
+pricing: subscription
+music: supported
+links:
+    - type: website
+      url: https://firecore.com/infuse
+    - type: app-store
+      url: https://apps.apple.com/app/infuse/id1136220934
+installationLink:
+    type: app-store
+    url: https://apps.apple.com/app/infuse/id1136220934
+previewImages:
+    - image: ./preview-images/0.webp
+    - image: ./preview-images/1.webp
+      title: Library
+    - image: ./preview-images/2.webp
+      title: Movie details
+    - image: ./preview-images/3.webp
+      title: Now playing
+features:
+    direct-play: true
+    hw-decode: true
+    dolby-vision: true
+    10bit-hevc: true
+    airplay: true
+    chromecast: true
+    external-subtitles: true
+    pgs-ass-subtitles: true
+    trakt-scrobbling: true
+    multi-server: true
+    parental-controls: true
+    gapless-playback: true
