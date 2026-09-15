@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T16:11:34.205Z",
+  "generatedAt": "2026-09-15T16:14:34.121Z",
   "entries": {
     "clients/afinity": {
       "repo": "MakD/AFinity",
@@ -113,6 +113,12 @@
       "repo": "paulherter/swiftly-player",
       "stars": 2,
       "lastActivity": "2026-09-14T21:29:02Z",
+      "isArchived": false
+    },
+    "clients/switchfin": {
+      "repo": "dragonflylee/switchfin",
+      "stars": 872,
+      "lastActivity": "2026-09-08T07:21:36Z",
       "isArchived": false
     },
     "plugins/file-transformation": {

@@ -1,0 +1,55 @@
+name: Switchfin
+logo: ./logo.svg
+developerName: dragonflylee
+developerGithub: dragonflylee
+dateAdded: 2026-09-15
+dateCreated: 2023-06-12
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A third-party native Jellyfin client for Windows, macOS, Linux, Nintendo Switch, PS4, and PSVita, built on MPV with hardware-accelerated playback, Live TV, and a remote file browser for WebDAV/SFTP/FTP sources.
+platforms:
+    - windows
+    - macos
+    - linux
+    - nintendo-switch
+    - playstation
+mainPlatform: nintendo-switch
+pricing: free
+license:
+    name: Apache-2.0
+    url: https://github.com/dragonflylee/switchfin/blob/dev/LICENSE
+links:
+    - type: github
+      url: https://github.com/dragonflylee/switchfin
+      sourcelink: true
+    - type: other
+      label: Nintendo Switch Homebrew Store
+      url: https://hb-app.store/switch/Switchfin
+    - type: other
+      label: PSVita (VitaDB)
+      url: https://www.rinnegatamante.eu/vitadb/#/info/1258
+    - type: other
+      label: PS4 (pkg-zone)
+      url: https://pkg-zone.com/details/SFIN00000
+    - type: other
+      label: Flathub
+      url: https://flathub.org/apps/fun.dragonfly.switchfin
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Home
+    - image: ./preview-images/2.webp
+      title: Library
+    - image: ./preview-images/3.webp
+      title: Search
+    - image: ./preview-images/4.webp
+      title: Music
+    - image: ./preview-images/5.webp
+      title: Series
+    - image: ./preview-images/6.webp
+      title: Episode
+features:
+    direct-play: true
+    hw-decode: true
+    live-tv-dvr: true
+    offline-download: true
+    pgs-ass-subtitles: true
