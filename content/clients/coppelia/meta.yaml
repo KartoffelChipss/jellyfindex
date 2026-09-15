@@ -1,0 +1,38 @@
+name: Coppelia
+logo: ./logo.svg
+developerName: Jordan Matelsky
+developerGithub: j6k4m8
+dateAdded: 2026-09-15
+dateCreated: 2025-12-28
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A native, low-resource Jellyfin client focused on music libraries, built with Flutter for macOS, iOS, Android, and Linux, with offline downloads, smart lists, and deep theming.
+platforms:
+    - macos
+    - ios
+    - android
+    - linux
+mainPlatform: macos
+pricing: free
+music: main
+license:
+    name: Apache-2.0
+    url: https://github.com/j6k4m8/coppelia/blob/main/LICENSE
+links:
+    - type: github
+      url: https://github.com/j6k4m8/coppelia
+      sourcelink: true
+    - type: website
+      url: https://blog.jordan.matelsky.com/coppelia/
+previewImages:
+    - image: ./preview-images/1.webp
+      title: Themes (macOS)
+    - image: ./preview-images/2.webp
+      title: Authentication
+    - image: ./preview-images/3.webp
+      title: Now Playing
+    - image: ./preview-images/4.webp
+      title: Smart Lists
+features:
+    offline-download: true
+    gapless-playback: true

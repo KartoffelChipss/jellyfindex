@@ -1,10 +1,16 @@
 {
-  "generatedAt": "2026-09-15T15:59:55.825Z",
+  "generatedAt": "2026-09-15T16:11:34.205Z",
   "entries": {
     "clients/afinity": {
       "repo": "MakD/AFinity",
       "stars": 235,
       "lastActivity": "2026-08-30T03:40:08Z",
+      "isArchived": false
+    },
+    "clients/coppelia": {
+      "repo": "j6k4m8/coppelia",
+      "stars": 70,
+      "lastActivity": "2026-09-01T22:38:58Z",
       "isArchived": false
     },
     "clients/jellycon": {

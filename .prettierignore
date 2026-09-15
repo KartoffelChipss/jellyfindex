@@ -3,3 +3,4 @@ dist/
 .astro/
 pnpm-lock.yaml
 packages/schema/schemas/
+apps/web/src/data/repo-stats.json
