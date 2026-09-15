@@ -1,0 +1,73 @@
+{
+  "id": "coppelia",
+  "url": "https://jellyfindex.com/clients/coppelia",
+  "name": "Coppelia",
+  "developerName": "Jordan Matelsky",
+  "developerGithub": "j6k4m8",
+  "dateAdded": "2026-09-15T00:00:00.000Z",
+  "dateCreated": "2025-12-28T00:00:00.000Z",
+  "submittedBy": "KartoffelChipss",
+  "openSource": true,
+  "license": {
+    "name": "Apache-2.0",
+    "url": "https://github.com/j6k4m8/coppelia/blob/main/LICENSE"
+  },
+  "shortDescription": "A native, low-resource Jellyfin client focused on music libraries, built with Flutter for macOS, iOS, Android, and Linux, with offline downloads, smart lists, and deep theming.",
+  "description": "Coppelia is a native app built specifically for browsing and playing Jellyfin music libraries, built with Flutter for macOS, iOS, Android, and Linux (Windows is planned). It was built to be native and low-resource rather than a wrapped web view, and to look good while doing it.\n\nIt covers fast library browsing and search across albums, artists, genres, and playlists, with full playlist management, gapless playback, and queue controls. macOS gets Now Playing and media key integration, and Android gets lockscreen and notification controls. Offline support goes beyond simple downloads with pinning, a Wi-Fi-aware download manager, and dedicated offline library sections, and Smart Lists let you build self-updating local playlists from rules. Appearance is deeply configurable, down to accent colors, font scale, layout density, and now-playing palette theming.",
+  "platforms": [
+    "macos",
+    "ios",
+    "android",
+    "linux"
+  ],
+  "mainPlatform": "macos",
+  "official": false,
+  "beta": false,
+  "abandoned": false,
+  "ignoreAbandonedCheck": false,
+  "pricing": "free",
+  "music": "main",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/j6k4m8/coppelia",
+      "sourcelink": true
+    },
+    {
+      "type": "website",
+      "url": "https://blog.jordan.matelsky.com/coppelia/"
+    }
+  ],
+  "installationInstructions": {},
+  "features": {
+    "offline-download": true,
+    "gapless-playback": true
+  },
+  "relatedPlugins": [],
+  "aiUsage": "unknown",
+  "logo": "https://jellyfindex.com/_astro/logo.C-XXPXRn_10Fvcd.svg",
+  "previewImages": [
+    {
+      "image": "https://jellyfindex.com/_astro/1.uxSDEebU_mVhkv.webp",
+      "title": "Themes (macOS)"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/2.CzSa7c2X_ZVz7Uz.webp",
+      "title": "Authentication"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/3.C83L1MZU_1X22nc.webp",
+      "title": "Now Playing"
+    },
+    {
+      "image": "https://jellyfindex.com/_astro/4.CNQwRN6Z_Z2vV6x9.webp",
+      "title": "Smart Lists"
+    }
+  ],
+  "repoStats": {
+    "repo": "j6k4m8/coppelia",
+    "stars": 70,
+    "lastActivity": "2026-09-01T22:38:58Z",
+    "isArchived": false
+  }
+}
