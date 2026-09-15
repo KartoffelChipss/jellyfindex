@@ -1,0 +1,3 @@
+Moonbase is the server plugin that gives every Moonfin client its shared backbone, for both Jellyfin and Emby. It syncs user settings across devices, hosts the Moonfin web app directly on the server, resolves media bar and home screen data server-side, and adds extra rating sources through MDBList and TMDB.
+
+On top of that, Moonbase provides a Seerr integration with a built-in proxy and single sign-on, push notifications for Seerr activity and new library additions, a custom theme editor with server-side validation, retro game library support with synced saves, and admin tools for pushing server-wide defaults, broadcasting messages, and monitoring active downloads and transcodes. The repo ships both a Jellyfin plugin and an Emby plugin from one place.

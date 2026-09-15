@@ -1,0 +1,25 @@
+name: Moonbase
+logo: ./logo.webp
+developerName: Moonfin
+developerGithub: Moonfin-Client
+dateAdded: 2026-09-15
+dateCreated: 2026-02-08
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: The companion server plugin for Moonfin clients on Jellyfin and Emby, syncing settings across devices, hosting the Moonfin web app, and adding Seerr integration, custom themes, and admin tools.
+license:
+    name: GPL-3.0
+    url: https://github.com/Moonfin-Client/Plugin/blob/master/LICENSE
+categories:
+    - companion
+    - integrations
+    - notifications
+minimumJellyfinVersion: 10.10.0
+links:
+    - type: github
+      url: https://github.com/Moonfin-Client/Plugin
+      sourcelink: true
+    - type: website
+      url: https://moonfin.io
+relatedClients:
+    - moonfin

@@ -64,6 +64,11 @@ tasks:
         cmds:
             - pnpm run optimize-images
 
+    repo-stats:
+        desc: Fetch GitHub stars & activity for content entries (requires GITHUB_TOKEN)
+        cmds:
+            - pnpm run repo-stats
+
     clean:
         desc: Remove build output and caches
         cmds:

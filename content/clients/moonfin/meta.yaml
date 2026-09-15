@@ -1,0 +1,74 @@
+name: Moonfin
+logo: ./logo.webp
+banner: ./banner.webp
+developerName: Moonfin
+developerGithub: Moonfin-Client
+dateAdded: 2026-09-15
+dateCreated: 2026-03-25
+submittedBy: KartoffelChipss
+openSource: true
+shortDescription: A premium Jellyfin and Emby client built with Flutter for phones, tablets, desktop, Android TV, Apple TV, Fire TV, and web, with offline downloads, retro games, and ebook support.
+platforms:
+    - android
+    - ios
+    - macos
+    - windows
+    - linux
+    - androidtv
+    - tvos
+    - fireos
+    - web
+    - webos
+    - tizen
+    - rokuos
+mainPlatform: android
+pricing: free
+license:
+    name: GPL-2.0
+    url: https://github.com/Moonfin-Client/Moonfin-Core/blob/main/LICENSE
+links:
+    - type: github
+      url: https://github.com/Moonfin-Client/Moonfin-Core
+      label: Core GitHub
+    - type: website
+      url: https://moonfin.io
+    - type: app-store
+      url: https://apps.apple.com/app/moonfin/id6761283970
+    - type: google-play
+      url: https://play.google.com/store/apps/details?id=org.moonfin.androidtv
+    - type: discord
+      url: https://discord.gg/moonfin
+    - type: donation
+      url: https://www.buymeacoffee.com/moonfin
+previewImages:
+    - image: ./preview-images/desktop-1.webp
+      title: Desktop / tablet library
+    - image: ./preview-images/desktop-2.webp
+      title: Desktop / tablet details
+    - image: ./preview-images/mobile-1.webp
+      title: Mobile home
+    - image: ./preview-images/mobile-2.webp
+      title: Mobile details
+    - image: ./preview-images/tv-1.webp
+      title: TV home
+    - image: ./preview-images/tv-2.webp
+      title: TV details
+    - image: ./preview-images/tv-3.webp
+      title: TV genres
+features:
+    offline-download: true
+    chromecast: true
+    airplay: true
+    dlna: true
+    syncplay: true
+    dolby-vision: true
+    10bit-hevc: true
+    direct-play: true
+    trickplay: true
+    live-tv-dvr: true
+    seerr-integration: true
+    multi-server: true
+    parental-controls: true
+    quick-connect: true
+relatedPlugins:
+    - moonbase
