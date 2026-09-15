@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T19:38:37.940Z",
+  "generatedAt": "2026-09-15T08:04:46.832Z",
   "count": 5,
   "plugins": [
     {
@@ -39,7 +39,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-file-transformation",
-        "stars": 530,
+        "stars": 531,
         "lastActivity": "2026-09-08T09:02:53Z",
         "isArchived": false
       }
@@ -103,7 +103,7 @@
       ],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-home-sections",
-        "stars": 505,
+        "stars": 507,
         "lastActivity": "2026-09-11T09:15:35Z",
         "isArchived": false
       }
