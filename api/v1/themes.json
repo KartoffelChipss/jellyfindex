@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T07:35:46.313Z",
+  "generatedAt": "2026-09-20T07:58:08.749Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 684,
+        "stars": 686,
         "lastActivity": "2026-09-18T16:50:53Z",
         "isArchived": false
       }
@@ -179,7 +179,7 @@
       ],
       "repoStats": {
         "repo": "catppuccin/jellyfin",
-        "stars": 130,
+        "stars": 129,
         "lastActivity": "2026-09-11T11:37:31Z",
         "isArchived": false
       }
@@ -244,7 +244,7 @@
       ],
       "repoStats": {
         "repo": "lscambo13/ElegantFin",
-        "stars": 2161,
+        "stars": 2162,
         "lastActivity": "2026-09-09T11:16:14Z",
         "isArchived": false
       }
@@ -348,7 +348,7 @@
       ],
       "repoStats": {
         "repo": "tedhinklater/finimalism",
-        "stars": 458,
+        "stars": 459,
         "lastActivity": "2026-02-16T16:09:19Z",
         "isArchived": false
       }
@@ -519,7 +519,7 @@
       "repoStats": {
         "repo": "buesche87/infinitv",
         "stars": 22,
-        "lastActivity": "2026-09-17T21:13:30Z",
+        "lastActivity": "2026-09-19T17:31:51Z",
         "isArchived": false
       }
     },
@@ -626,7 +626,7 @@
       ],
       "repoStats": {
         "repo": "ya0903/NetFin",
-        "stars": 54,
+        "stars": 55,
         "lastActivity": "2026-04-29T20:10:36Z",
         "isArchived": false
       }
@@ -680,7 +680,7 @@
       ],
       "repoStats": {
         "repo": "KartoffelChipss/NeutralFin",
-        "stars": 98,
+        "stars": 99,
         "lastActivity": "2026-09-15T15:31:29Z",
         "isArchived": false
       }
