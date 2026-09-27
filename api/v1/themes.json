@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T08:03:27.238Z",
+  "generatedAt": "2026-09-27T08:38:19.973Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 707,
+        "stars": 713,
         "lastActivity": "2026-09-23T19:16:30Z",
         "isArchived": false
       }
@@ -121,7 +121,7 @@
       ],
       "repoStats": {
         "repo": "tromoSM/better-jellyfin-ui",
-        "stars": 63,
+        "stars": 64,
         "lastActivity": "2026-09-12T22:52:34Z",
         "isArchived": false
       }
@@ -244,7 +244,7 @@
       ],
       "repoStats": {
         "repo": "lscambo13/ElegantFin",
-        "stars": 2177,
+        "stars": 2178,
         "lastActivity": "2026-09-09T11:16:14Z",
         "isArchived": false
       }
@@ -742,7 +742,7 @@
       ],
       "repoStats": {
         "repo": "loof2736/scyfin",
-        "stars": 733,
+        "stars": 734,
         "lastActivity": "2026-09-11T21:28:28Z",
         "isArchived": false
       }
