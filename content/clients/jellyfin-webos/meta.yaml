@@ -6,6 +6,7 @@ dateAdded: 2026-09-05
 dateCreated: 2019-05-04
 submittedBy: KartoffelChipss
 openSource: true
+abandoned: true
 shortDescription: The official Jellyfin app for LG webOS smart TVs, wrapping the web client for the big screen.
 platforms:
     - webos

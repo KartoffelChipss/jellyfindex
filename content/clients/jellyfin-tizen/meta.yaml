@@ -6,6 +6,7 @@ dateAdded: 2026-09-05
 dateCreated: 2019-10-12
 submittedBy: KartoffelChipss
 openSource: true
+abandoned: true
 shortDescription: The official Jellyfin app for Samsung Tizen smart TVs, wrapping the web client for the big screen.
 platforms:
     - tizen
