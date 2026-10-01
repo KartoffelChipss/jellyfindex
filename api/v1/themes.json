@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T11:08:56.371Z",
+  "generatedAt": "2026-10-01T11:11:40.522Z",
   "count": 15,
   "themes": [
     {
@@ -425,7 +425,7 @@
       "description": "Flow is a Plex-inspired theme for Jellyfin's web client, built on top of [scyfin](https://github.com/loof2736/scyfin).\n\nOptional add-ons layer on top of the base theme: a collapsible drawer menu, a bigger logo for high-DPI displays, an episode grid borrowed from Ultrachromic, rounded cast/crew cards, and several color presets (orange, pink, rainbow, red, white).",
       "official": false,
       "beta": false,
-      "abandoned": true,
+      "abandoned": false,
       "ignoreAbandonedCheck": false,
       "links": [
         {
