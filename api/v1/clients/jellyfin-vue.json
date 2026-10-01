@@ -21,7 +21,7 @@
   "official": true,
   "beta": true,
   "abandoned": false,
-  "ignoreAbandonedCheck": false,
+  "ignoreAbandonedCheck": true,
   "pricing": "free",
   "music": "supported",
   "links": [

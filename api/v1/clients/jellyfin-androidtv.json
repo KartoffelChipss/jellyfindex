@@ -22,7 +22,7 @@
   "official": true,
   "beta": false,
   "abandoned": false,
-  "ignoreAbandonedCheck": false,
+  "ignoreAbandonedCheck": true,
   "pricing": "free",
   "music": "none",
   "links": [

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T11:02:58.873Z",
+  "generatedAt": "2026-10-01T11:08:56.336Z",
   "count": 22,
   "clients": [
     {
@@ -324,7 +324,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -401,7 +401,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -484,7 +484,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "supported",
       "links": [
@@ -549,7 +549,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -615,7 +615,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -671,7 +671,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -733,7 +733,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -807,7 +807,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -861,7 +861,7 @@
       "official": true,
       "beta": true,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "supported",
       "links": [
@@ -922,7 +922,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
@@ -976,7 +976,7 @@
       "official": true,
       "beta": false,
       "abandoned": false,
-      "ignoreAbandonedCheck": false,
+      "ignoreAbandonedCheck": true,
       "pricing": "free",
       "music": "none",
       "links": [
