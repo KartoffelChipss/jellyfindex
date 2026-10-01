@@ -11,6 +11,7 @@ platforms:
     - other
 mainPlatform: other
 official: true
+ignoreAbandonedCheck: true
 license:
     name: GPL-3.0
     url: https://github.com/jellyfin/jellyfin-kodi/blob/master/LICENSE.txt

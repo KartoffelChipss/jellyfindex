@@ -11,6 +11,7 @@ platforms:
     - rokuos
 mainPlatform: rokuos
 official: true
+ignoreAbandonedCheck: true
 license:
     name: GPL-2.0
     url: https://github.com/jellyfin/jellyfin-roku/blob/master/LICENSE

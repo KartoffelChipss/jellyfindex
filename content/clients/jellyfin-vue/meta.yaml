@@ -11,6 +11,7 @@ platforms:
     - web
 mainPlatform: web
 official: true
+ignoreAbandonedCheck: true
 beta: true
 license:
     name: GPL-3.0

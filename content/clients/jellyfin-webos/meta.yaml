@@ -11,6 +11,7 @@ platforms:
     - webos
 mainPlatform: webos
 official: true
+ignoreAbandonedCheck: true
 license:
     name: MPL-2.0
     url: https://github.com/jellyfin/jellyfin-webos/blob/master/LICENSE

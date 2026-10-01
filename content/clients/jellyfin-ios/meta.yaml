@@ -11,6 +11,7 @@ platforms:
     - ios
 mainPlatform: ios
 official: true
+ignoreAbandonedCheck: true
 license:
     name: MPL-2.0
     url: https://github.com/jellyfin/jellyfin-ios/blob/master/LICENSE

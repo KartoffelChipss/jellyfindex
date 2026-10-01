@@ -9,6 +9,7 @@ openSource: true
 shortDescription: The official desktop client for Jellyfin, built on mpv for high quality local playback.
 platforms: [windows, macos, linux]
 official: true
+ignoreAbandonedCheck: true
 music: supported
 installationLink:
     type: github

@@ -12,6 +12,7 @@ platforms:
     - fireos
 mainPlatform: androidtv
 official: true
+ignoreAbandonedCheck: true
 license:
     name: GPL-2.0
     url: https://github.com/jellyfin/jellyfin-androidtv/blob/master/LICENSE
