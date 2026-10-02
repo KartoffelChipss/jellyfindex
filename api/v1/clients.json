@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T11:11:40.492Z",
+  "generatedAt": "2026-10-02T09:05:18.232Z",
   "count": 22,
   "clients": [
     {
@@ -166,7 +166,7 @@
       ],
       "repoStats": {
         "repo": "j6k4m8/coppelia",
-        "stars": 72,
+        "stars": 73,
         "lastActivity": "2026-09-16T16:22:02Z",
         "isArchived": false
       }
@@ -373,7 +373,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-android",
         "stars": 2789,
-        "lastActivity": "2026-09-30T22:21:33Z",
+        "lastActivity": "2026-10-02T07:23:30Z",
         "isArchived": false
       }
     },
@@ -459,8 +459,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-androidtv",
-        "stars": 4587,
-        "lastActivity": "2026-09-30T22:05:35Z",
+        "stars": 4590,
+        "lastActivity": "2026-10-01T18:00:31Z",
         "isArchived": false
       }
     },
@@ -521,7 +521,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-media-player",
-        "stars": 5818,
+        "stars": 5820,
         "lastActivity": "2026-08-31T07:43:51Z",
         "isArchived": false
       }
@@ -587,8 +587,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-ios",
-        "stars": 604,
-        "lastActivity": "2026-09-26T14:02:08Z",
+        "stars": 603,
+        "lastActivity": "2026-10-01T16:45:33Z",
         "isArchived": false
       }
     },
@@ -641,8 +641,8 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-kodi",
-        "stars": 1136,
-        "lastActivity": "2026-09-29T18:15:52Z",
+        "stars": 1138,
+        "lastActivity": "2026-10-01T16:45:36Z",
         "isArchived": false
       }
     },
@@ -705,8 +705,8 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-mpv-shim",
-        "stars": 2445,
-        "lastActivity": "2026-09-30T22:36:01Z",
+        "stars": 2448,
+        "lastActivity": "2026-10-01T16:45:59Z",
         "isArchived": false
       }
     },
@@ -779,8 +779,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-roku",
-        "stars": 232,
-        "lastActivity": "2026-09-30T21:33:33Z",
+        "stars": 233,
+        "lastActivity": "2026-10-01T19:57:58Z",
         "isArchived": false
       }
     },
@@ -833,7 +833,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-tizen",
-        "stars": 1727,
+        "stars": 1728,
         "lastActivity": "2025-10-24T13:59:32Z",
         "isArchived": false
       }
@@ -1194,8 +1194,8 @@
       ],
       "repoStats": {
         "repo": "Moonfin-Client/Moonfin-Core",
-        "stars": 771,
-        "lastActivity": "2026-10-01T04:14:02Z",
+        "stars": 776,
+        "lastActivity": "2026-10-02T04:48:58Z",
         "isArchived": false
       }
     },
@@ -1343,7 +1343,7 @@
       ],
       "repoStats": {
         "repo": "PelagicaApp/Pelagica",
-        "stars": 342,
+        "stars": 346,
         "lastActivity": "2026-09-27T11:58:35Z",
         "isArchived": false
       }
@@ -1442,8 +1442,8 @@
       ],
       "repoStats": {
         "repo": "streamyfin/streamyfin",
-        "stars": 5229,
-        "lastActivity": "2026-10-01T08:43:56Z",
+        "stars": 5231,
+        "lastActivity": "2026-10-01T12:15:01Z",
         "isArchived": false
       }
     },
@@ -1519,8 +1519,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/Swiftfin",
-        "stars": 4191,
-        "lastActivity": "2026-09-30T23:43:07Z",
+        "stars": 4194,
+        "lastActivity": "2026-10-02T06:21:37Z",
         "isArchived": false
       }
     },
@@ -1610,7 +1610,7 @@
       "repoStats": {
         "repo": "paulherter/swiftly-player",
         "stars": 18,
-        "lastActivity": "2026-09-30T00:04:17Z",
+        "lastActivity": "2026-10-01T17:51:19Z",
         "isArchived": false
       }
     },
@@ -1710,7 +1710,7 @@
       ],
       "repoStats": {
         "repo": "dragonflylee/switchfin",
-        "stars": 876,
+        "stars": 877,
         "lastActivity": "2026-09-29T05:05:25Z",
         "isArchived": false
       }
