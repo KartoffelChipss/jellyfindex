@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T09:22:51.472Z",
+  "generatedAt": "2026-10-12T09:53:18.488Z",
   "count": 6,
   "plugins": [
     {
@@ -103,7 +103,7 @@
       ],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-home-sections",
-        "stars": 531,
+        "stars": 532,
         "lastActivity": "2026-10-05T21:33:44Z",
         "isArchived": false
       }
@@ -216,7 +216,7 @@
       "repoStats": {
         "repo": "Moonfin-Client/Plugin",
         "stars": 437,
-        "lastActivity": "2026-10-11T07:24:27Z",
+        "lastActivity": "2026-10-11T18:56:03Z",
         "isArchived": false
       }
     },
@@ -309,7 +309,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "IAmParadox27/jellyfin-plugin-pages",
-        "stars": 185,
+        "stars": 186,
         "lastActivity": "2026-09-16T09:19:40Z",
         "isArchived": false
       }
