@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T07:58:53.165Z",
+  "generatedAt": "2026-10-21T08:03:39.716Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 794,
+        "stars": 798,
         "lastActivity": "2026-10-05T17:16:27Z",
         "isArchived": false
       }
@@ -122,7 +122,7 @@
       "repoStats": {
         "repo": "tromoSM/better-jellyfin-ui",
         "stars": 64,
-        "lastActivity": "2026-09-12T22:52:34Z",
+        "lastActivity": "2026-10-20T19:25:59Z",
         "isArchived": false
       }
     },
