@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T08:26:18.186Z",
+  "generatedAt": "2026-10-28T09:04:05.292Z",
   "count": 6,
   "plugins": [
     {
@@ -215,7 +215,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "Moonfin-Client/Plugin",
-        "stars": 443,
+        "stars": 445,
         "lastActivity": "2026-10-27T00:41:57Z",
         "isArchived": false
       }
