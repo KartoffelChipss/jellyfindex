@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T09:00:10.771Z",
+  "generatedAt": "2026-11-01T09:50:31.319Z",
   "count": 6,
   "plugins": [
     {
@@ -163,7 +163,7 @@
       ],
       "repoStats": {
         "repo": "streamyfin/jellyfin-plugin-streamyfin",
-        "stars": 310,
+        "stars": 311,
         "lastActivity": "2026-10-15T20:40:36Z",
         "isArchived": false
       }
@@ -215,7 +215,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "Moonfin-Client/Plugin",
-        "stars": 452,
+        "stars": 455,
         "lastActivity": "2026-10-31T00:30:46Z",
         "isArchived": false
       }
