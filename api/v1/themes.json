@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T11:23:16.278Z",
+  "generatedAt": "2026-11-02T10:10:45.935Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 823,
+        "stars": 824,
         "lastActivity": "2026-10-05T17:16:27Z",
         "isArchived": false
       }
@@ -244,7 +244,7 @@
       ],
       "repoStats": {
         "repo": "lscambo13/ElegantFin",
-        "stars": 2244,
+        "stars": 2245,
         "lastActivity": "2026-09-09T11:16:14Z",
         "isArchived": false
       }
@@ -348,7 +348,7 @@
       ],
       "repoStats": {
         "repo": "tedhinklater/finimalism",
-        "stars": 463,
+        "stars": 464,
         "lastActivity": "2026-02-16T16:09:19Z",
         "isArchived": false
       }
@@ -403,8 +403,8 @@
       "repoStats": {
         "repo": "prism2001/finity",
         "stars": 76,
-        "lastActivity": "2026-05-03T15:13:53Z",
-        "isArchived": false
+        "lastActivity": "2026-11-02T01:03:04Z",
+        "isArchived": true
       }
     },
     {
@@ -680,7 +680,7 @@
       ],
       "repoStats": {
         "repo": "KartoffelChipss/NeutralFin",
-        "stars": 99,
+        "stars": 100,
         "lastActivity": "2026-09-15T15:31:29Z",
         "isArchived": false
       }
@@ -742,7 +742,7 @@
       ],
       "repoStats": {
         "repo": "loof2736/scyfin",
-        "stars": 741,
+        "stars": 742,
         "lastActivity": "2026-10-10T18:33:53Z",
         "isArchived": false
       }
