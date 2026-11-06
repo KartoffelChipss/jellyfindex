@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T09:58:03.065Z",
+  "generatedAt": "2026-11-06T09:59:49.344Z",
   "entries": {
     "clients/afinity": {
       "repo": "MakD/AFinity",
@@ -21,38 +21,38 @@
     },
     "clients/jellyfin-android": {
       "repo": "jellyfin/jellyfin-android",
-      "stars": 2860,
-      "lastActivity": "2026-11-02T16:57:04Z",
+      "stars": 2863,
+      "lastActivity": "2026-11-05T14:00:42Z",
       "isArchived": false
     },
     "clients/jellyfin-androidtv": {
       "repo": "jellyfin/jellyfin-androidtv",
-      "stars": 4707,
-      "lastActivity": "2026-11-04T12:00:40Z",
+      "stars": 4711,
+      "lastActivity": "2026-11-06T08:51:09Z",
       "isArchived": false
     },
     "clients/jellyfin-desktop": {
       "repo": "jellyfin/jellyfin-media-player",
-      "stars": 5971,
-      "lastActivity": "2026-11-03T20:39:21Z",
+      "stars": 5977,
+      "lastActivity": "2026-11-06T08:51:07Z",
       "isArchived": false
     },
     "clients/jellyfin-ios": {
       "repo": "jellyfin/jellyfin-ios",
-      "stars": 615,
+      "stars": 616,
       "lastActivity": "2026-11-01T05:32:12Z",
       "isArchived": false
     },
     "clients/jellyfin-kodi": {
       "repo": "jellyfin/jellyfin-kodi",
       "stars": 1154,
-      "lastActivity": "2026-11-05T09:47:21Z",
+      "lastActivity": "2026-11-06T09:15:54Z",
       "isArchived": false
     },
     "clients/jellyfin-mpv-shim": {
       "repo": "jellyfin/jellyfin-mpv-shim",
-      "stars": 2556,
-      "lastActivity": "2026-11-05T09:47:17Z",
+      "stars": 2557,
+      "lastActivity": "2026-11-06T09:45:42Z",
       "isArchived": false
     },
     "clients/jellyfin-roku": {
@@ -70,25 +70,25 @@
     "clients/jellyfin-vue": {
       "repo": "jellyfin/jellyfin-vue",
       "stars": 1718,
-      "lastActivity": "2026-11-02T14:35:24Z",
+      "lastActivity": "2026-11-05T22:55:48Z",
       "isArchived": false
     },
     "clients/jellyfin-webos": {
       "repo": "jellyfin/jellyfin-webos",
-      "stars": 885,
+      "stars": 886,
       "lastActivity": "2025-11-04T01:15:36Z",
       "isArchived": false
     },
     "clients/jellyfin-xbox": {
       "repo": "jellyfin/jellyfin-xbox",
-      "stars": 172,
+      "stars": 173,
       "lastActivity": "2026-10-31T13:44:31Z",
       "isArchived": false
     },
     "clients/moonfin": {
       "repo": "Moonfin-Client/Moonfin-Core",
-      "stars": 963,
-      "lastActivity": "2026-11-05T05:27:40Z",
+      "stars": 967,
+      "lastActivity": "2026-11-06T06:21:41Z",
       "isArchived": false
     },
     "clients/pelagica": {
@@ -99,50 +99,50 @@
     },
     "clients/streamyfin": {
       "repo": "streamyfin/streamyfin",
-      "stars": 5337,
-      "lastActivity": "2026-11-05T02:53:22Z",
+      "stars": 5342,
+      "lastActivity": "2026-11-05T19:44:25Z",
       "isArchived": false
     },
     "clients/swiftfin": {
       "repo": "jellyfin/Swiftfin",
       "stars": 4258,
-      "lastActivity": "2026-11-04T21:32:26Z",
+      "lastActivity": "2026-11-06T07:32:36Z",
       "isArchived": false
     },
     "clients/swiftly-for-jellyfin": {
       "repo": "paulherter/swiftly-player",
       "stars": 43,
-      "lastActivity": "2026-11-03T18:03:45Z",
+      "lastActivity": "2026-11-06T02:32:23Z",
       "isArchived": false
     },
     "clients/switchfin": {
       "repo": "dragonflylee/switchfin",
-      "stars": 896,
+      "stars": 895,
       "lastActivity": "2026-10-27T09:19:28Z",
       "isArchived": false
     },
     "plugins/file-transformation": {
       "repo": "IAmParadox27/jellyfin-plugin-file-transformation",
-      "stars": 572,
+      "stars": 573,
       "lastActivity": "2026-09-08T09:02:53Z",
       "isArchived": false
     },
     "plugins/home-screen-sections": {
       "repo": "IAmParadox27/jellyfin-plugin-home-sections",
-      "stars": 548,
+      "stars": 549,
       "lastActivity": "2026-10-31T01:48:18Z",
       "isArchived": false
     },
     "plugins/jellyfin-plugin-streamyfin": {
       "repo": "streamyfin/jellyfin-plugin-streamyfin",
-      "stars": 312,
+      "stars": 313,
       "lastActivity": "2026-10-15T20:40:36Z",
       "isArchived": false
     },
     "plugins/moonbase": {
       "repo": "Moonfin-Client/Plugin",
-      "stars": 459,
-      "lastActivity": "2026-11-04T03:37:48Z",
+      "stars": 460,
+      "lastActivity": "2026-11-06T02:57:52Z",
       "isArchived": false
     },
     "plugins/pelagica-jellyfin-plugin": {
@@ -159,7 +159,7 @@
     },
     "themes/abyss": {
       "repo": "AumGupta/abyss-jellyfin",
-      "stars": 829,
+      "stars": 830,
       "lastActivity": "2026-10-05T17:16:27Z",
       "isArchived": false
     },
@@ -177,7 +177,7 @@
     },
     "themes/elegantfin": {
       "repo": "lscambo13/ElegantFin",
-      "stars": 2254,
+      "stars": 2255,
       "lastActivity": "2026-11-05T03:01:28Z",
       "isArchived": false
     },
@@ -243,7 +243,7 @@
     },
     "themes/zestytheme": {
       "repo": "stpnwf/ZestyTheme",
-      "stars": 527,
+      "stars": 526,
       "lastActivity": "2025-11-07T03:30:27Z",
       "isArchived": false
     }
