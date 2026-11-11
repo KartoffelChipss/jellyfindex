@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T10:33:05.808Z",
+  "generatedAt": "2026-11-11T09:56:13.594Z",
   "count": 22,
   "clients": [
     {
@@ -93,8 +93,8 @@
       ],
       "repoStats": {
         "repo": "MakD/AFinity",
-        "stars": 266,
-        "lastActivity": "2026-11-09T20:38:49Z",
+        "stars": 268,
+        "lastActivity": "2026-11-11T09:33:24Z",
         "isArchived": false
       }
     },
@@ -296,7 +296,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellycon",
-        "stars": 569,
+        "stars": 570,
         "lastActivity": "2026-10-31T16:50:13Z",
         "isArchived": false
       }
@@ -372,8 +372,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-android",
-        "stars": 2864,
-        "lastActivity": "2026-11-10T10:04:32Z",
+        "stars": 2865,
+        "lastActivity": "2026-11-11T09:48:58Z",
         "isArchived": false
       }
     },
@@ -459,8 +459,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-androidtv",
-        "stars": 4724,
-        "lastActivity": "2026-11-10T10:04:29Z",
+        "stars": 4730,
+        "lastActivity": "2026-11-11T09:48:52Z",
         "isArchived": false
       }
     },
@@ -521,7 +521,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-media-player",
-        "stars": 5998,
+        "stars": 6008,
         "lastActivity": "2026-11-07T11:40:19Z",
         "isArchived": false
       }
@@ -588,7 +588,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-ios",
         "stars": 619,
-        "lastActivity": "2026-11-01T05:32:12Z",
+        "lastActivity": "2026-11-10T19:00:51Z",
         "isArchived": false
       }
     },
@@ -642,7 +642,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-kodi",
         "stars": 1155,
-        "lastActivity": "2026-11-09T10:04:55Z",
+        "lastActivity": "2026-11-11T09:48:12Z",
         "isArchived": false
       }
     },
@@ -705,8 +705,8 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-mpv-shim",
-        "stars": 2600,
-        "lastActivity": "2026-11-09T22:36:05Z",
+        "stars": 2602,
+        "lastActivity": "2026-11-11T09:48:19Z",
         "isArchived": false
       }
     },
@@ -780,7 +780,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-roku",
         "stars": 249,
-        "lastActivity": "2026-11-07T20:00:42Z",
+        "lastActivity": "2026-11-10T23:55:36Z",
         "isArchived": false
       }
     },
@@ -833,7 +833,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-tizen",
-        "stars": 1763,
+        "stars": 1762,
         "lastActivity": "2025-10-24T13:59:32Z",
         "isArchived": false
       }
@@ -1002,7 +1002,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-xbox",
-        "stars": 173,
+        "stars": 174,
         "lastActivity": "2026-10-31T13:44:31Z",
         "isArchived": false
       }
@@ -1194,8 +1194,8 @@
       ],
       "repoStats": {
         "repo": "Moonfin-Client/Moonfin-Core",
-        "stars": 987,
-        "lastActivity": "2026-11-10T07:52:52Z",
+        "stars": 989,
+        "lastActivity": "2026-11-11T06:23:07Z",
         "isArchived": false
       }
     },
@@ -1442,8 +1442,8 @@
       ],
       "repoStats": {
         "repo": "streamyfin/streamyfin",
-        "stars": 5352,
-        "lastActivity": "2026-11-05T19:44:25Z",
+        "stars": 5353,
+        "lastActivity": "2026-11-11T08:01:29Z",
         "isArchived": false
       }
     },
@@ -1519,8 +1519,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/Swiftfin",
-        "stars": 4268,
-        "lastActivity": "2026-11-10T06:27:07Z",
+        "stars": 4272,
+        "lastActivity": "2026-11-11T04:56:21Z",
         "isArchived": false
       }
     },
@@ -1710,8 +1710,8 @@
       ],
       "repoStats": {
         "repo": "dragonflylee/switchfin",
-        "stars": 897,
-        "lastActivity": "2026-11-08T12:19:06Z",
+        "stars": 898,
+        "lastActivity": "2026-11-10T14:47:59Z",
         "isArchived": false
       }
     }
