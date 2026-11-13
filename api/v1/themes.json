@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T10:25:14.102Z",
+  "generatedAt": "2026-11-13T10:11:04.952Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 838,
+        "stars": 839,
         "lastActivity": "2026-10-05T17:16:27Z",
         "isArchived": false
       }
@@ -121,7 +121,7 @@
       ],
       "repoStats": {
         "repo": "tromoSM/better-jellyfin-ui",
-        "stars": 69,
+        "stars": 70,
         "lastActivity": "2026-10-20T19:25:59Z",
         "isArchived": false
       }
@@ -244,7 +244,7 @@
       ],
       "repoStats": {
         "repo": "lscambo13/ElegantFin",
-        "stars": 2268,
+        "stars": 2269,
         "lastActivity": "2026-11-05T03:01:28Z",
         "isArchived": false
       }
@@ -348,7 +348,7 @@
       ],
       "repoStats": {
         "repo": "tedhinklater/finimalism",
-        "stars": 467,
+        "stars": 468,
         "lastActivity": "2026-02-16T16:09:19Z",
         "isArchived": false
       }
@@ -452,7 +452,7 @@
       ],
       "repoStats": {
         "repo": "LitCastVlog/Flow",
-        "stars": 118,
+        "stars": 117,
         "lastActivity": "2026-10-02T22:49:50Z",
         "isArchived": false
       }
@@ -742,7 +742,7 @@
       ],
       "repoStats": {
         "repo": "loof2736/scyfin",
-        "stars": 745,
+        "stars": 746,
         "lastActivity": "2026-10-10T18:33:53Z",
         "isArchived": false
       }
@@ -796,7 +796,7 @@
       ],
       "repoStats": {
         "repo": "CTalvio/Ultrachromic",
-        "stars": 1003,
+        "stars": 1002,
         "lastActivity": "2026-10-02T19:40:18Z",
         "isArchived": false
       }
@@ -858,7 +858,7 @@
       ],
       "repoStats": {
         "repo": "stpnwf/ZestyTheme",
-        "stars": 525,
+        "stars": 526,
         "lastActivity": "2025-11-07T03:30:27Z",
         "isArchived": false
       }
