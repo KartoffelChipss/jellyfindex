@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T10:15:19.186Z",
+  "generatedAt": "2026-11-17T11:17:00.454Z",
   "count": 22,
   "clients": [
     {
@@ -94,7 +94,7 @@
       "repoStats": {
         "repo": "MakD/AFinity",
         "stars": 273,
-        "lastActivity": "2026-11-15T22:19:18Z",
+        "lastActivity": "2026-11-17T07:19:51Z",
         "isArchived": false
       }
     },
@@ -372,8 +372,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-android",
-        "stars": 2874,
-        "lastActivity": "2026-11-12T12:50:35Z",
+        "stars": 2875,
+        "lastActivity": "2026-11-17T03:00:44Z",
         "isArchived": false
       }
     },
@@ -459,8 +459,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-androidtv",
-        "stars": 4742,
-        "lastActivity": "2026-11-15T15:04:08Z",
+        "stars": 4746,
+        "lastActivity": "2026-11-17T03:00:44Z",
         "isArchived": false
       }
     },
@@ -521,7 +521,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-media-player",
-        "stars": 6032,
+        "stars": 6036,
         "lastActivity": "2026-11-15T18:15:00Z",
         "isArchived": false
       }
@@ -588,7 +588,7 @@
       "repoStats": {
         "repo": "jellyfin/jellyfin-ios",
         "stars": 626,
-        "lastActivity": "2026-11-12T21:07:28Z",
+        "lastActivity": "2026-11-16T21:42:31Z",
         "isArchived": false
       }
     },
@@ -641,7 +641,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-kodi",
-        "stars": 1156,
+        "stars": 1158,
         "lastActivity": "2026-11-15T07:18:07Z",
         "isArchived": false
       }
@@ -705,7 +705,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-mpv-shim",
-        "stars": 2619,
+        "stars": 2622,
         "lastActivity": "2026-11-16T06:44:29Z",
         "isArchived": false
       }
@@ -779,7 +779,7 @@
       ],
       "repoStats": {
         "repo": "jellyfin/jellyfin-roku",
-        "stars": 253,
+        "stars": 254,
         "lastActivity": "2026-11-13T18:00:43Z",
         "isArchived": false
       }
@@ -948,7 +948,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-webos",
-        "stars": 888,
+        "stars": 889,
         "lastActivity": "2026-11-11T13:10:14Z",
         "isArchived": false
       }
@@ -1002,7 +1002,7 @@
       "previewImages": [],
       "repoStats": {
         "repo": "jellyfin/jellyfin-xbox",
-        "stars": 175,
+        "stars": 174,
         "lastActivity": "2026-11-15T16:21:54Z",
         "isArchived": false
       }
@@ -1194,8 +1194,8 @@
       ],
       "repoStats": {
         "repo": "Moonfin-Client/Moonfin-Core",
-        "stars": 1025,
-        "lastActivity": "2026-11-16T05:20:34Z",
+        "stars": 1028,
+        "lastActivity": "2026-11-17T04:28:28Z",
         "isArchived": false
       }
     },
@@ -1343,7 +1343,7 @@
       ],
       "repoStats": {
         "repo": "PelagicaApp/Pelagica",
-        "stars": 385,
+        "stars": 384,
         "lastActivity": "2026-11-15T12:04:58Z",
         "isArchived": false
       }
@@ -1442,7 +1442,7 @@
       ],
       "repoStats": {
         "repo": "streamyfin/streamyfin",
-        "stars": 5365,
+        "stars": 5368,
         "lastActivity": "2026-11-15T21:53:12Z",
         "isArchived": false
       }
@@ -1519,8 +1519,8 @@
       ],
       "repoStats": {
         "repo": "jellyfin/Swiftfin",
-        "stars": 4287,
-        "lastActivity": "2026-11-16T08:58:25Z",
+        "stars": 4288,
+        "lastActivity": "2026-11-17T02:25:25Z",
         "isArchived": false
       }
     },
@@ -1609,7 +1609,7 @@
       ],
       "repoStats": {
         "repo": "paulherter/swiftly-player",
-        "stars": 46,
+        "stars": 47,
         "lastActivity": "2026-11-14T06:31:57Z",
         "isArchived": false
       }
@@ -1710,8 +1710,8 @@
       ],
       "repoStats": {
         "repo": "dragonflylee/switchfin",
-        "stars": 905,
-        "lastActivity": "2026-11-12T02:22:32Z",
+        "stars": 906,
+        "lastActivity": "2026-11-16T16:04:53Z",
         "isArchived": false
       }
     }
