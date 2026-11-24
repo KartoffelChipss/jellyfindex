@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T11:25:39.601Z",
+  "generatedAt": "2026-11-24T13:00:26.163Z",
   "count": 15,
   "themes": [
     {
@@ -63,7 +63,7 @@
       ],
       "repoStats": {
         "repo": "AumGupta/abyss-jellyfin",
-        "stars": 857,
+        "stars": 859,
         "lastActivity": "2026-10-05T17:16:27Z",
         "isArchived": false
       }
@@ -742,7 +742,7 @@
       ],
       "repoStats": {
         "repo": "loof2736/scyfin",
-        "stars": 747,
+        "stars": 745,
         "lastActivity": "2026-10-10T18:33:53Z",
         "isArchived": false
       }
